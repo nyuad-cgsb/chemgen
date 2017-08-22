@@ -1,0 +1,40 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "../common/models/workflow",
+      "../common/models/library/rnai/Ahringer",
+      "../common/models/library/rnai/Ahringer/defs",
+      "../common/models/library/rnai/Ahringer/load",
+      "../common/models/library/rnai/Ahringer/extract",
+      "../common/models/library/reagents/defs",
+      "../common/models/microscope/arrayscan",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "Workflow": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Plate": {
+    "dataSource": "arrayscanDS",
+    "public": false
+  },
+  "RnaiLibrarystock": {
+    "dataSource": "chemgenDS"
+  },
+  "RnaiRnailibrary": {
+    "dataSource": "chemgenDS"
+  },
+  "ReagentsReagentlibrary": {
+    "dataSource": "chemgenDS"
+  }
+}

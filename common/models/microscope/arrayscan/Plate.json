@@ -1,0 +1,578 @@
+{
+  "name": "Plate",
+  "options": {
+    "idInjection": false,
+    "mssql": {
+      "schema": "dbo",
+      "table": "Plate"
+    }
+  },
+  "properties": {
+    "csPlateid": {
+      "type": "Number",
+      "id": 1,
+      "required": true,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mssql": {
+        "columnName": "CS_PlateId",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "NO"
+      }
+    },
+    "id": {
+      "type": "String",
+      "id": 1,
+      "required": true,
+      "length": 50,
+      "precision": null,
+      "scale": null,
+      "mssql": {
+        "columnName": "ID",
+        "dataType": "varchar",
+        "dataLength": 50,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "NO"
+      }
+    },
+    "name": {
+      "type": "String",
+      "required": false,
+      "length": 255,
+      "precision": null,
+      "scale": null,
+      "mssql": {
+        "columnName": "Name",
+        "dataType": "varchar",
+        "dataLength": 255,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "description": {
+      "type": "String",
+      "required": false,
+      "length": 4096,
+      "precision": null,
+      "scale": null,
+      "mssql": {
+        "columnName": "Description",
+        "dataType": "varchar",
+        "dataLength": 4096,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "statusid": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 5,
+      "scale": 0,
+      "mssql": {
+        "columnName": "StatusID",
+        "dataType": "smallint",
+        "dataLength": null,
+        "dataPrecision": 5,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+    "logstat": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mssql": {
+        "columnName": "LogStat",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+    "creator": {
+      "type": "String",
+      "required": false,
+      "length": 50,
+      "precision": null,
+      "scale": null,
+      "mssql": {
+        "columnName": "Creator",
+        "dataType": "varchar",
+        "dataLength": 50,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "creationdate": {
+      "type": "Date",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "mssql": {
+        "columnName": "CreationDate",
+        "dataType": "datetime",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "creationtime": {
+      "type": "Date",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "mssql": {
+        "columnName": "CreationTime",
+        "dataType": "datetime",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "protocolid": {
+      "type": "Number",
+      "id": 1,
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mssql": {
+        "columnName": "ProtocolID",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+    "detaildatapath": {
+      "type": "String",
+      "required": false,
+      "length": 255,
+      "precision": null,
+      "scale": null,
+      "mssql": {
+        "columnName": "DetailDataPath",
+        "dataType": "varchar",
+        "dataLength": 255,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "imagepath": {
+      "type": "String",
+      "required": false,
+      "length": 255,
+      "precision": null,
+      "scale": null,
+      "mssql": {
+        "columnName": "ImagePath",
+        "dataType": "varchar",
+        "dataLength": 255,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "platestarttime": {
+      "type": "Date",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "mssql": {
+        "columnName": "PlateStartTime",
+        "dataType": "datetime",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "platefinishtime": {
+      "type": "Date",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "mssql": {
+        "columnName": "PlateFinishTime",
+        "dataType": "datetime",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "protocoldata": {
+      "type": "String",
+      "required": false,
+      "length": 2000,
+      "precision": null,
+      "scale": null,
+      "mssql": {
+        "columnName": "ProtocolData",
+        "dataType": "varchar",
+        "dataLength": 2000,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "wellcount": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mssql": {
+        "columnName": "WellCount",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+    "wfieldcount": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mssql": {
+        "columnName": "WFieldCount",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+    "fimagecount": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mssql": {
+        "columnName": "FImageCount",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+    "cellcount": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mssql": {
+        "columnName": "CellCount",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+    "scanid": {
+      "type": "String",
+      "required": false,
+      "length": 255,
+      "precision": null,
+      "scale": null,
+      "mssql": {
+        "columnName": "ScanId",
+        "dataType": "varchar",
+        "dataLength": 255,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "zsystemlistid": {
+      "type": "String",
+      "required": false,
+      "length": 50,
+      "precision": null,
+      "scale": null,
+      "mssql": {
+        "columnName": "zSystemListId",
+        "dataType": "varchar",
+        "dataLength": 50,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "logtype": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 5,
+      "scale": 0,
+      "mssql": {
+        "columnName": "LogType",
+        "dataType": "smallint",
+        "dataLength": null,
+        "dataPrecision": 5,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+    "platestackid": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mssql": {
+        "columnName": "PlateStackId",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+    "savemodeid": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 5,
+      "scale": 0,
+      "mssql": {
+        "columnName": "SaveModeID",
+        "dataType": "smallint",
+        "dataLength": null,
+        "dataPrecision": 5,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+    "instrumentid": {
+      "type": "Number",
+      "id": 1,
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mssql": {
+        "columnName": "InstrumentId",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+    "runid": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mssql": {
+        "columnName": "RunId",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+    "platebarcode": {
+      "type": "String",
+      "required": false,
+      "length": 50,
+      "precision": null,
+      "scale": null,
+      "mssql": {
+        "columnName": "PlateBarCode",
+        "dataType": "varchar",
+        "dataLength": 50,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "stackid": {
+      "type": "String",
+      "required": false,
+      "length": 50,
+      "precision": null,
+      "scale": null,
+      "mssql": {
+        "columnName": "StackId",
+        "dataType": "varchar",
+        "dataLength": 50,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "intervalcount": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mssql": {
+        "columnName": "IntervalCount",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+    "formfactordata": {
+      "type": "String",
+      "required": false,
+      "length": 255,
+      "precision": null,
+      "scale": null,
+      "mssql": {
+        "columnName": "FormFactorData",
+        "dataType": "varchar",
+        "dataLength": 255,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "paId": {
+      "type": "Number",
+      "id": 1,
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mssql": {
+        "columnName": "pa_id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+    "paVersion": {
+      "type": "Number",
+      "id": 2,
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mssql": {
+        "columnName": "pa_version",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+    "parentId": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mssql": {
+        "columnName": "parent_id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+    "auxSource": {
+      "type": "String",
+      "required": false,
+      "length": 255,
+      "precision": null,
+      "scale": null,
+      "mssql": {
+        "columnName": "aux_source",
+        "dataType": "varchar",
+        "dataLength": 255,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "owner": {
+      "type": "String",
+      "required": false,
+      "length": 50,
+      "precision": null,
+      "scale": null,
+      "mssql": {
+        "columnName": "owner",
+        "dataType": "varchar",
+        "dataLength": 50,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "siloId": {
+      "type": "Number",
+      "id": 1,
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mssql": {
+        "columnName": "silo_id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+    "guid": {
+      "type": "String",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "mssql": {
+        "columnName": "guid",
+        "dataType": "uniqueidentifier",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

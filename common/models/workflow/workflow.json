@@ -1,0 +1,80 @@
+{
+  "name": "Workflow",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "tasks": {
+      "type": [
+        "any"
+      ],
+      "required": true
+    },
+    "library": {
+      "type": "any",
+      "required": true
+    },
+    "libraryModel": {
+      "type": "string",
+      "required": true
+    },
+    "libraryStockModel": {
+      "type": "string",
+      "required": false 
+    },
+    "condition": {
+      "type": "any",
+      "required": true
+    },
+    "screenStage": {
+      "type": "string",
+      "required": true
+    },
+    "screenName": {
+      "type": "string",
+      "required": true
+    },
+    "instrumentId": {
+      "type": "any",
+      "required": true
+    },
+    "assayDate": {
+      "type": "any",
+      "required": true
+    },
+    "data": {
+      "type": "any",
+      "required": true
+    },
+    "search": {
+      "type": "any",
+      "required": true
+    },
+    "permissiveTemp": {
+      "type": "any",
+      "required": true
+    },
+    "restrictiveTemp": {
+      "type": "any",
+      "required": true
+    },
+    "imageDates": {
+      "type": [
+        "any"
+      ],
+      "required": true
+    },
+    "wells": {
+      "type": [
+        "string"
+      ],
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
