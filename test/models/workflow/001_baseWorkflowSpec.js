@@ -7,8 +7,7 @@ const assert = require('assert');
 const Promise = require('bluebird');
 const app = require(path.resolve(__dirname) + '/../../../server/server');
 const util = require('util');
-const diff = require('deep-diff')
-  .diff;
+const diff = require('deep-diff').diff;
 
 describe('001_baseWorkflowSpec', function() {
   it('Should create a workflow object', function(done) {

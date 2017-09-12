@@ -154,13 +154,5 @@ app.models.RnaiLibrarystock.getParentLibrary = function(FormData, barcode) {
   });
 };
 
-findInstrumentPlates = {};
+var findInstrumentPlates = {};
 exports.findInstrumentPlates = findInstrumentPlates;
-
-// customFindPlates()
-//   .then(function(results) {
-//     // console.log('we have found plates!' + JSON.stringify(results[0], null, 2));
-//   })
-//   .catch(function(error) {
-//     throw (error);
-//   });

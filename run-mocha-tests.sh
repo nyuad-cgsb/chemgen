@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 export NODE_ENV='TEST'
+export NODE_ENV='test'
 
 ## Ports
 export SERVER_PORT=3000
@@ -9,7 +10,10 @@ export CLIENT_TEST=9001
 
 export wpUrl="http://onyx.abudhabi.nyu.edu/wordpress"
 
-cd /home/jillian/Dropbox/projects/NY/chemgen/chemgen-loopback-new
+PROJECTDIR=/home/jillian/Dropbox/projects/NY/chemgen/chemgen-loopback-new
+RSYNC="rsync -avz  -e 'ssh -p 4410' $PROJECTDIR jdr400@onyx.abudhabi.nyu.edu:/home/jdr400/projects/chemgen/" 
+
+echo $RSYNC
 
 inotify-hookable \
     --watch-directories '.' \

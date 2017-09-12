@@ -4,8 +4,8 @@ const Promise = require('bluebird');
 const RnaiLibrarystock = app.models.RnaiLibrarystock;
 
 /**
-  * Secondary
-  **/
+* Secondary
+**/
 
 // Secondary screens are custom created based on a gene set of interest
 // They are handed over to me in an excel sheet, which I export to JSON and it gets saved in the 'screen' table.
@@ -22,7 +22,6 @@ RnaiLibrarystock.extract.Secondary.getParentLibrary = function(workflowData) {
         resolve(results);
       })
       .catch(function(error) {
-        console.log('error ' + JSON.stringify(error));
         reject(new Error(error));
       });
   });

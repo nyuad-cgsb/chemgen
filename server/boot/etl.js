@@ -4,6 +4,7 @@ module.exports = function(app, cb) {
   /*
    * These are just some general helpers for workflows - rows, columns, transforming object to find
    */
+   //TODO Move these someplace else - server should just be for routing
 
   app.etlWorkflow = {};
   app.etlWorkflow.helpers = {};

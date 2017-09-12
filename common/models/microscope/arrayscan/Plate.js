@@ -21,6 +21,7 @@ module.exports = function(Plate) {
   /**
    * Get a Chemical Library Plate by doing PlateStart, PlateEnd
    * TODO move this over to ChemicalLibrary
+   * TODO Name this getRange
    * For Chemical Library
    * @param  {[type]} plate [description]
    * @return {[type]}       [description]

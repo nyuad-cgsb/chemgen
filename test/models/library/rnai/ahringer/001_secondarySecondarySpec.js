@@ -15,8 +15,10 @@ const util = require('util');
 const diff = require('deep-diff')
   .diff;
 
+var workflow = require('../../../../../common/workflows/library/rnai/ahringer/secondary/lib/workflow.js');
 var workflowData = require('../../../../data/library/rnai/secondary/workflow.json');
 var rnaiLibraryData = require('../../../../data/library/rnai/secondary/rnailibrary.json');
+var plateData = require('../../../../data/library/rnai/secondary/2017-12-11_assay.json');
 
 describe('001_secondarySpec.test.js Library.rnai.ahringer Secondary Parsing', function() {
   it('Should tell us our primary exists', function() {
@@ -60,6 +62,16 @@ describe('001_secondarySpec.test.js Library.rnai.ahringer Secondary Parsing', fu
     // TODO Set up sandbox of parentLibrary well info
     before(function(done) {
       app.models.RnaiRnailibrary.create(rnaiLibraryData)
+        .then(function(results) {
+          done();
+        })
+        .catch(function(error) {
+          done(new Error(error));
+        });
+    });
+
+    before(function(done) {
+      app.models.Plate.create(plateData)
         .then(function(results) {
           done();
         })
@@ -113,4 +125,10 @@ describe('001_secondarySpec.test.js Library.rnai.ahringer Secondary Parsing', fu
         });
     });
   });
+
+  it('Should search for some plates!', function(done){
+    done();
+  });
+
+
 });
