@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+set -x -e
+
+mkdir -p {{{images.makeDir}}}
+mkdir -p /tmp/{{{random}}}
+
+cp -f "{{{images.vendorImage}}}" "{{{images.tmpImage}}}"
+
+/var/data/bftools/bfconvert -overwrite "{{{images.tmpImage}}}" "{{{images.convertImage}}}"
+convert -layers flatten -quality 100 "{{{images.convertImage}}}" "{{{images.convertBmp}}}"
+convert -auto-level "{{{images.convertImage}}}" "{{{images.autoLevelTiffImage}}}"
+convert -layers flatten -quality 100 "{{{images.autoLevelTiffImage}}}" "{{{images.autoLevelJpegImage}}}"
+
+{{#thumbSizes}}
+convert -quality 50 -thumbnail {{{.}}} "{{{images.autoLevelJpegImage}}}" "{{{images.baseImage}}}-autolevel-{{{.}}}.jpeg"
+{{/thumbSizes}}
+
+rm -rf /tmp/{{{random}}}

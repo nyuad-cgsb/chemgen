@@ -2,8 +2,10 @@
 
 //TODO
 // Quite a few of these are probably common across experiments
+const app = require('../../../../../server/server');
+const RnaiLibrarystock = app.models.RnaiLibrarystock;
 
-exports.buildControlbarcode = function(barcode) {
+RnaiLibrarystock.helpers.buildControlbarcode = function(barcode) {
   var controlB = 'L4440';
   if (barcode.match('E')) {
     controlB = controlB + 'E';
@@ -20,7 +22,7 @@ exports.buildControlbarcode = function(barcode) {
   return controlB;
 };
 
-exports.barcodeIsControl = function(barcode) {
+RnaiLibrarystock.helpers.barcodeIsControl = function(barcode) {
   var control = 'not_control';
   if (barcode.match('L4440')) {
     control = 'control';
@@ -34,7 +36,7 @@ exports.barcodeIsControl = function(barcode) {
  * @param  {object} barcode [Barcode from the arrayscan - RNAiI.1A1_E_D]
  * @return {string}         [{A,B},{1,2}]
  */
-exports.getQuad = function(barcode) {
+RnaiLibrarystock.helpers.getQuad = function(barcode) {
   var codes = {
     Q1: 'A1',
     Q2: 'A2',
@@ -57,7 +59,7 @@ exports.getQuad = function(barcode) {
   }
 };
 
-exports.getPlate = function(plateNo) {
+ RnaiLibrarystock.helpers.getPlate = function(plateNo) {
   if (!plateNo) {
     return '';
   }
@@ -75,7 +77,7 @@ exports.getPlate = function(plateNo) {
  * @return {[type]}         [Enhancer/Suppressor] <- NO MORE
  * @return {[type]}         [Permissive/Restrictive]
  */
-var parseCond = function(barcode) {
+RnaiLibrarystock.helpers.parseCond = function(barcode) {
   if (barcode.match('E')) {
     return 'Permissive';
   } else if (barcode.match('S')) {
@@ -85,14 +87,13 @@ var parseCond = function(barcode) {
   }
 };
 
-exports.parseCond = parseCond;
 
 /**
  * See if its a duplicate
  * @param  {[type]} barcode [Barcode from the arrayscan - RNAiI.1A1_E_D]
  * @return {[type]}         [True/False]
  */
-exports.isDuplicate = function(barcode) {
+RnaiLibrarystock.helpers.isDuplicate = function(barcode) {
   if (barcode.match('D')) {
     return 1;
   } else {
@@ -100,13 +101,13 @@ exports.isDuplicate = function(barcode) {
   }
 };
 
-exports.getTemp = function(barcode, FormData) {
+RnaiLibrarystock.helpers.getTemp = function(barcode, workflowData) {
   var cond = parseCond(barcode);
   var temp = 0;
   if (cond === 'Enhancer') {
-    return FormData.EnhancerTemp || 0;
+    return workflowData.EnhancerTemp || 0;
   } else if (cond === 'Suppress') {
-    return FormData.SuppressorTemp || 0;
+    return workflowData.SuppressorTemp || 0;
   } else {
     return 0;
   }
@@ -119,7 +120,7 @@ exports.getTemp = function(barcode, FormData) {
  * @param  {Object | Undefined} libraryResult [Library record for that well]
  * @return {Object}               [Create a library result if it doesn't exist]
  */
-exports.checkLibraryResult = function(libraryResult) {
+RnaiLibrarystock.helpers.checkLibraryResult = function(libraryResult) {
   if (!libraryResult) {
     libraryResult = {};
     libraryResult.name = 'ahringer_empty';
@@ -131,8 +132,7 @@ exports.checkLibraryResult = function(libraryResult) {
 /////////////////////////////////////
 //Worm Specific
 /////////////////////////////////////
-exports.worms = {};
-exports.worms.barcodeStrain = function(barcode) {
+RnaiLibrarystock.helpers.wormStrain = function(barcode) {
   var strain = 'N2';
   if (barcode.match('M') || barcode.match('mel')) {
     strain = 'M';

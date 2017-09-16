@@ -5,12 +5,12 @@
       "loopback/server/models",
       "../common/models",
       "../common/models/workflow",
-      "../common/models/library/rnai/Ahringer",
+      "../common/models/experiment/plate/defs",
+      "../common/models/experiment/assay/defs",
       "../common/models/library/rnai/Ahringer/defs",
-      "../common/models/library/rnai/Ahringer/load",
-      "../common/models/library/rnai/Ahringer/extract",
       "../common/models/library/reagents/defs",
       "../common/models/microscope/arrayscan",
+      "../common/models/wordpress/defs",
       "./models"
     ],
     "mixins": [
@@ -36,5 +36,26 @@
   },
   "ReagentsReagentlibrary": {
     "dataSource": "chemgenDS"
+  },
+  "ExperimentExperimentplate": {
+    "dataSource": "chemgenDS"
+  },
+  "ExperimentAssay": {
+    "dataSource": "chemgenDS"
+  },
+  "WpTermTaxonomy": {
+    "dataSource": "wordpressDS"
+  },
+  "WpTermRelationships": {
+    "dataSource": "wordpressDS"
+  },
+  "WpTerms": {
+    "dataSource": "wordpressDS"
+  },
+  "WpPosts": {
+    "dataSource": "wordpressDS"
+  },
+  "WpPostmeta": {
+    "dataSource": "wordpressDS"
   }
 }
