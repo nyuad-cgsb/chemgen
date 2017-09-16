@@ -24,6 +24,7 @@ describe('001_baseWorkflowSpec', function() {
       permissiveTemp: 30,
       restrictiveTemp: 30,
       instrumentId: 1,
+      isJunk: 0,
       screenName: '2017-12-11--PR',
       search: {},
       data: {},

@@ -1,0 +1,107 @@
+{
+  "name": "WpTermTaxonomy",
+  "options": {
+    "idInjection": false,
+    "mysql": {
+      "schema": "wordpress",
+      "table": "wp_term_taxonomy"
+    }
+  },
+  "properties": {
+    "termTaxonomyId": {
+      "type": "Number",
+      "id": 1,
+      "required": false,
+      "length": null,
+      "precision": 20,
+      "scale": 0,
+      "mysql": {
+        "columnName": "term_taxonomy_id",
+        "dataType": "bigint",
+        "dataLength": null,
+        "dataPrecision": 20,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "termId": {
+      "type": "Number",
+      "required": true,
+      "length": null,
+      "precision": 20,
+      "scale": 0,
+      "mysql": {
+        "columnName": "term_id",
+        "dataType": "bigint",
+        "dataLength": null,
+        "dataPrecision": 20,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "taxonomy": {
+      "type": "String",
+      "required": true,
+      "length": 32,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "taxonomy",
+        "dataType": "varchar",
+        "dataLength": 32,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "N"
+      }
+    },
+    "description": {
+      "type": "String",
+      "required": false,
+      "length": 4294967295,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "description",
+        "dataType": "longtext",
+        "dataLength": 4294967295,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "N"
+      }
+    },
+    "parent": {
+      "type": "Number",
+      "required": true,
+      "length": null,
+      "precision": 20,
+      "scale": 0,
+      "mysql": {
+        "columnName": "parent",
+        "dataType": "bigint",
+        "dataLength": null,
+        "dataPrecision": 20,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "count": {
+      "type": "Number",
+      "required": true,
+      "length": null,
+      "precision": 19,
+      "scale": 0,
+      "mysql": {
+        "columnName": "count",
+        "dataType": "bigint",
+        "dataLength": null,
+        "dataPrecision": 19,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

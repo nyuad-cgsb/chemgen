@@ -1,0 +1,167 @@
+{
+  "name": "ExperimentExperimentplate",
+  "options": {
+    "idInjection": false,
+    "mysql": {
+      "schema": "chemgen",
+      "table": "Experiment_ExperimentPlate"
+    }
+  },
+  "properties": {
+    "experimentPlateId": {
+      "type": "Number",
+      "id": 1,
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "experiment_plate_id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "barcode": {
+      "type": "String",
+      "required": true,
+      "length": 100,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "barcode",
+        "dataType": "varchar",
+        "dataLength": 100,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "N"
+      }
+    },
+    "instrumentId": {
+      "type": "Number",
+      "required": true,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "instrument_id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "instrumentPlateId": {
+      "type": "Number",
+      "required": true,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "instrument_plate_id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "screenId": {
+      "type": "Number",
+      "required": true,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "screen_id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "screenStage": {
+      "type": "String",
+      "required": true,
+      "length": 535,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "screen_stage",
+        "dataType": "varchar",
+        "dataLength": 535,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "N"
+      }
+    },
+    "date": {
+      "type": "Date",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "date",
+        "dataType": "timestamp",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "N"
+      }
+    },
+    "temperature": {
+      "type": "String",
+      "required": false,
+      "length": 535,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "temperature",
+        "dataType": "varchar",
+        "dataLength": 535,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "N"
+      }
+    },
+    "comment": {
+      "type": "String",
+      "required": false,
+      "length": 65535,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "comment",
+        "dataType": "text",
+        "dataLength": 65535,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      }
+    }
+  },
+  "wpPostId": {
+    "type": "Number",
+    "required": false,
+    "length": null,
+    "precision": 10,
+    "scale": 0,
+    "mysql": {
+      "columnName": "wp_post_id",
+      "dataType": "int",
+      "dataLength": null,
+      "dataPrecision": 10,
+      "dataScale": 0,
+      "nullable": "Y"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
