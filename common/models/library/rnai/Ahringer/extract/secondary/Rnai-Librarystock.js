@@ -1,11 +1,12 @@
 'use strict';
+
 const app = require('../../../../../../../server/server.js');
 const Promise = require('bluebird');
 const RnaiLibrarystock = app.models.RnaiLibrarystock;
 
 /**
-* Secondary
-**/
+ * Secondary
+ **/
 
 // Secondary screens are custom created based on a gene set of interest
 // They are handed over to me in an excel sheet, which I export to JSON and it gets saved in the 'screen' table.
@@ -45,8 +46,7 @@ var buildRnaiLibraryWhere = function(lookUp) {
     var quad = lookUp[2];
     well = lookUp[3];
     where = {
-      and: [
-        {
+      and: [{
           stocktitle: chrom + '-' + plateNo + '--' + quad,
         },
         {
@@ -71,7 +71,7 @@ var parseWell = function(workflowData, wellData) {
     var obj = {
       wellData: wellData,
     };
-      // If its a control just return right here
+    // If its a control just return right here
     if (wellData.splitLookUp[0].match('L4440')) {
       obj.geneName = 'L4440';
       obj.well = wellData.assayWell;
@@ -88,8 +88,8 @@ var parseWell = function(workflowData, wellData) {
         reject(new Error('Not able to find a corresponding library well!'));
       } else {
         app.models.RnaiRnailibrary.find({
-          where: where,
-        })
+            where: where,
+          })
           .then(function(tresults) {
             if (!tresults[0]) {
               resolve();
@@ -113,8 +113,8 @@ var parseWell = function(workflowData, wellData) {
 RnaiLibrarystock.extract.Secondary.parseRows = function(workflowData, lists) {
   return new Promise(function(resolve, reject) {
     Promise.map(lists, function(wellData) {
-      return parseWell(workflowData, wellData);
-    })
+        return parseWell(workflowData, wellData);
+      })
       .then(function(results) {
         resolve(results);
       })
@@ -151,5 +151,82 @@ RnaiLibrarystock.extract.Secondary.parseCustomPlate = function(workflowData) {
 
   return new Promise(function(resolve) {
     resolve(list);
+  });
+};
+
+// TODO split this into separate function
+RnaiLibrarystock.extract.parseLibraryResults = function(workflowData, plateInfo, libraryResults) {
+  // rnailibraryId
+  return new Promise(function(resolve, reject) {
+    var allWells = workflowData.wells;
+    var barcode = plateInfo.ExperimentExperimentplate.barcode;
+    var strain = RnaiLibrarystock.helpers.wormStrain(barcode);
+    var control = RnaiLibrarystock.helpers.barcodeIsControl(barcode);
+    var condition = RnaiLibrarystock.helpers
+      .parseCond(plateInfo.ExperimentExperimentplate.barcode);
+
+    Promise.map(allWells, function(well) {
+        // TODO FIX THIS
+        var libraryResult = RnaiLibrarystock.genLibraryResult(barcode, libraryResults, well);
+        var createStock = {
+          plateId: plateInfo.ExperimentExperimentplate.experimentPlateId,
+          parentstockId: libraryResult.rnailibraryId,
+          librarystockName: barcode,
+          well: well,
+          taxTerms: [{
+              taxonomy: 'image_date',
+              taxTerm: plateInfo.ExperimentExperimentplate.plateStartTime,
+            }, {
+              taxonomy: 'wb_sequence_id',
+              taxTerm: libraryResult.geneName,
+            }, {
+              taxonomy: 'condition',
+              taxTerm: condition,
+            },
+            {
+              taxonomy: 'envira-tag',
+              taxTerm: [workflowData.screenName, '_', condition,
+                '_', strain, '_', libraryResult.geneName
+              ].join(''),
+            },
+            {
+              taxonomy: 'envira-tag',
+              taxTerm: workflowData.screenName + '_' + barcode,
+            },
+            {
+              taxonomy: 'envira-tag',
+              taxTerm: [workflowData.screenName, '_', barcode, '_', condition,
+                '_', strain, '_', libraryResult.geneName
+              ].join(''),
+            },
+            {
+              taxonomy: 'envira-tag',
+              taxTerm: [workflowData.screenName, '_', condition,
+                '_', strain, '_', well
+              ].join(''),
+            },
+          ],
+          taxTerm: libraryResult.geneName,
+          geneName: libraryResult.geneName,
+          metaLibrarystock: JSON.stringify({
+            library: 'ahringer',
+          }),
+        };
+
+        var data = {
+          libraryStock: createStock,
+          libraryParent: libraryResult,
+        };
+
+        return data;
+      }, {
+        concurrency: 1,
+      })
+      .then(function(results) {
+        resolve(results);
+      })
+      .catch(function(error) {
+        reject(new Error(error));
+      });
   });
 };

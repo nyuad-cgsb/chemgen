@@ -1,0 +1,23 @@
+{{#hasGene}}
+  <h3>Gene {{{geneName}}}</h3>
+  <div id="enviraEM">
+    <h5>Enhancer Mutant</h5>
+    <p>
+      [envira-gallery-dynamic id="tags-{{enviraEMTag}}" columns="{{enviraEMCol}}"] </p>
+  </div>
+  <div id="enviraEN">
+    <h5>Enhancer N2</h5>
+    <p>
+      [envira-gallery-dynamic id="tags-{{enviraENTag}}" columns="{{enviraEMCol}}"]</p>
+  </div>
+  <div id="enviraSM">
+    <h5>Suppressor Mutant</h5>
+    <p>
+      [envira-gallery-dynamic id="tags-{{enviraSMTag}}" columns="{{enviraSMCol}}"] </p>
+  </div>
+  <div id="enviraSN">
+    <h5>Suppressor N2</h5>
+    <p>
+      [envira-gallery-dynamic id="tags-{{enviraSNTag}}" columns="{{enviraSNCol}}"] </p>
+  </div>
+{{/hasGene}}
