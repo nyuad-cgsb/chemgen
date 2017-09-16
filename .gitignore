@@ -18,3 +18,4 @@ coverage
 node_modules
 npm-debug.log
 dev.sh
+dev_envs.sh

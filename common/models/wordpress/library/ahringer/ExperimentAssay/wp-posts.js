@@ -29,7 +29,7 @@ WpPosts.library.ahringer.load.assay.workflows.processExperimentPlates = function
 WpPosts.library.ahringer.load.assay.processExperimentPlate = function(workflowData, plateData) {
   return new Promise(function(resolve, reject) {
     Promise.map(plateData.experimentAssayList, function(experimentData) {
-        return WpPosts.library.ahringer.load.assay.workflow.processPost(workflowData, plateData.plateInfo, experimentData);
+        return WpPosts.library.ahringer.load.assay.workflows.processPost(workflowData, plateData.plateInfo, experimentData);
       })
       .then(function(results) {
         resolve(results);
@@ -41,7 +41,7 @@ WpPosts.library.ahringer.load.assay.processExperimentPlate = function(workflowDa
   })
 };
 
-WpPosts.library.ahringer.load.assay.workflow.processPost = function(workflowData, plateInfo, experimentData) {
+WpPosts.library.ahringer.load.assay.workflows.processPost = function(workflowData, plateInfo, experimentData) {
   var taxTerms = experimentData.libraryData.libraryStock.taxTerms;
   var title = experimentData.experimentAssayData.assayId + '-' + experimentData.experimentAssayData.assayName;
   var titleSlug = slug(title);
