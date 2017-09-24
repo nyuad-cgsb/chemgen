@@ -9,12 +9,14 @@ const Mustache = require('mustache');
 const readFile = Promise.promisify(require('fs').readFile);
 const path = require('path');
 
+//TODO Most of these are general and do not belong under the library.ahringer tag
+
 WpPosts.library.ahringer.load.assay.workflows.processExperimentPlates = function(workflowData, plateDataList) {
   return new Promise(function(resolve, reject) {
     Promise.map(plateDataList, function(plateData) {
         return WpPosts.library.ahringer.load.assay.processExperimentPlate(workflowData, plateData);
       }, {
-        concurrency: 1
+        concurrency: 1,
       })
       .then(function(results) {
         resolve(results[0]);
@@ -38,7 +40,7 @@ WpPosts.library.ahringer.load.assay.processExperimentPlate = function(workflowDa
         app.winston.error(error.stack);
         reject(new Error(error));
       });
-  })
+  });
 };
 
 WpPosts.library.ahringer.load.assay.workflows.processPost = function(workflowData, plateInfo, experimentData) {
@@ -75,14 +77,20 @@ WpPosts.library.ahringer.load.assay.workflows.processPost = function(workflowDat
       .then(function(results) {
         var result = results[0];
         var postData = {
-          id: results[0].id,
-          guid: results[0].guid,
-          postTitle: results[0].postTitle,
-          imagePath: experimentData.experimentAssayData.platePath
+          id: results[0]['id'],
+          guid: results[0]['guid'],
+          postTitle: results[0]['postTitle'],
+          imagePath: experimentData.experimentAssayData.platePath,
         };
-        //Do the downstream processing here
-        //Each post should be associated to 1 or more taxonomy terms
+        // Do the downstream processing here
+        // Each post should be associated to 1 or more taxonomy terms
+        // app.winston.info(JSON.stringify(taxTerms));
         return app.models.WpTerms.load.workflows.createTerms(postData, taxTerms);
+      })
+      .then(function(results) {
+        // experimentData.assayPostData = results;
+        // resolve(experimentData);
+        return WpPosts.load.assay.workflows.genImagePost(workflowData, results, taxTerms);
       })
       .then(function(results) {
         experimentData.assayPostData = results;
@@ -93,68 +101,39 @@ WpPosts.library.ahringer.load.assay.workflows.processPost = function(workflowDat
         reject(new Error(error));
       });
   });
-
 };
 
+//TODO Make this more general
+//The only thing that is different is the geneName
+//Everything else is mel28/N2 Permissive/Restrictive
+//And possibly how to parse the condition
 WpPosts.library.ahringer.load.assay.genPostContent = function(workflowData, plateData, experimentData, taxTerms) {
   var barcode = plateData.ExperimentExperimentplate.barcode;
   var plateId = plateData.ExperimentExperimentplate.experimentPlateId;
   var libraryData = experimentData.libraryData;
+  var condition = app.models.RnaiLibrarystock.helpers.parseCond(barcode);
 
   var screenName = workflowData.screenName;
   var geneName = libraryData.libraryStock.geneName;
 
   var contentObj = {};
+  contentObj.plateId = plateId;
+  contentObj.condition = condition;
   contentObj.plateUrl = [WpPosts.wpUrl, '/plate/', slug(plateId + '-' + barcode)].join('');
   contentObj.barcode = plateData.ExperimentExperimentplate.barcode;
 
-  //TODO This should be part of the template
+  // TODO This should be part of the template
   contentObj.table = WpPosts.load.genTermTable(taxTerms);
 
+  contentObj.libraryParent = libraryData.libraryParent;
   contentObj.screenName = workflowData.screenName;
   contentObj.screenNameSlug = slug(workflowData.screenName);
   contentObj.geneName = libraryData.libraryStock.geneName;
   contentObj.geneNameSlug = slug(libraryData.libraryStock.geneName);
 
-  //This one is different if it is a custom screen
-  contentObj.enviraCTag = [slug(workflowData.screenName),
-    '_',
-    slug(app.models.RnaiLibrarystock.helpers.buildControlbarcode(barcode))
-  ].join('');
-  contentObj.enviraCCol = 2;
-  contentObj.enviraEMTag = [contentObj.screenNameSlug,
-    slug('_Enhancer_M_'),
-    contentObj.geneNameSlug,
-  ].join('');
-  contentObj.enviraEMCol = 4;
-  contentObj.enviraENTag = [contentObj.screenNameSlug,
-    slug('_Enhancer_N2_'),
-    contentObj.geneNameSlug
-  ].join('');
-  contentObj.enviraENCol = 4;
-  contentObj.enviraSMTag = [contentObj.screenNameSlug,
-    slug('_Restrictive_M_'),
-    contentObj.geneNameSlug
-  ].join('');
-  contentObj.enviraSMCol = 4;
-  contentObj.enviraSNTag = [contentObj.screenNameSlug,
-    slug('_Restrictive_N2_'),
-    contentObj.geneNameSlug
-  ].join('');
-  contentObj.enviraSNCol = 4;
+  contentObj = WpPosts.library.ahringer.load.assay.genEnviraContent(contentObj);
+  contentObj = WpPosts.library.ahringer.load.assay.genEnviraControl(workflowData, contentObj);
 
-  //List all the other Images
-  if (contentObj.geneName.match('empty')) {
-    contentObj.hasGene = false;
-  } else {
-    contentObj.hasGene = true;
-  }
-
-  // Put this back
-  // if (barcode.match('L4440')) {
-  //   enviraGallery = buildEnviraControlGallery(workflowData.screenName, barcode);
-  //   postTable = '';
-  // }
   return new Promise(function(resolve, reject) {
     var templateFile = path.join(path.dirname(__filename), 'templates/assayPost.mustache');
     readFile(templateFile, 'utf8')
@@ -169,22 +148,55 @@ WpPosts.library.ahringer.load.assay.genPostContent = function(workflowData, plat
   });
 };
 
+WpPosts.library.ahringer.load.assay.genEnviraControl = function(workflowData, contentObj) {
+  contentObj.enviraCTCol = 6;
+  if (workflowData.screenStage === 'Secondary') {
+    contentObj.enviraCTTag = [contentObj.screenNameSlug,
+      '_ID_', contentObj.plateId, '_',
+      contentObj.geneNameSlug,
+    ].join('');
+  } else {
+    //TODO Check and see if there is one per worm strain and condition, or just condition
+    //TODO Not sure if this one will work
+    contentObj.enviraCTTag = [contentObj.screenNameSlug,
+      '_', contentObj.condition, '_',
+      contentObj.geneNameSlug,
+    ].join('');
+  }
 
-// var preProcessKue = function(data) {
-//   var postData = genAssayPostContent(data);
-//   var taxTerms = postData.taxTerms;
-//
-//   var postMeta = {
-//     postContent: postData.postContent,
-//     wpUrl: postData.wpUrl,
-//     wpUI: data.workflowData.wpUI || 1,
-//   };
-//   var postObj = genAssayPostMeta(data, postMeta);
-//
-//   taxTerms.push({
-//     taxonomy: 'envira-tag',
-//     taxTerm: postObj.postTitle,
-//   });
-//
-//   return [postObj, postMeta, taxTerms];
-// };
+  return contentObj;
+};
+
+WpPosts.library.ahringer.load.assay.genEnviraContent = function(contentObj) {
+  contentObj.enviraCCol = 2;
+  contentObj.enviraEMTag = [contentObj.screenNameSlug,
+    slug('_Permissive_M_'),
+    contentObj.geneNameSlug,
+  ].join('');
+  contentObj.enviraEMCol = 4;
+  contentObj.enviraENTag = [contentObj.screenNameSlug,
+    slug('_Permissive_N2_'),
+    contentObj.geneNameSlug,
+  ].join('');
+  contentObj.enviraENCol = 4;
+  contentObj.enviraSMTag = [contentObj.screenNameSlug,
+    slug('_Restrictive_M_'),
+    contentObj.geneNameSlug,
+  ].join('');
+  contentObj.enviraSMCol = 4;
+  contentObj.enviraSNTag = [contentObj.screenNameSlug,
+    slug('_Restrictive_N2_'),
+    contentObj.geneNameSlug,
+  ].join('');
+  contentObj.enviraSNCol = 4;
+
+  if (contentObj.geneName.match('empty')) {
+    contentObj.hasGene = false;
+  } else if (contentObj.geneName.match('L4440')) {
+    contentObj.hasGene = false;
+  } else {
+    contentObj.hasGene = true;
+  }
+
+  return contentObj;
+};

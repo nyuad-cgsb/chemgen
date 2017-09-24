@@ -1,47 +1,115 @@
-<div class="container">
+<div class="">
+
   <div class="row">
-      <div class="col-md-12">
+    <div class="col-md-6">
+      <div id="screenInfo">
+        <h2>Screen Information</h2>
+        <h3>Plate View</h3>
+        <p> Screen {{{screenName}}} Gene {{{geneName}}}</p>
+        <a href="{{{plateUrl}}}">{{barcode}}</a>
       </div>
-      <h2>Screen Information</h2>
-      <section id="screenInfo">
-          <h3>Plate View</h3>
-          <p> Screen {{{screenName}}} Gene {{{geneName}}}</p>
-          <a href="{{{plateUrl}}}">{{barcode}}</a>
+      <div id="libraryInfo">
+        {{#libraryParent.rnailibraryId}}
+          <h3> Parent Library Info </h3>
           <table class="table responsive">
-              <thead>
-                  <tr>
-                      <th>Tag</th>
-                      <th>Value</th>
-                  </tr>
-              </thead>
-              <tbody>
-                  {{{table}}}
-              </tbody>
+            <tbody>
+              <tr>
+                <td>BioLoc</td>
+                <td>{{libraryParent.bioloc}}</td>
+              </tr>
+              <tr>
+                <td>Fwd Primer</td>
+                <td>{{libraryParent.fwdPrimer}}</td>
+              </tr>
+              <tr>
+                <td>Reverse Primer</td>
+                <td>{{libraryParent.revPrimer}}</td>
+              </tr>
+              <tr>
+                <td>Stock Title</td>
+                <td>{{libraryParent.stocktitle}}</td>
+              </tr>
+              <tr>
+                <td>Stock Location</td>
+                <td>{{libraryParent.stockloc}}</td>
+              </tr>
+            </tbody>
           </table>
-      </section>
-      <section id="screenGeneGallery">
-          <div>
-              {{#hasGene}}
-              <div id="enviraC">
-                  <h5>Control</h5>
-                  <p>
-                      [envira-gallery-dynamic id="tags-{{enviraCTag}}" columns="{{enviraCCol}}"]</p>
-              </div>
-              {{/hasGene}}
-              ${enviraTemplate}
-          </div>
-      </section>
-      <section id="relatedAssay">
-          <div class="">
-          </div>
-          <div class="" id="wbassay">
-              [posts_table columns="image,title,tax:condition:Condition,tax:worm_strain:Strain" post_type="assay" term="wb_sequence_id:{{{geneNameSlug}}}+screen_name:{{{screenNameSlug}}}" lazy_load="true" links="title,image" image_size="medium" &nbsp;widths="50,20,20,10"
-              filters="tax:worm_strain,tax:condition"]
-          </div>
-      </section>
-      <section id="wbxref">
-          <p>
-              [posts_table columns="title,tax:wb_cosmid_id,tax:wb_sequence_id" post_type="wb_fn_desc" term="wb_sequence_id:{{geneNameSlug}}" lazy_load="true" links="title"]</p>
-      </section>
+        {{/libraryParent.rnailibraryId}}
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div id="taxTerms">
+        <table class="table responsive">
+          <thead>
+            <tr>
+              <th>Tag</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{{table}}}
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <section id="screenGeneGallery">
+        <div>
+          {{#hasGene}}
+            <h2>Gene {{{geneName}}}</h2>
+            <div id="enviraEM">
+              <h3>Permissive Mutant</h3>
+              <p>
+                [envira-gallery-dynamic id="tags-{{enviraEMTag}}" columns="{{enviraEMCol}}"] </p>
+            </div>
+            <div id="enviraEN">
+              <h3>Permissive N2</h3>
+              <p>
+                [envira-gallery-dynamic id="tags-{{enviraENTag}}" columns="{{enviraEMCol}}"]</p>
+            </div>
+            <div id="enviraSM">
+              <h3>Restrictive Mutant</h3>
+              <p>
+                [envira-gallery-dynamic id="tags-{{enviraSMTag}}" columns="{{enviraSMCol}}"] </p>
+            </div>
+            <div id="enviraSN">
+              <h3>Restrictive N2</h3>
+              <p>
+                [envira-gallery-dynamic id="tags-{{enviraSNTag}}" columns="{{enviraSNCol}}"] </p>
+            </div>
+          {{/hasGene}}
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <section id="ControlGallery">
+        <div id="enviraCT">
+          <h3>Control</h3>
+          <p>
+            [envira-gallery-dynamic id="tags-{{enviraCTTag}}" columns="{{enviraCTCol}}"] </p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <section id="relatedAssay">
+        <div class="">
+        </div>
+        <div class="" id="wbassay">
+          [posts_table columns="image,title,tax:condition:Condition,tax:worm_strain:Strain" post_type="assay" term="wb_gene_sequence_id:{{{geneNameSlug}}}+screen_name:{{{screenNameSlug}}}" lazy_load="true" links="title,image" image_size="medium" widths="50,20,20,10"
+          filters="tax:worm_strain,tax:condition" rows_per_page="5"]
+        </div>
+      </section>
+    </div>
+  </div>
+
 </div>

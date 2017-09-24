@@ -13,11 +13,13 @@ WpTermTaxonomy.load.workflows.processTaxTerms = function(postData, taxTermList) 
   return new Promise(function(resolve, reject) {
     Promise.map(taxTermList, function(taxTerm) {
         return WpTermTaxonomy.load.processTaxTerm(postData.id, taxTerm);
+      }, {
+        concurrency: 1
       })
       .then(function(results) {
         return app.models.WpTermRelationships.load.workflows.createRels(postData, results);
       })
-      .then(function(results){
+      .then(function(results) {
         resolve(results);
       })
       .catch(function(error) {
@@ -31,15 +33,15 @@ At some point we should have some sort of cron job that does an actual count
 For now we just throw it in there as 1
 **/
 WpTermTaxonomy.load.processTaxTerm = function(postId, taxTerm) {
-  var createTermTaxonomyObj = {
-    termId: taxTerm.termId,
-    term: taxTerm.term,
-    taxonomy: taxTerm.taxonomy,
-    description: '',
-    parent: 0,
-    count: 1,
-  };
   return new Promise(function(resolve, reject) {
+    var createTermTaxonomyObj = {
+      termId: taxTerm.termId,
+      term: taxTerm.term,
+      taxonomy: taxTerm.taxonomy,
+      description: '',
+      parent: 0,
+      count: 1,
+    };
     WpTermTaxonomy
       .findOrCreate({
         where: {
@@ -54,26 +56,42 @@ WpTermTaxonomy.load.processTaxTerm = function(postId, taxTerm) {
       }, createTermTaxonomyObj)
       .then(function(results) {
         resolve({
-          term: results[0].term,
-          termId: results[0].termId,
+          term: taxTerm.term,
+          termId: taxTerm.termId,
           postId: postId,
           termTaxonomyId: results[0].termTaxonomyId,
         });
       })
       .catch(function(error) {
-        if (!error.hasOwnProperty('code')) {
+        if (error.message.match('Duplicate') || error.message.match('duplicate')) {
+          WpTermTaxonomy
+            .findOne({
+              where: app.etlWorkflow.helpers.findOrCreateObj(createTermTaxonomyObj),
+            })
+            .then(function(results) {
+              resolve({
+                term: results.term,
+                termId: results.termId,
+                postId: postId,
+                termTaxonomyId: results.termTaxonomyId,
+              });
+            })
+            .catch(function(error) {
+              reject(new Error(error));
+            });
+        } else if (!error.hasOwnProperty('code')) {
           reject(new Error(error));
         } else if (error.code.match('ER_DUP_ENTRY')) {
           WpTermTaxonomy
             .findOne({
-              where: helpers.findOrCreateObj(createTermTaxonomyObj),
+              where: app.etlWorkflow.helpers.findOrCreateObj(createTermTaxonomyObj),
             })
             .then(function(results) {
               resolve({
-                term: results[0].term,
-                termId: results[0].termId,
+                term: results.term,
+                termId: results.termId,
                 postId: postId,
-                termTaxonomyId: results[0].termTaxonomyId,
+                termTaxonomyId: results.termTaxonomyId,
               });
             })
             .catch(function(error) {
@@ -83,6 +101,5 @@ WpTermTaxonomy.load.processTaxTerm = function(postId, taxTerm) {
           reject(new Error(error));
         }
       });
-
   });
 };

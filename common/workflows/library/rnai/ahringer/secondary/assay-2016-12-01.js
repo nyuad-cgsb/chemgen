@@ -22,7 +22,7 @@ const path = require('path');
 /// ////////////////////////////////
 var file = path.resolve(__dirname) + '/data/assay_2016-12-11.json';
 var assayDate = '2016-12-11';
-var screenName = 'AHR2-2016-12-11--PR';
+var screenName = 'AHR2-2016-12-11--Sec';
 var like = 'rnai%';
 var loopUpIndex = 0;
 var commentIndex = 1;
@@ -52,7 +52,7 @@ var wells = [
 // The condition needs to be set throughout the workflow
 // The arrayscan search denotes the search function we use to get plates
 var workflowData = {
-  tasks: ['task1', 'task2', 'task3'],
+  // tasks: ['task1', 'task2', 'task3'],
   library: 'ahringer',
   libraryModel: 'RnaiLibrary',
   libraryStockModel: 'RnaiLibrarystock',
@@ -97,46 +97,20 @@ var workflowData = {
   screenId: 1,
 };
 
-var addWorkflowData = function(file) {
-  return new Promise(function(resolve, reject) {
-    // This reads in the data supplied by Rawan about the wells
-    readFile(file, 'utf8')
-      .then(function(contents) {
-        workflowData.data.library = {};
-        workflowData.data.library.wellData = JSON.parse(contents);
-        return app.models.Workflow.create(workflowData);
-      })
-      .then(function(results){
-        resolve(results);
-      })
-      .catch(function(error) {
-        reject(new Error(error));
-      });
-  });
-};
-
 //TODO Break this up - make sure we are working from the actual model
 //We should also only process one plate at a time - otherwise we will fill up
 //the memory
-
-addWorkflowData(file)
+app.models.Workflow.library.ahringer.secondary.create(workflowData, file)
   .then(function(workflowData) {
     return app.models.Plate.search(workflowData.search.instrument.arrayscan);
   })
   .then(function(platesList) {
     //TODO break here
-    var plate = [platesList[0]];
-    return app.models.ExperimentExperimentplate.load.workflows.processVendorPlates(workflowData, plate);
-  })
-  .then(function(plateInfoList) {
-    return app.models.RnaiLibrarystock.load.workflows.processExperimentPlates(workflowData, plateInfoList);
+    // var plate = [platesList[0]];
+    return app.models.Workflow.library.ahringer.mapPlates(workflowData, platesList);
   })
   .then(function(results) {
-    //This completes the usual database operations - now onto the wordpress portion
-    return app.models.ExperimentAssay.load.workflows.processExperimentPlates(workflowData, results);
-  })
-  .then(function(results){
-    app.winston.info('results are ' + JSON.stringify(results));
+    app.winston.info('finished');
   })
   .catch(function(error) {
     app.winston.error(error.stack);

@@ -104,9 +104,9 @@ RnaiLibrarystock.helpers.isDuplicate = function(barcode) {
 RnaiLibrarystock.helpers.getTemp = function(barcode, workflowData) {
   var cond = parseCond(barcode);
   var temp = 0;
-  if (cond === 'Enhancer') {
+  if (cond === 'Permissive') {
     return workflowData.EnhancerTemp || 0;
-  } else if (cond === 'Suppress') {
+  } else if (cond === 'Restrictive') {
     return workflowData.SuppressorTemp || 0;
   } else {
     return 0;

@@ -52,8 +52,8 @@ WpPosts.library.ahringer.load.plate.processPost = function(workflowData, plateDa
 
   var enviraGallery = [
     '[envira-gallery-dynamic id="tags-',
-    slug(workflowData.screenName + '--' + barcode),
-    '"]'
+    slug(workflowData.screenName + '_' + barcode),
+    '" columns="6"]'
   ].join('');
 
   postContent = postContent + enviraGallery;
@@ -77,6 +77,7 @@ WpPosts.library.ahringer.load.plate.processPost = function(workflowData, plateDa
   postObjWithDate.postDate = dateNow;
   postObjWithDate.postDateGmt = dateNow;
 
+
   return new Promise(function(resolve, reject) {
     WpPosts
       .findOrCreate({
@@ -84,9 +85,11 @@ WpPosts.library.ahringer.load.plate.processPost = function(workflowData, plateDa
       }, postObjWithDate)
       .then(function(results) {
         var result = results[0];
-        var postData = {id: results[0].id, guid: results[0].guid, postTitle: results[0].postTitle};
+        var postData = {id: results[0]['id'], guid: results[0]['guid'], postTitle: results[0]['postTitle']};
         //Do the downstream processing here
         //Each post should be associated to 1 or more taxonomy terms
+        // app.winston.info(JSON.stringify(results));
+        // app.winston.info(JSON.stringify(postData));
         return app.models.WpTerms.load.workflows.createTerms(postData, createTermObjs);
       })
       .then(function(results){

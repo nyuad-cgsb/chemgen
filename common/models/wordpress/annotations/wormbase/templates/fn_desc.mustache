@@ -1,0 +1,109 @@
+<div id="summary">
+  <h3>Summary</h3>
+  <table class="table responsive">
+    <tbody>
+      {{#data.gene_id}}
+        <tr>
+          <td>Gene ID</td>
+          <td>
+            <a href="http://www.wormbase.org/species/c_elegans/gene/{{{data.gene_id}}}">Wormbase {{{data.gene_id}}}</a>
+          </td>
+        </tr>
+      {{/data.gene_id}}
+      {{#data.public_name}}
+        <tr>
+          <td>Public Name</td>
+          <td>
+            {{{data.public_name}}}
+          </td>
+        </tr>
+      {{/data.public_name}}
+      {{#data.molecular_name}}
+        <tr>
+          <td>Molecular Name</td>
+          <td>
+            {{{data.molecular_name}}}
+          </td>
+        </tr>
+      {{/data.molecular_name}}
+      {{#data.automated_description}}
+        <tr>
+          <td>Automated Description</td>
+          <td>
+            {{{data.automated_description}}}
+          </td>
+        </tr>
+      {{/data.automated_description}}
+      {{#data.gene_class_description}}
+        <tr>
+          <td>Gene Class Description</td>
+          <td>
+            {{{data.gene_class_description}}}
+          </td>
+        </tr>
+      {{/data.gene_class_description}}
+      {{#data.concise_description}}
+        <tr>
+          <td>Concise Description</td>
+          <td>
+            {{{data.concise_description}}}
+          </td>
+        </tr>
+      {{/data.concise_description}}
+      {{#data.provisional_description}}
+        <tr>
+          <td>Provisional Description</td>
+          <td>
+            {{{data.provisional_description}}}
+          </td>
+        </tr>
+      {{/data.provisional_description}}
+      {{#data.detailed_description}}
+        <tr>
+          <td>Detailed Description</td>
+          <td>
+            {{{data.detailed_description}}}
+          </td>
+        </tr>
+      {{/data.detailed_description}}
+    </tbody>
+  </table>
+</div>
+
+<br>
+<hr>
+<br>
+
+<div id="proteins">
+  <h3>Transcripts and Proteins</h3>
+  <table class="table responsive">
+    <tbody>
+      <tr>
+        <th>Proteins</th>
+        <th>Transcripts</th>
+      </tr>
+      {{#proteinList}}
+        {{#transcript}}
+          <td>
+            {{{transcript}}}
+          </td>
+          </tr>
+        {{/transcript}}
+        {{#protein}}
+          <tr>
+            <td>
+              {{{protein}}}
+            </td>
+        {{/protein}}
+      {{/proteinList}}
+    </tbody>
+  </table>
+</div>
+
+<br>
+<hr>
+<br>
+
+<div id="wormbase_iframe">
+  [iframe src="http://www.wormbase.org/species/c_elegans/gene/{{{data.gene_id}}}" width="100%" height="500"]
+</div>

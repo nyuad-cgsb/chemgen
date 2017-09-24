@@ -1,0 +1,98 @@
+<h2>XRefs</h2><br>These are cross references to other databases<br>
+
+<table class="table responsive">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Url</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#contentData.wbGeneSequenceId}}
+    <tr>
+      <td>Sequence ID</td>
+      <td>
+        {{{contentData.wbGeneSequenceId}}}
+      </td>
+    </tr>
+    {{/contentData.wbGeneSequenceId}}
+    {{#contentData.wbGeneAccession}}
+    <tr>
+      <td>WormBase Gene Accession</td>
+      <td>
+        <a href="http://www.wormbase.org/species/c_elegans/gene/{{{contentData.wbGeneAccession}}}">
+          {{{contentData.wbGeneAccession}}}
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>GeneID - Internal</td>
+      <td>
+        <a href="{{{wpUrl}}}/wb-fn-desc/{{{contentData.wbGeneAccession}}}">
+          {{{contentData.wbGeneAccession}}}
+        </a>
+      </td>
+    </tr>
+    {{/contentData.wbGeneAccession}}
+    {{#contentData.wbGeneCgcName}}
+    <tr>
+      <td>WormBase CGC Name</td>
+      <td>
+        {{{contentData.wbGeneCgcName}}}
+      </td>
+    </tr>
+    {{/contentData.wbGeneCgcName}}
+    {{#contentData.wbTranscript}}
+    <tr>
+      <td>WormBase Transcript</td>
+      <td>
+        <a href="http://www.wormbase.org/species/c_elegans/transcript/{{{contentData.wbTranscript}}}">
+          {{{contentData.wbTranscript}}}
+        </a>
+      </td>
+    </tr>
+    {{/contentData.wbTranscript}}
+    {{#contentData.wbProteinAccession}}
+    <tr>
+      <td>WormBase Protein Accession</td>
+      <td>
+        <a href="http://www.wormbase.org/species/c_elegans/protein/WP:{{{contentData.wbProteinAccession}}}">
+          {{{contentData.wbProteinAccession}}}
+        </a>
+      </td>
+    </tr>
+    {{/contentData.wbProteinAccession}}
+    {{#contentData.insdcParentSeq}}
+    <tr>
+      <td>INSDC Parent Sequence</td>
+      <td>
+        {{{contentData.insdcParentSeq}}}
+      </td>
+    </tr>
+    {{/contentData.insdcParentSeq}}
+    {{#contentData.insdcLocusTag}}
+    <tr>
+      <td>INSDC Locus Tag ID</td>
+      <td>
+        {{{contentData.insdcLocusTag}}}
+      </td>
+    </tr>
+    {{/contentData.insdcLocusTag}}
+    {{#contentData.insdcProteinId}}
+    <tr>
+      <td>INSDC Protein ID</td>
+      <td>
+        {{{contentData.insdcProteinId}}}
+      </td>
+    </tr>
+    {{/contentData.insdcProteinId}}
+    {{#contentData.uniprotAccession}}
+    <tr>
+      <td>UniProt accession</td>
+      <td>
+        {{{contentData.uniprotAccession}}}
+      </td>
+    </tr>
+    {{/contentData.uniprotAccession}}
+  </tbody>
+</table>
