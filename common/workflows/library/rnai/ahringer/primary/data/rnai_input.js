@@ -142,8 +142,8 @@ var decideData = function(data) {
           assayDate: assayDate,
           imageDates: data.imageDates,
           screenStage: 'Primary',
-          permissiveTemp: data['Enhancer temp'],
-          restrictiveTemp: data['Suppressor temp'],
+          permissiveTemp: data['Enhancer temp'] || 17.5,
+          restrictiveTemp: data['Suppressor temp'] || 23.3,
           instrumentId: 1,
           screenId: 1,
           search: {

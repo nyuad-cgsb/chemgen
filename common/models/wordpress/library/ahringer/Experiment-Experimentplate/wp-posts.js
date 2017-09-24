@@ -52,7 +52,7 @@ WpPosts.library.ahringer.load.plate.processPost = function(workflowData, plateDa
 
   var enviraGallery = [
     '[envira-gallery-dynamic id="tags-',
-    slug(workflowData.screenName + '_' + barcode),
+    slug(workflowData.screenName + '_ID_' + plateId + '_' + barcode),
     '" columns="6"]'
   ].join('');
 
@@ -103,6 +103,7 @@ WpPosts.library.ahringer.load.plate.processPost = function(workflowData, plateDa
   });
 };
 
+//TODO Move this to terms
 WpPosts.library.ahringer.load.createTags = function(workflowData, tags, plateInfo) {
   var barcode = plateInfo.ExperimentExperimentplate.barcode;
   var shortBarcode = barcode.replace('_D', '');

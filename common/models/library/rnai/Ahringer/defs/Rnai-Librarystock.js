@@ -21,6 +21,7 @@ module.exports = function(RnaiLibrarystock) {
 
   RnaiLibrarystock.on('attached', function(obj) {
     require('../extract/secondary/Rnai-Librarystock.js');
+    require('../extract/primary/Rnai-Librarystock.js');
     require('../load/Rnai-Librarystock.js');
     require('../extract/Rnai-Librarystock.js');
     require('../helpers.js');

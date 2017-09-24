@@ -27,16 +27,17 @@ RnaiLibrarystock.extract.Primary.getParentLibrary = function(workflowData, barco
 
 RnaiLibrarystock.extract.Primary.getLibraryInfo = function(workflowData, barcode) {
   var quadrant = RnaiLibrarystock.helpers.getQuad(barcode);
-  var plate = RnaiLibrarystock.helpers.getPlate(workflowData.RnaiPlateNo);
-  var chrom = workflowData.chrom;
+  var plate = RnaiLibrarystock.helpers.getPlate(workflowData.search.library.rnai.ahringer.RnaiPlateNo);
+  var chrom = workflowData.search.library.rnai.ahringer.chrom;
   var stockTitle = chrom + '-' + plate + '--' + quadrant;
+  var where =  {
+    stocktitle: chrom + '-' + plate + '--' + quadrant,
+  };
 
   return new Promise(function(resolve, reject) {
     app.models.RnaiRnailibrary
         .find({
-          where: {
-            stocktitle: chrom + '-' + plate + '--' + quadrant,
-          },
+          where: where,
         })
         .then(function(results) {
           resolve(results);
@@ -46,68 +47,3 @@ RnaiLibrarystock.extract.Primary.getLibraryInfo = function(workflowData, barcode
         });
   });
 };
-
-  // //TODO Standard and Custom Plates
-  // RnaiLibrarystock.getLibraryInfo = function(FormData, barcode) {
-  //   console.log('In Main getLibraryInfo');
-  //   var quadrant = RnaiLibrarystock.getQuad(barcode);
-  //   var plate = RnaiLibrarystock.getPlate(FormData.RnaiPlateNo);
-  //   var chrom = FormData.chrom;
-  //   var stockTitle = chrom + '-' + plate + '--' + quadrant;
-  //
-  //   return new Promise(function(resolve, reject) {
-  //     app.models.RnaiRnailibrary
-  //       .find({
-  //         where: {
-  //           stocktitle: chrom + '-' + plate + '--' + quadrant,
-  //         },
-  //       })
-  //       .then(function(results) {
-  //         resolve(results);
-  //       })
-  //       .catch(function(error) {
-  //         reject(new Error(error));
-  //       });
-  //   });
-  // };
-
-  // RnaiLibrarystock.getParentLibrary = function(FormData, barcode) {
-  //   //Check
-  //   return new Promise(function(resolve, reject) {
-  //     RnaiLibrarystock.getLibraryInfo(FormData, barcode)
-  //       .then(function(results) {
-  //         resolve(results);
-  //       })
-  //       .catch(function(error) {
-  //         reject(new Error(error));
-  //       });
-  //   });
-  // };
-
-
-  // RnaiLibrarystock.processCreateStock = function(queueObj, done) {
-  //   var FormData = queueObj.FormData;
-  //   var plateInfo = queueObj.plateInfo;
-  //   var barcode = plateInfo.ExperimentExperimentplate.barcode;
-  //
-  //   RnaiLibrarystock.getParentLibrary(FormData, barcode)
-  //     .then(function(results) {
-  //       return RnaiLibrarystock.preProcessLibraryResults({
-  //         ExperimentExperimentplate: plateInfo,
-  //         libraryResults: results,
-  //         FormData: FormData,
-  //       });
-  //     })
-  //     .then(function(results) {
-  //       return RnaiLibrarystock.createRnaiLibraryStocks(results);
-  //     })
-  //     .then(function(results) {
-  //       return RnaiLibrarystock.postProcessStockKue(queueObj, results);
-  //     })
-  //     .then(function(results) {
-  //       done();
-  //     })
-  //     .catch(function(error) {
-  //       done(new Error(error.stack));
-  //     });
-  // };

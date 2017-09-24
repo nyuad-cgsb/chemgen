@@ -106,7 +106,7 @@ app.models.Workflow.library.ahringer.secondary.create(workflowData, file)
   })
   .then(function(platesList) {
     //TODO break here
-    // var plate = [platesList[0]];
+    //To make sure we are working from model workflowData
     return app.models.Workflow.library.ahringer.mapPlates(workflowData, platesList);
   })
   .then(function(results) {

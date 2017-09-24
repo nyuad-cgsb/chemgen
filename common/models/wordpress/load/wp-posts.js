@@ -15,7 +15,7 @@ WpPosts.load.postInfo = function(workflowData, plateInfo) {
   postContent = postContent + '<b>Library: </b>' + library + '<br>';
   postContent = postContent + '<b>Screen Stage: </b>' +
     workflowData.screenStage + '<br>';
-  postContent = postContent + '<b>Imaging Dates: </b> ' + plateInfo.vendorPlate.creationDate + '<br>';
+  postContent = postContent + '<b>Imaging Dates: </b> ' + plateInfo.vendorPlate.creationdate + '<br>';
 
   postContent = postContent + '<b>Junk: </b>' + workflowData.isJunk + '<br>';
 

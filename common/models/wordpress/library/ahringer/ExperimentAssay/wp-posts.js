@@ -9,15 +9,15 @@ const Mustache = require('mustache');
 const readFile = Promise.promisify(require('fs').readFile);
 const path = require('path');
 
-//TODO Most of these are general and do not belong under the library.ahringer tag
+// TODO Most of these are general and do not belong under the library.ahringer tag
 
 WpPosts.library.ahringer.load.assay.workflows.processExperimentPlates = function(workflowData, plateDataList) {
   return new Promise(function(resolve, reject) {
     Promise.map(plateDataList, function(plateData) {
-        return WpPosts.library.ahringer.load.assay.processExperimentPlate(workflowData, plateData);
-      }, {
-        concurrency: 1,
-      })
+      return WpPosts.library.ahringer.load.assay.processExperimentPlate(workflowData, plateData);
+    }, {
+      concurrency: 1,
+    })
       .then(function(results) {
         resolve(results[0]);
       })
@@ -31,8 +31,8 @@ WpPosts.library.ahringer.load.assay.workflows.processExperimentPlates = function
 WpPosts.library.ahringer.load.assay.processExperimentPlate = function(workflowData, plateData) {
   return new Promise(function(resolve, reject) {
     Promise.map(plateData.experimentAssayList, function(experimentData) {
-        return WpPosts.library.ahringer.load.assay.workflows.processPost(workflowData, plateData.plateInfo, experimentData);
-      })
+      return WpPosts.library.ahringer.load.assay.workflows.processPost(workflowData, plateData.plateInfo, experimentData);
+    })
       .then(function(results) {
         resolve(results);
       })
@@ -45,7 +45,8 @@ WpPosts.library.ahringer.load.assay.processExperimentPlate = function(workflowDa
 
 WpPosts.library.ahringer.load.assay.workflows.processPost = function(workflowData, plateInfo, experimentData) {
   var taxTerms = experimentData.libraryData.libraryStock.taxTerms;
-  var title = experimentData.experimentAssayData.assayId + '-' + experimentData.experimentAssayData.assayName;
+  var plateId = plateInfo.ExperimentExperimentplate.experimentPlateId;
+  var title = [plateId, experimentData.experimentAssayData.assayId, experimentData.experimentAssayData.assayName].join('-');
   var titleSlug = slug(title);
 
   return new Promise(function(resolve, reject) {
@@ -103,10 +104,10 @@ WpPosts.library.ahringer.load.assay.workflows.processPost = function(workflowDat
   });
 };
 
-//TODO Make this more general
-//The only thing that is different is the geneName
-//Everything else is mel28/N2 Permissive/Restrictive
-//And possibly how to parse the condition
+// TODO Make this more general
+// The only thing that is different is the geneName
+// Everything else is mel28/N2 Permissive/Restrictive
+// And possibly how to parse the condition
 WpPosts.library.ahringer.load.assay.genPostContent = function(workflowData, plateData, experimentData, taxTerms) {
   var barcode = plateData.ExperimentExperimentplate.barcode;
   var plateId = plateData.ExperimentExperimentplate.experimentPlateId;
@@ -150,17 +151,22 @@ WpPosts.library.ahringer.load.assay.genPostContent = function(workflowData, plat
 
 WpPosts.library.ahringer.load.assay.genEnviraControl = function(workflowData, contentObj) {
   contentObj.enviraCTCol = 6;
-  if (workflowData.screenStage === 'Secondary') {
+  if(contentObj.barcode.match('L4440')){
+    return contentObj;
+  }
+  else if (workflowData.screenStage === 'Secondary') {
     contentObj.enviraCTTag = [contentObj.screenNameSlug,
       '_ID_', contentObj.plateId, '_',
       contentObj.geneNameSlug,
     ].join('');
   } else {
-    //TODO Check and see if there is one per worm strain and condition, or just condition
-    //TODO Not sure if this one will work
+    // TODO Check and see if there is one per worm strain and condition, or just condition
+    // TODO Not sure if this one will work
+    // TODO This should be separated out somewhere
+    // Should be screen name, condition, 'L4440', possibly - creationDate?
+    var ct = app.models[workflowData.libraryStockModel].helpers.buildControlTag(contentObj.barcode);
     contentObj.enviraCTTag = [contentObj.screenNameSlug,
-      '_', contentObj.condition, '_',
-      contentObj.geneNameSlug,
+      '_', ct,
     ].join('');
   }
 

@@ -5,7 +5,7 @@
 const app = require('../../../../../server/server');
 const RnaiLibrarystock = app.models.RnaiLibrarystock;
 
-RnaiLibrarystock.helpers.buildControlbarcode = function(barcode) {
+RnaiLibrarystock.helpers.buildControlTag = function(barcode) {
   var controlB = 'L4440';
   if (barcode.match('E')) {
     controlB = controlB + 'E';

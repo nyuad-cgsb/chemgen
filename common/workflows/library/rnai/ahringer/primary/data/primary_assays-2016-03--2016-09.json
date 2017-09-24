@@ -2572,8 +2572,8 @@
       }
     ],
     "screenStage": "Primary",
-    "permissiveTemp": "",
-    "restrictiveTemp": "",
+    "permissiveTemp": 17.5,
+    "restrictiveTemp": 23.3,
     "instrumentId": 1,
     "screenId": 1,
     "search": {
@@ -2646,8 +2646,8 @@
       }
     ],
     "screenStage": "Primary",
-    "permissiveTemp": "",
-    "restrictiveTemp": "",
+    "permissiveTemp": 17.5,
+    "restrictiveTemp": 23.3,
     "instrumentId": 1,
     "screenId": 1,
     "search": {
