@@ -10,7 +10,7 @@
       "type": [
         "any"
       ],
-      "required": true
+      "required": false 
     },
     "library": {
       "type": "any",
@@ -54,11 +54,11 @@
     },
     "permissiveTemp": {
       "type": "any",
-      "required": true
+      "required": false
     },
     "restrictiveTemp": {
       "type": "any",
-      "required": true
+      "required": false
     },
     "isJunk": {
       "type": "any",

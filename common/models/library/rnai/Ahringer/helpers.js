@@ -5,7 +5,7 @@
 const app = require('../../../../../server/server');
 const RnaiLibrarystock = app.models.RnaiLibrarystock;
 
-RnaiLibrarystock.helpers.buildControlbarcode = function(barcode) {
+RnaiLibrarystock.helpers.buildControlTag = function(barcode) {
   var controlB = 'L4440';
   if (barcode.match('E')) {
     controlB = controlB + 'E';
@@ -104,9 +104,9 @@ RnaiLibrarystock.helpers.isDuplicate = function(barcode) {
 RnaiLibrarystock.helpers.getTemp = function(barcode, workflowData) {
   var cond = parseCond(barcode);
   var temp = 0;
-  if (cond === 'Enhancer') {
+  if (cond === 'Permissive') {
     return workflowData.EnhancerTemp || 0;
-  } else if (cond === 'Suppress') {
+  } else if (cond === 'Restrictive') {
     return workflowData.SuppressorTemp || 0;
   } else {
     return 0;

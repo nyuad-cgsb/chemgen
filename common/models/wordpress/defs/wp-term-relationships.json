@@ -10,6 +10,7 @@
   "properties": {
     "objectId": {
       "type": "Number",
+      "id": true,
       "required": false,
       "length": null,
       "precision": 20,
@@ -25,6 +26,7 @@
     },
     "termTaxonomyId": {
       "type": "Number",
+      "id": true,
       "required": true,
       "length": null,
       "precision": 20,
