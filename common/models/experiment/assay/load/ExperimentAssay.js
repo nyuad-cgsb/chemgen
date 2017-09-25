@@ -142,7 +142,6 @@ ExperimentAssay.load.convertImage = function(workflowData, plateInfo, libraryDat
 
     var images = ExperimentAssay.helpers.genImageFileNames(plateInfo, well);
     var lookUpImage = images.baseImage + '-autolevel-' + '600x600.jpeg';
-    app.winston.info('lookupImage is ' + lookUpImage);
     var title = 'convertImage-' + plateId + '-' + assayName;
 
     //TODO Mixing callbacks with promises - this is baaaad
