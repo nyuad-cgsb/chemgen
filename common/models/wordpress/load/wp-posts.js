@@ -5,9 +5,13 @@ const WpPosts = app.models.WpPosts;
 const Promise = require('bluebird');
 const slug = require('slug');
 const php = require('js-php-serialize');
+const deepcopy = require('deepcopy');
+const Mustache = require('mustache');
+const readFile = Promise.promisify(require('fs').readFile);
+const path = require('path');
 
 WpPosts.load.postInfo = function(workflowData, plateInfo) {
-  var postContent  = '';
+  var postContent = '';
   var library = capitalizeFirstLetter(workflowData.library);
 
   postContent = postContent +
@@ -29,7 +33,7 @@ function capitalizeFirstLetter(string) {
 // TODO Should these be in terms?
 // This gets called for both the plate and assay
 WpPosts.load.createTags = function(workflowData, plateInfo) {
-  var tags =  [{
+  var tags = [{
     taxonomy: 'screen_name',
     taxTerm: workflowData.screenName || 'test',
   }, {
@@ -38,7 +42,7 @@ WpPosts.load.createTags = function(workflowData, plateInfo) {
   }, {
     taxonomy: 'envira-tag',
     taxTerm: plateInfo.ExperimentExperimentplate.barcode,
-  },  {
+  }, {
     taxonomy: 'screen_stage',
     taxTerm: workflowData.screenStage,
   }, {
@@ -54,12 +58,16 @@ WpPosts.load.createTags = function(workflowData, plateInfo) {
 // TODO This should just be a part of a template
 WpPosts.load.genTermTable = function(createTerms) {
   var table = '';
+  var seen = {};
   createTerms.map(function(createTerm) {
     if (createTerm.taxonomy.match('envira')) {
       return;
-    }    else if (! createTerm.taxTerm) {
+    } else if (!createTerm.taxTerm) {
+      return;
+    } else if (seen.hasOwnProperty(createTerm.taxTerm)) {
       return;
     }
+    seen[createTerm.taxTerm] = 1;
     table = table + '<tr>';
     var taxTerm = createTerm.taxTerm;
     var taxTermUrl = '<a href="' + WpPosts.wpUrl + '/' + createTerm.taxonomy + '/' +

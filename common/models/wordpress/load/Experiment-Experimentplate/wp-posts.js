@@ -1,6 +1,6 @@
 'use strict';
 
-const app = require('../../../../../../server/server');
+const app = require('../../../../../server/server');
 const Promise = require('bluebird');
 const WpPosts = app.models.WpPosts;
 const deepcopy = require('deepcopy');
@@ -14,10 +14,10 @@ Loop over plates
       Generate WpTermTaxonomy
         And associate those back to the post
 **/
-WpPosts.library.ahringer.load.plate.workflows.processPosts = function(workflowData, platesData) {
+WpPosts.load.plate.workflows.processPosts = function(workflowData, platesData) {
   return new Promise(function(resolve, reject) {
     Promise.map(platesData, function(plateData) {
-        return WpPosts.library.ahringer.load.plate.processPost(workflowData, plateData);
+        return WpPosts.load.plate.processPost(workflowData, plateData);
       })
       .then(function(results) {
         resolve(results);
@@ -29,7 +29,7 @@ WpPosts.library.ahringer.load.plate.workflows.processPosts = function(workflowDa
   });
 };
 
-WpPosts.library.ahringer.load.plate.processPost = function(workflowData, plateData) {
+WpPosts.load.plate.processPost = function(workflowData, plateData) {
   var plateInfo = plateData.plateInfo;
   var experimentAssayList = plateData.experimentAssayList;
 
@@ -101,40 +101,4 @@ WpPosts.library.ahringer.load.plate.processPost = function(workflowData, plateDa
         reject(new Error(error));
       });
   });
-};
-
-//TODO Move this to terms
-WpPosts.library.ahringer.load.createTags = function(workflowData, tags, plateInfo) {
-  var barcode = plateInfo.ExperimentExperimentplate.barcode;
-  var shortBarcode = barcode.replace('_D', '');
-
-  //TODO add checks for undefined values
-  tags.push({
-    taxonomy: 'rnai_assay_date',
-    taxTerm: workflowData.assayDate
-  });
-  tags.push({
-    taxonomy: 'rnai_enhancer_temp',
-    taxTerm: workflowData.EnhancerTemp
-  });
-  tags.push({
-    taxonomy: 'rnai_suppressor_temp',
-    taxTerm: workflowData.SuppressorTemp
-  });
-
-  if (barcode) {
-    if (barcode.match('M') || barcode.match('mel')) {
-      tags.push({
-        taxonomy: 'worm_strain',
-        taxTerm: 'mel-28',
-      });
-    } else {
-      tags.push({
-        taxonomy: 'worm_strain',
-        taxTerm: 'N2',
-      });
-    }
-  }
-
-  return tags;
 };

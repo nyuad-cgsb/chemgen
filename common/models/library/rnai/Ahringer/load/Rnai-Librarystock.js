@@ -57,6 +57,7 @@ RnaiLibrarystock.load.createRnaiLibraryStocks = function(dataList) {
             };
             resultData.libraryStock.taxTerms = createObj.taxTerms;
             resultData.libraryStock.geneName = createObj.geneName;
+            resultData.libraryStock.taxTerm = createObj.geneName;
             return resultData;
           });
       })

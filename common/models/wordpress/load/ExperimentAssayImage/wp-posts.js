@@ -1,6 +1,6 @@
 'use strict';
 
-const app = require('../../../../../../server/server');
+const app = require('../../../../../server/server');
 const Promise = require('bluebird');
 const WpPosts = app.models.WpPosts;
 const deepcopy = require('deepcopy');

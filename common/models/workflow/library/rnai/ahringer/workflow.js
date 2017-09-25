@@ -55,10 +55,10 @@ Workflow.library.ahringer.processPlate = function(workflowData, plate) {
         return app.models.ExperimentAssay.load.workflows.processExperimentPlates(workflowData, results);
       })
       .then(function(results) {
-        return app.models.WpPosts.library.ahringer.load.plate.workflows.processPosts(workflowData, results);
+        return app.models.WpPosts.load.plate.workflows.processPosts(workflowData, results);
       })
       .then(function(results) {
-        return app.models.WpPosts.library.ahringer.load.assay.workflows.processExperimentPlates(workflowData, results);
+        return app.models.WpPosts.load.assay.workflows.processExperimentPlates(workflowData, results);
       })
       .then(function(results) {
         app.winston.info('Finished Plate: ' + plate.csPlateid);

@@ -369,7 +369,7 @@ describe('001_secondarySpec.test.js Library.rnai.ahringer Secondary Parsing', fu
           return app.models.ExperimentAssay.load.workflows.processExperimentPlates(workflowData, results);
         })
         .then(function(results) {
-          return app.models.WpPosts.library.ahringer.load.plate.workflows.processPosts(workflowData, results);
+          return app.models.WpPosts.load.plate.workflows.processPosts(workflowData, results);
         })
         .then(function(results) {
           // TODO add in a check to make sure we created taxterms, termtaxonomies, and relationships
@@ -382,7 +382,7 @@ describe('001_secondarySpec.test.js Library.rnai.ahringer Secondary Parsing', fu
     });
 
     it('Should run create the ExperimentAssay WpPost', function(done) {
-      app.models.WpPosts.library.ahringer.load.assay.workflows.processExperimentPlates(workflowData, reducedPlateAssayData)
+      app.models.WpPosts.load.assay.workflows.processExperimentPlates(workflowData, reducedPlateAssayData)
         .then(function(results) {
           // TODO add in a check to make sure we created taxterms, termtaxonomies, and relationships
           results = JSON.stringify(results);

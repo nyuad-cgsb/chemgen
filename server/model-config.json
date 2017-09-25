@@ -26,8 +26,7 @@
     "public": false
   },
   "Plate": {
-    "dataSource": "arrayscanDS",
-    "public": false
+    "dataSource": "arrayscanDS"
   },
   "RnaiLibrarystock": {
     "dataSource": "chemgenDS"

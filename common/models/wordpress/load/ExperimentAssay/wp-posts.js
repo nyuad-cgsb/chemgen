@@ -1,6 +1,6 @@
 'use strict';
 
-const app = require('../../../../../../server/server');
+const app = require('../../../../../server/server');
 const Promise = require('bluebird');
 const WpPosts = app.models.WpPosts;
 const deepcopy = require('deepcopy');
@@ -9,15 +9,14 @@ const Mustache = require('mustache');
 const readFile = Promise.promisify(require('fs').readFile);
 const path = require('path');
 
-// TODO Most of these are general and do not belong under the library.ahringer tag
-
-WpPosts.library.ahringer.load.assay.workflows.processExperimentPlates = function(workflowData, plateDataList) {
+// TODO Most of these are general and do not belong under the tag
+WpPosts.load.assay.workflows.processExperimentPlates = function(workflowData, plateDataList) {
   return new Promise(function(resolve, reject) {
     Promise.map(plateDataList, function(plateData) {
-      return WpPosts.library.ahringer.load.assay.processExperimentPlate(workflowData, plateData);
-    }, {
-      concurrency: 1,
-    })
+        return WpPosts.load.assay.processExperimentPlate(workflowData, plateData);
+      }, {
+        concurrency: 1,
+      })
       .then(function(results) {
         resolve(results[0]);
       })
@@ -28,11 +27,11 @@ WpPosts.library.ahringer.load.assay.workflows.processExperimentPlates = function
   });
 };
 
-WpPosts.library.ahringer.load.assay.processExperimentPlate = function(workflowData, plateData) {
+WpPosts.load.assay.processExperimentPlate = function(workflowData, plateData) {
   return new Promise(function(resolve, reject) {
     Promise.map(plateData.experimentAssayList, function(experimentData) {
-      return WpPosts.library.ahringer.load.assay.workflows.processPost(workflowData, plateData.plateInfo, experimentData);
-    })
+        return WpPosts.load.assay.workflows.processPost(workflowData, plateData.plateInfo, experimentData);
+      })
       .then(function(results) {
         resolve(results);
       })
@@ -43,18 +42,18 @@ WpPosts.library.ahringer.load.assay.processExperimentPlate = function(workflowDa
   });
 };
 
-WpPosts.library.ahringer.load.assay.workflows.processPost = function(workflowData, plateInfo, experimentData) {
+WpPosts.load.assay.workflows.processPost = function(workflowData, plateInfo, experimentData) {
   var taxTerms = experimentData.libraryData.libraryStock.taxTerms;
   var plateId = plateInfo.ExperimentExperimentplate.experimentPlateId;
   var title = [plateId, experimentData.experimentAssayData.assayId, experimentData.experimentAssayData.assayName].join('-');
   var titleSlug = slug(title);
 
   return new Promise(function(resolve, reject) {
-    WpPosts.library.ahringer.load.assay.genPostContent(workflowData, plateInfo, experimentData, taxTerms)
+    WpPosts.load.assay.genPostContent(workflowData, plateInfo, experimentData, taxTerms)
       .then(function(postContent) {
         var postObj = {
           postAuthor: 1,
-          postType: 'assay',
+          postType: workflowData.library + '_assay',
           commentCount: 0,
           menuOrder: 0,
           postContent: postContent,
@@ -83,6 +82,10 @@ WpPosts.library.ahringer.load.assay.workflows.processPost = function(workflowDat
           postTitle: results[0]['postTitle'],
           imagePath: experimentData.experimentAssayData.platePath,
         };
+        taxTerms.push({
+          taxonomy: 'envira-tag',
+          taxTerm: postData.postTitle,
+        });
         // Do the downstream processing here
         // Each post should be associated to 1 or more taxonomy terms
         // app.winston.info(JSON.stringify(taxTerms));
@@ -105,17 +108,17 @@ WpPosts.library.ahringer.load.assay.workflows.processPost = function(workflowDat
 };
 
 // TODO Make this more general
-// The only thing that is different is the geneName
+// The only thing that is different is the taxTerm
 // Everything else is mel28/N2 Permissive/Restrictive
 // And possibly how to parse the condition
-WpPosts.library.ahringer.load.assay.genPostContent = function(workflowData, plateData, experimentData, taxTerms) {
+WpPosts.load.assay.genPostContent = function(workflowData, plateData, experimentData, taxTerms) {
   var barcode = plateData.ExperimentExperimentplate.barcode;
   var plateId = plateData.ExperimentExperimentplate.experimentPlateId;
   var libraryData = experimentData.libraryData;
-  var condition = app.models.RnaiLibrarystock.helpers.parseCond(barcode);
+  var condition = app.models[workflowData.libraryStockModel].helpers.parseCond(barcode);
 
   var screenName = workflowData.screenName;
-  var geneName = libraryData.libraryStock.geneName;
+  var taxTerm = libraryData.libraryStock.taxTerm;
 
   var contentObj = {};
   contentObj.plateId = plateId;
@@ -129,14 +132,14 @@ WpPosts.library.ahringer.load.assay.genPostContent = function(workflowData, plat
   contentObj.libraryParent = libraryData.libraryParent;
   contentObj.screenName = workflowData.screenName;
   contentObj.screenNameSlug = slug(workflowData.screenName);
-  contentObj.geneName = libraryData.libraryStock.geneName;
-  contentObj.geneNameSlug = slug(libraryData.libraryStock.geneName);
+  contentObj.taxTerm = libraryData.libraryStock.taxTerm;
+  contentObj.taxTermSlug = slug(libraryData.libraryStock.taxTerm);
 
-  contentObj = WpPosts.library.ahringer.load.assay.genEnviraContent(contentObj);
-  contentObj = WpPosts.library.ahringer.load.assay.genEnviraControl(workflowData, contentObj);
+  contentObj = WpPosts.load.assay.genEnviraContent(contentObj);
+  contentObj = WpPosts.load.assay.genEnviraControl(workflowData, contentObj);
 
   return new Promise(function(resolve, reject) {
-    var templateFile = path.join(path.dirname(__filename), 'templates/assayPost.mustache');
+    var templateFile = path.join(path.dirname(__filename), 'templates/' + workflowData.library + 'AssayPost.mustache');
     readFile(templateFile, 'utf8')
       .then(function(contents) {
         var postContent = Mustache.render(contents, contentObj);
@@ -149,20 +152,18 @@ WpPosts.library.ahringer.load.assay.genPostContent = function(workflowData, plat
   });
 };
 
-WpPosts.library.ahringer.load.assay.genEnviraControl = function(workflowData, contentObj) {
+//TODO this is a bit of a mess
+//This should in the library def - with primary/secondary or even more heirarchical
+WpPosts.load.assay.genEnviraControl = function(workflowData, contentObj) {
   contentObj.enviraCTCol = 6;
-  if(contentObj.barcode.match('L4440')){
+  if (contentObj.barcode.match('L4440')) {
     return contentObj;
-  }
-  else if (workflowData.screenStage === 'Secondary') {
+  } else if (workflowData.screenStage === 'Secondary') {
     contentObj.enviraCTTag = [contentObj.screenNameSlug,
       '_ID_', contentObj.plateId, '_',
-      contentObj.geneNameSlug,
+      contentObj.taxTermSlug,
     ].join('');
   } else {
-    // TODO Check and see if there is one per worm strain and condition, or just condition
-    // TODO Not sure if this one will work
-    // TODO This should be separated out somewhere
     // Should be screen name, condition, 'L4440', possibly - creationDate?
     var ct = app.models[workflowData.libraryStockModel].helpers.buildControlTag(contentObj.barcode);
     contentObj.enviraCTTag = [contentObj.screenNameSlug,
@@ -173,35 +174,35 @@ WpPosts.library.ahringer.load.assay.genEnviraControl = function(workflowData, co
   return contentObj;
 };
 
-WpPosts.library.ahringer.load.assay.genEnviraContent = function(contentObj) {
+WpPosts.load.assay.genEnviraContent = function(contentObj) {
   contentObj.enviraCCol = 2;
   contentObj.enviraEMTag = [contentObj.screenNameSlug,
     slug('_Permissive_M_'),
-    contentObj.geneNameSlug,
+    contentObj.taxTermSlug,
   ].join('');
   contentObj.enviraEMCol = 4;
   contentObj.enviraENTag = [contentObj.screenNameSlug,
     slug('_Permissive_N2_'),
-    contentObj.geneNameSlug,
+    contentObj.taxTermSlug,
   ].join('');
   contentObj.enviraENCol = 4;
   contentObj.enviraSMTag = [contentObj.screenNameSlug,
     slug('_Restrictive_M_'),
-    contentObj.geneNameSlug,
+    contentObj.taxTermSlug,
   ].join('');
   contentObj.enviraSMCol = 4;
   contentObj.enviraSNTag = [contentObj.screenNameSlug,
     slug('_Restrictive_N2_'),
-    contentObj.geneNameSlug,
+    contentObj.taxTermSlug,
   ].join('');
   contentObj.enviraSNCol = 4;
 
-  if (contentObj.geneName.match('empty')) {
-    contentObj.hasGene = false;
-  } else if (contentObj.geneName.match('L4440')) {
-    contentObj.hasGene = false;
+  if (contentObj.taxTerm.match('empty')) {
+    contentObj.hasTaxTerm = false;
+  } else if (contentObj.taxTerm.match('L4440')) {
+    contentObj.hasTaxTerm = false;
   } else {
-    contentObj.hasGene = true;
+    contentObj.hasTaxTerm = true;
   }
 
   return contentObj;

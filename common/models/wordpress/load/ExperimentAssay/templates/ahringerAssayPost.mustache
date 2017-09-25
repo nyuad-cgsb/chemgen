@@ -5,7 +5,7 @@
       <div id="screenInfo">
         <h2>Screen Information</h2>
         <h3>Plate View</h3>
-        <p> Screen {{{screenName}}} Gene {{{geneName}}}</p>
+        <p> Screen {{{screenName}}} {{{taxTerm}}}</p>
         <a href="{{{plateUrl}}}">{{barcode}}</a>
       </div>
       <div id="libraryInfo">
@@ -59,8 +59,8 @@
     <div class="col-md-12">
       <section id="screenGeneGallery">
         <div>
-          {{#hasGene}}
-            <h2>Gene {{{geneName}}}</h2>
+          {{#hasTaxTerm}}
+            <h2>{{{taxTerm}}}</h2>
             <div id="enviraEM">
               <h3>Permissive Mutant</h3>
               <p>
@@ -81,7 +81,7 @@
               <p>
                 [envira-gallery-dynamic id="tags-{{enviraSNTag}}" columns="{{enviraSNCol}}"] </p>
             </div>
-          {{/hasGene}}
+          {{/hasTaxTerm}}
         </div>
       </section>
     </div>
@@ -94,7 +94,7 @@
         <div id="enviraCT">
           <h3>Control</h3>
           <p>
-            [envira-gallery-dynamic id="tags-{{enviraCTTag}}" columns="{{enviraCTCol}}"] </p>
+            [envira-gallery-dynamic id="tags-{{enviraCTTag}}" columns="{{enviraCTCol}}" columns="3" limit="6"] </p>
         </div>
       </section>
     </div>
@@ -107,7 +107,7 @@
         <div class="">
         </div>
         <div class="" id="wbassay">
-          [posts_table columns="image,title,tax:condition:Condition,tax:worm_strain:Strain" post_type="assay" term="wb_gene_sequence_id:{{{geneNameSlug}}}+screen_name:{{{screenNameSlug}}}" lazy_load="true" links="title,image" image_size="medium" widths="50,20,20,10"
+          [posts_table columns="image,title,tax:condition:Condition,tax:worm_strain:Strain" post_type="assay" term="wb_gene_sequence_id:{{{taxTermSlug}}}+screen_name:{{{screenNameSlug}}}" lazy_load="true" links="title,image" image_size="medium" widths="50,20,20,10"
           filters="tax:worm_strain,tax:condition" rows_per_page="5"]
         </div>
       </section>
