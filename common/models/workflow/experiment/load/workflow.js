@@ -1,6 +1,6 @@
 'use strict';
 
-const app = require('../../../../../../server/server');
+const app = require('../../../../../server/server');
 const Promise = require('bluebird');
 const Workflow = app.models.Workflow;
 const fs = require('fs');
@@ -8,12 +8,11 @@ const readFile = Promise.promisify(require('fs')
   .readFile);
 const jsonfile = require('jsonfile');
 
-  // TODO This function is probably not library specific
-Workflow.library.ahringer.getPlates = function(workflowData) {
+Workflow.experiment.getPlates = function(workflowData) {
   return new Promise(function(resolve, reject) {
     app.models.Plate.search(workflowData.search.instrument.arrayscan)
       .then(function(platesList) {
-        return Workflow.library.ahringer.mapPlates(workflowData, platesList);
+        return Workflow.experiment.mapPlates(workflowData, platesList);
       })
       .then(function() {
         resolve();
@@ -25,12 +24,13 @@ Workflow.library.ahringer.getPlates = function(workflowData) {
   });
 };
 
-Workflow.library.ahringer.mapPlates = function(workflowData, platesList) {
+Workflow.experiment.mapPlates = function(workflowData, platesList) {
+  app.winston.info('Starting screen ' + workflowData.screenName);
   app.winston.info('There are ' + platesList.length + ' plates');
   return new Promise(function(resolve, reject) {
     Promise.map(platesList, function(plate) {
       app.winston.info('Starting Plate: ' + plate.csPlateid + ' Name: ' + plate.name);
-      return Workflow.library.ahringer.processPlate(workflowData, plate);
+      return Workflow.experiment.processPlate(workflowData, plate);
     }, {concurrency: 1})
       .then(function(results) {
         resolve();
@@ -42,7 +42,7 @@ Workflow.library.ahringer.mapPlates = function(workflowData, platesList) {
   });
 };
 
-Workflow.library.ahringer.processPlate = function(workflowData, plate) {
+Workflow.experiment.processPlate = function(workflowData, plate) {
   return new Promise(function(resolve, reject) {
     app.models.ExperimentExperimentplate.load.workflows.processVendorPlates(workflowData, [plate])
       .then(function(plateInfoList) {

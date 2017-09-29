@@ -87,7 +87,6 @@ RnaiLibrarystock.helpers.parseCond = function(barcode) {
   }
 };
 
-
 /**
  * See if its a duplicate
  * @param  {[type]} barcode [Barcode from the arrayscan - RNAiI.1A1_E_D]
@@ -102,7 +101,7 @@ RnaiLibrarystock.helpers.isDuplicate = function(barcode) {
 };
 
 RnaiLibrarystock.helpers.getTemp = function(barcode, workflowData) {
-  var cond = parseCond(barcode);
+  var cond = RnaiLibrarystock.helpers.parseCond(barcode);
   var temp = 0;
   if (cond === 'Permissive') {
     return workflowData.EnhancerTemp || 0;
@@ -129,9 +128,9 @@ RnaiLibrarystock.helpers.checkLibraryResult = function(libraryResult) {
   return libraryResult;
 };
 
-/////////////////////////////////////
-//Worm Specific
-/////////////////////////////////////
+/**
+Worm Specific
+**/
 RnaiLibrarystock.helpers.wormStrain = function(barcode) {
   var strain = 'N2';
   if (barcode.match('M') || barcode.match('mel')) {

@@ -19,24 +19,26 @@ RnaiLibrarystock.extract.parseLibraryResults = function(workflowData, plateInfo,
     var taxID = 'geneName';
 
     Promise.map(allWells, function(well) {
-      var libraryResult = RnaiLibrarystock.genLibraryResult(barcode, libraryResults, well);
+        var libraryResult = RnaiLibrarystock.genLibraryResult(barcode, libraryResults, well);
         // TODO add RnaiWbXrefs to tests
-      return app.models.RnaiWbXrefs.extract.genTaxTerms({
-        where: {
-          wbGeneSequenceId: libraryResult.geneName,
-        },
-      })
+        return app.models.RnaiWbXrefs.extract.genTaxTerms({
+            where: {
+              wbGeneSequenceId: libraryResult.geneName,
+            },
+          })
           .then(function(wormTaxTerms) {
-            var taxTerms = app.models.WpTerms.load.genLibraryTerms(workflowData, plateInfo, libraryResult, condition, strain, well, taxID);
-
+            var taxTerms = app.models.WpTerms
+              .load.genLibraryTerms(workflowData, plateInfo, libraryResult, condition, strain, well, taxID);
             // For secondary plates we need to add an additional taxTerm for control wells
-
             wormTaxTerms.taxTerms.forEach(function(wormTaxTerm) {
               taxTerms.push(wormTaxTerm);
             });
 
             if (libraryResult.geneName === 'L4440') {
-              taxTerms.push({taxonomy: 'wb_gene_sequence_id', taxTerm: 'L4440'});
+              taxTerms.push({
+                taxonomy: 'wb_gene_sequence_id',
+                taxTerm: 'L4440'
+              });
             }
 
             if (barcode.match('L4440')) {
@@ -44,10 +46,11 @@ RnaiLibrarystock.extract.parseLibraryResults = function(workflowData, plateInfo,
               var ctTag = [slug(workflowData.screenName),
                 '_', ct,
               ].join('');
-              taxTerms.push({taxonomy: 'envira-tag', taxTerm: ctTag});
+              taxTerms.push({
+                taxonomy: 'envira-tag',
+                taxTerm: ctTag
+              });
             }
-            // app.winston.info(JSON.stringify(wormTaxTerms));
-            // app.winston.info(JSON.stringify(taxTerms));
 
             var createStock = {
               plateId: plateId,
@@ -69,9 +72,9 @@ RnaiLibrarystock.extract.parseLibraryResults = function(workflowData, plateInfo,
 
             return data;
           });
-    }, {
-      concurrency: 1,
-    })
+      }, {
+        concurrency: 1,
+      })
       .then(function(results) {
         resolve(results);
       })

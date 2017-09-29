@@ -8,10 +8,12 @@
       "../common/models/experiment/plate/defs",
       "../common/models/experiment/assay/defs",
       "../common/models/library/rnai/Ahringer/defs",
+      "../common/models/library/chemical/chembridge/defs",
       "../common/models/library/reagents/defs",
       "../common/models/microscope/arrayscan",
       "../common/models/wordpress/defs",
       "../common/models/annotations/wormbase/defs",
+      "../common/models/annotations/chembridge/defs",
       "./models"
     ],
     "mixins": [
@@ -35,6 +37,15 @@
     "dataSource": "chemgenDS"
   },
   "RnaiWbXrefs": {
+    "dataSource": "chemgenDS"
+  },
+  "ChemicalChembridgelibrary": {
+    "dataSource": "chemgenDS"
+  },
+  "ChemicalLibrarystock": {
+    "dataSource": "chemgenDS"
+  },
+  "ChemicalChembridgexrefs": {
     "dataSource": "chemgenDS"
   },
   "ReagentsReagentlibrary": {

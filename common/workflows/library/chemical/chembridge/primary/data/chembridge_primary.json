@@ -1,0 +1,705 @@
+[
+  {
+    "screenName": "CHEMB-2014-12-04--Prim",
+    "library": "chembridge",
+    "libraryModel": "ChemicalChembridgeLibrary",
+    "libraryStockModel": "ChemicalLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2014-12-04",
+    "imageDates": [
+      {
+        "creationdate": "2014-12-09"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": 30,
+    "restrictiveTemp": 30,
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "M%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2014-09-12"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "chemical": {
+          "chembridge": {}
+        }
+      }
+    },
+    "data": {
+      "comments": "Possibilty that chemical may not have been added to all wells due to bravo setting, same for all previous experiments",
+      "wormStrain": "N2",
+      "chemicalConcentration": "10uM",
+      "dmso": "1%",
+      "incubationTime": "5 days",
+      "incubationTemp": "20",
+      "arrayScanDate": "2014-09-12",
+      "odReadingDate": "2014-12-09"
+    }
+  },
+  {
+    "screenName": "CHEMB-2014-12-11--Prim",
+    "library": "chembridge",
+    "libraryModel": "ChemicalChembridgeLibrary",
+    "libraryStockModel": "ChemicalLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2014-12-11",
+    "imageDates": [
+      {
+        "creationdate": "2014-12-17"
+      },
+      {
+        "creationdate": "2014-12-16"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": 30,
+    "restrictiveTemp": 30,
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "M%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2014-12-17"
+                },
+                {
+                  "creationdate": "2014-12-16"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "chemical": {
+          "chembridge": {}
+        }
+      }
+    },
+    "data": {
+      "comments": "Screened from 96 to 1 (reverse direction); incubated for one extra day because most eggs had not hatched on day 5",
+      "wormStrain": "N2",
+      "chemicalConcentration": "10uM",
+      "dmso": "1%",
+      "incubationTime": "6 days",
+      "incubationTemp": "20",
+      "arrayScanDate": "2014-12-17,2014-12-16",
+      "odReadingDate": "2014-12-17"
+    }
+  },
+  {
+    "screenName": "CHEMB-2015-02-26--Prim",
+    "library": "chembridge",
+    "libraryModel": "ChemicalChembridgeLibrary",
+    "libraryStockModel": "ChemicalLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2015-02-26",
+    "imageDates": [
+      {
+        "creationdate": "2015-03-03"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": 30,
+    "restrictiveTemp": 30,
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "M%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2015-03-03"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "chemical": {
+          "chembridge": {}
+        }
+      }
+    },
+    "data": {
+      "wormStrain": "N2",
+      "chemicalConcentration": "10uM",
+      "dmso": "1%",
+      "incubationTime": "5 days",
+      "incubationTemp": "20",
+      "arrayScanDate": "2015-03-03",
+      "odReadingDate": "2015-03-03"
+    }
+  },
+  {
+    "screenName": "CHEMB-2015-05-05--Prim",
+    "library": "chembridge",
+    "libraryModel": "ChemicalChembridgeLibrary",
+    "libraryStockModel": "ChemicalLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2015-05-05",
+    "imageDates": [
+      {
+        "creationdate": "2015-05-10"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": 30,
+    "restrictiveTemp": 30,
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "M%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2015-05-10"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "chemical": {
+          "chembridge": {}
+        }
+      }
+    },
+    "data": {
+      "comments": "Freshly diluted from copy 1",
+      "wormStrain": "N2",
+      "chemicalConcentration": "20uM",
+      "dmso": "2%",
+      "incubationTime": "5 days",
+      "incubationTemp": "20",
+      "arrayScanDate": "2015-05-10",
+      "odReadingDate": "2015-05-10"
+    }
+  },
+  {
+    "screenName": "CHEMB-2015-08-05--Prim",
+    "library": "chembridge",
+    "libraryModel": "ChemicalChembridgeLibrary",
+    "libraryStockModel": "ChemicalLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2015-08-05",
+    "imageDates": [
+      {
+        "creationdate": "2015-08-11"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": 30,
+    "restrictiveTemp": 30,
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "M%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2015-08-11"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "chemical": {
+          "chembridge": {}
+        }
+      }
+    },
+    "data": {
+      "comments": "Done in duplicates",
+      "wormStrain": "N2",
+      "chemicalConcentration": "20uM",
+      "dmso": "2%",
+      "incubationTime": "6 days",
+      "incubationTemp": "20",
+      "arrayScanDate": "2015-08-11",
+      "odReadingDate": "2015-08-11"
+    }
+  },
+  {
+    "screenName": "CHEMB-2015-08-17--Prim",
+    "library": "chembridge",
+    "libraryModel": "ChemicalChembridgeLibrary",
+    "libraryStockModel": "ChemicalLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2015-08-17",
+    "imageDates": [
+      {
+        "creationdate": "2015-08-23"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": 30,
+    "restrictiveTemp": 30,
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "M%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2015-08-23"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "chemical": {
+          "chembridge": {}
+        }
+      }
+    },
+    "data": {
+      "comments": "Run together with next line",
+      "wormStrain": "N2",
+      "chemicalConcentration": "20uM",
+      "dmso": "2%",
+      "incubationTime": "6-7 days",
+      "incubationTemp": "20",
+      "arrayScanDate": "2015-08-23",
+      "odReadingDate": "2015-08-23"
+    }
+  },
+  {
+    "screenName": "CHEMB-2015-08-18--Prim",
+    "library": "chembridge",
+    "libraryModel": "ChemicalChembridgeLibrary",
+    "libraryStockModel": "ChemicalLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2015-08-18",
+    "imageDates": [
+      {
+        "creationdate": "2015-08-23"
+      },
+      {
+        "creationdate": "2015-08-24"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": 30,
+    "restrictiveTemp": 30,
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "M%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2015-08-23"
+                },
+                {
+                  "creationdate": "2015-08-24"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "chemical": {
+          "chembridge": {}
+        }
+      }
+    },
+    "data": {
+      "comments": "Arrayscan space shortage, hence half run on next day",
+      "wormStrain": "N2",
+      "chemicalConcentration": "20uM",
+      "dmso": "2%",
+      "incubationTime": "6 days",
+      "incubationTemp": "20",
+      "arrayScanDate": "2015-08-23,2015-08-24",
+      "odReadingDate": "2015 - 24-08-23"
+    }
+  },
+  {
+    "screenName": "CHEMB-2015-09-01--Prim",
+    "library": "chembridge",
+    "libraryModel": "ChemicalChembridgeLibrary",
+    "libraryStockModel": "ChemicalLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2015-09-01",
+    "imageDates": [
+      {
+        "creationdate": "2015-09-08"
+      },
+      {
+        "creationdate": "2015-09-09"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": 30,
+    "restrictiveTemp": 30,
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "M%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2015-09-08"
+                },
+                {
+                  "creationdate": "2015-09-09"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "chemical": {
+          "chembridge": {}
+        }
+      }
+    },
+    "data": {
+      "comments": "Bravo crashed on M121-M124Q4, process continued from next plate",
+      "wormStrain": "PS312",
+      "chemicalConcentration": "10uM",
+      "dmso": "1%",
+      "incubationTime": "7 days",
+      "incubationTemp": "22.5",
+      "arrayScanDate": "2015-09-08,2015-09-09",
+      "odReadingDate": "2015-09-08"
+    }
+  },
+  {
+    "screenName": "CHEMB-2015-09-15--Prim",
+    "library": "chembridge",
+    "libraryModel": "ChemicalChembridgeLibrary",
+    "libraryStockModel": "ChemicalLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2015-09-15",
+    "imageDates": [
+      {
+        "creationdate": "2015-09-22"
+      },
+      {
+        "creationdate": "2015-09-23"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": 30,
+    "restrictiveTemp": 30,
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "M%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2015-09-22"
+                },
+                {
+                  "creationdate": "2015-09-23"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "chemical": {
+          "chembridge": {}
+        }
+      }
+    },
+    "data": {
+      "comments": "De-lidder stopped working. first 30 over plates OD and Images taken on Day 7. Rest of plates, no OD, lids removed and liquid added using wellmate and placed in cytomat, images taken on Day 8- Day 9",
+      "wormStrain": "PS312",
+      "chemicalConcentration": "10uM",
+      "dmso": "1%",
+      "incubationTime": "7-8-9 days",
+      "incubationTemp": "22.5",
+      "arrayScanDate": "2015-09-22,2015-09-23",
+      "odReadingDate": "2015-09-22"
+    }
+  },
+  {
+    "screenName": "CHEMB-2015-09-21--Prim",
+    "library": "chembridge",
+    "libraryModel": "ChemicalChembridgeLibrary",
+    "libraryStockModel": "ChemicalLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2015-09-21",
+    "imageDates": [
+      {
+        "creationdate": "2015-09-29"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": 30,
+    "restrictiveTemp": 30,
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "M%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2015-09-29"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "chemical": {
+          "chembridge": {}
+        }
+      }
+    },
+    "data": {
+      "comments": "Ran out of worms for last Iteration. De-lidder did not work, liquid added using wellmate and imaged usinf Arrayscan manually, no OD reading. Worms were too dilute, added 30ul, final conc is 8.8uM",
+      "wormStrain": "PS312",
+      "chemicalConcentration": "10uM",
+      "dmso": "1%",
+      "incubationTime": "8 days",
+      "incubationTemp": "22.5",
+      "arrayScanDate": "2015-09-29"
+    }
+  },
+  {
+    "screenName": "CHEMB-2015-11-11--Prim",
+    "library": "chembridge",
+    "libraryModel": "ChemicalChembridgeLibrary",
+    "libraryStockModel": "ChemicalLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2015-11-11",
+    "imageDates": [
+      {
+        "creationdate": "2015-11-15"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": 30,
+    "restrictiveTemp": 30,
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "M%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2015-11-15"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "chemical": {
+          "chembridge": {}
+        }
+      }
+    },
+    "data": {
+      "wormStrain": "N2",
+      "chemicalConcentration": "20uM",
+      "dmso": "2%",
+      "incubationTime": "4 days",
+      "incubationTemp": "22.5",
+      "arrayScanDate": "2015-11-15",
+      "odReadingDate": "2015-11-15"
+    }
+  }
+]

@@ -119,6 +119,14 @@ WpTerms.load.genLibraryTerms = function(workflowData, plateInfo, libraryResult, 
       taxTerm: workflowData.screenName + '_' + condition + '_' + libraryResult[taxID],
     },
     {
+      taxonomy: 'envira-tag',
+      taxTerm: workflowData.screenName + '_' + libraryResult[taxID],
+    },
+    {
+      taxonomy: 'envira-tag',
+      taxTerm: workflowData.screenName + '_' + strain + '_' + libraryResult[taxID],
+    },
+    {
       taxonomy: 'screen_name',
       taxTerm: workflowData.screenName,
     },

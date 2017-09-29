@@ -123,7 +123,10 @@ WpPosts.load.assay.genPostContent = function(workflowData, plateData, experiment
   var contentObj = {};
   contentObj.plateId = plateId;
   contentObj.condition = condition;
-  contentObj.plateUrl = [WpPosts.wpUrl, '/plate/', slug(plateId + '-' + barcode)].join('');
+  contentObj.plateUrl = [WpPosts.wpUrl, '/' +
+    workflowData.library + '_plate/',
+    slug(plateId + '-' + barcode),
+  ].join('');
   contentObj.barcode = plateData.ExperimentExperimentplate.barcode;
 
   // TODO This should be part of the template

@@ -9,33 +9,41 @@
         <a href="{{{plateUrl}}}">{{barcode}}</a>
       </div>
       <div id="libraryInfo">
-        {{#libraryParent.rnailibraryId}}
+        {{#libraryParent.chembridgelibraryId}}
           <h3> Parent Library Info </h3>
           <table class="table responsive">
             <tbody>
               <tr>
-                <td>BioLoc</td>
-                <td>{{libraryParent.bioloc}}</td>
+                <td>Chembridge Id</td>
+                <td>{{libraryParent.chembridgelibraryId}}</td>
               </tr>
               <tr>
-                <td>Fwd Primer</td>
-                <td>{{libraryParent.fwdPrimer}}</td>
+                <td>Plate</td>
+                <td>{{libraryParent.plate}}</td>
               </tr>
               <tr>
-                <td>Reverse Primer</td>
-                <td>{{libraryParent.revPrimer}}</td>
+                <td>Well</td>
+                <td>{{libraryParent.coordinate}}</td>
               </tr>
               <tr>
-                <td>Stock Title</td>
-                <td>{{libraryParent.stocktitle}}</td>
+                <td>Rb</td>
+                <td>{{libraryParent.rb}}</td>
               </tr>
               <tr>
-                <td>Stock Location</td>
-                <td>{{libraryParent.stockloc}}</td>
+                <td>ClogP</td>
+                <td>{{libraryParent.clogp}}</td>
+              </tr>
+              <tr>
+                <td>Tpsa</td>
+                <td>{{libraryParent.tpsa}}</td>
+              </tr>
+              <tr>
+                <td>Name</td>
+                <td>{{libraryParent.name}}</td>
               </tr>
             </tbody>
           </table>
-        {{/libraryParent.rnailibraryId}}
+        {{/libraryParent.chembridgelibraryId}}
       </div>
     </div>
     <div class="col-md-6">
@@ -60,26 +68,15 @@
       <section id="screenGeneGallery">
         <div>
           {{#hasTaxTerm}}
-            <h2>{{{taxTerm}}}</h2>
-            <div id="enviraEM">
-              <h3>Permissive Mutant</h3>
+            <h2>{{{taxTerm}}} N2</h2>
+            <div id="enviraGallery">
               <p>
-                [envira-gallery-dynamic id="tags-{{enviraEMTag}}" columns="{{enviraEMCol}}"] </p>
+                [envira-gallery-dynamic id="tags-{{{screenNameSlug}}}_N2_{{{taxTermSlug}}}" columns="6"] </p>
             </div>
-            <div id="enviraEN">
-              <h3>Permissive N2</h3>
+            <h2>{{{taxTerm}}} PS312</h2>
+            <div id="enviraGallery">
               <p>
-                [envira-gallery-dynamic id="tags-{{enviraENTag}}" columns="{{enviraEMCol}}"]</p>
-            </div>
-            <div id="enviraSM">
-              <h3>Restrictive Mutant</h3>
-              <p>
-                [envira-gallery-dynamic id="tags-{{enviraSMTag}}" columns="{{enviraSMCol}}"] </p>
-            </div>
-            <div id="enviraSN">
-              <h3>Restrictive N2</h3>
-              <p>
-                [envira-gallery-dynamic id="tags-{{enviraSNTag}}" columns="{{enviraSNCol}}"] </p>
+                [envira-gallery-dynamic id="tags-{{{screenNameSlug}}}_PS312_{{{taxTermSlug}}}" columns="6"] </p>
             </div>
           {{/hasTaxTerm}}
         </div>
@@ -87,28 +84,14 @@
     </div>
   </div>
 
-  {{#enviraCTTag}}
-  <div class="row">
-    <div class="col-md-12">
-      <section id="ControlGallery">
-        <div id="enviraCT">
-          <h3>Control</h3>
-          <p>
-            [envira-gallery-dynamic id="tags-{{enviraCTTag}}" columns="{{enviraCTCol}}" columns="3" limit="6"] </p>
-        </div>
-      </section>
-    </div>
-  </div>
-  {{/enviraCTTag}}
-
   <div class="row">
     <div class="col-md-12">
       <section id="relatedAssay">
         <div class="">
         </div>
         <div class="" id="wbassay">
-          [posts_table columns="image,title,tax:condition:Condition,tax:worm_strain:Strain" post_type="assay" term="wb_gene_sequence_id:{{{taxTermSlug}}}+screen_name:{{{screenNameSlug}}}" lazy_load="true" links="title,image" image_size="medium" widths="50,20,20,10"
-          filters="tax:worm_strain,tax:condition" rows_per_page="5"]
+          [posts_table columns="image,title,tax:worm_strain:Strain" post_type="chembridge_assay" term="envira-tag:{{{screenNameSlug}}}_{{{taxTermSlug}}}" lazy_load="true" links="title,image" image_size="medium" widths="80,10,10"
+          filters="tax:worm_strain" rows_per_page="5"]
         </div>
       </section>
     </div>

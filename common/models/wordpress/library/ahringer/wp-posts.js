@@ -4,9 +4,8 @@ const app = require('../../../../../server/server');
 const Promise = require('bluebird');
 const WpPosts = app.models.WpPosts;
 
-//TODO Move this to terms
-//This doesn't get called...
 WpPosts.library.ahringer.load.createTags = function(workflowData, tags, plateInfo) {
+  // WpPosts.library.ahringer.load.createTags = function(workflowData, tags, plateInfo) {
   var barcode = plateInfo.ExperimentExperimentplate.barcode;
   var shortBarcode = barcode.replace('_D', '');
 

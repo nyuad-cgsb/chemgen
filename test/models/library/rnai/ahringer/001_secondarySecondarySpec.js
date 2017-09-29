@@ -206,13 +206,22 @@ describe('001_secondarySpec.test.js Library.rnai.ahringer Secondary Parsing', fu
               }, {
                 'taxonomy': 'envira-tag',
                 'taxTerm': '2016-12-11--PR_Restrictive_N2_A09'
-              }, {
+              },
+              {
                 'taxonomy': 'envira-tag',
                 'taxTerm': '2016-12-11--PR_ID_2_F30A10.10'
               },
               {
                 'taxonomy': 'envira-tag',
                 'taxTerm': '2016-12-11--PR_Restrictive_F30A10.10'
+              },
+              {
+                'taxonomy': 'envira-tag',
+                'taxTerm': '2016-12-11--PR_F30A10.10'
+              },
+              {
+                'taxonomy': 'envira-tag',
+                'taxTerm': '2016-12-11--PR_N2_F30A10.10'
               },
               {
                 'taxonomy': 'screen_name',
@@ -312,13 +321,22 @@ describe('001_secondarySpec.test.js Library.rnai.ahringer Secondary Parsing', fu
                 }, {
                   'taxonomy': 'envira-tag',
                   'taxTerm': '2016-12-11--PR_Restrictive_N2_A01'
-                }, {
+                },
+                {
                   'taxonomy': 'envira-tag',
                   'taxTerm': '2016-12-11--PR_ID_5_L4440'
                 },
                 {
                   'taxonomy': 'envira-tag',
                   'taxTerm': '2016-12-11--PR_Restrictive_L4440'
+                },
+                {
+                  'taxonomy': 'envira-tag',
+                  'taxTerm': '2016-12-11--PR_L4440'
+                },
+                {
+                  'taxonomy': 'envira-tag',
+                  'taxTerm': '2016-12-11--PR_N2_L4440'
                 },
                 {
                   'taxonomy': 'screen_name',
