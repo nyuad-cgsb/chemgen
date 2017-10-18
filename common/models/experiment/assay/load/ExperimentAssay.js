@@ -141,7 +141,8 @@ ExperimentAssay.load.convertImage = function(workflowData, plateInfo, libraryDat
     var assayName = plateInfo.ExperimentExperimentplate.barcode + '_' + well;
 
     var images = ExperimentAssay.helpers.genImageFileNames(plateInfo, well);
-    var lookUpImage = images.baseImage + '-autolevel-' + '600x600.jpeg';
+    // var lookUpImage = images.baseImage + '-autolevel-' + '600x600.jpeg';
+    var lookUpImage = images.baseImage + '-autolevel' + '.bmp';
     var title = 'convertImage-' + plateId + '-' + assayName;
 
     //TODO Mixing callbacks with promises - this is baaaad
@@ -149,7 +150,6 @@ ExperimentAssay.load.convertImage = function(workflowData, plateInfo, libraryDat
 
     fs.access(lookUpImage, function(err) {
       if (err && err.code === 'ENOENT') {
-
         ExperimentAssay.helpers.genConvertImageCommands(images)
           .then(function(commands) {
             var imageJob = {
@@ -169,16 +169,12 @@ ExperimentAssay.load.convertImage = function(workflowData, plateInfo, libraryDat
             });
           })
           .catch(function(error) {
-            // reject(new Error(error));
-            //This is a terrible hack to make sure this works for tests
             resolve({
               baseImage: images.baseImage,
               script: title,
               convert: 1
             });
-
           });
-
       } else {
         resolve({
           baseImage: images.baseImage,

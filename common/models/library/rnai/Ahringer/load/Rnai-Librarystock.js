@@ -27,7 +27,10 @@ RnaiLibrarystock.load.workflows.createStock = function(workflowData, plateInfo) 
         return RnaiLibrarystock.load.createRnaiLibraryStocks(parsedLibraryResults);
       })
       .then(function(libraryDataList) {
-        resolve({plateInfo: plateInfo, libraryDataList: libraryDataList});
+        resolve({
+          plateInfo: plateInfo,
+          libraryDataList: libraryDataList
+        });
       })
       .catch(function(error) {
         app.winston.warn(error.stack);
@@ -39,9 +42,9 @@ RnaiLibrarystock.load.workflows.createStock = function(workflowData, plateInfo) 
 RnaiLibrarystock.load.createRnaiLibraryStocks = function(dataList) {
   return new Promise(function(resolve, reject) {
     Promise.map(dataList, function(data) {
-      var createObj = data.libraryStock;
+        var createObj = data.libraryStock;
 
-      return RnaiLibrarystock
+        return RnaiLibrarystock
           .findOrCreate({
             where: app.etlWorkflow.helpers.findOrCreateObj(createObj),
           }, createObj)
@@ -52,24 +55,27 @@ RnaiLibrarystock.load.createRnaiLibraryStocks = function(dataList) {
               libraryParent: data.libraryParent,
               geneName: createObj.geneName,
             };
+            resultData.libraryStock.taxTerms = createObj.taxTerms;
+            resultData.libraryStock.geneName = createObj.geneName;
+            resultData.libraryStock.taxTerm = createObj.geneName;
             return resultData;
           });
-    })
-        .then(function(results) {
-          resolve(results);
-        })
-        .catch(function(error) {
-          reject(new Error(error));
-        });
+      })
+      .then(function(results) {
+        resolve(results);
+      })
+      .catch(function(error) {
+        reject(new Error(error));
+      });
   });
 };
 
 RnaiLibrarystock.load.workflows.processExperimentPlates = function(workflowData, plateInfoList) {
   return new Promise(function(resolve, reject) {
     Promise.map(plateInfoList, function(plateInfo) {
-    return RnaiLibrarystock.load.workflows.createStock(workflowData, plateInfo)
+        return RnaiLibrarystock.load.workflows.createStock(workflowData, plateInfo);
       }, {
-        concurrency: 1,
+        concurrency: 6,
       })
       .then(function(results) {
         resolve(results);
@@ -81,14 +87,13 @@ RnaiLibrarystock.load.workflows.processExperimentPlates = function(workflowData,
   });
 };
 
-
 RnaiLibrarystock.genLibraryResult = function(barcode, libraryResults, well) {
   var libraryResult = {};
   if (barcode.match('L4440')) {
     libraryResult.name = 'L4440';
     libraryResult.geneName = 'L4440';
   } else {
-        // I'm sure I use the quadrant for something  - just not sure what
+    // I'm sure I use the quadrant for something  - just not sure what
     var quadrant = RnaiLibrarystock.helpers.getQuad(barcode);
     libraryResult = _.find(libraryResults, {
       well: well,

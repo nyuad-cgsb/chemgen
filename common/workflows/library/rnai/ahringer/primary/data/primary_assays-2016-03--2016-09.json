@@ -1,0 +1,6408 @@
+[
+  {
+    "screenName": "AHR-2016-03-16--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-03-16",
+    "imageDates": [
+      {
+        "creationdate": "2016-03-21"
+      },
+      {
+        "creationdate": "2016-03-22"
+      },
+      {
+        "creationdate": "2016-03-23"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.5",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%I.1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-03-21"
+                },
+                {
+                  "creationdate": "2016-03-22"
+                },
+                {
+                  "creationdate": "2016-03-23"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "I",
+            "RnaiPlateNo": "1"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-03-03",
+      "CultureDate": "2016-03-07",
+      "FreezeDate": "2016-03-08",
+      "IPTGInductionDate": "2016-03-16",
+      "restrictiveImageDate": "2016-03-21",
+      "permissiveImageDate": "2016-03-22",
+      "comments": "Suppressors - incubated at 17.5 for 3 days (until L4) and transferred to 23.5"
+    }
+  },
+  {
+    "screenName": "AHR-2016-03-16--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-03-16",
+    "imageDates": [
+      {
+        "creationdate": "2016-03-21"
+      },
+      {
+        "creationdate": "2016-03-22"
+      },
+      {
+        "creationdate": "2016-03-23"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.5",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%I.2%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-03-21"
+                },
+                {
+                  "creationdate": "2016-03-22"
+                },
+                {
+                  "creationdate": "2016-03-23"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "I",
+            "RnaiPlateNo": "2"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-03-03",
+      "CultureDate": "2016-03-07",
+      "FreezeDate": "2016-03-08",
+      "IPTGInductionDate": "2016-03-16",
+      "restrictiveImageDate": "2016-03-21",
+      "permissiveImageDate": "2016-03-22",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-03-16--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-03-16",
+    "imageDates": [
+      {
+        "creationdate": "2016-03-21"
+      },
+      {
+        "creationdate": "2016-03-22"
+      },
+      {
+        "creationdate": "2016-03-23"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.5",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%I.3%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-03-21"
+                },
+                {
+                  "creationdate": "2016-03-22"
+                },
+                {
+                  "creationdate": "2016-03-23"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "I",
+            "RnaiPlateNo": "3"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-03-03",
+      "CultureDate": "2016-03-07",
+      "FreezeDate": "2016-03-08",
+      "IPTGInductionDate": "2016-03-16",
+      "restrictiveImageDate": "2016-03-21",
+      "permissiveImageDate": "2016-03-22",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-03-23--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-03-23",
+    "imageDates": [
+      {
+        "creationdate": "2016-03-28"
+      },
+      {
+        "creationdate": "2016-03-29"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%I.4%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-03-28"
+                },
+                {
+                  "creationdate": "2016-03-29"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "I",
+            "RnaiPlateNo": "4"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-03-08",
+      "CultureDate": "2016-03-21",
+      "FreezeDate": "2016-03-22",
+      "IPTGInductionDate": "2016-03-23",
+      "restrictiveImageDate": "2016-03-28",
+      "permissiveImageDate": "2016-03-29",
+      "comments": "Bravo crashed on Plate 7 Q2, continues run the next day"
+    }
+  },
+  {
+    "screenName": "AHR-2016-03-23--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-03-23",
+    "imageDates": [
+      {
+        "creationdate": "2016-03-28"
+      },
+      {
+        "creationdate": "2016-03-29"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%I.5%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-03-28"
+                },
+                {
+                  "creationdate": "2016-03-29"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "I",
+            "RnaiPlateNo": "5"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-03-08",
+      "CultureDate": "2016-03-21",
+      "FreezeDate": "2016-03-22",
+      "IPTGInductionDate": "2016-03-23",
+      "restrictiveImageDate": "2016-03-28",
+      "permissiveImageDate": "2016-03-29",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-03-23--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-03-23",
+    "imageDates": [
+      {
+        "creationdate": "2016-03-28"
+      },
+      {
+        "creationdate": "2016-03-29"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%I.6%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-03-28"
+                },
+                {
+                  "creationdate": "2016-03-29"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "I",
+            "RnaiPlateNo": "6"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-03-15",
+      "CultureDate": "2016-03-21",
+      "FreezeDate": "2016-03-22",
+      "IPTGInductionDate": "2016-03-23",
+      "restrictiveImageDate": "2016-03-28",
+      "permissiveImageDate": "2016-03-29",
+      "comments": "Suppressors - incubated at 17.5 for 3 days (until L4) and transferred to 23.3"
+    }
+  },
+  {
+    "screenName": "AHR-2016-03-23--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-24-03-23",
+    "imageDates": [
+      {
+        "creationdate": "2016-03-28"
+      },
+      {
+        "creationdate": "2016-03-29"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%I.7%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-03-28"
+                },
+                {
+                  "creationdate": "2016-03-29"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "I",
+            "RnaiPlateNo": "7"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-03-15",
+      "CultureDate": "2016-03-21",
+      "FreezeDate": "2016-03-22",
+      "IPTGInductionDate": "2016-03-23",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-03-23--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-24-03-23",
+    "imageDates": [
+      {
+        "creationdate": "2016-03-28"
+      },
+      {
+        "creationdate": "2016-03-29"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%I.8%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-03-28"
+                },
+                {
+                  "creationdate": "2016-03-29"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "I",
+            "RnaiPlateNo": "8"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-03-15",
+      "CultureDate": "2016-03-21",
+      "FreezeDate": "2016-03-22",
+      "IPTGInductionDate": "2016-03-23",
+      "comments": "Worms look stressed"
+    }
+  },
+  {
+    "screenName": "AHR-2016-03-23--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-24-03-23",
+    "imageDates": [
+      {
+        "creationdate": "2016-03-28"
+      },
+      {
+        "creationdate": "2016-03-29"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%I.9%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-03-28"
+                },
+                {
+                  "creationdate": "2016-03-29"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "I",
+            "RnaiPlateNo": "9"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-03-15",
+      "CultureDate": "2016-03-21",
+      "FreezeDate": "2016-03-22",
+      "IPTGInductionDate": "2016-03-23",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-03-23--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-24-03-23",
+    "imageDates": [
+      {
+        "creationdate": "2016-03-28"
+      },
+      {
+        "creationdate": "2016-03-29"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%I.10%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-03-28"
+                },
+                {
+                  "creationdate": "2016-03-29"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "I",
+            "RnaiPlateNo": "10"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-03-15",
+      "CultureDate": "2016-03-21",
+      "FreezeDate": "2016-03-22",
+      "IPTGInductionDate": "2016-03-23",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-03-30--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-03-30",
+    "imageDates": [
+      {
+        "creationdate": "2016-04-04"
+      },
+      {
+        "creationdate": "2016-04-05"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%I.7%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-04-04"
+                },
+                {
+                  "creationdate": "2016-04-05"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "I",
+            "RnaiPlateNo": "7"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-03-15",
+      "CultureDate": "2016-03-29",
+      "IPTGInductionDate": "2016-03-30",
+      "restrictiveImageDate": "2016-04-04",
+      "permissiveImageDate": "2016-04-05",
+      "comments": "Suppressors - incubated at 17.5 for 2.5 days (until L4) and transferred to 23.3 from this screen onwards"
+    }
+  },
+  {
+    "screenName": "AHR-2016-03-30--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-03-30",
+    "imageDates": [
+      {
+        "creationdate": "2016-04-04"
+      },
+      {
+        "creationdate": "2016-04-05"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%I.8%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-04-04"
+                },
+                {
+                  "creationdate": "2016-04-05"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "I",
+            "RnaiPlateNo": "8"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-03-15",
+      "CultureDate": "2016-03-29",
+      "IPTGInductionDate": "2016-03-30",
+      "restrictiveImageDate": "2016-04-04",
+      "permissiveImageDate": "2016-04-05",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-03-30--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-03-30",
+    "imageDates": [
+      {
+        "creationdate": "2016-04-04"
+      },
+      {
+        "creationdate": "2016-04-05"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%I.9%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-04-04"
+                },
+                {
+                  "creationdate": "2016-04-05"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "I",
+            "RnaiPlateNo": "9"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-03-15",
+      "CultureDate": "2016-03-29",
+      "IPTGInductionDate": "2016-03-30",
+      "restrictiveImageDate": "2016-04-04",
+      "permissiveImageDate": "2016-04-05",
+      "comments": "Transferred using the 30 min gap momentum protocol"
+    }
+  },
+  {
+    "screenName": "AHR-2016-03-30--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-03-30",
+    "imageDates": [
+      {
+        "creationdate": "2016-04-04"
+      },
+      {
+        "creationdate": "2016-04-05"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%I.10%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-04-04"
+                },
+                {
+                  "creationdate": "2016-04-05"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "I",
+            "RnaiPlateNo": "10"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-03-15",
+      "CultureDate": "2016-03-29",
+      "IPTGInductionDate": "2016-03-30",
+      "restrictiveImageDate": "2016-04-04",
+      "permissiveImageDate": "2016-04-05",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-03-30--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-03-30",
+    "imageDates": [
+      {
+        "creationdate": "2016-04-04"
+      },
+      {
+        "creationdate": "2016-04-05"
+      },
+      {
+        "creationdate": "2016-04-06"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%II.1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-04-04"
+                },
+                {
+                  "creationdate": "2016-04-05"
+                },
+                {
+                  "creationdate": "2016-04-06"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "II",
+            "RnaiPlateNo": "1"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-03-24",
+      "CultureDate": "2016-03-28",
+      "FreezeDate": "2016-03-29",
+      "IPTGInductionDate": "2016-03-30",
+      "restrictiveImageDate": "2016-04-04",
+      "permissiveImageDate": "2016-04-05",
+      "comments": "Starting Chromosome II, plate 1, worms look sick :S"
+    }
+  },
+  {
+    "screenName": "AHR-2016-03-30--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-03-30",
+    "imageDates": [
+      {
+        "creationdate": "2016-04-04"
+      },
+      {
+        "creationdate": "2016-04-05"
+      },
+      {
+        "creationdate": "2016-04-06"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%II.2%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-04-04"
+                },
+                {
+                  "creationdate": "2016-04-05"
+                },
+                {
+                  "creationdate": "2016-04-06"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "II",
+            "RnaiPlateNo": "2"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-03-20",
+      "CultureDate": "2016-03-28",
+      "FreezeDate": "2016-03-29",
+      "IPTGInductionDate": "2016-03-30",
+      "restrictiveImageDate": "2016-04-04",
+      "permissiveImageDate": "2016-04-05",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-03-30--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-03-30",
+    "imageDates": [
+      {
+        "creationdate": "2016-04-04"
+      },
+      {
+        "creationdate": "2016-04-05"
+      },
+      {
+        "creationdate": "2016-04-06"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%II.3%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-04-04"
+                },
+                {
+                  "creationdate": "2016-04-05"
+                },
+                {
+                  "creationdate": "2016-04-06"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "II",
+            "RnaiPlateNo": "3"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-03-24",
+      "CultureDate": "2016-03-28",
+      "FreezeDate": "2016-03-29",
+      "IPTGInductionDate": "2016-03-30",
+      "restrictiveImageDate": "2016-04-04",
+      "permissiveImageDate": "2016-04-05",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-03-30--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-03-30",
+    "imageDates": [
+      {
+        "creationdate": "2016-04-04"
+      },
+      {
+        "creationdate": "2016-04-05"
+      },
+      {
+        "creationdate": "2016-04-06"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%II.4%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-04-04"
+                },
+                {
+                  "creationdate": "2016-04-05"
+                },
+                {
+                  "creationdate": "2016-04-06"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "II",
+            "RnaiPlateNo": "4"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-03-24",
+      "CultureDate": "2016-03-28",
+      "FreezeDate": "2016-03-29",
+      "IPTGInductionDate": "2016-03-30",
+      "restrictiveImageDate": "2016-04-04",
+      "permissiveImageDate": "2016-04-05",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-03-30--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-03-30",
+    "imageDates": [
+      {
+        "creationdate": "2016-04-04"
+      },
+      {
+        "creationdate": "2016-04-05"
+      },
+      {
+        "creationdate": "2016-04-06"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%II.5%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-04-04"
+                },
+                {
+                  "creationdate": "2016-04-05"
+                },
+                {
+                  "creationdate": "2016-04-06"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "II",
+            "RnaiPlateNo": "5"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-03-24",
+      "CultureDate": "2016-03-28",
+      "FreezeDate": "2016-03-29",
+      "IPTGInductionDate": "2016-03-30",
+      "restrictiveImageDate": "2016-04-04",
+      "permissiveImageDate": "2016-04-05",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-04-13--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-04-13",
+    "imageDates": [
+      {
+        "creationdate": "2016-04-18"
+      },
+      {
+        "creationdate": "2016-04-19"
+      },
+      {
+        "creationdate": "2016-04-20"
+      },
+      {
+        "creationdate": "2016-04-21"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%II.6%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-04-18"
+                },
+                {
+                  "creationdate": "2016-04-19"
+                },
+                {
+                  "creationdate": "2016-04-20"
+                },
+                {
+                  "creationdate": "2016-04-21"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "II",
+            "RnaiPlateNo": "6"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-03-30",
+      "CultureDate": "2016-04-04",
+      "FreezeDate": "2016-04-07",
+      "IPTGInductionDate": "2016-04-13",
+      "restrictiveImageDate": "2016-04-18",
+      "permissiveImageDate": "2016-21-04-20",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-04-13--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-04-13",
+    "imageDates": [
+      {
+        "creationdate": "2016-04-18"
+      },
+      {
+        "creationdate": "2016-04-19"
+      },
+      {
+        "creationdate": "2016-04-20"
+      },
+      {
+        "creationdate": "2016-04-21"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%II.7%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-04-18"
+                },
+                {
+                  "creationdate": "2016-04-19"
+                },
+                {
+                  "creationdate": "2016-04-20"
+                },
+                {
+                  "creationdate": "2016-04-21"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "II",
+            "RnaiPlateNo": "7"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-03-30",
+      "CultureDate": "2016-04-04",
+      "FreezeDate": "2016-04-07",
+      "IPTGInductionDate": "2016-04-13",
+      "restrictiveImageDate": "2016-04-18",
+      "permissiveImageDate": "2016-21-04-20",
+      "comments": "Enhancer imaging- De-lidder stopped working on Chromosome II, 2, Q3, continued the next day"
+    }
+  },
+  {
+    "screenName": "AHR-2016-04-13--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-04-13",
+    "imageDates": [
+      {
+        "creationdate": "2016-04-18"
+      },
+      {
+        "creationdate": "2016-04-19"
+      },
+      {
+        "creationdate": "2016-04-20"
+      },
+      {
+        "creationdate": "2016-04-21"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%II.8%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-04-18"
+                },
+                {
+                  "creationdate": "2016-04-19"
+                },
+                {
+                  "creationdate": "2016-04-20"
+                },
+                {
+                  "creationdate": "2016-04-21"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "II",
+            "RnaiPlateNo": "8"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-03-30",
+      "CultureDate": "2016-04-04",
+      "FreezeDate": "2016-04-07",
+      "IPTGInductionDate": "2016-04-13",
+      "restrictiveImageDate": "2016-04-18",
+      "permissiveImageDate": "2016-21-04-20",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-04-13--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-04-13",
+    "imageDates": [
+      {
+        "creationdate": "2016-04-18"
+      },
+      {
+        "creationdate": "2016-04-19"
+      },
+      {
+        "creationdate": "2016-04-20"
+      },
+      {
+        "creationdate": "2016-04-21"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%II.9%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-04-18"
+                },
+                {
+                  "creationdate": "2016-04-19"
+                },
+                {
+                  "creationdate": "2016-04-20"
+                },
+                {
+                  "creationdate": "2016-04-21"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "II",
+            "RnaiPlateNo": "9"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-03-30",
+      "CultureDate": "2016-04-04",
+      "FreezeDate": "2016-04-07",
+      "IPTGInductionDate": "2016-04-13",
+      "restrictiveImageDate": "2016-04-18",
+      "permissiveImageDate": "2016-21-04-20",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-04-13--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-04-13",
+    "imageDates": [
+      {
+        "creationdate": "2016-04-18"
+      },
+      {
+        "creationdate": "2016-04-19"
+      },
+      {
+        "creationdate": "2016-04-20"
+      },
+      {
+        "creationdate": "2016-04-21"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%II.10%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-04-18"
+                },
+                {
+                  "creationdate": "2016-04-19"
+                },
+                {
+                  "creationdate": "2016-04-20"
+                },
+                {
+                  "creationdate": "2016-04-21"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "II",
+            "RnaiPlateNo": "10"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-03-30",
+      "CultureDate": "2016-04-04",
+      "FreezeDate": "2016-04-07",
+      "IPTGInductionDate": "2016-04-13",
+      "restrictiveImageDate": "2016-04-18",
+      "permissiveImageDate": "2016-21-04-20",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-04-13--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-04-13",
+    "imageDates": [
+      {
+        "creationdate": "2016-04-18"
+      },
+      {
+        "creationdate": "2016-04-19"
+      },
+      {
+        "creationdate": "2016-04-20"
+      },
+      {
+        "creationdate": "2016-04-21"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%II.11%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-04-18"
+                },
+                {
+                  "creationdate": "2016-04-19"
+                },
+                {
+                  "creationdate": "2016-04-20"
+                },
+                {
+                  "creationdate": "2016-04-21"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "II",
+            "RnaiPlateNo": "11"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-03-30",
+      "CultureDate": "2016-04-04",
+      "FreezeDate": "2016-04-07",
+      "IPTGInductionDate": "2016-04-13",
+      "restrictiveImageDate": "2016-04-18",
+      "permissiveImageDate": "2016-21-04-20",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-04-13--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-04-13",
+    "imageDates": [
+      {
+        "creationdate": "2016-04-18"
+      },
+      {
+        "creationdate": "2016-04-19"
+      },
+      {
+        "creationdate": "2016-04-20"
+      },
+      {
+        "creationdate": "2016-04-21"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%III.1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-04-18"
+                },
+                {
+                  "creationdate": "2016-04-19"
+                },
+                {
+                  "creationdate": "2016-04-20"
+                },
+                {
+                  "creationdate": "2016-04-21"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "III",
+            "RnaiPlateNo": "1"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-03-30",
+      "CultureDate": "2016-04-04",
+      "FreezeDate": "2016-04-07",
+      "IPTGInductionDate": "2016-04-13",
+      "restrictiveImageDate": "2016-04-18",
+      "permissiveImageDate": "2016-21-04-20",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-04-13--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-04-13",
+    "imageDates": [
+      {
+        "creationdate": "2016-04-18"
+      },
+      {
+        "creationdate": "2016-04-19"
+      },
+      {
+        "creationdate": "2016-04-20"
+      },
+      {
+        "creationdate": "2016-04-21"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%III.2%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-04-18"
+                },
+                {
+                  "creationdate": "2016-04-19"
+                },
+                {
+                  "creationdate": "2016-04-20"
+                },
+                {
+                  "creationdate": "2016-04-21"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "III",
+            "RnaiPlateNo": "2"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-03-30",
+      "CultureDate": "2016-04-04",
+      "FreezeDate": "2016-04-07",
+      "IPTGInductionDate": "2016-04-13",
+      "restrictiveImageDate": "2016-04-18",
+      "permissiveImageDate": "2016-21-04-20",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-04-19--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-04-19",
+    "imageDates": [
+      {
+        "creationdate": "2016-04-24"
+      },
+      {
+        "creationdate": "2016-04-25"
+      },
+      {
+        "creationdate": "2016-04-26"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%III.3%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-04-24"
+                },
+                {
+                  "creationdate": "2016-04-25"
+                },
+                {
+                  "creationdate": "2016-04-26"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "III",
+            "RnaiPlateNo": "3"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-04-10",
+      "CultureDate": "2016-04-17",
+      "FreezeDate": "2016-04-18",
+      "IPTGInductionDate": "2016-04-19",
+      "restrictiveImageDate": "2016-04-24",
+      "permissiveImageDate": "2016-26-04-25",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-04-19--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-04-19",
+    "imageDates": [
+      {
+        "creationdate": "2016-04-24"
+      },
+      {
+        "creationdate": "2016-04-25"
+      },
+      {
+        "creationdate": "2016-04-26"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%III.4%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-04-24"
+                },
+                {
+                  "creationdate": "2016-04-25"
+                },
+                {
+                  "creationdate": "2016-04-26"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "III",
+            "RnaiPlateNo": "4"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-04-10",
+      "CultureDate": "2016-04-17",
+      "FreezeDate": "2016-04-18",
+      "IPTGInductionDate": "2016-04-19",
+      "restrictiveImageDate": "2016-04-24",
+      "permissiveImageDate": "2016-26-04-25",
+      "comments": "Enhancer imaging- De-lidder stopped working on Chromosome III, 5, Q1, continued the next day"
+    }
+  },
+  {
+    "screenName": "AHR-2016-04-19--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-04-19",
+    "imageDates": [
+      {
+        "creationdate": "2016-04-24"
+      },
+      {
+        "creationdate": "2016-04-25"
+      },
+      {
+        "creationdate": "2016-04-26"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%III.5%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-04-24"
+                },
+                {
+                  "creationdate": "2016-04-25"
+                },
+                {
+                  "creationdate": "2016-04-26"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "III",
+            "RnaiPlateNo": "5"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-04-10",
+      "CultureDate": "2016-04-17",
+      "FreezeDate": "2016-04-18",
+      "IPTGInductionDate": "2016-04-19",
+      "restrictiveImageDate": "2016-04-24",
+      "permissiveImageDate": "2016-26-04-25",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-04-19--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-04-19",
+    "imageDates": [
+      {
+        "creationdate": "2016-04-24"
+      },
+      {
+        "creationdate": "2016-04-25"
+      },
+      {
+        "creationdate": "2016-04-26"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%III.6%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-04-24"
+                },
+                {
+                  "creationdate": "2016-04-25"
+                },
+                {
+                  "creationdate": "2016-04-26"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "III",
+            "RnaiPlateNo": "6"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-04-10",
+      "CultureDate": "2016-04-17",
+      "FreezeDate": "2016-04-18",
+      "IPTGInductionDate": "2016-04-19",
+      "restrictiveImageDate": "2016-04-24",
+      "permissiveImageDate": "2016-26-04-25",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-04-19--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-04-19",
+    "imageDates": [
+      {
+        "creationdate": "2016-04-24"
+      },
+      {
+        "creationdate": "2016-04-25"
+      },
+      {
+        "creationdate": "2016-04-26"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%III.7%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-04-24"
+                },
+                {
+                  "creationdate": "2016-04-25"
+                },
+                {
+                  "creationdate": "2016-04-26"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "III",
+            "RnaiPlateNo": "7"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-04-11",
+      "CultureDate": "2016-04-17",
+      "FreezeDate": "2016-04-18",
+      "IPTGInductionDate": "2016-04-19",
+      "restrictiveImageDate": "2016-04-24",
+      "permissiveImageDate": "2016-26-04-25",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-04-19--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-04-19",
+    "imageDates": [
+      {
+        "creationdate": "2016-04-24"
+      },
+      {
+        "creationdate": "2016-04-25"
+      },
+      {
+        "creationdate": "2016-04-26"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%III.8%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-04-24"
+                },
+                {
+                  "creationdate": "2016-04-25"
+                },
+                {
+                  "creationdate": "2016-04-26"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "III",
+            "RnaiPlateNo": "8"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-04-11",
+      "CultureDate": "2016-04-17",
+      "FreezeDate": "2016-04-18",
+      "IPTGInductionDate": "2016-04-19",
+      "restrictiveImageDate": "2016-04-24",
+      "permissiveImageDate": "2016-26-04-25",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-04-19--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-04-19",
+    "imageDates": [
+      {
+        "creationdate": "2016-04-24"
+      },
+      {
+        "creationdate": "2016-04-25"
+      },
+      {
+        "creationdate": "2016-04-26"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%III.9%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-04-24"
+                },
+                {
+                  "creationdate": "2016-04-25"
+                },
+                {
+                  "creationdate": "2016-04-26"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "III",
+            "RnaiPlateNo": "9"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-04-11",
+      "CultureDate": "2016-04-17",
+      "FreezeDate": "2016-04-18",
+      "IPTGInductionDate": "2016-04-19",
+      "restrictiveImageDate": "2016-04-24",
+      "permissiveImageDate": "2016-26-04-25",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-04-27--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-04-27",
+    "imageDates": [
+      {
+        "creationdate": "2016-04-24"
+      },
+      {
+        "creationdate": "2016-04-25"
+      },
+      {
+        "creationdate": "2016-04-26"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": 17.5,
+    "restrictiveTemp": 23.3,
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%IV.1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-04-24"
+                },
+                {
+                  "creationdate": "2016-04-25"
+                },
+                {
+                  "creationdate": "2016-04-26"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "IV",
+            "RnaiPlateNo": "1"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-04-14",
+      "CultureDate": "2016-04-26",
+      "FreezeDate": "2016-04-27",
+      "IPTGInductionDate": "2016-04-27",
+      "comments": "Barcode labeller stopped working, unable to screen"
+    }
+  },
+  {
+    "screenName": "AHR-2016-04-27--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-04-27",
+    "imageDates": [
+      {
+        "creationdate": "2016-04-24"
+      },
+      {
+        "creationdate": "2016-04-25"
+      },
+      {
+        "creationdate": "2016-04-26"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": 17.5,
+    "restrictiveTemp": 23.3,
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%IV.2%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-04-24"
+                },
+                {
+                  "creationdate": "2016-04-25"
+                },
+                {
+                  "creationdate": "2016-04-26"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "IV",
+            "RnaiPlateNo": "2"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-04-14",
+      "CultureDate": "2016-04-26",
+      "FreezeDate": "2016-04-27",
+      "IPTGInductionDate": "2016-04-27",
+      "comments": "3 sets - 1 for freezing, 2 for screening"
+    }
+  },
+  {
+    "screenName": "AHR-2016-04-27--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-and-12-05-11",
+    "imageDates": [
+      {
+        "creationdate": "2016-05-16"
+      },
+      {
+        "creationdate": "2016-05-17"
+      },
+      {
+        "creationdate": "2016-05-18"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%IV.3%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-05-16"
+                },
+                {
+                  "creationdate": "2016-05-17"
+                },
+                {
+                  "creationdate": "2016-05-18"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "IV",
+            "RnaiPlateNo": "3"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-04-14",
+      "CultureDate": "2016-05-09",
+      "FreezeDate": "2016-05-10",
+      "IPTGInductionDate": "2016-05-11",
+      "restrictiveImageDate": "2016-17-05-16",
+      "permissiveImageDate": "2016-18-05-17",
+      "comments": "3 sets - 1 for freezing, 2 for screening (20 hours apart)"
+    }
+  },
+  {
+    "screenName": "AHR-2016-04-27--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-and-12-05-11",
+    "imageDates": [
+      {
+        "creationdate": "2016-05-16"
+      },
+      {
+        "creationdate": "2016-05-17"
+      },
+      {
+        "creationdate": "2016-05-18"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%IV.4%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-05-16"
+                },
+                {
+                  "creationdate": "2016-05-17"
+                },
+                {
+                  "creationdate": "2016-05-18"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "IV",
+            "RnaiPlateNo": "4"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-04-14",
+      "CultureDate": "2016-05-09",
+      "FreezeDate": "2016-05-10",
+      "IPTGInductionDate": "2016-05-11",
+      "restrictiveImageDate": "2016-17-05-16",
+      "permissiveImageDate": "2016-18-05-17",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-05-25--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-05-25",
+    "imageDates": [
+      {
+        "creationdate": "2016-05-30"
+      },
+      {
+        "creationdate": "2016-05-31"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%IV.5.A2%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-05-30"
+                },
+                {
+                  "creationdate": "2016-05-31"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "IV",
+            "RnaiPlateNo": "5.A2"
+          }
+        }
+      }
+    },
+    "data": {
+      "IPTGInductionDate": "2016-05-25",
+      "restrictiveImageDate": "3017-05-30",
+      "permissiveImageDate": "2017-05-31",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-05-25--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-05-25",
+    "imageDates": [
+      {
+        "creationdate": "2016-05-30"
+      },
+      {
+        "creationdate": "2016-05-31"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%IV.5.B1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-05-30"
+                },
+                {
+                  "creationdate": "2016-05-31"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "IV",
+            "RnaiPlateNo": "5.B1"
+          }
+        }
+      }
+    },
+    "data": {
+      "IPTGInductionDate": "2016-05-25",
+      "restrictiveImageDate": "3017-05-30",
+      "permissiveImageDate": "2017-05-31",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-05-25--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-05-25",
+    "imageDates": [
+      {
+        "creationdate": "2016-05-30"
+      },
+      {
+        "creationdate": "2016-05-31"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%IV.5.B2%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-05-30"
+                },
+                {
+                  "creationdate": "2016-05-31"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "IV",
+            "RnaiPlateNo": "5.B2"
+          }
+        }
+      }
+    },
+    "data": {
+      "IPTGInductionDate": "2016-05-25",
+      "restrictiveImageDate": "3017-05-30",
+      "permissiveImageDate": "2017-05-31",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-05-25--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-05-25",
+    "imageDates": [
+      {
+        "creationdate": "2016-05-30"
+      },
+      {
+        "creationdate": "2016-05-31"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%IV.7.B1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-05-30"
+                },
+                {
+                  "creationdate": "2016-05-31"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "IV",
+            "RnaiPlateNo": "7.B1"
+          }
+        }
+      }
+    },
+    "data": {
+      "IPTGInductionDate": "2016-05-25",
+      "restrictiveImageDate": "3017-05-30",
+      "permissiveImageDate": "2017-05-31",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-05-25--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-05-25",
+    "imageDates": [
+      {
+        "creationdate": "2016-05-30"
+      },
+      {
+        "creationdate": "2016-05-31"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%IV.7.B2%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-05-30"
+                },
+                {
+                  "creationdate": "2016-05-31"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "IV",
+            "RnaiPlateNo": "7.B2"
+          }
+        }
+      }
+    },
+    "data": {
+      "IPTGInductionDate": "2016-05-25",
+      "restrictiveImageDate": "3017-05-30",
+      "permissiveImageDate": "2017-05-31",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-05-25--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-05-25",
+    "imageDates": [
+      {
+        "creationdate": "2016-05-30"
+      },
+      {
+        "creationdate": "2016-05-31"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%IV.8.A1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-05-30"
+                },
+                {
+                  "creationdate": "2016-05-31"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "IV",
+            "RnaiPlateNo": "8.A1"
+          }
+        }
+      }
+    },
+    "data": {
+      "IPTGInductionDate": "2016-05-25",
+      "restrictiveImageDate": "3017-05-30",
+      "permissiveImageDate": "2017-05-31",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-05-25--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-05-25",
+    "imageDates": [
+      {
+        "creationdate": "2016-05-30"
+      },
+      {
+        "creationdate": "2016-05-31"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%IV.8.A2%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-05-30"
+                },
+                {
+                  "creationdate": "2016-05-31"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "IV",
+            "RnaiPlateNo": "8.A2"
+          }
+        }
+      }
+    },
+    "data": {
+      "IPTGInductionDate": "2016-05-25",
+      "restrictiveImageDate": "3017-05-30",
+      "permissiveImageDate": "2017-05-31",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-05-25--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-05-25",
+    "imageDates": [
+      {
+        "creationdate": "2016-05-30"
+      },
+      {
+        "creationdate": "2016-05-31"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%IV.8.B1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-05-30"
+                },
+                {
+                  "creationdate": "2016-05-31"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "IV",
+            "RnaiPlateNo": "8.B1"
+          }
+        }
+      }
+    },
+    "data": {
+      "IPTGInductionDate": "2016-05-25",
+      "restrictiveImageDate": "3017-05-30",
+      "permissiveImageDate": "2017-05-31",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-06-01--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-06-01",
+    "imageDates": [
+      {
+        "creationdate": "2016-06-06"
+      },
+      {
+        "creationdate": "2016-06-07"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%IV.5.Q1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-06"
+                },
+                {
+                  "creationdate": "2016-06-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "IV",
+            "RnaiPlateNo": "5.Q1"
+          }
+        }
+      }
+    },
+    "data": {
+      "CultureDate": "2016-05-30",
+      "FreezeDate": "2016-05-31",
+      "IPTGInductionDate": "2016-06-01",
+      "restrictiveImageDate": "2016-06-06",
+      "permissiveImageDate": "2016-06-07",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-06-01--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-06-01",
+    "imageDates": [
+      {
+        "creationdate": "2016-06-06"
+      },
+      {
+        "creationdate": "2016-06-07"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%IV.6.Q1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-06"
+                },
+                {
+                  "creationdate": "2016-06-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "IV",
+            "RnaiPlateNo": "6.Q1"
+          }
+        }
+      }
+    },
+    "data": {
+      "CultureDate": "2016-05-30",
+      "FreezeDate": "2016-05-31",
+      "IPTGInductionDate": "2016-06-01",
+      "restrictiveImageDate": "2016-06-06",
+      "permissiveImageDate": "2016-06-07",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-06-01--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-06-01",
+    "imageDates": [
+      {
+        "creationdate": "2016-06-06"
+      },
+      {
+        "creationdate": "2016-06-07"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%IV.6.Q2%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-06"
+                },
+                {
+                  "creationdate": "2016-06-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "IV",
+            "RnaiPlateNo": "6.Q2"
+          }
+        }
+      }
+    },
+    "data": {
+      "CultureDate": "2016-05-30",
+      "FreezeDate": "2016-05-31",
+      "IPTGInductionDate": "2016-06-01",
+      "restrictiveImageDate": "2016-06-06",
+      "permissiveImageDate": "2016-06-07",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-06-01--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-06-01",
+    "imageDates": [
+      {
+        "creationdate": "2016-06-06"
+      },
+      {
+        "creationdate": "2016-06-07"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%IV.6.Q3%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-06"
+                },
+                {
+                  "creationdate": "2016-06-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "IV",
+            "RnaiPlateNo": "6.Q3"
+          }
+        }
+      }
+    },
+    "data": {
+      "CultureDate": "2016-05-30",
+      "FreezeDate": "2016-05-31",
+      "IPTGInductionDate": "2016-06-01",
+      "restrictiveImageDate": "2016-06-06",
+      "permissiveImageDate": "2016-06-07",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-06-01--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-06-01",
+    "imageDates": [
+      {
+        "creationdate": "2016-06-06"
+      },
+      {
+        "creationdate": "2016-06-07"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%IV.6.Q4%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-06"
+                },
+                {
+                  "creationdate": "2016-06-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "IV",
+            "RnaiPlateNo": "6.Q4"
+          }
+        }
+      }
+    },
+    "data": {
+      "CultureDate": "2016-05-30",
+      "FreezeDate": "2016-05-31",
+      "IPTGInductionDate": "2016-06-01",
+      "restrictiveImageDate": "2016-06-06",
+      "permissiveImageDate": "2016-06-07",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-06-01--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-06-01",
+    "imageDates": [
+      {
+        "creationdate": "2016-06-06"
+      },
+      {
+        "creationdate": "2016-06-07"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%IV.7.Q1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-06"
+                },
+                {
+                  "creationdate": "2016-06-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "IV",
+            "RnaiPlateNo": "7.Q1"
+          }
+        }
+      }
+    },
+    "data": {
+      "CultureDate": "2016-05-30",
+      "FreezeDate": "2016-05-31",
+      "IPTGInductionDate": "2016-06-01",
+      "restrictiveImageDate": "2016-06-06",
+      "permissiveImageDate": "2016-06-07",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-06-01--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-06-01",
+    "imageDates": [
+      {
+        "creationdate": "2016-06-06"
+      },
+      {
+        "creationdate": "2016-06-07"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%IV.7.Q2%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-06"
+                },
+                {
+                  "creationdate": "2016-06-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "IV",
+            "RnaiPlateNo": "7.Q2"
+          }
+        }
+      }
+    },
+    "data": {
+      "CultureDate": "2016-05-30",
+      "FreezeDate": "2016-05-31",
+      "IPTGInductionDate": "2016-06-01",
+      "restrictiveImageDate": "2016-06-06",
+      "permissiveImageDate": "2016-06-07",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-06-01--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-06-01",
+    "imageDates": [
+      {
+        "creationdate": "2016-06-06"
+      },
+      {
+        "creationdate": "2016-06-07"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%IV.8.Q4%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-06"
+                },
+                {
+                  "creationdate": "2016-06-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "IV",
+            "RnaiPlateNo": "8.Q4"
+          }
+        }
+      }
+    },
+    "data": {
+      "CultureDate": "2016-05-30",
+      "FreezeDate": "2016-05-31",
+      "IPTGInductionDate": "2016-06-01",
+      "restrictiveImageDate": "2016-06-06",
+      "permissiveImageDate": "2016-06-07",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-06-08--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-06-08",
+    "imageDates": [
+      {
+        "creationdate": "2016-06-13"
+      },
+      {
+        "creationdate": "2016-06-14"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%IV.1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-13"
+                },
+                {
+                  "creationdate": "2016-06-14"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "IV",
+            "RnaiPlateNo": "1"
+          }
+        }
+      }
+    },
+    "data": {
+      "CultureDate": "2016-06-06",
+      "FreezeDate": "2016-06-07",
+      "IPTGInductionDate": "2016-06-08",
+      "restrictiveImageDate": "2016-06-13",
+      "permissiveImageDate": "2016-06-14",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-06-08--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-06-08",
+    "imageDates": [
+      {
+        "creationdate": "2016-06-13"
+      },
+      {
+        "creationdate": "2016-06-14"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%IV.2%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-13"
+                },
+                {
+                  "creationdate": "2016-06-14"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "IV",
+            "RnaiPlateNo": "2"
+          }
+        }
+      }
+    },
+    "data": {
+      "CultureDate": "2016-06-06",
+      "FreezeDate": "2016-06-07",
+      "IPTGInductionDate": "2016-06-08",
+      "restrictiveImageDate": "2016-06-13",
+      "permissiveImageDate": "2016-06-14",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-06-08--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-06-08",
+    "imageDates": [
+      {
+        "creationdate": "2016-06-13"
+      },
+      {
+        "creationdate": "2016-06-14"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%IV.9%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-13"
+                },
+                {
+                  "creationdate": "2016-06-14"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "IV",
+            "RnaiPlateNo": "9"
+          }
+        }
+      }
+    },
+    "data": {
+      "CultureDate": "2016-06-06",
+      "FreezeDate": "2016-06-07",
+      "IPTGInductionDate": "2016-06-08",
+      "restrictiveImageDate": "2016-06-13",
+      "permissiveImageDate": "2016-06-14",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-06-08--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-06-08",
+    "imageDates": [
+      {
+        "creationdate": "2016-06-13"
+      },
+      {
+        "creationdate": "2016-06-14"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%IV.10.A1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-13"
+                },
+                {
+                  "creationdate": "2016-06-14"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "IV",
+            "RnaiPlateNo": "10.A1"
+          }
+        }
+      }
+    },
+    "data": {
+      "CultureDate": "2016-06-06",
+      "FreezeDate": "2016-06-07",
+      "IPTGInductionDate": "2016-06-08",
+      "restrictiveImageDate": "2016-06-13",
+      "permissiveImageDate": "2016-06-14",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-06-08--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-06-08",
+    "imageDates": [
+      {
+        "creationdate": "2016-06-13"
+      },
+      {
+        "creationdate": "2016-06-14"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%IV.10.A2%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-13"
+                },
+                {
+                  "creationdate": "2016-06-14"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "IV",
+            "RnaiPlateNo": "10.A2"
+          }
+        }
+      }
+    },
+    "data": {
+      "CultureDate": "2016-06-06",
+      "FreezeDate": "2016-06-07",
+      "IPTGInductionDate": "2016-06-08",
+      "restrictiveImageDate": "2016-06-13",
+      "permissiveImageDate": "2016-06-14",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-06-08--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-06-08",
+    "imageDates": [
+      {
+        "creationdate": "2016-06-13"
+      },
+      {
+        "creationdate": "2016-06-14"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%IV.10.B2%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-13"
+                },
+                {
+                  "creationdate": "2016-06-14"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "IV",
+            "RnaiPlateNo": "10.B2"
+          }
+        }
+      }
+    },
+    "data": {
+      "CultureDate": "2016-06-06",
+      "FreezeDate": "2016-06-07",
+      "IPTGInductionDate": "2016-06-08",
+      "restrictiveImageDate": "2016-06-13",
+      "permissiveImageDate": "2016-06-14",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-06-23--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-06-23",
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%IV.10.B1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "IV",
+            "RnaiPlateNo": "10.B1"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-06-07",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-06-23--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-06-23",
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.1.A1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "1.A1"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-06-13",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-06-23--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-06-23",
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.1.A2%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "1.A2"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-06-13",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-06-23--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-06-23",
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.1.B1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "1.B1"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-06-16",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-06-23--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-06-23",
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.1.B2%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "1.B2"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-06-13",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-06-23--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-06-23",
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.2.A1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "2.A1"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-06-16",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-06-23--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-06-23",
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.2.A2%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "2.A2"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-06-16",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-06-23--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-06-23",
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.2.B1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "2.B1"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-06-07",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-06-23--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-06-23",
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.2.B2%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "2.B2"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-06-16",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-06-23--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-06-23",
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.3.A1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "3.A1"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-06-16",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-06-23--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-06-23",
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.3.A2%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "3.A2"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-06-16",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-06-23--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-06-23",
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.3.B1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "3.B1"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-06-13",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-06-23--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-06-23",
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.3.B2%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "3.B2"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-06-16",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-06-23--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-06-23",
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.4.A1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "4.A1"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-06-16",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-06-23--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-06-23",
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.4.A2%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "4.A2"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-06-16",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-06-23--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-06-23",
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.4.B1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "4.B1"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-06-13",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-06-23--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-06-23",
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.4.B2%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "4.B2"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-06-07",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-06-23--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-06-23",
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.5.A1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "5.A1"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-06-16",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-06-23--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-06-23",
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.5.A2%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "5.A2"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-06-13",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-06-23--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-06-23",
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.5.B1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "5.B1"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-06-16",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-06-23--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-06-23",
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.5.B2%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "5.B2"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-06-13",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-06-23--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-06-23",
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.6.A1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "6.A1"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-06-16",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-06-23--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-06-23",
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.6.A2%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "6.A2"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-06-16",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-06-23--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-06-23",
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.6.B1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "6.B1"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-06-16",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR-2016-06-23--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2016-06-23",
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.3",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.6.B2%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "6.B2"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-06-14",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    }
+  }
+]

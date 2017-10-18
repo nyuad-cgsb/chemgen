@@ -8,7 +8,7 @@ const readFile = Promise.promisify(require('fs')
 const jsonfile = require('jsonfile');
 const path = require('path');
 
-// var workflow = require('./lib/workflow');
+const Workflow = app.models.Workflow;
 
 // 1. Assign Screen Data - name, stage, wells, etc.
 // 2. Read in data file corresponding to the screen - its a json file in ./data
@@ -20,9 +20,9 @@ const path = require('path');
 /// ////////////////////////////////
 // BEGIN DECEMBER SCREEN
 /// ////////////////////////////////
-var file = path.resolve(__dirname) + '/data/assay_2016-12-11.json';
+var wellDataFile = path.resolve(__dirname, 'data', 'assay_2016-12-11.json');
 var assayDate = '2016-12-11';
-var screenName = 'AHR2-2016-12-11--PR';
+var screenName = 'AHR2-2016-12-11--Sec';
 var like = 'rnai%';
 var loopUpIndex = 0;
 var commentIndex = 1;
@@ -52,7 +52,7 @@ var wells = [
 // The condition needs to be set throughout the workflow
 // The arrayscan search denotes the search function we use to get plates
 var workflowData = {
-  tasks: ['task1', 'task2', 'task3'],
+  // tasks: ['task1', 'task2', 'task3'],
   library: 'ahringer',
   libraryModel: 'RnaiLibrary',
   libraryStockModel: 'RnaiLibrarystock',
@@ -97,47 +97,17 @@ var workflowData = {
   screenId: 1,
 };
 
-var addWorkflowData = function(file) {
-  return new Promise(function(resolve, reject) {
-    // This reads in the data supplied by Rawan about the wells
-    readFile(file, 'utf8')
-      .then(function(contents) {
-        workflowData.data.library = {};
-        workflowData.data.library.wellData = JSON.parse(contents);
-        return app.models.Workflow.create(workflowData);
-      })
-      .then(function(results){
-        resolve(results);
-      })
-      .catch(function(error) {
-        reject(new Error(error));
-      });
-  });
-};
-
-//TODO Break this up - make sure we are working from the actual model
-//We should also only process one plate at a time - otherwise we will fill up
-//the memory
-
-addWorkflowData(file)
+Workflow.experiment.secondary.create(workflowData, wellDataFile)
   .then(function(workflowData) {
-    return app.models.Plate.search(workflowData.search.instrument.arrayscan);
+    return Workflow.experiment.getPlates(workflowData);
   })
-  .then(function(platesList) {
-    //TODO break here
-    var plate = [platesList[0]];
-    return app.models.ExperimentExperimentplate.load.workflows.processVendorPlates(workflowData, plate);
-  })
-  .then(function(plateInfoList) {
-    return app.models.RnaiLibrarystock.load.workflows.processExperimentPlates(workflowData, plateInfoList);
-  })
-  .then(function(results) {
-    //This completes the usual database operations - now onto the wordpress portion
-    return app.models.ExperimentAssay.load.workflows.processExperimentPlates(workflowData, results);
-  })
-  .then(function(results){
-    app.winston.info('results are ' + JSON.stringify(results));
+  .then(function() {
+    app.winston.info('Finished entire workflow!');
+    process.exit(0);
+    return;
   })
   .catch(function(error) {
+    app.winston.info('Finished entire workflow! ERRORS!!');
+    process.exit(1);
     app.winston.error(error.stack);
   });

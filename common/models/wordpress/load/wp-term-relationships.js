@@ -13,10 +13,10 @@ WpTermRelationships.load.workflows.createRels = function(postData, termTaxList) 
           objectId: termTax.postId,
         };
         return WpTermRelationships.load.createRel(createObj);
-      })
+      }, {concurrency: 6})
       .then(function(results) {
-        //So far we have no need to do any downstream processing with these results
-        //But we will have it results anyways
+        // So far we have no need to do any downstream processing with these results
+        // But we will have it results anyways
         resolve(results);
       })
       .catch(function(error) {
@@ -27,44 +27,41 @@ WpTermRelationships.load.workflows.createRels = function(postData, termTaxList) 
 
 WpTermRelationships.load.createRel = function(termTax) {
   return new Promise(function(resolve, reject) {
-    WpTermRelationships
-      .findOrCreate({
-        where: app.etlWorkflow.helpers.findOrCreateObj(termTax),
-      }, termTax)
-      .then(function(results) {
-        resolve(results[0]);
-      })
-      .catch(function(error) {
-        if(error.message.match('Duplicate') || error.message.match('duplicate')){
-          app.winston.error('We should be finding a new one...');
-          WpTermRelationships
-            .findOne({
-              where: app.etlWorkflow.helpers.findOrCreateObj(termTax),
-            })
-            .then(function(results) {
-              app.winston.info('What are the results?' + JSON.stringify(results));
-              resolve(results);
-            })
-            .catch(function(error) {
-              reject(new Error(error));
-            });
-        }
-        else if (!error.hasOwnProperty('code')) {
-          reject(new Error(error));
-        } else if (error.code.match('ER_DUP_ENTRY')) {
-          WpTermRelationships
-            .findOne({
-              where: app.etlWorkflow.helpers.findOrCreateObj(termTax),
-            })
-            .then(function(results) {
-              resolve(results);
-            })
-            .catch(function(error) {
-              reject(new Error(error));
-            });
-        } else {
-          reject(new Error(error));
-        }
-      });
+      WpTermRelationships
+        .findOrCreate({
+          where: app.etlWorkflow.helpers.findOrCreateObj(termTax),
+        }, termTax)
+        .then(function(results) {
+          resolve(results[0]);
+        })
+        .catch(function(error) {
+          if (error.message.match('Duplicate') || error.message.match('duplicate')) {
+            WpTermRelationships
+              .findOne({
+                where: app.etlWorkflow.helpers.findOrCreateObj(termTax),
+              })
+              .then(function(results) {
+                resolve(results);
+              })
+              .catch(function(error) {
+                reject(new Error(error));
+              });
+          } else if (!error.hasOwnProperty('code')) {
+            reject(new Error(error));
+          } else if (error.code.match('ER_DUP_ENTRY')) {
+            WpTermRelationships
+              .findOne({
+                where: app.etlWorkflow.helpers.findOrCreateObj(termTax),
+              })
+              .then(function(results) {
+                resolve(results);
+              })
+              .catch(function(error) {
+                reject(new Error(error));
+              });
+          } else {
+            reject(new Error(error));
+          }
+        });
   });
 };

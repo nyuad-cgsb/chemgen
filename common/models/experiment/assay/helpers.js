@@ -61,6 +61,7 @@ ExperimentAssay.helpers.genImageFileNames = function(plateInfo, well) {
     convertBmp: baseImage + '.bmp',
     autoLevelTiffImage: autoLevelJpegImage,
     autoLevelJpegImage: baseImage + '-autolevel.jpeg',
+    autoLevelBmpImage: baseImage + '-autolevel.bmp',
     vendorImage: vendorImage,
     makeDir: makeDir,
     baseImage: baseImage,
