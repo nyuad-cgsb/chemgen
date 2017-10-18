@@ -10,7 +10,7 @@ WpTerms.load.workflows.createTerms = function(postData, createTermObjs) {
     Promise.map(createTermObjs, function(createTermObj) {
         return WpTerms.load.createTerm(postData['id'], createTermObj);
       }, {
-        concurrency: 1
+        concurrency: 6
       })
       .then(function(results) {
         return app.models.WpTermTaxonomy.load.workflows.processTaxTerms(postData, results);
@@ -75,6 +75,16 @@ WpTerms.load.createTerm = function(postId, createTermObj) {
   });
 };
 
+//TODO Update THESE
+//Should have a better way of parsing these
+//Each associated taxonomy should have an ID
+//Plate ID = pid
+//Screen Name - SN
+//Worm Strain - WS
+//Barcode - B
+//Condition - C
+//Well - W
+//TaxTerm: TT
 WpTerms.load.genLibraryTerms = function(workflowData, plateInfo, libraryResult, condition, strain, well, taxID) {
   var plateId = plateInfo.ExperimentExperimentplate.experimentPlateId;
   var barcode = plateInfo.ExperimentExperimentplate.barcode;
@@ -87,54 +97,70 @@ WpTerms.load.genLibraryTerms = function(workflowData, plateInfo, libraryResult, 
       taxTerm: condition,
     }, {
       taxonomy: 'envira-tag',
-      taxTerm: [workflowData.screenName, '_', condition,
-        '_', strain, '_', libraryResult[taxID],
+      taxTerm: ['SN-' + workflowData.screenName, '_C-', condition,
+        '_WS-', strain, '_TT-', libraryResult[taxID],
       ].join(''),
     }, {
       taxonomy: 'envira-tag',
-      taxTerm: workflowData.screenName + '_' + barcode,
+      taxTerm: 'SN-' + workflowData.screenName + '_B-' + barcode,
     }, {
       taxonomy: 'envira-tag',
-      taxTerm: workflowData.screenName + '_ID_' + plateId + '_' + barcode,
+      taxTerm: 'SN-' + workflowData.screenName + '_PI-' + plateId + '_B-' + barcode,
     }, {
       taxonomy: 'envira-tag',
-      taxTerm: [workflowData.screenName, '_', barcode, '_', condition,
-        '_', strain, '_', libraryResult[taxID],
+      taxTerm: ['SN-', workflowData.screenName, '_B-', barcode, '_C-', condition,
+        '_WS-', strain, '_TT-', libraryResult[taxID],
       ].join(''),
     }, {
       taxonomy: 'envira-tag',
-      taxTerm: [workflowData.screenName, '_', condition,
-        '_', strain, '_', well,
+      taxTerm: ['SN-', workflowData.screenName, '_C-', condition,
+        '_WS-', strain, '_W-', well,
       ].join(''),
+    },
+    {
+      taxonomy: 'envira-tag',
+      taxTerm: 'SN-' + workflowData.screenName + '_TT-' + libraryResult[taxID],
+    },
+    {
+      taxonomy: 'envira-tag',
+      taxTerm: 'SN-' + workflowData.screenName + '_WS-' + strain + '_TT-' + libraryResult[taxID],
+    },
+    {
+      taxonomy: 'envira-tag',
+      taxTerm: 'SN-' + workflowData.screenName + '_WS-' + strain + '_TT-' + libraryResult[taxID] + '_W-' + well,
+    },
+    {
+      taxonomy: 'envira-tag',
+      taxTerm: 'SN-' + workflowData.screenName + '_C-' + condition + '_WS-' + strain + '_TT-' + libraryResult[taxID] + '_W-' + well,
     },
     //These last two are for building the control gallery
     //For the secondary screen the L4440s are in the same plate
     {
       taxonomy: 'envira-tag',
-      taxTerm: workflowData.screenName + '_ID_' + plateId + '_' + libraryResult[taxID],
+      taxTerm: 'SN-' + workflowData.screenName + '_PI-' + plateId + '_WS-' + strain + '_TT-' + libraryResult[taxID],
+    },
+    {
+      taxonomy: 'envira-tag',
+      taxTerm: 'SN-' + workflowData.screenName + '_PI-' + plateId + '_C-' + condition + '_WS-' + strain + '_TT-' + libraryResult[taxID],
     },
     //For the primary screen there is 1 whole plate per condition
     {
       taxonomy: 'envira-tag',
-      taxTerm: workflowData.screenName + '_' + condition + '_' + libraryResult[taxID],
-    },
-    {
-      taxonomy: 'envira-tag',
-      taxTerm: workflowData.screenName + '_' + libraryResult[taxID],
-    },
-    {
-      taxonomy: 'envira-tag',
-      taxTerm: workflowData.screenName + '_' + strain + '_' + libraryResult[taxID],
+      taxTerm: 'SN-' + workflowData.screenName + '_C-' + condition + '_WS-' + strain + '_TT-' + libraryResult[taxID],
     },
     {
       taxonomy: 'screen_name',
       taxTerm: workflowData.screenName,
     },
+    {
+      taxonomy: 'experiment_screen_stage',
+      taxTerm: workflowData.screenStage,
+    },
     //This last one is only for worms...
     {
       taxonomy: 'worm_strain',
       taxTerm: strain,
-    }
+    },
   ];
 
   return taxTerms;

@@ -102,8 +102,12 @@ Workflow.experiment.secondary.create(workflowData, wellDataFile)
     return Workflow.experiment.getPlates(workflowData);
   })
   .then(function() {
+    app.winston.info('Finished entire workflow!');
+    process.exit(0);
     return;
   })
   .catch(function(error) {
+    app.winston.info('Finished entire workflow! ERRORS!!');
+    process.exit(1);
     app.winston.error(error.stack);
   });

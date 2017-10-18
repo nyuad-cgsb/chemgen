@@ -75,7 +75,7 @@ RnaiLibrarystock.load.workflows.processExperimentPlates = function(workflowData,
     Promise.map(plateInfoList, function(plateInfo) {
         return RnaiLibrarystock.load.workflows.createStock(workflowData, plateInfo);
       }, {
-        concurrency: 1,
+        concurrency: 6,
       })
       .then(function(results) {
         resolve(results);

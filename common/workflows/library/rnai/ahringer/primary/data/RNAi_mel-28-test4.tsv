@@ -1,0 +1,18 @@
+Library	Screen type	Worm Strain	Worm Stage	Chromosome no.	RNAi plate no.	Controls	RNAi Stamp date	Culture date	Freeze date	IPTG induction date	Assay date		Enhancer temp	Enhancer Imaging and OD date	Suppressor temp	Suppressor Imaging and OD date	CreationDate	Comments
+RNAi Ahringer library	Enhancer and Suppressor	N2, mel-28	L1	I	1	L4440	3/3/2016	7/3/2016	8/3/2016	16/3/2016	16/3/2016		17.5	22/03/2016	23.5	21/03/2016	2016-03-21,2016-03-22,2016-03-23	Suppressors - incubated at 17.5 for 3 days (until L4) and transferred to 23.5
+					2	L4440	3/3/2016	7/3/2016	8/3/2016	16/3/2016	16/3/2016		17.5	22/03/2016	23.5	21/03/2016
+					3	L4440	3/3/2016	7/3/2016	8/3/2016	16/3/2016	16/3/2016		17.5	22/03/2016	23.5	21/03/2016
+														completed on 23/03/2016
+
+RNAi Ahringer library	Enhancer and Suppressor	N2, mel-28	L1	I	4	L4440	8/3/2016	21/03/2016	22/03/2016	23/03/2016	23/03/2016		17.5	29/03/2016	23.3	28/03/2016	2016-03-28,2016-03-29	Bravo crashed on Plate 7 Q2, continues run the next day
+					5	L4440	8/3/2016	21/03/2016	22/03/2016	23/03/2016	23/03/2016		17.5	29/03/2016	23.3	28/03/2016
+					6	L4440	15/3/2016	21/03/2016	22/03/2016	23/03/2016	23/03/2016		17.5	29/03/2016	23.3	28/03/2016		Suppressors - incubated at 17.5 for 3 days (until L4) and transferred to 23.3
+					7	L4440	15/3/2016	21/03/2016	22/03/2016	23/03/2016	23/03/2016 - 24/03/2016		17.5	Not imaged	23.3	Not imaged
+					8	L4440	15/3/2016	21/03/2016	22/03/2016	23/03/2016	23/03/2016 - 24/03/2016		17.5	Not imaged	23.3	Not imaged		Worms look stressed
+					9	L4440	15/3/2016	21/03/2016	22/03/2016	23/03/2016	23/03/2016 - 24/03/2016		17.5	Not imaged	23.3	Not imaged
+					10	L4440	15/3/2016	21/03/2016	22/03/2016	23/03/2016	23/03/2016 - 24/03/2016		17.5	Not imaged	23.3	Not imaged
+
+RNAi Ahringer library	Enhancer and Suppressor	N2, mel-28	L1	I	7	None	15/3/2016	29/03/2016		30/03/2016	30/03/2016		17.5	5/4/2016	23.3	4/4/2016	2016-04-04,2016-04-05	Suppressors - incubated at 17.5 for 2.5 days (until L4) and transferred to 23.3 from this screen onwards
+					8		15/3/2016	29/03/2016		30/03/2016	30/03/2016		17.5	5/4/2016	23.3	4/4/2016
+					9		15/3/2016	29/03/2016		30/03/2016	30/03/2016		17.5	5/4/2016	23.3	4/4/2016		Transferred using the 30 min gap momentum protocol
+					10		15/3/2016	29/03/2016		30/03/2016	30/03/2016		17.5	5/4/2016	23.3	4/4/2016

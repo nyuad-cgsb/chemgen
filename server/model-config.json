@@ -7,6 +7,7 @@
       "../common/models/workflow/defs",
       "../common/models/experiment/plate/defs",
       "../common/models/experiment/assay/defs",
+      "../common/models/experiment/screen/defs",
       "../common/models/library/rnai/Ahringer/defs",
       "../common/models/library/chemical/chembridge/defs",
       "../common/models/library/reagents/defs",
@@ -55,6 +56,9 @@
     "dataSource": "chemgenDS"
   },
   "ExperimentAssay": {
+    "dataSource": "chemgenDS"
+  },
+  "MainScreen": {
     "dataSource": "chemgenDS"
   },
   "WpTermTaxonomy": {

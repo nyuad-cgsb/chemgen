@@ -1,0 +1,4627 @@
+[
+  {
+    "tasks": [
+      "getRidOfThis"
+    ],
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "condition": "fillThisIn",
+    "screenStage": "Primary",
+    "screenName": "AHR-2016-06-23--Pr",
+    "instrumentId": 1,
+    "assayDate": "2016-06-23",
+    "data": {
+      "StampDate": "2016-06-07",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    },
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%IV.10B1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "IV",
+            "RnaiPlateNo": "10"
+          }
+        }
+      }
+    },
+    "permissiveTemp": 17.5,
+    "restrictiveTemp": 23.3,
+    "isJunk": 0,
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "wells": [
+      "A01",
+      "A02",
+      "A03",
+      "A04",
+      "A05",
+      "A06",
+      "A07",
+      "A08",
+      "A09",
+      "A10",
+      "A11",
+      "A12",
+      "B01",
+      "B02",
+      "B03",
+      "B04",
+      "B05",
+      "B06",
+      "B07",
+      "B08",
+      "B09",
+      "B10",
+      "B11",
+      "B12",
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C09",
+      "C10",
+      "C11",
+      "C12",
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "E01",
+      "E02",
+      "E03",
+      "E04",
+      "E05",
+      "E06",
+      "E07",
+      "E08",
+      "E09",
+      "E10",
+      "E11",
+      "E12",
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "F08",
+      "F09",
+      "F10",
+      "F11",
+      "F12",
+      "G01",
+      "G02",
+      "G03",
+      "G04",
+      "G05",
+      "G06",
+      "G07",
+      "G08",
+      "G09",
+      "G10",
+      "G11",
+      "G12",
+      "H01",
+      "H02",
+      "H03",
+      "H04",
+      "H05",
+      "H06",
+      "H07",
+      "H08",
+      "H09",
+      "H10",
+      "H11",
+      "H12"
+    ],
+    "id": 61,
+    "screenId": 63
+  },
+  {
+    "tasks": [
+      "getRidOfThis"
+    ],
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "condition": "fillThisIn",
+    "screenStage": "Primary",
+    "screenName": "AHR-2016-06-23--Pr",
+    "instrumentId": 1,
+    "assayDate": "2016-06-23",
+    "data": {
+      "StampDate": "2016-06-13",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    },
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.1A1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "1"
+          }
+        }
+      }
+    },
+    "permissiveTemp": 17.5,
+    "restrictiveTemp": 23.3,
+    "isJunk": 0,
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "wells": [
+      "A01",
+      "A02",
+      "A03",
+      "A04",
+      "A05",
+      "A06",
+      "A07",
+      "A08",
+      "A09",
+      "A10",
+      "A11",
+      "A12",
+      "B01",
+      "B02",
+      "B03",
+      "B04",
+      "B05",
+      "B06",
+      "B07",
+      "B08",
+      "B09",
+      "B10",
+      "B11",
+      "B12",
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C09",
+      "C10",
+      "C11",
+      "C12",
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "E01",
+      "E02",
+      "E03",
+      "E04",
+      "E05",
+      "E06",
+      "E07",
+      "E08",
+      "E09",
+      "E10",
+      "E11",
+      "E12",
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "F08",
+      "F09",
+      "F10",
+      "F11",
+      "F12",
+      "G01",
+      "G02",
+      "G03",
+      "G04",
+      "G05",
+      "G06",
+      "G07",
+      "G08",
+      "G09",
+      "G10",
+      "G11",
+      "G12",
+      "H01",
+      "H02",
+      "H03",
+      "H04",
+      "H05",
+      "H06",
+      "H07",
+      "H08",
+      "H09",
+      "H10",
+      "H11",
+      "H12"
+    ],
+    "id": 62,
+    "screenId": 63
+  },
+  {
+    "tasks": [
+      "getRidOfThis"
+    ],
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "condition": "fillThisIn",
+    "screenStage": "Primary",
+    "screenName": "AHR-2016-06-23--Pr",
+    "instrumentId": 1,
+    "assayDate": "2016-06-23",
+    "data": {
+      "StampDate": "2016-06-13",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    },
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.1A2%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "1"
+          }
+        }
+      }
+    },
+    "permissiveTemp": 17.5,
+    "restrictiveTemp": 23.3,
+    "isJunk": 0,
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "wells": [
+      "A01",
+      "A02",
+      "A03",
+      "A04",
+      "A05",
+      "A06",
+      "A07",
+      "A08",
+      "A09",
+      "A10",
+      "A11",
+      "A12",
+      "B01",
+      "B02",
+      "B03",
+      "B04",
+      "B05",
+      "B06",
+      "B07",
+      "B08",
+      "B09",
+      "B10",
+      "B11",
+      "B12",
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C09",
+      "C10",
+      "C11",
+      "C12",
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "E01",
+      "E02",
+      "E03",
+      "E04",
+      "E05",
+      "E06",
+      "E07",
+      "E08",
+      "E09",
+      "E10",
+      "E11",
+      "E12",
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "F08",
+      "F09",
+      "F10",
+      "F11",
+      "F12",
+      "G01",
+      "G02",
+      "G03",
+      "G04",
+      "G05",
+      "G06",
+      "G07",
+      "G08",
+      "G09",
+      "G10",
+      "G11",
+      "G12",
+      "H01",
+      "H02",
+      "H03",
+      "H04",
+      "H05",
+      "H06",
+      "H07",
+      "H08",
+      "H09",
+      "H10",
+      "H11",
+      "H12"
+    ],
+    "id": 63,
+    "screenId": 63
+  },
+  {
+    "tasks": [
+      "getRidOfThis"
+    ],
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "condition": "fillThisIn",
+    "screenStage": "Primary",
+    "screenName": "AHR-2016-06-23--Pr",
+    "instrumentId": 1,
+    "assayDate": "2016-06-23",
+    "data": {
+      "StampDate": "2016-06-16",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    },
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.1B1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "1"
+          }
+        }
+      }
+    },
+    "permissiveTemp": 17.5,
+    "restrictiveTemp": 23.3,
+    "isJunk": 0,
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "wells": [
+      "A01",
+      "A02",
+      "A03",
+      "A04",
+      "A05",
+      "A06",
+      "A07",
+      "A08",
+      "A09",
+      "A10",
+      "A11",
+      "A12",
+      "B01",
+      "B02",
+      "B03",
+      "B04",
+      "B05",
+      "B06",
+      "B07",
+      "B08",
+      "B09",
+      "B10",
+      "B11",
+      "B12",
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C09",
+      "C10",
+      "C11",
+      "C12",
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "E01",
+      "E02",
+      "E03",
+      "E04",
+      "E05",
+      "E06",
+      "E07",
+      "E08",
+      "E09",
+      "E10",
+      "E11",
+      "E12",
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "F08",
+      "F09",
+      "F10",
+      "F11",
+      "F12",
+      "G01",
+      "G02",
+      "G03",
+      "G04",
+      "G05",
+      "G06",
+      "G07",
+      "G08",
+      "G09",
+      "G10",
+      "G11",
+      "G12",
+      "H01",
+      "H02",
+      "H03",
+      "H04",
+      "H05",
+      "H06",
+      "H07",
+      "H08",
+      "H09",
+      "H10",
+      "H11",
+      "H12"
+    ],
+    "id": 64,
+    "screenId": 63
+  },
+  {
+    "tasks": [
+      "getRidOfThis"
+    ],
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "condition": "fillThisIn",
+    "screenStage": "Primary",
+    "screenName": "AHR-2016-06-23--Pr",
+    "instrumentId": 1,
+    "assayDate": "2016-06-23",
+    "data": {
+      "StampDate": "2016-06-13",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    },
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.1B2%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "1"
+          }
+        }
+      }
+    },
+    "permissiveTemp": 17.5,
+    "restrictiveTemp": 23.3,
+    "isJunk": 0,
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "wells": [
+      "A01",
+      "A02",
+      "A03",
+      "A04",
+      "A05",
+      "A06",
+      "A07",
+      "A08",
+      "A09",
+      "A10",
+      "A11",
+      "A12",
+      "B01",
+      "B02",
+      "B03",
+      "B04",
+      "B05",
+      "B06",
+      "B07",
+      "B08",
+      "B09",
+      "B10",
+      "B11",
+      "B12",
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C09",
+      "C10",
+      "C11",
+      "C12",
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "E01",
+      "E02",
+      "E03",
+      "E04",
+      "E05",
+      "E06",
+      "E07",
+      "E08",
+      "E09",
+      "E10",
+      "E11",
+      "E12",
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "F08",
+      "F09",
+      "F10",
+      "F11",
+      "F12",
+      "G01",
+      "G02",
+      "G03",
+      "G04",
+      "G05",
+      "G06",
+      "G07",
+      "G08",
+      "G09",
+      "G10",
+      "G11",
+      "G12",
+      "H01",
+      "H02",
+      "H03",
+      "H04",
+      "H05",
+      "H06",
+      "H07",
+      "H08",
+      "H09",
+      "H10",
+      "H11",
+      "H12"
+    ],
+    "id": 65,
+    "screenId": 63
+  },
+  {
+    "tasks": [
+      "getRidOfThis"
+    ],
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "condition": "fillThisIn",
+    "screenStage": "Primary",
+    "screenName": "AHR-2016-06-23--Pr",
+    "instrumentId": 1,
+    "assayDate": "2016-06-23",
+    "data": {
+      "StampDate": "2016-06-16",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    },
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.2A1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "2"
+          }
+        }
+      }
+    },
+    "permissiveTemp": 17.5,
+    "restrictiveTemp": 23.3,
+    "isJunk": 0,
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "wells": [
+      "A01",
+      "A02",
+      "A03",
+      "A04",
+      "A05",
+      "A06",
+      "A07",
+      "A08",
+      "A09",
+      "A10",
+      "A11",
+      "A12",
+      "B01",
+      "B02",
+      "B03",
+      "B04",
+      "B05",
+      "B06",
+      "B07",
+      "B08",
+      "B09",
+      "B10",
+      "B11",
+      "B12",
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C09",
+      "C10",
+      "C11",
+      "C12",
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "E01",
+      "E02",
+      "E03",
+      "E04",
+      "E05",
+      "E06",
+      "E07",
+      "E08",
+      "E09",
+      "E10",
+      "E11",
+      "E12",
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "F08",
+      "F09",
+      "F10",
+      "F11",
+      "F12",
+      "G01",
+      "G02",
+      "G03",
+      "G04",
+      "G05",
+      "G06",
+      "G07",
+      "G08",
+      "G09",
+      "G10",
+      "G11",
+      "G12",
+      "H01",
+      "H02",
+      "H03",
+      "H04",
+      "H05",
+      "H06",
+      "H07",
+      "H08",
+      "H09",
+      "H10",
+      "H11",
+      "H12"
+    ],
+    "id": 66,
+    "screenId": 63
+  },
+  {
+    "tasks": [
+      "getRidOfThis"
+    ],
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "condition": "fillThisIn",
+    "screenStage": "Primary",
+    "screenName": "AHR-2016-06-23--Pr",
+    "instrumentId": 1,
+    "assayDate": "2016-06-23",
+    "data": {
+      "StampDate": "2016-06-16",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    },
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.2A2%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "2"
+          }
+        }
+      }
+    },
+    "permissiveTemp": 17.5,
+    "restrictiveTemp": 23.3,
+    "isJunk": 0,
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "wells": [
+      "A01",
+      "A02",
+      "A03",
+      "A04",
+      "A05",
+      "A06",
+      "A07",
+      "A08",
+      "A09",
+      "A10",
+      "A11",
+      "A12",
+      "B01",
+      "B02",
+      "B03",
+      "B04",
+      "B05",
+      "B06",
+      "B07",
+      "B08",
+      "B09",
+      "B10",
+      "B11",
+      "B12",
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C09",
+      "C10",
+      "C11",
+      "C12",
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "E01",
+      "E02",
+      "E03",
+      "E04",
+      "E05",
+      "E06",
+      "E07",
+      "E08",
+      "E09",
+      "E10",
+      "E11",
+      "E12",
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "F08",
+      "F09",
+      "F10",
+      "F11",
+      "F12",
+      "G01",
+      "G02",
+      "G03",
+      "G04",
+      "G05",
+      "G06",
+      "G07",
+      "G08",
+      "G09",
+      "G10",
+      "G11",
+      "G12",
+      "H01",
+      "H02",
+      "H03",
+      "H04",
+      "H05",
+      "H06",
+      "H07",
+      "H08",
+      "H09",
+      "H10",
+      "H11",
+      "H12"
+    ],
+    "id": 67,
+    "screenId": 63
+  },
+  {
+    "tasks": [
+      "getRidOfThis"
+    ],
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "condition": "fillThisIn",
+    "screenStage": "Primary",
+    "screenName": "AHR-2016-06-23--Pr",
+    "instrumentId": 1,
+    "assayDate": "2016-06-23",
+    "data": {
+      "StampDate": "2016-06-07",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    },
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.2B1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "2"
+          }
+        }
+      }
+    },
+    "permissiveTemp": 17.5,
+    "restrictiveTemp": 23.3,
+    "isJunk": 0,
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "wells": [
+      "A01",
+      "A02",
+      "A03",
+      "A04",
+      "A05",
+      "A06",
+      "A07",
+      "A08",
+      "A09",
+      "A10",
+      "A11",
+      "A12",
+      "B01",
+      "B02",
+      "B03",
+      "B04",
+      "B05",
+      "B06",
+      "B07",
+      "B08",
+      "B09",
+      "B10",
+      "B11",
+      "B12",
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C09",
+      "C10",
+      "C11",
+      "C12",
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "E01",
+      "E02",
+      "E03",
+      "E04",
+      "E05",
+      "E06",
+      "E07",
+      "E08",
+      "E09",
+      "E10",
+      "E11",
+      "E12",
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "F08",
+      "F09",
+      "F10",
+      "F11",
+      "F12",
+      "G01",
+      "G02",
+      "G03",
+      "G04",
+      "G05",
+      "G06",
+      "G07",
+      "G08",
+      "G09",
+      "G10",
+      "G11",
+      "G12",
+      "H01",
+      "H02",
+      "H03",
+      "H04",
+      "H05",
+      "H06",
+      "H07",
+      "H08",
+      "H09",
+      "H10",
+      "H11",
+      "H12"
+    ],
+    "id": 68,
+    "screenId": 63
+  },
+  {
+    "tasks": [
+      "getRidOfThis"
+    ],
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "condition": "fillThisIn",
+    "screenStage": "Primary",
+    "screenName": "AHR-2016-06-23--Pr",
+    "instrumentId": 1,
+    "assayDate": "2016-06-23",
+    "data": {
+      "StampDate": "2016-06-16",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    },
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.2B2%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "2"
+          }
+        }
+      }
+    },
+    "permissiveTemp": 17.5,
+    "restrictiveTemp": 23.3,
+    "isJunk": 0,
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "wells": [
+      "A01",
+      "A02",
+      "A03",
+      "A04",
+      "A05",
+      "A06",
+      "A07",
+      "A08",
+      "A09",
+      "A10",
+      "A11",
+      "A12",
+      "B01",
+      "B02",
+      "B03",
+      "B04",
+      "B05",
+      "B06",
+      "B07",
+      "B08",
+      "B09",
+      "B10",
+      "B11",
+      "B12",
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C09",
+      "C10",
+      "C11",
+      "C12",
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "E01",
+      "E02",
+      "E03",
+      "E04",
+      "E05",
+      "E06",
+      "E07",
+      "E08",
+      "E09",
+      "E10",
+      "E11",
+      "E12",
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "F08",
+      "F09",
+      "F10",
+      "F11",
+      "F12",
+      "G01",
+      "G02",
+      "G03",
+      "G04",
+      "G05",
+      "G06",
+      "G07",
+      "G08",
+      "G09",
+      "G10",
+      "G11",
+      "G12",
+      "H01",
+      "H02",
+      "H03",
+      "H04",
+      "H05",
+      "H06",
+      "H07",
+      "H08",
+      "H09",
+      "H10",
+      "H11",
+      "H12"
+    ],
+    "id": 69,
+    "screenId": 63
+  },
+  {
+    "tasks": [
+      "getRidOfThis"
+    ],
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "condition": "fillThisIn",
+    "screenStage": "Primary",
+    "screenName": "AHR-2016-06-23--Pr",
+    "instrumentId": 1,
+    "assayDate": "2016-06-23",
+    "data": {
+      "StampDate": "2016-06-16",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    },
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.3A1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "3"
+          }
+        }
+      }
+    },
+    "permissiveTemp": 17.5,
+    "restrictiveTemp": 23.3,
+    "isJunk": 0,
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "wells": [
+      "A01",
+      "A02",
+      "A03",
+      "A04",
+      "A05",
+      "A06",
+      "A07",
+      "A08",
+      "A09",
+      "A10",
+      "A11",
+      "A12",
+      "B01",
+      "B02",
+      "B03",
+      "B04",
+      "B05",
+      "B06",
+      "B07",
+      "B08",
+      "B09",
+      "B10",
+      "B11",
+      "B12",
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C09",
+      "C10",
+      "C11",
+      "C12",
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "E01",
+      "E02",
+      "E03",
+      "E04",
+      "E05",
+      "E06",
+      "E07",
+      "E08",
+      "E09",
+      "E10",
+      "E11",
+      "E12",
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "F08",
+      "F09",
+      "F10",
+      "F11",
+      "F12",
+      "G01",
+      "G02",
+      "G03",
+      "G04",
+      "G05",
+      "G06",
+      "G07",
+      "G08",
+      "G09",
+      "G10",
+      "G11",
+      "G12",
+      "H01",
+      "H02",
+      "H03",
+      "H04",
+      "H05",
+      "H06",
+      "H07",
+      "H08",
+      "H09",
+      "H10",
+      "H11",
+      "H12"
+    ],
+    "id": 70,
+    "screenId": 63
+  },
+  {
+    "tasks": [
+      "getRidOfThis"
+    ],
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "condition": "fillThisIn",
+    "screenStage": "Primary",
+    "screenName": "AHR-2016-06-23--Pr",
+    "instrumentId": 1,
+    "assayDate": "2016-06-23",
+    "data": {
+      "StampDate": "2016-06-16",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    },
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.3A2%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "3"
+          }
+        }
+      }
+    },
+    "permissiveTemp": 17.5,
+    "restrictiveTemp": 23.3,
+    "isJunk": 0,
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "wells": [
+      "A01",
+      "A02",
+      "A03",
+      "A04",
+      "A05",
+      "A06",
+      "A07",
+      "A08",
+      "A09",
+      "A10",
+      "A11",
+      "A12",
+      "B01",
+      "B02",
+      "B03",
+      "B04",
+      "B05",
+      "B06",
+      "B07",
+      "B08",
+      "B09",
+      "B10",
+      "B11",
+      "B12",
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C09",
+      "C10",
+      "C11",
+      "C12",
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "E01",
+      "E02",
+      "E03",
+      "E04",
+      "E05",
+      "E06",
+      "E07",
+      "E08",
+      "E09",
+      "E10",
+      "E11",
+      "E12",
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "F08",
+      "F09",
+      "F10",
+      "F11",
+      "F12",
+      "G01",
+      "G02",
+      "G03",
+      "G04",
+      "G05",
+      "G06",
+      "G07",
+      "G08",
+      "G09",
+      "G10",
+      "G11",
+      "G12",
+      "H01",
+      "H02",
+      "H03",
+      "H04",
+      "H05",
+      "H06",
+      "H07",
+      "H08",
+      "H09",
+      "H10",
+      "H11",
+      "H12"
+    ],
+    "id": 71,
+    "screenId": 63
+  },
+  {
+    "tasks": [
+      "getRidOfThis"
+    ],
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "condition": "fillThisIn",
+    "screenStage": "Primary",
+    "screenName": "AHR-2016-06-23--Pr",
+    "instrumentId": 1,
+    "assayDate": "2016-06-23",
+    "data": {
+      "StampDate": "2016-06-13",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    },
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.3B1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "3"
+          }
+        }
+      }
+    },
+    "permissiveTemp": 17.5,
+    "restrictiveTemp": 23.3,
+    "isJunk": 0,
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "wells": [
+      "A01",
+      "A02",
+      "A03",
+      "A04",
+      "A05",
+      "A06",
+      "A07",
+      "A08",
+      "A09",
+      "A10",
+      "A11",
+      "A12",
+      "B01",
+      "B02",
+      "B03",
+      "B04",
+      "B05",
+      "B06",
+      "B07",
+      "B08",
+      "B09",
+      "B10",
+      "B11",
+      "B12",
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C09",
+      "C10",
+      "C11",
+      "C12",
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "E01",
+      "E02",
+      "E03",
+      "E04",
+      "E05",
+      "E06",
+      "E07",
+      "E08",
+      "E09",
+      "E10",
+      "E11",
+      "E12",
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "F08",
+      "F09",
+      "F10",
+      "F11",
+      "F12",
+      "G01",
+      "G02",
+      "G03",
+      "G04",
+      "G05",
+      "G06",
+      "G07",
+      "G08",
+      "G09",
+      "G10",
+      "G11",
+      "G12",
+      "H01",
+      "H02",
+      "H03",
+      "H04",
+      "H05",
+      "H06",
+      "H07",
+      "H08",
+      "H09",
+      "H10",
+      "H11",
+      "H12"
+    ],
+    "id": 72,
+    "screenId": 63
+  },
+  {
+    "tasks": [
+      "getRidOfThis"
+    ],
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "condition": "fillThisIn",
+    "screenStage": "Primary",
+    "screenName": "AHR-2016-06-23--Pr",
+    "instrumentId": 1,
+    "assayDate": "2016-06-23",
+    "data": {
+      "StampDate": "2016-06-16",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    },
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.3B2%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "3"
+          }
+        }
+      }
+    },
+    "permissiveTemp": 17.5,
+    "restrictiveTemp": 23.3,
+    "isJunk": 0,
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "wells": [
+      "A01",
+      "A02",
+      "A03",
+      "A04",
+      "A05",
+      "A06",
+      "A07",
+      "A08",
+      "A09",
+      "A10",
+      "A11",
+      "A12",
+      "B01",
+      "B02",
+      "B03",
+      "B04",
+      "B05",
+      "B06",
+      "B07",
+      "B08",
+      "B09",
+      "B10",
+      "B11",
+      "B12",
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C09",
+      "C10",
+      "C11",
+      "C12",
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "E01",
+      "E02",
+      "E03",
+      "E04",
+      "E05",
+      "E06",
+      "E07",
+      "E08",
+      "E09",
+      "E10",
+      "E11",
+      "E12",
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "F08",
+      "F09",
+      "F10",
+      "F11",
+      "F12",
+      "G01",
+      "G02",
+      "G03",
+      "G04",
+      "G05",
+      "G06",
+      "G07",
+      "G08",
+      "G09",
+      "G10",
+      "G11",
+      "G12",
+      "H01",
+      "H02",
+      "H03",
+      "H04",
+      "H05",
+      "H06",
+      "H07",
+      "H08",
+      "H09",
+      "H10",
+      "H11",
+      "H12"
+    ],
+    "id": 73,
+    "screenId": 63
+  },
+  {
+    "tasks": [
+      "getRidOfThis"
+    ],
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "condition": "fillThisIn",
+    "screenStage": "Primary",
+    "screenName": "AHR-2016-06-23--Pr",
+    "instrumentId": 1,
+    "assayDate": "2016-06-23",
+    "data": {
+      "StampDate": "2016-06-16",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    },
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.4A1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "4"
+          }
+        }
+      }
+    },
+    "permissiveTemp": 17.5,
+    "restrictiveTemp": 23.3,
+    "isJunk": 0,
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "wells": [
+      "A01",
+      "A02",
+      "A03",
+      "A04",
+      "A05",
+      "A06",
+      "A07",
+      "A08",
+      "A09",
+      "A10",
+      "A11",
+      "A12",
+      "B01",
+      "B02",
+      "B03",
+      "B04",
+      "B05",
+      "B06",
+      "B07",
+      "B08",
+      "B09",
+      "B10",
+      "B11",
+      "B12",
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C09",
+      "C10",
+      "C11",
+      "C12",
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "E01",
+      "E02",
+      "E03",
+      "E04",
+      "E05",
+      "E06",
+      "E07",
+      "E08",
+      "E09",
+      "E10",
+      "E11",
+      "E12",
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "F08",
+      "F09",
+      "F10",
+      "F11",
+      "F12",
+      "G01",
+      "G02",
+      "G03",
+      "G04",
+      "G05",
+      "G06",
+      "G07",
+      "G08",
+      "G09",
+      "G10",
+      "G11",
+      "G12",
+      "H01",
+      "H02",
+      "H03",
+      "H04",
+      "H05",
+      "H06",
+      "H07",
+      "H08",
+      "H09",
+      "H10",
+      "H11",
+      "H12"
+    ],
+    "id": 74,
+    "screenId": 63
+  },
+  {
+    "tasks": [
+      "getRidOfThis"
+    ],
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "condition": "fillThisIn",
+    "screenStage": "Primary",
+    "screenName": "AHR-2016-06-23--Pr",
+    "instrumentId": 1,
+    "assayDate": "2016-06-23",
+    "data": {
+      "StampDate": "2016-06-16",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    },
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.4A2%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "4"
+          }
+        }
+      }
+    },
+    "permissiveTemp": 17.5,
+    "restrictiveTemp": 23.3,
+    "isJunk": 0,
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "wells": [
+      "A01",
+      "A02",
+      "A03",
+      "A04",
+      "A05",
+      "A06",
+      "A07",
+      "A08",
+      "A09",
+      "A10",
+      "A11",
+      "A12",
+      "B01",
+      "B02",
+      "B03",
+      "B04",
+      "B05",
+      "B06",
+      "B07",
+      "B08",
+      "B09",
+      "B10",
+      "B11",
+      "B12",
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C09",
+      "C10",
+      "C11",
+      "C12",
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "E01",
+      "E02",
+      "E03",
+      "E04",
+      "E05",
+      "E06",
+      "E07",
+      "E08",
+      "E09",
+      "E10",
+      "E11",
+      "E12",
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "F08",
+      "F09",
+      "F10",
+      "F11",
+      "F12",
+      "G01",
+      "G02",
+      "G03",
+      "G04",
+      "G05",
+      "G06",
+      "G07",
+      "G08",
+      "G09",
+      "G10",
+      "G11",
+      "G12",
+      "H01",
+      "H02",
+      "H03",
+      "H04",
+      "H05",
+      "H06",
+      "H07",
+      "H08",
+      "H09",
+      "H10",
+      "H11",
+      "H12"
+    ],
+    "id": 75,
+    "screenId": 63
+  },
+  {
+    "tasks": [
+      "getRidOfThis"
+    ],
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "condition": "fillThisIn",
+    "screenStage": "Primary",
+    "screenName": "AHR-2016-06-23--Pr",
+    "instrumentId": 1,
+    "assayDate": "2016-06-23",
+    "data": {
+      "StampDate": "2016-06-13",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    },
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.4B1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "4"
+          }
+        }
+      }
+    },
+    "permissiveTemp": 17.5,
+    "restrictiveTemp": 23.3,
+    "isJunk": 0,
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "wells": [
+      "A01",
+      "A02",
+      "A03",
+      "A04",
+      "A05",
+      "A06",
+      "A07",
+      "A08",
+      "A09",
+      "A10",
+      "A11",
+      "A12",
+      "B01",
+      "B02",
+      "B03",
+      "B04",
+      "B05",
+      "B06",
+      "B07",
+      "B08",
+      "B09",
+      "B10",
+      "B11",
+      "B12",
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C09",
+      "C10",
+      "C11",
+      "C12",
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "E01",
+      "E02",
+      "E03",
+      "E04",
+      "E05",
+      "E06",
+      "E07",
+      "E08",
+      "E09",
+      "E10",
+      "E11",
+      "E12",
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "F08",
+      "F09",
+      "F10",
+      "F11",
+      "F12",
+      "G01",
+      "G02",
+      "G03",
+      "G04",
+      "G05",
+      "G06",
+      "G07",
+      "G08",
+      "G09",
+      "G10",
+      "G11",
+      "G12",
+      "H01",
+      "H02",
+      "H03",
+      "H04",
+      "H05",
+      "H06",
+      "H07",
+      "H08",
+      "H09",
+      "H10",
+      "H11",
+      "H12"
+    ],
+    "id": 76,
+    "screenId": 63
+  },
+  {
+    "tasks": [
+      "getRidOfThis"
+    ],
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "condition": "fillThisIn",
+    "screenStage": "Primary",
+    "screenName": "AHR-2016-06-23--Pr",
+    "instrumentId": 1,
+    "assayDate": "2016-06-23",
+    "data": {
+      "StampDate": "2016-06-07",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    },
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.4B2%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "4"
+          }
+        }
+      }
+    },
+    "permissiveTemp": 17.5,
+    "restrictiveTemp": 23.3,
+    "isJunk": 0,
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "wells": [
+      "A01",
+      "A02",
+      "A03",
+      "A04",
+      "A05",
+      "A06",
+      "A07",
+      "A08",
+      "A09",
+      "A10",
+      "A11",
+      "A12",
+      "B01",
+      "B02",
+      "B03",
+      "B04",
+      "B05",
+      "B06",
+      "B07",
+      "B08",
+      "B09",
+      "B10",
+      "B11",
+      "B12",
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C09",
+      "C10",
+      "C11",
+      "C12",
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "E01",
+      "E02",
+      "E03",
+      "E04",
+      "E05",
+      "E06",
+      "E07",
+      "E08",
+      "E09",
+      "E10",
+      "E11",
+      "E12",
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "F08",
+      "F09",
+      "F10",
+      "F11",
+      "F12",
+      "G01",
+      "G02",
+      "G03",
+      "G04",
+      "G05",
+      "G06",
+      "G07",
+      "G08",
+      "G09",
+      "G10",
+      "G11",
+      "G12",
+      "H01",
+      "H02",
+      "H03",
+      "H04",
+      "H05",
+      "H06",
+      "H07",
+      "H08",
+      "H09",
+      "H10",
+      "H11",
+      "H12"
+    ],
+    "id": 77,
+    "screenId": 63
+  },
+  {
+    "tasks": [
+      "getRidOfThis"
+    ],
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "condition": "fillThisIn",
+    "screenStage": "Primary",
+    "screenName": "AHR-2016-06-23--Pr",
+    "instrumentId": 1,
+    "assayDate": "2016-06-23",
+    "data": {
+      "StampDate": "2016-06-16",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    },
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.5A1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "5"
+          }
+        }
+      }
+    },
+    "permissiveTemp": 17.5,
+    "restrictiveTemp": 23.3,
+    "isJunk": 0,
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "wells": [
+      "A01",
+      "A02",
+      "A03",
+      "A04",
+      "A05",
+      "A06",
+      "A07",
+      "A08",
+      "A09",
+      "A10",
+      "A11",
+      "A12",
+      "B01",
+      "B02",
+      "B03",
+      "B04",
+      "B05",
+      "B06",
+      "B07",
+      "B08",
+      "B09",
+      "B10",
+      "B11",
+      "B12",
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C09",
+      "C10",
+      "C11",
+      "C12",
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "E01",
+      "E02",
+      "E03",
+      "E04",
+      "E05",
+      "E06",
+      "E07",
+      "E08",
+      "E09",
+      "E10",
+      "E11",
+      "E12",
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "F08",
+      "F09",
+      "F10",
+      "F11",
+      "F12",
+      "G01",
+      "G02",
+      "G03",
+      "G04",
+      "G05",
+      "G06",
+      "G07",
+      "G08",
+      "G09",
+      "G10",
+      "G11",
+      "G12",
+      "H01",
+      "H02",
+      "H03",
+      "H04",
+      "H05",
+      "H06",
+      "H07",
+      "H08",
+      "H09",
+      "H10",
+      "H11",
+      "H12"
+    ],
+    "id": 78,
+    "screenId": 63
+  },
+  {
+    "tasks": [
+      "getRidOfThis"
+    ],
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "condition": "fillThisIn",
+    "screenStage": "Primary",
+    "screenName": "AHR-2016-06-23--Pr",
+    "instrumentId": 1,
+    "assayDate": "2016-06-23",
+    "data": {
+      "StampDate": "2016-06-13",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    },
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.5A2%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "5"
+          }
+        }
+      }
+    },
+    "permissiveTemp": 17.5,
+    "restrictiveTemp": 23.3,
+    "isJunk": 0,
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "wells": [
+      "A01",
+      "A02",
+      "A03",
+      "A04",
+      "A05",
+      "A06",
+      "A07",
+      "A08",
+      "A09",
+      "A10",
+      "A11",
+      "A12",
+      "B01",
+      "B02",
+      "B03",
+      "B04",
+      "B05",
+      "B06",
+      "B07",
+      "B08",
+      "B09",
+      "B10",
+      "B11",
+      "B12",
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C09",
+      "C10",
+      "C11",
+      "C12",
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "E01",
+      "E02",
+      "E03",
+      "E04",
+      "E05",
+      "E06",
+      "E07",
+      "E08",
+      "E09",
+      "E10",
+      "E11",
+      "E12",
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "F08",
+      "F09",
+      "F10",
+      "F11",
+      "F12",
+      "G01",
+      "G02",
+      "G03",
+      "G04",
+      "G05",
+      "G06",
+      "G07",
+      "G08",
+      "G09",
+      "G10",
+      "G11",
+      "G12",
+      "H01",
+      "H02",
+      "H03",
+      "H04",
+      "H05",
+      "H06",
+      "H07",
+      "H08",
+      "H09",
+      "H10",
+      "H11",
+      "H12"
+    ],
+    "id": 79,
+    "screenId": 63
+  },
+  {
+    "tasks": [
+      "getRidOfThis"
+    ],
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "condition": "fillThisIn",
+    "screenStage": "Primary",
+    "screenName": "AHR-2016-06-23--Pr",
+    "instrumentId": 1,
+    "assayDate": "2016-06-23",
+    "data": {
+      "StampDate": "2016-06-16",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    },
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.5B1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "5"
+          }
+        }
+      }
+    },
+    "permissiveTemp": 17.5,
+    "restrictiveTemp": 23.3,
+    "isJunk": 0,
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "wells": [
+      "A01",
+      "A02",
+      "A03",
+      "A04",
+      "A05",
+      "A06",
+      "A07",
+      "A08",
+      "A09",
+      "A10",
+      "A11",
+      "A12",
+      "B01",
+      "B02",
+      "B03",
+      "B04",
+      "B05",
+      "B06",
+      "B07",
+      "B08",
+      "B09",
+      "B10",
+      "B11",
+      "B12",
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C09",
+      "C10",
+      "C11",
+      "C12",
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "E01",
+      "E02",
+      "E03",
+      "E04",
+      "E05",
+      "E06",
+      "E07",
+      "E08",
+      "E09",
+      "E10",
+      "E11",
+      "E12",
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "F08",
+      "F09",
+      "F10",
+      "F11",
+      "F12",
+      "G01",
+      "G02",
+      "G03",
+      "G04",
+      "G05",
+      "G06",
+      "G07",
+      "G08",
+      "G09",
+      "G10",
+      "G11",
+      "G12",
+      "H01",
+      "H02",
+      "H03",
+      "H04",
+      "H05",
+      "H06",
+      "H07",
+      "H08",
+      "H09",
+      "H10",
+      "H11",
+      "H12"
+    ],
+    "id": 80,
+    "screenId": 63
+  },
+  {
+    "tasks": [
+      "getRidOfThis"
+    ],
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "condition": "fillThisIn",
+    "screenStage": "Primary",
+    "screenName": "AHR-2016-06-23--Pr",
+    "instrumentId": 1,
+    "assayDate": "2016-06-23",
+    "data": {
+      "StampDate": "2016-06-13",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    },
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.5B2%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "5"
+          }
+        }
+      }
+    },
+    "permissiveTemp": 17.5,
+    "restrictiveTemp": 23.3,
+    "isJunk": 0,
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "wells": [
+      "A01",
+      "A02",
+      "A03",
+      "A04",
+      "A05",
+      "A06",
+      "A07",
+      "A08",
+      "A09",
+      "A10",
+      "A11",
+      "A12",
+      "B01",
+      "B02",
+      "B03",
+      "B04",
+      "B05",
+      "B06",
+      "B07",
+      "B08",
+      "B09",
+      "B10",
+      "B11",
+      "B12",
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C09",
+      "C10",
+      "C11",
+      "C12",
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "E01",
+      "E02",
+      "E03",
+      "E04",
+      "E05",
+      "E06",
+      "E07",
+      "E08",
+      "E09",
+      "E10",
+      "E11",
+      "E12",
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "F08",
+      "F09",
+      "F10",
+      "F11",
+      "F12",
+      "G01",
+      "G02",
+      "G03",
+      "G04",
+      "G05",
+      "G06",
+      "G07",
+      "G08",
+      "G09",
+      "G10",
+      "G11",
+      "G12",
+      "H01",
+      "H02",
+      "H03",
+      "H04",
+      "H05",
+      "H06",
+      "H07",
+      "H08",
+      "H09",
+      "H10",
+      "H11",
+      "H12"
+    ],
+    "id": 81,
+    "screenId": 63
+  },
+  {
+    "tasks": [
+      "getRidOfThis"
+    ],
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "condition": "fillThisIn",
+    "screenStage": "Primary",
+    "screenName": "AHR-2016-06-23--Pr",
+    "instrumentId": 1,
+    "assayDate": "2016-06-23",
+    "data": {
+      "StampDate": "2016-06-16",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    },
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.6A1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "6"
+          }
+        }
+      }
+    },
+    "permissiveTemp": 17.5,
+    "restrictiveTemp": 23.3,
+    "isJunk": 0,
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "wells": [
+      "A01",
+      "A02",
+      "A03",
+      "A04",
+      "A05",
+      "A06",
+      "A07",
+      "A08",
+      "A09",
+      "A10",
+      "A11",
+      "A12",
+      "B01",
+      "B02",
+      "B03",
+      "B04",
+      "B05",
+      "B06",
+      "B07",
+      "B08",
+      "B09",
+      "B10",
+      "B11",
+      "B12",
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C09",
+      "C10",
+      "C11",
+      "C12",
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "E01",
+      "E02",
+      "E03",
+      "E04",
+      "E05",
+      "E06",
+      "E07",
+      "E08",
+      "E09",
+      "E10",
+      "E11",
+      "E12",
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "F08",
+      "F09",
+      "F10",
+      "F11",
+      "F12",
+      "G01",
+      "G02",
+      "G03",
+      "G04",
+      "G05",
+      "G06",
+      "G07",
+      "G08",
+      "G09",
+      "G10",
+      "G11",
+      "G12",
+      "H01",
+      "H02",
+      "H03",
+      "H04",
+      "H05",
+      "H06",
+      "H07",
+      "H08",
+      "H09",
+      "H10",
+      "H11",
+      "H12"
+    ],
+    "id": 84,
+    "screenId": 63
+  },
+  {
+    "tasks": [
+      "getRidOfThis"
+    ],
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "condition": "fillThisIn",
+    "screenStage": "Primary",
+    "screenName": "AHR-2016-06-23--Pr",
+    "instrumentId": 1,
+    "assayDate": "2016-06-23",
+    "data": {
+      "StampDate": "2016-06-16",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    },
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.6A2%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "6"
+          }
+        }
+      }
+    },
+    "permissiveTemp": 17.5,
+    "restrictiveTemp": 23.3,
+    "isJunk": 0,
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "wells": [
+      "A01",
+      "A02",
+      "A03",
+      "A04",
+      "A05",
+      "A06",
+      "A07",
+      "A08",
+      "A09",
+      "A10",
+      "A11",
+      "A12",
+      "B01",
+      "B02",
+      "B03",
+      "B04",
+      "B05",
+      "B06",
+      "B07",
+      "B08",
+      "B09",
+      "B10",
+      "B11",
+      "B12",
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C09",
+      "C10",
+      "C11",
+      "C12",
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "E01",
+      "E02",
+      "E03",
+      "E04",
+      "E05",
+      "E06",
+      "E07",
+      "E08",
+      "E09",
+      "E10",
+      "E11",
+      "E12",
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "F08",
+      "F09",
+      "F10",
+      "F11",
+      "F12",
+      "G01",
+      "G02",
+      "G03",
+      "G04",
+      "G05",
+      "G06",
+      "G07",
+      "G08",
+      "G09",
+      "G10",
+      "G11",
+      "G12",
+      "H01",
+      "H02",
+      "H03",
+      "H04",
+      "H05",
+      "H06",
+      "H07",
+      "H08",
+      "H09",
+      "H10",
+      "H11",
+      "H12"
+    ],
+    "id": 82,
+    "screenId": 63
+  },
+  {
+    "tasks": [
+      "getRidOfThis"
+    ],
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "condition": "fillThisIn",
+    "screenStage": "Primary",
+    "screenName": "AHR-2016-06-23--Pr",
+    "instrumentId": 1,
+    "assayDate": "2016-06-23",
+    "data": {
+      "StampDate": "2016-06-16",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    },
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.6B1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "6"
+          }
+        }
+      }
+    },
+    "permissiveTemp": 17.5,
+    "restrictiveTemp": 23.3,
+    "isJunk": 0,
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "wells": [
+      "A01",
+      "A02",
+      "A03",
+      "A04",
+      "A05",
+      "A06",
+      "A07",
+      "A08",
+      "A09",
+      "A10",
+      "A11",
+      "A12",
+      "B01",
+      "B02",
+      "B03",
+      "B04",
+      "B05",
+      "B06",
+      "B07",
+      "B08",
+      "B09",
+      "B10",
+      "B11",
+      "B12",
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C09",
+      "C10",
+      "C11",
+      "C12",
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "E01",
+      "E02",
+      "E03",
+      "E04",
+      "E05",
+      "E06",
+      "E07",
+      "E08",
+      "E09",
+      "E10",
+      "E11",
+      "E12",
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "F08",
+      "F09",
+      "F10",
+      "F11",
+      "F12",
+      "G01",
+      "G02",
+      "G03",
+      "G04",
+      "G05",
+      "G06",
+      "G07",
+      "G08",
+      "G09",
+      "G10",
+      "G11",
+      "G12",
+      "H01",
+      "H02",
+      "H03",
+      "H04",
+      "H05",
+      "H06",
+      "H07",
+      "H08",
+      "H09",
+      "H10",
+      "H11",
+      "H12"
+    ],
+    "id": 83,
+    "screenId": 63
+  },
+  {
+    "tasks": [
+      "getRidOfThis"
+    ],
+    "library": "ahringer",
+    "libraryModel": "RnaiLibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "condition": "fillThisIn",
+    "screenStage": "Primary",
+    "screenName": "AHR-2016-06-23--Pr",
+    "instrumentId": 1,
+    "assayDate": "2016-06-23",
+    "data": {
+      "StampDate": "2016-06-14",
+      "CultureDate": "2016-06-21",
+      "FreezeDate": "2016-06-22",
+      "IPTGInductionDate": "2016-06-23",
+      "restrictiveImageDate": "2016-06-28",
+      "permissiveImageDate": "2016-06-30",
+      "comments": ""
+    },
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%V.6B2%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2016-06-28"
+                },
+                {
+                  "creationdate": "2016-06-29"
+                },
+                {
+                  "creationdate": "2016-06-30"
+                },
+                {
+                  "creationdate": "2017-01-07"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "V",
+            "RnaiPlateNo": "6"
+          }
+        }
+      }
+    },
+    "permissiveTemp": 17.5,
+    "restrictiveTemp": 23.3,
+    "isJunk": 0,
+    "imageDates": [
+      {
+        "creationdate": "2016-06-28"
+      },
+      {
+        "creationdate": "2016-06-29"
+      },
+      {
+        "creationdate": "2016-06-30"
+      },
+      {
+        "creationdate": "2017-01-07"
+      }
+    ],
+    "wells": [
+      "A01",
+      "A02",
+      "A03",
+      "A04",
+      "A05",
+      "A06",
+      "A07",
+      "A08",
+      "A09",
+      "A10",
+      "A11",
+      "A12",
+      "B01",
+      "B02",
+      "B03",
+      "B04",
+      "B05",
+      "B06",
+      "B07",
+      "B08",
+      "B09",
+      "B10",
+      "B11",
+      "B12",
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C09",
+      "C10",
+      "C11",
+      "C12",
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "E01",
+      "E02",
+      "E03",
+      "E04",
+      "E05",
+      "E06",
+      "E07",
+      "E08",
+      "E09",
+      "E10",
+      "E11",
+      "E12",
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "F08",
+      "F09",
+      "F10",
+      "F11",
+      "F12",
+      "G01",
+      "G02",
+      "G03",
+      "G04",
+      "G05",
+      "G06",
+      "G07",
+      "G08",
+      "G09",
+      "G10",
+      "G11",
+      "G12",
+      "H01",
+      "H02",
+      "H03",
+      "H04",
+      "H05",
+      "H06",
+      "H07",
+      "H08",
+      "H09",
+      "H10",
+      "H11",
+      "H12"
+    ],
+    "id": 85,
+    "screenId": 63
+  }
+]

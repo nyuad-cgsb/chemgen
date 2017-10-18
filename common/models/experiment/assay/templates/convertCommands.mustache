@@ -10,6 +10,7 @@ cp -f "{{{images.vendorImage}}}" "{{{images.tmpImage}}}"
 /var/data/bftools/bfconvert -overwrite "{{{images.tmpImage}}}" "{{{images.convertImage}}}"
 convert -layers flatten -quality 100 "{{{images.convertImage}}}" "{{{images.convertBmp}}}"
 convert -auto-level "{{{images.convertImage}}}" "{{{images.autoLevelTiffImage}}}"
+convert -auto-level "{{{images.convertBmp}}}" "{{{images.autoLevelBmpImage}}}"
 convert -layers flatten -quality 100 "{{{images.autoLevelTiffImage}}}" "{{{images.autoLevelJpegImage}}}"
 
 {{#thumbSizes}}

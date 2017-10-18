@@ -15,9 +15,22 @@ Workflow.experiment.primary.create = function(workflowDataFile) {
       .then(function(contents) {
         var workflowDataList = JSON.parse(contents);
         Promise.map(workflowDataList, function(workflowData) {
+          delete workflowData.id;
           workflowData.condition = 'fillThisIn';
           workflowData.tasks = ['getRidOfThis'];
-          return app.models.Workflow.create(workflowData);
+
+          return app.models.MainScreen
+          .findOrCreate(
+            {where: {name: workflowData.screenName}},
+            {name: workflowData.screenName}
+          )
+            .then(function(screenResults) {
+              workflowData.screenId = screenResults[0].screenId;
+              return app.models.Workflow.create(workflowData);
+            })
+            .catch(function(error) {
+              reject(new Error(error));
+            });
         })
       .then(function(results) {
         resolve(results);
@@ -32,8 +45,10 @@ Workflow.experiment.primary.create = function(workflowDataFile) {
 Workflow.experiment.primary.mapWorkflows = function(workflowDataList) {
   return new Promise(function(resolve, reject) {
     Promise.map(workflowDataList, function(workflowData) {
-        return Workflow.experiment.getPlates(workflowData);
-      }, {concurrency: 4})
+      app.winston.info('Screen: ' + workflowData.screenName);
+      // app.winston.info('Search: ' + JSON.stringify(workflowData.search.instrument.arrayscan, null, 2));
+      return Workflow.experiment.getPlates(workflowData);
+    }, {concurrency: 1})
       .then(function(results) {
         resolve();
       })

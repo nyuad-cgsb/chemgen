@@ -5,13 +5,13 @@ Screens get passed to me in an excel sheel
 I download these as a CSV, and parse out the data
 **/
 
+const app = require('../../../../../../../server/server');
 const Promise = require('bluebird');
-const fs = require('fs');
-//TODO Update this for papaparse
-const csv = require('fast-csv');
 const slug = require('slug');
 const path = require('path');
 const jsonfile = require('jsonfile');
+const fs = require('fs');
+const Papa = require('papaparse');
 
 var workflowDataList = [];
 
@@ -19,6 +19,7 @@ var chrom = '';
 var screenName = '';
 var creationDates = [];
 var assayDate = '';
+var screenNames = {};
 
 var file = path.resolve(__dirname, 'RNAi_mel-28.tsv');
 
@@ -34,38 +35,34 @@ var parseCreationDates = function(dateStr) {
 };
 
 var startStream = function(file) {
-  var stream = fs.createReadStream(file);
+  var inputStream = fs.createReadStream(file, 'utf8');
 
-  var csvStream = csv
-    .fromStream(stream, {
-      headers: true,
-      delimiter: '\t',
+  Papa.parse(inputStream, {
+    header: true,
+    comments: '//',
+    delimiter: '\t',
+    fastMode: false,
+    worker: true,
+    step: function(results) {
+      inputStream.pause();
+      decideData(results.data[0])
+    .then(function(results) {
+      return inputStream.resume();
     })
-    .on('data', function(data) {
-      decideData(data)
-        .then(function() {})
-        .catch(function(error) {
-          console.log('we got an error! ' + error);
-        });
-    })
-    .on('end', function() {
-      console.log('csv stream done');
-    })
-    .on('close', function() {
-      console.log('csv stream end');
+    .catch(function(error) {
+      app.winston.error(error.stack);
+      return inputStream.resume();
     });
-
-  stream.pipe(csvStream);
-  stream.on('close', function() {
-    console.log('stream done');
-  // process.exit(0);
-  });
-  stream.on('end', function() {
-    console.log('stream end');
-
-    // console.log(JSON.stringify(workflowDataList));
-    jsonfile.writeFileSync(path.resolve(__dirname, 'primary_assays-2016-03--2016-09.json'), workflowDataList, {spaces: 2})
-  // process.exit(0);
+      inputStream.resume();
+    },
+    complete: function() {
+      app.winston.info('all done!');
+      app.winston.info('Number of screens ' + Object.keys(screenNames).length);
+      app.winston.info(JSON.stringify(screenNames, null, 2));
+      jsonfile.writeFileSync(path.resolve(__dirname, 'primary_assays-2016-03--2016-09.json'), workflowDataList, {
+        spaces: 2,
+      });
+    },
   });
 };
 
@@ -84,7 +81,7 @@ var parseDates = function(date) {
 };
 
 var createScreen = function(data) {
-  var tscreen = 'AHR-';
+  var tscreen = 'AHR2-';
   screenName = '';
 
   if (assayDate) {
@@ -102,19 +99,22 @@ var createScreen = function(data) {
   }
   tscreen = tscreen + '--Pr';
   screenName = tscreen;
+  screenNames[screenName] = 0;
 };
 
 var decideData = function(data) {
   data.imageDates = creationDates;
+  data.assayDate = assayDate;
 
   if (data['Assay date']) {
     assayDate = parseDates(data['Assay date']);
+    data.assayDate = assayDate;
   }
   if (data['Chromosome no.']) {
     chrom = data['Chromosome no.'];
   }
   if (data['Library Screen type']) {
-    //Create a new screen
+    // Create a new screen
   }
   if (data['CreationDate'] && data['CreationDate'] !== 'CreationDate') {
     creationDates = parseCreationDates(data['CreationDate']);
@@ -129,8 +129,12 @@ var decideData = function(data) {
       if (data['RNAi plate no.'] === 'RNAi plate no.') {
         resolve();
       } else {
+        var count = screenNames[screenName];
+        count = count + 1;
+        screenNames[screenName] = count;
+
         // console.log(JSON.stringify(data, null, 2));
-        var barcode = 'RNAi' + chrom + '.' + data['RNAi plate no.'];
+        var barcode = 'RNA%' + chrom + '.' + data['RNAi plate no.'];
         data.barcode = barcode;
 
         var FormData = {
@@ -139,7 +143,7 @@ var decideData = function(data) {
           libraryModel: 'RnaiLibrary',
           libraryStockModel: 'RnaiLibrarystock',
           isJunk: 0,
-          assayDate: assayDate,
+          assayDate: data.assayDate,
           imageDates: data.imageDates,
           screenStage: 'Primary',
           permissiveTemp: data['Enhancer temp'] || 17.5,
@@ -190,6 +194,5 @@ var decideData = function(data) {
     }
   });
 };
-
 
 startStream(file);

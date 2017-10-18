@@ -1,25 +1,104 @@
 'use strict';
 
-//TODO
+// TODO
 // Quite a few of these are probably common across experiments
 const app = require('../../../../../server/server');
 const RnaiLibrarystock = app.models.RnaiLibrarystock;
 
-RnaiLibrarystock.helpers.buildControlTag = function(barcode) {
-  var controlB = 'L4440';
-  if (barcode.match('E')) {
-    controlB = controlB + 'E';
+RnaiLibrarystock.helpers.buildControlTag.Primary = function(workflowData, contentObj) {
+  var cnTag = '_C-Restrictive' + '_WS-N2';
+  var cmTag = '_C-Restrictive' + '_WS-M';
+
+  //Restrictive N2
+  contentObj.enviraCRNTag = [
+    'SN-', contentObj.screenNameSlug,
+    cnTag,
+    '_TT-', 'L4440',
+  ].join('');
+
+  //Restrictive M
+  contentObj.enviraCRMTag = [
+    'SN-', contentObj.screenNameSlug,
+    cmTag,
+    '_TT-', 'L4440',
+  ].join('');
+
+  cnTag = '_C-Permissive' + '_WS-N2';
+  cmTag = '_C-Permissive' + '_WS-M';
+
+  //Permissive N2
+  contentObj.enviraCPNTag = [
+    'SN-', contentObj.screenNameSlug,
+    cnTag,
+    '_TT-', 'L4440',
+  ].join('');
+
+  //Permissive M
+  contentObj.enviraCPMTag = [
+    'SN-', contentObj.screenNameSlug,
+    cmTag,
+    '_TT-', 'L4440',
+  ].join('');
+
+  return contentObj;
+};
+
+RnaiLibrarystock.helpers.buildControlTag.Secondary = function(workflowData, contentObj) {
+  var cnTag = '_C-Restrictive' + '_WS-N2';
+  var cmTag = '_C-Restrictive' + '_WS-M';
+
+  var strain = RnaiLibrarystock.helpers.wormStrain(contentObj.barcode);
+
+  if (strain === 'M' && contentObj.condition === 'Restrictive') {
+    cmTag =      '_PI-' +  contentObj.plateId + '_C-Restrictive' + '_WS-M';
+  }  else if (strain === 'N2' && contentObj.condition === 'Restrictive') {
+    cnTag =      '_PI-' +  contentObj.plateId + '_C-Restrictive' + '_WS-N2';
   }
-  if (barcode.match('S')) {
-    controlB = controlB + 'S';
+
+  //Restrictive N2
+  contentObj.enviraCRNTag = [
+    'SN-', contentObj.screenNameSlug,
+    cnTag,
+    '_TT-', 'L4440',
+  ].join('');
+
+  //Restrictive M
+  contentObj.enviraCRMTag = [
+    'SN-', contentObj.screenNameSlug,
+    cmTag,
+    '_TT-', 'L4440',
+  ].join('');
+
+  cnTag = '_C-Permissive' + '_WS-N2';
+  cmTag = '_C-Permissive' + '_WS-M';
+  if (strain === 'M' && contentObj.condition === 'Permissive') {
+    cmTag =      '_PI-' +  contentObj.plateId + '_C-Permissive' + '_WS-M';
+  }  else if (strain === 'N2' && contentObj.condition === 'Permissive') {
+    cnTag =      '_PI-' +  contentObj.plateId + '_C-Permissive' + '_WS-N2';
   }
-  if (barcode.match('D')) {
-    controlB = controlB + '_D';
-  }
-  if (barcode.match('M') || barcode.match('mel')) {
-    controlB = controlB + '_M';
-  }
-  return controlB;
+
+  //Permissive N2
+  contentObj.enviraCPNTag = [
+    'SN-', contentObj.screenNameSlug,
+    cnTag,
+    '_TT-', 'L4440',
+  ].join('');
+
+  //Permissive M
+  contentObj.enviraCPMTag = [
+    'SN-', contentObj.screenNameSlug,
+    cmTag,
+    '_TT-', 'L4440',
+  ].join('');
+
+  return contentObj;
+};
+
+RnaiLibrarystock.helpers.buildControlTags = function(workflowData, contentObj) {
+  contentObj.enviraCTCol = 6;
+  contentObj =  RnaiLibrarystock.helpers.buildControlTag[workflowData.screenStage](workflowData, contentObj);
+
+  return contentObj;
 };
 
 RnaiLibrarystock.helpers.barcodeIsControl = function(barcode) {
@@ -59,7 +138,7 @@ RnaiLibrarystock.helpers.getQuad = function(barcode) {
   }
 };
 
- RnaiLibrarystock.helpers.getPlate = function(plateNo) {
+RnaiLibrarystock.helpers.getPlate = function(plateNo) {
   if (!plateNo) {
     return '';
   }

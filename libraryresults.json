@@ -1,0 +1,80 @@
+{
+  "librarystockId": 9,
+  "parentstockId": 1323,
+  "librarystockName": "RNAi.1.N2.S",
+  "plateId": 2,
+  "well": "A09",
+  "metaLibrarystock": "{\"library\":\"ahringer\"}",
+  "taxTerms": [
+    {
+      "taxonomy": "image_date",
+      "taxTerm": "2017-01-16T16:03:54.000Z"
+    },
+    {
+      "taxonomy": "condition",
+      "taxTerm": "Restrictive"
+    },
+    {
+      "taxonomy": "envira-tag",
+      "taxTerm": "SN-2016-12-11--PR_C-Restrictive_WS-N2_TT-F30A10.10"
+    },
+    {
+      "taxonomy": "envira-tag",
+      "taxTerm": "SN-2016-12-11--PR_B-RNAi.1.N2.S"
+    },
+    {
+      "taxonomy": "envira-tag",
+      "taxTerm": "SN-2016-12-11--PR_PI-2_B-RNAi.1.N2.S"
+    },
+    {
+      "taxonomy": "envira-tag",
+      "taxTerm": "SN-2016-12-11--PR_B-RNAi.1.N2.S_C-Restrictive_WS-N2_TT-F30A10.10"
+    },
+    {
+      "taxonomy": "envira-tag",
+      "taxTerm": "SN-2016-12-11--PR_C-Restrictive_WS-N2_W-A09"
+    },
+    {
+      "taxonomy": "envira-tag",
+      "taxTerm": "SN-2016-12-11--PR_TT-F30A10.10"
+    },
+    {
+      "taxonomy": "envira-tag",
+      "taxTerm": "SN-2016-12-11--PR_WS-N2_TT-F30A10.10"
+    },
+    {
+      "taxonomy": "envira-tag",
+      "taxTerm": "SN-2016-12-11--PR_WS-N2_TT-F30A10.10_W-A09"
+    },
+    {
+      "taxonomy": "envira-tag",
+      "taxTerm": "SN-2016-12-11--PR_C-Restrictive_WS-N2_TT-F30A10.10_W-A09"
+    },
+    {
+      "taxonomy": "envira-tag",
+      "taxTerm": "SN-2016-12-11--PR_PI-2_WS-N2_TT-F30A10.10"
+    },
+    {
+      "taxonomy": "envira-tag",
+      "taxTerm": "SN-2016-12-11--PR_PI-2_C-Restrictive_WS-N2_TT-F30A10.10"
+    },
+    {
+      "taxonomy": "envira-tag",
+      "taxTerm": "SN-2016-12-11--PR_C-Restrictive_WS-N2_TT-F30A10.10"
+    },
+    {
+      "taxonomy": "screen_name",
+      "taxTerm": "2016-12-11--PR"
+    },
+    {
+      "taxonomy": "experiment_screen_stage",
+      "taxTerm": "Secondary"
+    },
+    {
+      "taxonomy": "worm_strain",
+      "taxTerm": "N2"
+    }
+  ],
+  "taxTerm": "F30A10.10",
+  "geneName": "F30A10.10"
+}

@@ -31,7 +31,7 @@ Workflow.experiment.mapPlates = function(workflowData, platesList) {
     Promise.map(platesList, function(plate) {
       app.winston.info('Starting Plate: ' + plate.csPlateid + ' Name: ' + plate.name);
       return Workflow.experiment.processPlate(workflowData, plate);
-    }, {concurrency: 1})
+    }, {concurrency: 6})
       .then(function(results) {
         resolve();
       })

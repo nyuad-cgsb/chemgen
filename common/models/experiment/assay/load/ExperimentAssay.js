@@ -141,7 +141,8 @@ ExperimentAssay.load.convertImage = function(workflowData, plateInfo, libraryDat
     var assayName = plateInfo.ExperimentExperimentplate.barcode + '_' + well;
 
     var images = ExperimentAssay.helpers.genImageFileNames(plateInfo, well);
-    var lookUpImage = images.baseImage + '-autolevel-' + '600x600.jpeg';
+    // var lookUpImage = images.baseImage + '-autolevel-' + '600x600.jpeg';
+    var lookUpImage = images.baseImage + '-autolevel' + '.bmp';
     var title = 'convertImage-' + plateId + '-' + assayName;
 
     //TODO Mixing callbacks with promises - this is baaaad

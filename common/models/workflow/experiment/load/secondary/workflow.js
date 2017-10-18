@@ -11,7 +11,13 @@ const jsonfile = require('jsonfile');
 Workflow.experiment.secondary.create = function(workflowData, wellDataFile) {
   return new Promise(function(resolve, reject) {
     // This reads in the data supplied by Rawan about the wells
-    readFile(wellDataFile, 'utf8')
+    app.models.MainScreen.findOrCreate(
+      {where: {name: workflowData.screenName}},
+      {name: workflowData.screenName})
+      .then(function(screenResults) {
+        workflowData.screenId = screenResults[0].screenId;
+        return readFile(wellDataFile, 'utf8');
+      })
       .then(function(contents) {
         workflowData.data.library = {};
         workflowData.data.library.wellData = JSON.parse(contents);

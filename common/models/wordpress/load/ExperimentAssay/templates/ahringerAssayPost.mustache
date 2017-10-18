@@ -87,19 +87,41 @@
     </div>
   </div>
 
-  {{#enviraCTTag}}
   <div class="row">
     <div class="col-md-12">
-      <section id="ControlGallery">
-        <div id="enviraCT">
-          <h3>Control</h3>
+      {{#enviraCRMTag}}
+        <div id="enviraCRM">
+          <h3>Control Restrictive Mutant</h3>
           <p>
-            [envira-gallery-dynamic id="tags-{{enviraCTTag}}" columns="{{enviraCTCol}}" columns="3" limit="6"] </p>
+            [envira-gallery-dynamic id="tags-{{enviraCRMTag}}" columns="4" limit="4" sort="random"] </p>
         </div>
-      </section>
+      {{/enviraCRMTag}}
+      {{#enviraCRNTag}}
+        <div id="enviraCRN">
+          <h3>Control Restrictive N2</h3>
+          <p>
+            [envira-gallery-dynamic id="tags-{{enviraCRNTag}}" columns="4" limit="4" sort="random"] </p>
+        </div>
+      {{/enviraCRNTag}}
+
+      {{#enviraCPMTag}}
+        <div id="enviraCPM">
+          <h3>Control Permissive Mutant</h3>
+          <p>
+            [envira-gallery-dynamic id="tags-{{enviraCPMTag}}" columns="4" limit="4" sort="random"] </p>
+        </div>
+      {{/enviraCPMTag}}
+
+      {{#enviraCPNTag}}
+        <div id="enviraCPN">
+          <h3>Control Permissive N2</h3>
+          <p>
+            [envira-gallery-dynamic id="tags-{{enviraCPNTag}}" columns="4" limit="4" sort="random"] </p>
+        </div>
+      {{/enviraCPNTag}}
+
     </div>
   </div>
-  {{/enviraCTTag}}
 
   <div class="row">
     <div class="col-md-12">
@@ -107,7 +129,7 @@
         <div class="">
         </div>
         <div class="" id="wbassay">
-          [posts_table columns="image,title,tax:condition:Condition,tax:worm_strain:Strain" post_type="assay" term="wb_gene_sequence_id:{{{taxTermSlug}}}+screen_name:{{{screenNameSlug}}}" lazy_load="true" links="title,image" image_size="medium" widths="50,20,20,10"
+          [posts_table columns="image,title,tax:condition:Condition,tax:worm_strain:Strain" post_type="ahringer_assay" term="wb_gene_sequence_id:{{{taxTermSlug}}}+screen_name:{{{screenNameSlug}}}" lazy_load="true" links="title,image" image_size="medium" widths="50,20,20,10"
           filters="tax:worm_strain,tax:condition" rows_per_page="5"]
         </div>
       </section>

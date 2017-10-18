@@ -5,14 +5,13 @@ const Promise = require('bluebird');
 const RnaiLibrarystock = app.models.RnaiLibrarystock;
 const slug = require('slug');
 
-// TODO Generating the taxTerms is general across screens
+// TODO This should be the library - not the librarystock
 // There is a 'taxTerm' identifier in the libraryStock, which could be in the workflowData
 RnaiLibrarystock.extract.parseLibraryResults = function(workflowData, plateInfo, libraryResults) {
   return new Promise(function(resolve, reject) {
     var allWells = workflowData.wells;
     var barcode = plateInfo.ExperimentExperimentplate.barcode;
     var strain = RnaiLibrarystock.helpers.wormStrain(barcode);
-    var control = RnaiLibrarystock.helpers.barcodeIsControl(barcode);
     var condition = RnaiLibrarystock.helpers
       .parseCond(plateInfo.ExperimentExperimentplate.barcode);
     var plateId = plateInfo.ExperimentExperimentplate.experimentPlateId;
@@ -34,21 +33,25 @@ RnaiLibrarystock.extract.parseLibraryResults = function(workflowData, plateInfo,
               taxTerms.push(wormTaxTerm);
             });
 
-            if (libraryResult.geneName === 'L4440') {
+            //In the primary screen we have an entire barcode with L4440s
+            if (barcode.match('L4440')) {
               taxTerms.push({
                 taxonomy: 'wb_gene_sequence_id',
                 taxTerm: 'L4440'
               });
             }
 
-            if (barcode.match('L4440')) {
-              var ct = RnaiLibrarystock.helpers.buildControlTag(barcode);
-              var ctTag = [slug(workflowData.screenName),
-                '_', ct,
-              ].join('');
+            //In the secondary screen we have just genes
+            if (libraryResult.geneName === 'L4440') {
               taxTerms.push({
-                taxonomy: 'envira-tag',
-                taxTerm: ctTag
+                taxonomy: 'wb_gene_sequence_id',
+                taxTerm: 'L4440'
+              });
+            }
+            if (wormTaxTerms.length === 0) {
+              taxTerms.push({
+                taxonomy: 'wb_gene_sequence_id',
+                taxTerm: libraryResult.geneName,
               });
             }
 
