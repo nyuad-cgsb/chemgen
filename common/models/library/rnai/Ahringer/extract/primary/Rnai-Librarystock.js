@@ -7,12 +7,13 @@ const RnaiLibrarystock = app.models.RnaiLibrarystock;
 /**
  * Primary
  **/
+ 
+ //These are all the library - not the library stock
 
 // Secondary screens are custom created based on a gene set of interest
 // They are handed over to me in an excel sheet, which I export to JSON and it gets saved in the 'screen' table.
 // Each well has a location representation - which is either the vendor library (length = 3)
 // Or the stock library (length = 4 to include a quadrant)
-// TODO THIS IS A WORKFLOW
 RnaiLibrarystock.extract.Primary.getParentLibrary = function(workflowData, barcode) {
   return new Promise(function(resolve, reject) {
     RnaiLibrarystock.extract.Primary.getLibraryInfo(workflowData, barcode)

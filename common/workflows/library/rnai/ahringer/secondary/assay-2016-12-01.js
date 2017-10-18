@@ -8,7 +8,7 @@ const readFile = Promise.promisify(require('fs')
 const jsonfile = require('jsonfile');
 const path = require('path');
 
-// var workflow = require('./lib/workflow');
+const Workflow = app.models.Workflow;
 
 // 1. Assign Screen Data - name, stage, wells, etc.
 // 2. Read in data file corresponding to the screen - its a json file in ./data
@@ -20,7 +20,7 @@ const path = require('path');
 /// ////////////////////////////////
 // BEGIN DECEMBER SCREEN
 /// ////////////////////////////////
-var file = path.resolve(__dirname) + '/data/assay_2016-12-11.json';
+var wellDataFile = path.resolve(__dirname, 'data', 'assay_2016-12-11.json');
 var assayDate = '2016-12-11';
 var screenName = 'AHR2-2016-12-11--Sec';
 var like = 'rnai%';
@@ -97,21 +97,17 @@ var workflowData = {
   screenId: 1,
 };
 
-//TODO Break this up - make sure we are working from the actual model
-//We should also only process one plate at a time - otherwise we will fill up
-//the memory
-app.models.Workflow.library.ahringer.secondary.create(workflowData, file)
+Workflow.experiment.secondary.create(workflowData, wellDataFile)
   .then(function(workflowData) {
-    return app.models.Plate.search(workflowData.search.instrument.arrayscan);
+    return Workflow.experiment.getPlates(workflowData);
   })
-  .then(function(platesList) {
-    //TODO break here
-    //To make sure we are working from model workflowData
-    return app.models.Workflow.library.ahringer.mapPlates(workflowData, platesList);
-  })
-  .then(function(results) {
-    app.winston.info('finished');
+  .then(function() {
+    app.winston.info('Finished entire workflow!');
+    process.exit(0);
+    return;
   })
   .catch(function(error) {
+    app.winston.info('Finished entire workflow! ERRORS!!');
+    process.exit(1);
     app.winston.error(error.stack);
   });

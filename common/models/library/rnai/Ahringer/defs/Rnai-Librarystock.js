@@ -6,6 +6,8 @@ module.exports = function(RnaiLibrarystock) {
   RnaiLibrarystock.Custom = {};
   RnaiLibrarystock.workflows = {};
   RnaiLibrarystock.helpers = {};
+  RnaiLibrarystock.helpers.buildControlTag = {};
+
 
   RnaiLibrarystock.load = {};
   RnaiLibrarystock.load.workflows = {};

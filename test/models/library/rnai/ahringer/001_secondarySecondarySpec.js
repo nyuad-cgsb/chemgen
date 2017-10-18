@@ -20,11 +20,15 @@ var workflowData = require('../../../../data/library/rnai/secondary/workflow.jso
 var rnaiLibraryData = require('../../../../data/library/rnai/secondary/rnailibrary.json');
 var plateData = require('../../../../data/library/rnai/secondary/2017-12-11_assay.json');
 var reducedPlateAssayData = require('../../../../data/library/rnai/secondary/plate_assay_data_well_A01.json');
+var libraryData = require('../../../../data/library/rnai/secondary/libraryresults.json');
 
 // TODO Get this working
 // var imageServer = nock('http://10.230.9.204:3001')
 //   .post('/')
 //   .reply(200);
+
+//TODO
+//Test barcodes like this: RNAiIV.4Q2(3)S_D_M
 
 describe('001_secondarySpec.test.js Library.rnai.ahringer Secondary Parsing', function() {
   it('Should tell us our primary exists', function() {
@@ -178,54 +182,7 @@ describe('001_secondarySpec.test.js Library.rnai.ahringer Secondary Parsing', fu
           results = JSON.parse(results);
           expect(Object.keys(results[0])).to.deep.equal(['plateInfo', 'libraryDataList']);
           expect(results.length).to.equal(3);
-          expect(results[0]['libraryDataList'][8]['libraryStock']).to.deep.equal({
-            'librarystockId': 9,
-            'parentstockId': 1323,
-            'librarystockName': 'RNAi.1.N2.S',
-            'plateId': 2,
-            'well': 'A09',
-            'metaLibrarystock': '{"library":"ahringer"}',
-            'taxTerms': [{
-                'taxonomy': 'image_date',
-                'taxTerm': '2017-01-16T16:03:54.000Z'
-              }, {
-                'taxonomy': 'condition',
-                'taxTerm': 'Restrictive'
-              }, {
-                'taxonomy': 'envira-tag',
-                'taxTerm': '2016-12-11--PR_Restrictive_N2_F30A10.10'
-              }, {
-                'taxonomy': 'envira-tag',
-                'taxTerm': '2016-12-11--PR_RNAi.1.N2.S'
-              }, {
-                'taxonomy': 'envira-tag',
-                'taxTerm': '2016-12-11--PR_ID_2_RNAi.1.N2.S'
-              }, {
-                'taxonomy': 'envira-tag',
-                'taxTerm': '2016-12-11--PR_RNAi.1.N2.S_Restrictive_N2_F30A10.10'
-              }, {
-                'taxonomy': 'envira-tag',
-                'taxTerm': '2016-12-11--PR_Restrictive_N2_A09'
-              }, {
-                'taxonomy': 'envira-tag',
-                'taxTerm': '2016-12-11--PR_ID_2_F30A10.10'
-              },
-              {
-                'taxonomy': 'envira-tag',
-                'taxTerm': '2016-12-11--PR_Restrictive_F30A10.10'
-              },
-              {
-                'taxonomy': 'screen_name',
-                'taxTerm': '2016-12-11--PR'
-              },
-              {
-                'taxonomy': 'worm_strain',
-                'taxTerm': 'N2'
-              },
-            ],
-            'taxTerm': 'F30A10.10',
-            'geneName': 'F30A10.10'
-          });
+          expect(results[0]['libraryDataList'][8]['libraryStock']).to.deep.equal(libraryData);
           done();
         })
         .catch(function(error) {
@@ -283,72 +240,7 @@ describe('001_secondarySpec.test.js Library.rnai.ahringer Secondary Parsing', fu
             'origWell': 'A09',
             'comment': 'usp-48',
           });
-
-          expect(results[0]['experimentAssayList'][0]['libraryData']).to.deep.equal({
-            'libraryStock': {
-              'librarystockId': 181,
-              'librarystockName': 'RNAi.1.N2.S',
-              'plateId': 5,
-              'well': 'A01',
-              'metaLibrarystock': '{"library":"ahringer"}',
-              'taxTerms': [{
-                  'taxonomy': 'image_date',
-                  'taxTerm': '2017-01-16T16:03:54.000Z'
-                }, {
-                  'taxonomy': 'condition',
-                  'taxTerm': 'Restrictive'
-                }, {
-                  'taxonomy': 'envira-tag',
-                  'taxTerm': '2016-12-11--PR_Restrictive_N2_L4440'
-                }, {
-                  'taxonomy': 'envira-tag',
-                  'taxTerm': '2016-12-11--PR_RNAi.1.N2.S'
-                }, {
-                  'taxonomy': 'envira-tag',
-                  'taxTerm': '2016-12-11--PR_ID_5_RNAi.1.N2.S'
-                }, {
-                  'taxonomy': 'envira-tag',
-                  'taxTerm': '2016-12-11--PR_RNAi.1.N2.S_Restrictive_N2_L4440'
-                }, {
-                  'taxonomy': 'envira-tag',
-                  'taxTerm': '2016-12-11--PR_Restrictive_N2_A01'
-                }, {
-                  'taxonomy': 'envira-tag',
-                  'taxTerm': '2016-12-11--PR_ID_5_L4440'
-                },
-                {
-                  'taxonomy': 'envira-tag',
-                  'taxTerm': '2016-12-11--PR_Restrictive_L4440'
-                },
-                {
-                  'taxonomy': 'screen_name',
-                  'taxTerm': '2016-12-11--PR'
-                },
-                {
-                  'taxonomy': 'worm_strain',
-                  'taxTerm': 'N2'
-                },
-                {
-                  'taxonomy': 'wb_gene_sequence_id',
-                  'taxTerm': 'L4440'
-                },
-              ],
-              'taxTerm': 'L4440',
-              'geneName': 'L4440'
-            },
-            'libraryParent': {
-              'wellData': {
-                'splitLookUp': ['L4440'],
-                'row': 'A',
-                'origKey': '1',
-                'assayWell': 'A01'
-              },
-              'geneName': 'L4440',
-              'well': 'A01'
-            },
-            'geneName': 'L4440'
-          });
-
+          expect(results[0]['experimentAssayList'][0]['libraryData']['geneName']).to.equal('L4440');
           done();
         })
         .catch(function(error) {
@@ -387,7 +279,7 @@ describe('001_secondarySpec.test.js Library.rnai.ahringer Secondary Parsing', fu
           // TODO add in a check to make sure we created taxterms, termtaxonomies, and relationships
           results = JSON.stringify(results);
           results = JSON.parse(results);
-          // console.log(JSON.stringify(results[0]));
+          // console.log(JSON.stringify(results[0]['assayPostData']));
           expect(Object.keys(results[0]['assayPostData'])).to.deep.equal(['id', 'guid', 'postTitle', 'imagePath']);
           done();
         })
@@ -395,5 +287,25 @@ describe('001_secondarySpec.test.js Library.rnai.ahringer Secondary Parsing', fu
           done(new Error(error));
         });
     });
+
+    // it('Should tell use we updated things', function(done) {
+    //   app.models.WpPosts.load.assay.workflows.processExperimentPlates(workflowData, reducedPlateAssayData)
+    //     .then(function(results) {
+    //       // TODO add in a check to make sure we created taxterms, termtaxonomies, and relationships
+    //       // results = JSON.stringify(results);
+    //       // results = JSON.parse(results);
+    //       // // console.log(JSON.stringify(results[0]['assayPostData']));
+    //       // expect(Object.keys(results[0]['assayPostData'])).to.deep.equal(['id', 'guid', 'postTitle', 'imagePath']);
+    //       return app.models.WpPosts.findOne({where: {id: 2}});
+    //     })
+    //     .then(function(results){
+    //       expect(results.id).to.equal(2);
+    //       done();
+    //     })
+    //     .catch(function(error) {
+    //       done(new Error(error));
+    //     });
+    // });
+
   });
 });

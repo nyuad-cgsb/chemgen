@@ -44,42 +44,18 @@ WpPosts.load.assay.processExperimentPlate = function(workflowData, plateData) {
 
 WpPosts.load.assay.workflows.processPost = function(workflowData, plateInfo, experimentData) {
   var taxTerms = experimentData.libraryData.libraryStock.taxTerms;
-  var plateId = plateInfo.ExperimentExperimentplate.experimentPlateId;
-  var title = [plateId, experimentData.experimentAssayData.assayId, experimentData.experimentAssayData.assayName].join('-');
-  var titleSlug = slug(title);
 
   return new Promise(function(resolve, reject) {
-    WpPosts.load.assay.genPostContent(workflowData, plateInfo, experimentData, taxTerms)
-      .then(function(postContent) {
-        var postObj = {
-          postAuthor: 1,
-          postType: workflowData.library + '_assay',
-          commentCount: 0,
-          menuOrder: 0,
-          postContent: postContent,
-          postStatus: 'publish',
-          postTitle: title,
-          postName: titleSlug,
-          postParent: 0,
-          pingStatus: 'open',
-          commentStatus: 'open',
-          guid: WpPosts.wpUrl + '/' + titleSlug,
-        };
-        var dateNow = new Date().toISOString();
-        var postObjWithDate = deepcopy(postObj);
-        postObjWithDate.postDate = dateNow;
-        postObjWithDate.postDateGmt = dateNow;
-        return WpPosts
-          .findOrCreate({
-            where: app.etlWorkflow.helpers.findOrCreateObj(postObj),
-          }, postObjWithDate);
+    WpPosts.load.assay.workflows
+      .createPost(workflowData, plateInfo, experimentData)
+      .then(function(result) {
+        return WpPosts.load.assay.workflows.updatePost(workflowData, plateInfo, experimentData, result);
       })
-      .then(function(results) {
-        var result = results[0];
+      .then(function(result) {
         var postData = {
-          id: results[0]['id'],
-          guid: results[0]['guid'],
-          postTitle: results[0]['postTitle'],
+          id: result['id'],
+          guid: result['guid'],
+          postTitle: result['postTitle'],
           imagePath: experimentData.experimentAssayData.platePath,
         };
         taxTerms.push({
@@ -88,17 +64,84 @@ WpPosts.load.assay.workflows.processPost = function(workflowData, plateInfo, exp
         });
         // Do the downstream processing here
         // Each post should be associated to 1 or more taxonomy terms
-        // app.winston.info(JSON.stringify(taxTerms));
         return app.models.WpTerms.load.workflows.createTerms(postData, taxTerms);
       })
       .then(function(results) {
         // experimentData.assayPostData = results;
-        // resolve(experimentData);
         return WpPosts.load.assay.workflows.genImagePost(workflowData, results, taxTerms);
       })
       .then(function(results) {
         experimentData.assayPostData = results;
         resolve(experimentData);
+      })
+      .catch(function(error) {
+        app.winston.error(error.stack);
+        reject(new Error(error));
+      });
+  });
+};
+
+WpPosts.load.assay.workflows.updatePost = function(workflowData, plateInfo, experimentData, postObj) {
+  var taxTerms = experimentData.libraryData.libraryStock.taxTerms;
+  return new Promise(function(resolve, reject) {
+    WpPosts.load.assay
+      .genPostContent(workflowData, plateInfo, experimentData, taxTerms)
+      .then(function(postContent) {
+        postObj.postContent = postContent;
+        var dateNow = new Date().toISOString();
+        postObj.postModified = dateNow;
+        postObj.postModifiedGmt = dateNow;
+        // return postObj.save;
+        // return WpPosts.upsertWithWhere({where: {id: postObj.id}}, postObj);
+        // return postObj.updateAttribute({postContent: postContent});
+        return WpPosts.updateOrCreate(postObj);
+      })
+      .then(function(results) {
+        resolve(results);
+      })
+      .catch(function(error) {
+        app.winston.error(error.stack);
+        reject(new Error(error));
+      });
+  });
+};
+
+// I change the layout of the posts ALL THE TIME
+// I will create the initial post - but always have it update to whatever I want
+WpPosts.load.assay.workflows.createPost = function(workflowData, plateInfo, experimentData) {
+  var plateId = plateInfo.ExperimentExperimentplate.experimentPlateId;
+  var title = [plateId, experimentData.experimentAssayData.assayId,
+    experimentData.experimentAssayData.assayName
+  ].join('-');
+  var titleSlug = slug(title);
+
+  // postContent: postContent,
+  var postObj = {
+    postAuthor: 1,
+    postType: workflowData.library + '_assay',
+    commentCount: 0,
+    menuOrder: 0,
+    postStatus: 'publish',
+    postTitle: title,
+    postName: titleSlug,
+    postParent: 0,
+    pingStatus: 'open',
+    commentStatus: 'open',
+    guid: WpPosts.wpUrl + '/' + titleSlug,
+  };
+
+  var dateNow = new Date().toISOString();
+  var postObjWithDate = deepcopy(postObj);
+  postObjWithDate.postDate = dateNow;
+  postObjWithDate.postDateGmt = dateNow;
+  postObjWithDate.postContent = '';
+
+  return new Promise(function(resolve, reject) {
+    WpPosts.findOrCreate({
+        where: app.etlWorkflow.helpers.findOrCreateObj(postObj),
+      }, postObjWithDate)
+      .then(function(results) {
+        resolve(results[0]);
       })
       .catch(function(error) {
         app.winston.error(error.stack);
@@ -119,11 +162,16 @@ WpPosts.load.assay.genPostContent = function(workflowData, plateData, experiment
 
   var screenName = workflowData.screenName;
   var taxTerm = libraryData.libraryStock.taxTerm;
+  var well = libraryData.libraryStock.well;
 
   var contentObj = {};
+  contentObj.well = well;
   contentObj.plateId = plateId;
   contentObj.condition = condition;
-  contentObj.plateUrl = [WpPosts.wpUrl, '/plate/', slug(plateId + '-' + barcode)].join('');
+  contentObj.plateUrl = [WpPosts.wpUrl, '/' +
+    workflowData.library + '_plate/',
+    slug(plateId + '-' + barcode),
+  ].join('');
   contentObj.barcode = plateData.ExperimentExperimentplate.barcode;
 
   // TODO This should be part of the template
@@ -152,23 +200,14 @@ WpPosts.load.assay.genPostContent = function(workflowData, plateData, experiment
   });
 };
 
-//TODO this is a bit of a mess
-//This should in the library def - with primary/secondary or even more heirarchical
 WpPosts.load.assay.genEnviraControl = function(workflowData, contentObj) {
   contentObj.enviraCTCol = 6;
+
   if (contentObj.barcode.match('L4440')) {
     return contentObj;
-  } else if (workflowData.screenStage === 'Secondary') {
-    contentObj.enviraCTTag = [contentObj.screenNameSlug,
-      '_ID_', contentObj.plateId, '_',
-      contentObj.taxTermSlug,
-    ].join('');
   } else {
-    // Should be screen name, condition, 'L4440', possibly - creationDate?
-    var ct = app.models[workflowData.libraryStockModel].helpers.buildControlTag(contentObj.barcode);
-    contentObj.enviraCTTag = [contentObj.screenNameSlug,
-      '_', ct,
-    ].join('');
+    contentObj = app.models[workflowData.libraryStockModel].helpers
+      .buildControlTags(workflowData, contentObj);
   }
 
   return contentObj;
@@ -176,24 +215,32 @@ WpPosts.load.assay.genEnviraControl = function(workflowData, contentObj) {
 
 WpPosts.load.assay.genEnviraContent = function(contentObj) {
   contentObj.enviraCCol = 2;
-  contentObj.enviraEMTag = [contentObj.screenNameSlug,
-    slug('_Permissive_M_'),
-    contentObj.taxTermSlug,
+  contentObj.enviraEMTag = [
+    'SN-', contentObj.screenNameSlug,
+    '_C-Permissive_WS-M_',
+    'TT-', contentObj.taxTermSlug,
+    '_W-', contentObj.well,
   ].join('');
   contentObj.enviraEMCol = 4;
-  contentObj.enviraENTag = [contentObj.screenNameSlug,
-    slug('_Permissive_N2_'),
-    contentObj.taxTermSlug,
+  contentObj.enviraENTag = [
+    'SN-', contentObj.screenNameSlug,
+    '_C-Permissive_WS-N2_',
+    'TT-', contentObj.taxTermSlug,
+    '_W-', contentObj.well,
   ].join('');
   contentObj.enviraENCol = 4;
-  contentObj.enviraSMTag = [contentObj.screenNameSlug,
-    slug('_Restrictive_M_'),
-    contentObj.taxTermSlug,
+  contentObj.enviraSMTag = [
+    'SN-', contentObj.screenNameSlug,
+    '_C-Restrictive_WS-M_',
+    'TT-', contentObj.taxTermSlug,
+    '_W-', contentObj.well,
   ].join('');
   contentObj.enviraSMCol = 4;
-  contentObj.enviraSNTag = [contentObj.screenNameSlug,
-    slug('_Restrictive_N2_'),
-    contentObj.taxTermSlug,
+  contentObj.enviraSNTag = [
+    'SN-', contentObj.screenNameSlug,
+    '_C-Restrictive_WS-N2_',
+    'TT-', contentObj.taxTermSlug,
+    '_W-', contentObj.well,
   ].join('');
   contentObj.enviraSNCol = 4;
 

@@ -1,0 +1,59 @@
+<div id="screenInfo">
+  <h2>Screen Information</h2>
+  <table class="table responsive">
+    <tbody>
+      <tr>
+        <td>Screen Name</td>
+        <td>{{{ workflowData.screenName }}}</td>
+      </tr>
+      <tr>
+        <td>Library</td>
+        <td>{{{ library }}}</td>
+      </tr>
+      <tr>
+        <td>Screen Stage</td>
+        <td>{{{ workflowData.screenStage }}}</td>
+      </tr>
+      <tr>
+        <td>Image Dates</td>
+        <td>{{{ plateInfo.vendorPlate.creationdate }}}</td>
+      </tr>
+      <tr>
+        <td>Junk</td>
+        <td>{{{ workflowData.isJunk }}}</td>
+      </tr>
+      <tr>
+        <td>Stamp Date</td>
+        <td>{{{ workflowData.data.StampDate }}}</td>
+      </tr>
+      <tr>
+        <td>Culture Date</td>
+        <td>{{{ workflowData.data.CultureDate }}}</td>
+      </tr>
+      <tr>
+        <td>Freeze Date</td>
+        <td>{{{ workflowData.data.FreezeDate }}}</td>
+      </tr>
+      <tr>
+        <td>IPTG Induction Date</td>
+        <td>{{{ workflowData.data.IPTGInductionDate }}}</td>
+      </tr>
+      <tr>
+        <td>Restrictive Image Date</td>
+        <td>{{{ workflowData.data.restrictiveImageDate }}}</td>
+      </tr>
+      <tr>
+        <td>Permissive Image Date</td>
+        <td>{{{ workflowData.data.permissiveImageDate }}}</td>
+      </tr>
+      <tr>
+        <td>Comments</td>
+        <td>{{{ workflowData.data.comments }}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div id="enviraPlateGallery">
+  <h2>Plate Gallery</h2> {{{enviraGallery}}}
+</div>

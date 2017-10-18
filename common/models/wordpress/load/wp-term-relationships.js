@@ -13,7 +13,7 @@ WpTermRelationships.load.workflows.createRels = function(postData, termTaxList) 
           objectId: termTax.postId,
         };
         return WpTermRelationships.load.createRel(createObj);
-      })
+      }, {concurrency: 6})
       .then(function(results) {
         // So far we have no need to do any downstream processing with these results
         // But we will have it results anyways

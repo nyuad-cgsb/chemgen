@@ -14,7 +14,7 @@ WpTermTaxonomy.load.workflows.processTaxTerms = function(postData, taxTermList) 
     Promise.map(taxTermList, function(taxTerm) {
         return WpTermTaxonomy.load.processTaxTerm(postData.id, taxTerm);
       }, {
-        concurrency: 1
+        concurrency: 6
       })
       .then(function(results) {
         return app.models.WpTermRelationships.load.workflows.createRels(postData, results);

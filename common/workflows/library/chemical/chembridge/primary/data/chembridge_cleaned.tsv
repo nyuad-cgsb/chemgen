@@ -1,0 +1,12 @@
+assayDate	Library	Worm Strain	Bacterial strain	Chemical plate ID	Chemical conc	% DMSO	Plate type		Incubation time	Incubation temperature (°C)		ArrayScan Imaging date	OD 600 reading date	DIC micraoscopy date		Comments
+4/12/2014	Chembridge	N2	OP50	1--96	10uM	1%	Brand pureGrade S		5 days	20		2014-09-12	9/12/2014			Possibilty that chemical may not have been added to all wells due to bravo setting, same for all previous experiments
+11/12/2014	Chembridge	N2	OP50	1--96	10uM	1%	Brand pureGrade S		6 days	20		2014-12-17,2014-12-16	16-17/12/2014			Screened from 96 to 1 (reverse direction); incubated for one extra day because most eggs had not hatched on day 5
+26/02/2015	Chembridge	N2	OP50	97-192	10uM	1%	Brand pureGrade S		5 days	20		2015-03-03	3/3/2015
+5/5/2015	Chembridge	N2	OP50	97-192	20uM	2%	Brand pureGrade S		5 days	20		2015-05-10	10/5/2015			Freshly diluted from copy 1
+5/8/2015	Chembridge	N2	OP50	385-396	20uM	2%	Brand pureGrade S		6 days	20		2015-08-11	11/8/2015			Done in duplicates
+17/08/2015	Chembridge	N2	OP50	289-384	20uM	2%	Brand pureGrade S		6-7 days	20		2015-08-23	23/08/2015			Run together with next line
+18/08/2015	Chembridge	N2	OP50	289-384	20uM	2%	Brand pureGrade S		6 days	20		2015-08-23,2015-08-24	23/08/2015 - 24/08/2015			Arrayscan space shortage, hence half run on next day
+1/9/2015	Chembridge	PS312	OP50	97-132	10uM	1%	Brand pureGrade S		7 days	22.5		2015-09-08,2015-09-09	8/9/2015			Bravo crashed on M121-M124Q4, process continued from next plate
+15/09/2015	Chembridge	PS312	OP50	133-192, 289-340	10uM	1%	Brand pureGrade S		7-8-9 days	22.5		2015-09-22,2015-09-23	22/09/2015			De-lidder stopped working. first 30 over plates OD and Images taken on Day 7. Rest of plates, no OD, lids removed and liquid added using wellmate and placed in cytomat, images taken on Day 8- Day 9
+21/09/2015	Chembridge	PS312	OP50	97-192, 289-340	10uM	1%	Brand pureGrade S		8 days	22.5		2015-09-29	Not available			Ran out of worms for last Iteration. De-lidder did not work, liquid added using wellmate and imaged usinf Arrayscan manually, no OD reading. Worms were too dilute, added 30ul, final conc is 8.8uM
+11/11/2015	Chembridge	N2	OP50	193-288	20uM	2%	Brand pureGrade S		4 days	22.5		2015-11-15	15/11/2015

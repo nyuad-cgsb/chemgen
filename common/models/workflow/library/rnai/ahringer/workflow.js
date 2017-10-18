@@ -13,9 +13,6 @@ Workflow.library.ahringer.getPlates = function(workflowData) {
   return new Promise(function(resolve, reject) {
     app.models.Plate.search(workflowData.search.instrument.arrayscan)
       .then(function(platesList) {
-        // app.winston.info(JSON.stringify(platesList));
-        // jsonfile.writeFileSync('primaryPlates.json', platesList, {spaces: 2});
-        // platesList = [platesList[0], platesList[16]];
         return Workflow.library.ahringer.mapPlates(workflowData, platesList);
       })
       .then(function() {
@@ -49,7 +46,8 @@ Workflow.library.ahringer.processPlate = function(workflowData, plate) {
   return new Promise(function(resolve, reject) {
     app.models.ExperimentExperimentplate.load.workflows.processVendorPlates(workflowData, [plate])
       .then(function(plateInfoList) {
-        return app.models.RnaiLibrarystock.load.workflows.processExperimentPlates(workflowData, plateInfoList);
+        return app.models[workflowData.libraryStockModel].load.workflows
+        .processExperimentPlates(workflowData, plateInfoList);
       })
       .then(function(results) {
         return app.models.ExperimentAssay.load.workflows.processExperimentPlates(workflowData, results);

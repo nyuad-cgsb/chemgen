@@ -5,6 +5,9 @@ const Promise = require('bluebird');
 const WpPosts = app.models.WpPosts;
 const deepcopy = require('deepcopy');
 const slug = require('slug');
+const Mustache = require('mustache');
+const readFile = Promise.promisify(require('fs').readFile);
+const path = require('path');
 
 /**
 Create the plate post
@@ -32,7 +35,6 @@ WpPosts.load.plate.workflows.processPosts = function(workflowData, platesData) {
 WpPosts.load.plate.processPost = function(workflowData, plateData) {
   var plateInfo = plateData.plateInfo;
   var experimentAssayList = plateData.experimentAssayList;
-
   var experimentPlate = plateInfo.ExperimentExperimentplate;
   var barcode = experimentPlate.barcode;
   var imagePath = experimentPlate.imagePath;
@@ -47,54 +49,82 @@ WpPosts.load.plate.processPost = function(workflowData, plateData) {
   var title = plateId + '-' + barcode;
   var titleSlug = slug(title);
 
-  var postContent = '';
-  postContent = postContent + WpPosts.load.postInfo(workflowData, plateInfo);
+  return new Promise(function(resolve, reject) {
+    WpPosts.load.plate.genPostContent(workflowData, plateData)
+      .then(function(postContent) {
+        var dateNow = new Date().toISOString();
+        var postObjNoDate = {
+          postAuthor: 1,
+          postType: workflowData.library + '_plate',
+          commentCount: 0,
+          menuOrder: 0,
+          postContent: postContent,
+          postStatus: 'publish',
+          postTitle: title,
+          postName: titleSlug,
+          postParent: 0,
+          pingStatus: 'open',
+          commentStatus: 'open',
+          guid: WpPosts.wpUrl + titleSlug,
+        };
+        var postObjWithDate = deepcopy(postObjNoDate);
+        postObjWithDate.postDate = dateNow;
+        postObjWithDate.postDateGmt = dateNow;
+        return WpPosts
+          .findOrCreate({
+            where: app.etlWorkflow.helpers.findOrCreateObj(postObjNoDate),
+          }, postObjWithDate);
+      })
+      .then(function(results) {
+        var result = results[0];
+        var postData = {
+          id: results[0]['id'],
+          guid: results[0]['guid'],
+          postTitle: results[0]['postTitle'],
+        };
+        return app.models.WpTerms.load.workflows
+          .createTerms(postData, createTermObjs);
+      })
+      .then(function(results) {
+        plateData.platePostData = results;
+        resolve(plateData);
+      })
+      .catch(function(error) {
+        app.winston.error(error.stack);
+        reject(new Error(error));
+      });
+  });
+};
+
+WpPosts.load.plate.genPostContent = function(workflowData, plateData) {
+  var plateInfo = plateData.plateInfo;
+  var experimentPlate = plateInfo.ExperimentExperimentplate;
+  var barcode = experimentPlate.barcode;
+  var plateId = experimentPlate.experimentPlateId;
+
+  var library = workflowData.library.charAt(0).toUpperCase() +
+    workflowData.library.slice(1);
 
   var enviraGallery = [
     '[envira-gallery-dynamic id="tags-',
-    slug(workflowData.screenName + '_ID_' + plateId + '_' + barcode),
-    '" columns="6"]'
+    slug('SN-' + workflowData.screenName + '_PI-' + plateId + '_B-' + barcode),
+    '" columns="6"]',
   ].join('');
 
-  postContent = postContent + enviraGallery;
-
-  var dateNow = new Date().toISOString();
-  var postObjNoDate = {
-    postAuthor: 1,
-    postType: 'plate',
-    commentCount: 0,
-    menuOrder: 0,
-    postContent: postContent,
-    postStatus: 'publish',
-    postTitle: title,
-    postName: titleSlug,
-    postParent: 0,
-    pingStatus: 'open',
-    commentStatus: 'open',
-    guid: WpPosts.wpUrl + titleSlug,
+  var contentObj = {
+    library: library,
+    workflowData: workflowData,
+    enviraGallery: enviraGallery,
+    plateInfo: plateInfo,
   };
-  var postObjWithDate = deepcopy(postObjNoDate);
-  postObjWithDate.postDate = dateNow;
-  postObjWithDate.postDateGmt = dateNow;
-
 
   return new Promise(function(resolve, reject) {
-    WpPosts
-      .findOrCreate({
-        where: app.etlWorkflow.helpers.findOrCreateObj(postObjNoDate),
-      }, postObjWithDate)
-      .then(function(results) {
-        var result = results[0];
-        var postData = {id: results[0]['id'], guid: results[0]['guid'], postTitle: results[0]['postTitle']};
-        //Do the downstream processing here
-        //Each post should be associated to 1 or more taxonomy terms
-        // app.winston.info(JSON.stringify(results));
-        // app.winston.info(JSON.stringify(postData));
-        return app.models.WpTerms.load.workflows.createTerms(postData, createTermObjs);
-      })
-      .then(function(results){
-        plateData.platePostData = results;
-        resolve(plateData);
+    var plateTemplate = path.resolve(__dirname,
+      'templates', workflowData.library + 'PlatePost.mustache');
+    readFile(plateTemplate, 'utf8')
+      .then(function(contents) {
+        var postContent = Mustache.render(contents, contentObj);
+        resolve(postContent);
       })
       .catch(function(error) {
         app.winston.error(error.stack);
