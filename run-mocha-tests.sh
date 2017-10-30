@@ -19,7 +19,7 @@ inotify-hookable \
     --watch-directories server \
     --watch-directories common \
     --watch-directories test \
-    --on-modify-command "${RSYNC}; mocha --recursive --reporter nyan"
+    --on-modify-command "${RSYNC}; mocha --recursive "
 
     #--on-modify-command "mocha --recursive --reporter nyan"
     #--on-modify-command "${RSYNC}; mocha --recursive --reporter nyan"

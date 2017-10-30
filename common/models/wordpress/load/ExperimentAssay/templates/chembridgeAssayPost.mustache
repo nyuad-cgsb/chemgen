@@ -71,12 +71,12 @@
             <h2>{{{taxTerm}}} N2</h2>
             <div id="enviraGallery">
               <p>
-                [envira-gallery-dynamic id="tags-{{{screenNameSlug}}}_N2_{{{taxTermSlug}}}" columns="6"] </p>
+                [envira-gallery-dynamic id="tags-SN-{{{screenNameSlug}}}_N2_{{{taxTermSlug}}}" columns="6"] </p>
             </div>
             <h2>{{{taxTerm}}} PS312</h2>
             <div id="enviraGallery">
               <p>
-                [envira-gallery-dynamic id="tags-{{{screenNameSlug}}}_PS312_{{{taxTermSlug}}}" columns="6"] </p>
+                [envira-gallery-dynamic id="tags-SN-{{{screenNameSlug}}}_PS312_{{{taxTermSlug}}}" columns="6"] </p>
             </div>
           {{/hasTaxTerm}}
         </div>
@@ -90,12 +90,7 @@
         <div class="">
         </div>
         <div class="" id="wbassay">
-          [posts_table columns="image,title,tax:worm_strain:Strain"
-          post_type="chembridge_assay" 
-          term="envira-tag:{{{screenNameSlug}}}_{{{taxTermSlug}}}"
-          lazy_load="true" links="title,image"
-          image_size="medium" widths="80,10,10"
-          filters="tax:worm_strain" rows_per_page="5"]
+          [posts_table columns="image,title,tax:worm_strain:Strain" post_type="chembridge_assay" term="envira-tag:{{{screenNameSlug}}}_{{{taxTermSlug}}}" lazy_load="true" links="title,image" image_size="medium" widths="80,10,10" filters="tax:worm_strain" rows_per_page="5"]
         </div>
       </section>
     </div>

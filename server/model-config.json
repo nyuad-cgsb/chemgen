@@ -8,8 +8,11 @@
       "../common/models/experiment/plate/defs",
       "../common/models/experiment/assay/defs",
       "../common/models/experiment/screen/defs",
-      "../common/models/library/rnai/Ahringer/defs",
+      "../common/models/library/rnai/stock/defs",
+      "../common/models/library/rnai/ahringer/defs",
+      "../common/models/library/chemical/stock/defs",
       "../common/models/library/chemical/chembridge/defs",
+      "../common/models/library/chemical/fda/defs",
       "../common/models/library/reagents/defs",
       "../common/models/microscope/arrayscan",
       "../common/models/wordpress/defs",
@@ -41,6 +44,9 @@
     "dataSource": "chemgenDS"
   },
   "ChemicalChembridgelibrary": {
+    "dataSource": "chemgenDS"
+  },
+  "ChemicalFdalibrary": {
     "dataSource": "chemgenDS"
   },
   "ChemicalLibrarystock": {

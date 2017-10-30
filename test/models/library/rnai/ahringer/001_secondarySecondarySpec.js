@@ -21,23 +21,21 @@ var rnaiLibraryData = require('../../../../data/library/rnai/secondary/rnailibra
 var plateData = require('../../../../data/library/rnai/secondary/2017-12-11_assay.json');
 var reducedPlateAssayData = require('../../../../data/library/rnai/secondary/plate_assay_data_well_A01.json');
 var libraryData = require('../../../../data/library/rnai/secondary/libraryresults.json');
+var processExperimentPlatesData = require('../../../../data/library/rnai/secondary/processExperimentPlates.json');
 
 // TODO Get this working
 // var imageServer = nock('http://10.230.9.204:3001')
 //   .post('/')
 //   .reply(200);
 
-//TODO
-//Test barcodes like this: RNAiIV.4Q2(3)S_D_M
-
-describe('001_secondarySpec.test.js Library.rnai.ahringer Secondary Parsing', function() {
+describe('001_secondarySpec ahringer Secondary Screen', function() {
   it('Should tell us our primary exists', function() {
     expect(app.models.RnaiLibrarystock.Primary).to.deep.equal({});
   });
 
   it('Should parse data from the custom ahringer plate', function(done) {
     app.etlWorkflow.helpers.rows = ['A'];
-    app.models.RnaiLibrarystock.extract.Secondary
+    app.models.RnaiRnailibrary.extract.Secondary
       .parseCustomPlate(workflowData)
       .then(function(results) {
         var firstResult = {
@@ -99,7 +97,8 @@ describe('001_secondarySpec.test.js Library.rnai.ahringer Secondary Parsing', fu
 
     it('Should return the entire getParentLibrary Workflow', function(done) {
       app.etlWorkflow.helpers.rows = ['A', 'C'];
-      app.models.RnaiLibrarystock.extract.Secondary.getParentLibrary(workflowData)
+      app.models.RnaiRnailibrary.extract.Secondary
+      .getParentLibrary(workflowData)
         .then(function(results) {
           results = JSON.stringify(results);
           results = JSON.parse(results);
@@ -145,7 +144,8 @@ describe('001_secondarySpec.test.js Library.rnai.ahringer Secondary Parsing', fu
       app.models.Plate.search(workflowData.search.instrument.arrayscan)
         .then(function(platesList) {
           var plate = [platesList[0]];
-          return app.models.ExperimentExperimentplate.load.workflows.processVendorPlates(workflowData, plate);
+          return app.models.ExperimentExperimentplate.load.workflows
+            .processVendorPlates(workflowData, plate);
         })
         .then(function(results) {
           results = JSON.stringify(results);
@@ -169,20 +169,28 @@ describe('001_secondarySpec.test.js Library.rnai.ahringer Secondary Parsing', fu
     });
 
     it('Should ensure we created the RnaiLibrarystock', function(done) {
+      this.timeout(1000);
       app.models.Plate.search(workflowData.search.instrument.arrayscan)
         .then(function(platesList) {
-          var plate = [platesList[0], platesList[5], platesList[platesList.length - 1]];
-          return app.models.ExperimentExperimentplate.load.workflows.processVendorPlates(workflowData, plate);
+          var plate = [platesList[0],
+            platesList[5],
+            platesList[platesList.length - 1],
+          ];
+          return app.models.ExperimentExperimentplate.load.workflows
+            .processVendorPlates(workflowData, plate);
         })
         .then(function(plateInfoList) {
-          return app.models.RnaiLibrarystock.load.workflows.processExperimentPlates(workflowData, plateInfoList);
+          return app.models.RnaiRnailibrary.load.workflows
+            .processExperimentPlates(workflowData, plateInfoList);
         })
         .then(function(results) {
           results = JSON.stringify(results);
           results = JSON.parse(results);
-          expect(Object.keys(results[0])).to.deep.equal(['plateInfo', 'libraryDataList']);
+          expect(Object.keys(results[0]))
+            .to.deep.equal(['plateInfo', 'libraryDataList']);
           expect(results.length).to.equal(3);
-          expect(results[0]['libraryDataList'][8]['libraryStock']).to.deep.equal(libraryData);
+          expect(results[0]['libraryDataList'][8]['libraryStock'])
+            .to.deep.equal(libraryData);
           done();
         })
         .catch(function(error) {
@@ -191,24 +199,22 @@ describe('001_secondarySpec.test.js Library.rnai.ahringer Secondary Parsing', fu
     });
 
     it('Should run processExperimentPlates', function(done) {
-      app.models.Plate.search(workflowData.search.instrument.arrayscan)
-        .then(function(platesList) {
-          var plate = [platesList[0], platesList[5], platesList[platesList.length - 1]];
-          return app.models.ExperimentExperimentplate.load.workflows.processVendorPlates(workflowData, plate);
-        })
-        .then(function(plateInfoList) {
-          return app.models.RnaiLibrarystock.load.workflows.processExperimentPlates(workflowData, plateInfoList);
-        })
-        .then(function(results) {
-          return app.models.ExperimentAssay.load.workflows.processExperimentPlates(workflowData, results);
-        })
+      this.timeout(1000);
+      app.models.ExperimentAssay.load.workflows
+        .processExperimentPlates(
+          processExperimentPlatesData[0],
+          processExperimentPlatesData[1]
+        )
         .then(function(results) {
           results = JSON.stringify(results);
           results = JSON.parse(results);
 
           expect(results.length).to.equal(3);
-          expect(Object.keys(results[0])).to.deep.equal(['plateInfo', 'experimentAssayList']);
-          expect(results[0]['experimentAssayList'][0]['experimentAssayData']).to.deep.equal({
+          expect(Object.keys(results[0]))
+            .to.deep.equal(['plateInfo', 'experimentAssayList']);
+          expect(
+            results[0]['experimentAssayList'][0]['experimentAssayData']
+          ).to.deep.equal({
             'assayId': 1,
             'platePath': 'assays/2017Jan16/7699/RNAi.1.N2.S_A01-autolevel.jpeg',
             'assayName': 'RNAi.1.N2.S_A01',
@@ -220,7 +226,9 @@ describe('001_secondarySpec.test.js Library.rnai.ahringer Secondary Parsing', fu
             'assayType': 'ahringer',
             'metaAssay': '{"experimentType":"organism","library":"ahringer"}',
           });
-          expect(results[0]['experimentAssayList'][8]['libraryData']['libraryParent']).to.deep.equal({
+          expect(
+            results[0]['experimentAssayList'][8]['libraryData']['libraryParent']
+          ).to.deep.equal({
             'rnailibraryId': 1323,
             'plate': 15,
             'well': 'A09',
@@ -240,7 +248,9 @@ describe('001_secondarySpec.test.js Library.rnai.ahringer Secondary Parsing', fu
             'origWell': 'A09',
             'comment': 'usp-48',
           });
-          expect(results[0]['experimentAssayList'][0]['libraryData']['geneName']).to.equal('L4440');
+          expect(
+            results[0]['experimentAssayList'][0]['libraryData']['geneName']
+          ).to.equal('L4440');
           done();
         })
         .catch(function(error) {
@@ -252,16 +262,20 @@ describe('001_secondarySpec.test.js Library.rnai.ahringer Secondary Parsing', fu
       app.models.Plate.search(workflowData.search.instrument.arrayscan)
         .then(function(platesList) {
           var plate = [platesList[0]];
-          return app.models.ExperimentExperimentplate.load.workflows.processVendorPlates(workflowData, plate);
+          return app.models.ExperimentExperimentplate.load.workflows
+            .processVendorPlates(workflowData, plate);
         })
         .then(function(plateInfoList) {
-          return app.models.RnaiLibrarystock.load.workflows.processExperimentPlates(workflowData, plateInfoList);
+          return app.models.RnaiRnailibrary.load.workflows
+            .processExperimentPlates(workflowData, plateInfoList);
         })
         .then(function(results) {
-          return app.models.ExperimentAssay.load.workflows.processExperimentPlates(workflowData, results);
+          return app.models.ExperimentAssay.load.workflows
+            .processExperimentPlates(workflowData, results);
         })
         .then(function(results) {
-          return app.models.WpPosts.load.plate.workflows.processPosts(workflowData, results);
+          return app.models.WpPosts.load.plate.workflows
+            .processPosts(workflowData, results);
         })
         .then(function(results) {
           // TODO add in a check to make sure we created taxterms, termtaxonomies, and relationships
@@ -274,13 +288,15 @@ describe('001_secondarySpec.test.js Library.rnai.ahringer Secondary Parsing', fu
     });
 
     it('Should run create the ExperimentAssay WpPost', function(done) {
-      app.models.WpPosts.load.assay.workflows.processExperimentPlates(workflowData, reducedPlateAssayData)
+      app.models.WpPosts.load.assay.workflows
+        .processExperimentPlates(workflowData, reducedPlateAssayData)
         .then(function(results) {
           // TODO add in a check to make sure we created taxterms, termtaxonomies, and relationships
           results = JSON.stringify(results);
           results = JSON.parse(results);
           // console.log(JSON.stringify(results[0]['assayPostData']));
-          expect(Object.keys(results[0]['assayPostData'])).to.deep.equal(['id', 'guid', 'postTitle', 'imagePath']);
+          expect(Object.keys(results[0]['assayPostData']))
+            .to.deep.equal(['id', 'guid', 'postTitle', 'imagePath']);
           done();
         })
         .catch(function(error) {
@@ -288,24 +304,29 @@ describe('001_secondarySpec.test.js Library.rnai.ahringer Secondary Parsing', fu
         });
     });
 
-    // it('Should tell use we updated things', function(done) {
-    //   app.models.WpPosts.load.assay.workflows.processExperimentPlates(workflowData, reducedPlateAssayData)
-    //     .then(function(results) {
-    //       // TODO add in a check to make sure we created taxterms, termtaxonomies, and relationships
-    //       // results = JSON.stringify(results);
-    //       // results = JSON.parse(results);
-    //       // // console.log(JSON.stringify(results[0]['assayPostData']));
-    //       // expect(Object.keys(results[0]['assayPostData'])).to.deep.equal(['id', 'guid', 'postTitle', 'imagePath']);
-    //       return app.models.WpPosts.findOne({where: {id: 2}});
-    //     })
-    //     .then(function(results){
-    //       expect(results.id).to.equal(2);
-    //       done();
-    //     })
-    //     .catch(function(error) {
-    //       done(new Error(error));
-    //     });
-    // });
-
+    it('Should tell use we updated things', function(done) {
+      app.models.WpPosts.load.assay.workflows
+        .processExperimentPlates(workflowData, reducedPlateAssayData)
+        .then(function(results) {
+          // TODO add in a check to make sure we created taxterms, termtaxonomies, and relationships
+          // results = JSON.stringify(results);
+          // results = JSON.parse(results);
+          // // console.log(JSON.stringify(results[0]['assayPostData']));
+          // expect(Object.keys(results[0]['assayPostData'])).to.deep.equal(['id', 'guid', 'postTitle', 'imagePath']);
+          return app.models.WpPosts.findOne({
+            where: {
+              id: 2
+            }
+          });
+        })
+        .then(function(results) {
+          expect(results.id).to.equal(2);
+          done();
+        })
+        .catch(function(error) {
+          done(new Error(error));
+        });
+    });
+    //TODO Add tests for workflow
   });
 });
