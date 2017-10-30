@@ -1,0 +1,112 @@
+<div class="">
+
+  <div class="row">
+    <div class="col-md-6">
+      <div id="screenInfo">
+        <h2>Screen Information</h2>
+        <h3>Plate View</h3>
+        <p> Screen {{{screenName}}} {{{taxTerm}}}</p>
+        <a href="{{{plateUrl}}}">{{barcode}}</a>
+      </div>
+      <div id="libraryInfo">
+        {{#libraryParent.fdalibraryId}}
+          <h3> Parent Library Info </h3>
+          <table class="table responsive">
+            <tbody>
+              <tr>
+                <td>FDA Library Id</td>
+                <td>{{libraryParent.fdalibraryId}}</td>
+              </tr>
+              <tr>
+                <td>Plate</td>
+                <td>{{libraryParent.plate}}</td>
+              </tr>
+              <tr>
+                <td>Stock Well</td>
+                <td>{{libraryParent.coordinate}}</td>
+              </tr>
+              <tr>
+                <td>Assay Well</td>
+                <td>{{libraryParent.well}}</td>
+              </tr>
+              <tr>
+                <td>BioActivity</td>
+                <td>{{libraryParent.bioactivity}}</td>
+              </tr>
+              <tr>
+                <td>MolecularName</td>
+                <td>{{libraryParent.molecularName}}</td>
+              </tr>
+              <tr>
+                <td>Formula</td>
+                <td>{{libraryParent.formula}}</td>
+              </tr>
+              <tr>
+                <td>Formula</td>
+                <td>{{libraryParent.formula}}</td>
+              </tr>
+              <tr>
+                <td>CasNum</td>
+                <td>{{libraryParent.casNum}}</td>
+              </tr>
+              <tr>
+                <td>Trade Name</td>
+                <td>{{libraryParent.tradename}}</td>
+              </tr>
+            </tbody>
+          </table>
+        {{/libraryParent.fdalibraryId}}
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div id="taxTerms">
+        <table class="table responsive">
+          <thead>
+            <tr>
+              <th>Tag</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{{table}}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <section id="screenGeneGallery">
+        <div>
+          {{#hasTaxTerm}}
+            <h2>{{{taxTerm}}} N2</h2>
+            <div id="enviraGallery_N2">
+                [envira-gallery-dynamic id="tags-SN-{{{screenNameSlug}}}_WS-N2_TT-{{{taxTermSlug}}}" columns="4"]
+            </div>
+            <h2>{{{taxTerm}}} M</h2>
+            <div id="enviraGallery_M">
+                [envira-gallery-dynamic id="tags-SN-{{{screenNameSlug}}}_WS-M_TT-{{{taxTermSlug}}}" columns="4"]
+            </div>
+            <h2>Controls</h2>
+            <div id="enviraGallery_control">
+                [envira-gallery-dynamic id="tags-SN-{{{screenNameSlug}}}_PI-{{{plateId}}}_WS-{{{wormStrain}}}_TT-L4440" columns="4" sort="random" limit="8"]
+            </div>
+          {{/hasTaxTerm}}
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <section id="relatedAssay">
+        <div class="">
+        </div>
+        <div class="" id="wbassay">
+          [posts_table columns="image,title,tax:worm_strain:Strain" post_type="fda_assay" term="envira-tag:{{{screenNameSlug}}}_{{{taxTermSlug}}}" lazy_load="true" links="title,image" image_size="medium" widths="80,10,10" filters="tax:worm_strain" rows_per_page="5"]
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

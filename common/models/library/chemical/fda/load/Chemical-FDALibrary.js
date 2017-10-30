@@ -3,12 +3,12 @@
 const app = require('../../../../../../server/server');
 const Promise = require('bluebird');
 
-const ChemicalLibrarystock = app.models.ChemicalLibrarystock;
+const ChemicalFdalibrary = app.models.ChemicalFdalibrary;
 
-ChemicalLibrarystock.load.workflows.processExperimentPlates = function(workflowData, plateInfoList) {
+ChemicalFdalibrary.load.workflows.processExperimentPlates = function(workflowData, plateInfoList) {
   return new Promise(function(resolve, reject) {
     Promise.map(plateInfoList, function(plateInfo) {
-        return ChemicalLibrarystock.load.workflows.createStock(workflowData, plateInfo);
+        return ChemicalFdalibrary.load.workflows.createStock(workflowData, plateInfo);
       }, {
         concurrency: 1,
       })
@@ -22,19 +22,19 @@ ChemicalLibrarystock.load.workflows.processExperimentPlates = function(workflowD
   });
 };
 
-ChemicalLibrarystock.load.workflows.createStock = function(workflowData, plateInfo) {
+ChemicalFdalibrary.load.workflows.createStock = function(workflowData, plateInfo) {
   var barcode = plateInfo.ExperimentExperimentplate.barcode;
   var stage = workflowData.screenStage;
   var get = 'getParentLibrary';
 
   return new Promise(function(resolve, reject) {
-    ChemicalLibrarystock.extract[stage][get](workflowData, barcode)
+    ChemicalFdalibrary.extract[stage][get](workflowData, barcode)
       .then(function(libraryResults) {
-        return ChemicalLibrarystock.extract
+        return ChemicalFdalibrary.extract
           .parseLibraryResults(workflowData, plateInfo, libraryResults);
       })
       .then(function(parsedLibraryResults) {
-        return ChemicalLibrarystock.load
+        return ChemicalFdalibrary.load
           .createLibraryStocks(parsedLibraryResults);
       })
       .then(function(libraryDataList) {
@@ -50,11 +50,13 @@ ChemicalLibrarystock.load.workflows.createStock = function(workflowData, plateIn
   });
 };
 
-ChemicalLibrarystock.load.createLibraryStocks = function(dataList) {
+ChemicalFdalibrary.load.createLibraryStocks = function(dataList) {
+
   return new Promise(function(resolve, reject) {
     Promise.map(dataList, function(data) {
         var createObj = data.libraryStock;
-        return ChemicalLibrarystock
+
+        return app.models.ChemicalLibrarystock
           .findOrCreate({
             where: app.etlWorkflow.helpers.findOrCreateObj(createObj),
           }, createObj)
@@ -63,7 +65,7 @@ ChemicalLibrarystock.load.createLibraryStocks = function(dataList) {
             var resultData = {
               libraryStock: result,
               libraryParent: data.libraryParent,
-              chembridgelibraryId: createObj.chembridgelibraryId,
+              fdalibraryId: createObj.fdalibraryId,
               taxTerm: createObj.taxTerm,
             };
             resultData.libraryStock.taxTerms = createObj.taxTerms;

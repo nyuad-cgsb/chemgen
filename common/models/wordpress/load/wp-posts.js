@@ -158,9 +158,15 @@ WpPosts.load.genImageMeta = function(imageBase) {
         'mime-type': 'image/jpeg',
       },
       large: {
-        file: imageName + '-768x768.jpeg',
-        width: 768,
-        height: 768,
+        file: imageName + '-1024x1024.jpeg',
+        width: 1024,
+        height: 1024,
+        'mime-type': 'image/jpeg',
+      },
+      'original': {
+        file: imageName + '.jpeg',
+        width: 1600,
+        height: 1600,
         'mime-type': 'image/jpeg',
       },
       'shapely-full': {

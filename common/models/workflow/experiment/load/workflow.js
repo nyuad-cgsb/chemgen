@@ -46,7 +46,8 @@ Workflow.experiment.processPlate = function(workflowData, plate) {
   return new Promise(function(resolve, reject) {
     app.models.ExperimentExperimentplate.load.workflows.processVendorPlates(workflowData, [plate])
       .then(function(plateInfoList) {
-        return app.models[workflowData.libraryStockModel].load.workflows
+        // return app.models[workflowData.libraryStockModel].load.workflows
+        return app.models[workflowData.libraryModel].load.workflows
         .processExperimentPlates(workflowData, plateInfoList);
       })
       .then(function(results) {
@@ -59,6 +60,7 @@ Workflow.experiment.processPlate = function(workflowData, plate) {
         return app.models.WpPosts.load.assay.workflows.processExperimentPlates(workflowData, results);
       })
       .then(function(results) {
+        app.winston.info(JSON.stringify(results));
         app.winston.info('Finished Plate: ' + plate.csPlateid);
         resolve();
       })

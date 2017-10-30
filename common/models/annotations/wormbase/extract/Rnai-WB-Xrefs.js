@@ -6,13 +6,15 @@ const RnaiWbXrefs = app.models.RnaiWbXrefs;
 const decamelize = require('decamelize');
 
 RnaiWbXrefs.extract.genTaxTerms = function(where) {
-  // where: {
-  //   wbGeneAccession: data.gene_id
-  // }
-  // In the RNAI Ahringer library this is geneName
-  // gene_id / wb_gene_accession
-  // public_name / wb_gene_cgc_name
-  // molecular_name / wb_gene_sequence_id
+  /*
+ where: {
+     wbGeneAccession: data.gene_id
+   }
+   In the RNAI Ahringer library this is geneName
+   gene_id / wb_gene_accession
+   public_name / wb_gene_cgc_name
+   molecular_name / wb_gene_sequence_id
+*/
 
   return new Promise(function(resolve, reject) {
     RnaiWbXrefs.find(where)
@@ -25,14 +27,14 @@ RnaiWbXrefs.extract.genTaxTerms = function(where) {
             if (result[key]) {
               taxTerms.push({
                 taxonomy: decamelize(key),
-                taxTerm: result[key]
+                taxTerm: result[key],
               });
             }
           });
         });
         resolve({
           xrefs: results,
-          taxTerms: taxTerms
+          taxTerms: taxTerms,
         });
       })
       .catch(function(error) {

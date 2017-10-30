@@ -1,22 +1,23 @@
 'use strict';
 
-// TODO
-// Quite a few of these are probably common across experiments
-const app = require('../../../../../server/server');
-const RnaiLibrarystock = app.models.RnaiLibrarystock;
+const app = require('../../../../../../server/server');
+const Promise = require('bluebird');
 
-RnaiLibrarystock.helpers.buildControlTag.Primary = function(workflowData, contentObj) {
+const RnaiRnailibrary = app.models.RnaiRnailibrary;
+
+RnaiRnailibrary.helpers.buildControlTag.Primary = function(workflowData, contentObj) {
   var cnTag = '_C-Restrictive' + '_WS-N2';
   var cmTag = '_C-Restrictive' + '_WS-M';
 
-  //Restrictive N2
+  /**
+  Restrictive N2
+  **/
   contentObj.enviraCRNTag = [
     'SN-', contentObj.screenNameSlug,
     cnTag,
     '_TT-', 'L4440',
   ].join('');
 
-  //Restrictive M
   contentObj.enviraCRMTag = [
     'SN-', contentObj.screenNameSlug,
     cmTag,
@@ -26,14 +27,12 @@ RnaiLibrarystock.helpers.buildControlTag.Primary = function(workflowData, conten
   cnTag = '_C-Permissive' + '_WS-N2';
   cmTag = '_C-Permissive' + '_WS-M';
 
-  //Permissive N2
   contentObj.enviraCPNTag = [
     'SN-', contentObj.screenNameSlug,
     cnTag,
     '_TT-', 'L4440',
   ].join('');
 
-  //Permissive M
   contentObj.enviraCPMTag = [
     'SN-', contentObj.screenNameSlug,
     cmTag,
@@ -43,16 +42,16 @@ RnaiLibrarystock.helpers.buildControlTag.Primary = function(workflowData, conten
   return contentObj;
 };
 
-RnaiLibrarystock.helpers.buildControlTag.Secondary = function(workflowData, contentObj) {
+RnaiRnailibrary.helpers.buildControlTag.Secondary = function(workflowData, contentObj) {
   var cnTag = '_C-Restrictive' + '_WS-N2';
   var cmTag = '_C-Restrictive' + '_WS-M';
 
-  var strain = RnaiLibrarystock.helpers.wormStrain(contentObj.barcode);
+  var strain = RnaiRnailibrary.helpers.wormStrain(contentObj.barcode);
 
   if (strain === 'M' && contentObj.condition === 'Restrictive') {
-    cmTag =      '_PI-' +  contentObj.plateId + '_C-Restrictive' + '_WS-M';
-  }  else if (strain === 'N2' && contentObj.condition === 'Restrictive') {
-    cnTag =      '_PI-' +  contentObj.plateId + '_C-Restrictive' + '_WS-N2';
+    cmTag = '_PI-' + contentObj.plateId + '_C-Restrictive' + '_WS-M';
+  } else if (strain === 'N2' && contentObj.condition === 'Restrictive') {
+    cnTag = '_PI-' + contentObj.plateId + '_C-Restrictive' + '_WS-N2';
   }
 
   //Restrictive N2
@@ -72,9 +71,9 @@ RnaiLibrarystock.helpers.buildControlTag.Secondary = function(workflowData, cont
   cnTag = '_C-Permissive' + '_WS-N2';
   cmTag = '_C-Permissive' + '_WS-M';
   if (strain === 'M' && contentObj.condition === 'Permissive') {
-    cmTag =      '_PI-' +  contentObj.plateId + '_C-Permissive' + '_WS-M';
-  }  else if (strain === 'N2' && contentObj.condition === 'Permissive') {
-    cnTag =      '_PI-' +  contentObj.plateId + '_C-Permissive' + '_WS-N2';
+    cmTag = '_PI-' + contentObj.plateId + '_C-Permissive' + '_WS-M';
+  } else if (strain === 'N2' && contentObj.condition === 'Permissive') {
+    cnTag = '_PI-' + contentObj.plateId + '_C-Permissive' + '_WS-N2';
   }
 
   //Permissive N2
@@ -94,14 +93,15 @@ RnaiLibrarystock.helpers.buildControlTag.Secondary = function(workflowData, cont
   return contentObj;
 };
 
-RnaiLibrarystock.helpers.buildControlTags = function(workflowData, contentObj) {
+RnaiRnailibrary.helpers.buildControlTags = function(workflowData, contentObj) {
   contentObj.enviraCTCol = 6;
-  contentObj =  RnaiLibrarystock.helpers.buildControlTag[workflowData.screenStage](workflowData, contentObj);
+  contentObj = RnaiRnailibrary.helpers
+    .buildControlTag[workflowData.screenStage](workflowData, contentObj);
 
   return contentObj;
 };
 
-RnaiLibrarystock.helpers.barcodeIsControl = function(barcode) {
+RnaiRnailibrary.helpers.barcodeIsControl = function(barcode) {
   var control = 'not_control';
   if (barcode.match('L4440')) {
     control = 'control';
@@ -115,7 +115,7 @@ RnaiLibrarystock.helpers.barcodeIsControl = function(barcode) {
  * @param  {object} barcode [Barcode from the arrayscan - RNAiI.1A1_E_D]
  * @return {string}         [{A,B},{1,2}]
  */
-RnaiLibrarystock.helpers.getQuad = function(barcode) {
+RnaiRnailibrary.helpers.getQuad = function(barcode) {
   var codes = {
     Q1: 'A1',
     Q2: 'A2',
@@ -138,7 +138,7 @@ RnaiLibrarystock.helpers.getQuad = function(barcode) {
   }
 };
 
-RnaiLibrarystock.helpers.getPlate = function(plateNo) {
+RnaiRnailibrary.helpers.getPlate = function(plateNo) {
   if (!plateNo) {
     return '';
   }
@@ -156,7 +156,7 @@ RnaiLibrarystock.helpers.getPlate = function(plateNo) {
  * @return {[type]}         [Enhancer/Suppressor] <- NO MORE
  * @return {[type]}         [Permissive/Restrictive]
  */
-RnaiLibrarystock.helpers.parseCond = function(barcode) {
+RnaiRnailibrary.helpers.parseCond = function(barcode) {
   if (barcode.match('E')) {
     return 'Permissive';
   } else if (barcode.match('S')) {
@@ -171,7 +171,7 @@ RnaiLibrarystock.helpers.parseCond = function(barcode) {
  * @param  {[type]} barcode [Barcode from the arrayscan - RNAiI.1A1_E_D]
  * @return {[type]}         [True/False]
  */
-RnaiLibrarystock.helpers.isDuplicate = function(barcode) {
+RnaiRnailibrary.helpers.isDuplicate = function(barcode) {
   if (barcode.match('D')) {
     return 1;
   } else {
@@ -179,8 +179,8 @@ RnaiLibrarystock.helpers.isDuplicate = function(barcode) {
   }
 };
 
-RnaiLibrarystock.helpers.getTemp = function(barcode, workflowData) {
-  var cond = RnaiLibrarystock.helpers.parseCond(barcode);
+RnaiRnailibrary.helpers.getTemp = function(barcode, workflowData) {
+  var cond = RnaiRnailibrary.helpers.parseCond(barcode);
   var temp = 0;
   if (cond === 'Permissive') {
     return workflowData.EnhancerTemp || 0;
@@ -198,7 +198,7 @@ RnaiLibrarystock.helpers.getTemp = function(barcode, workflowData) {
  * @param  {Object | Undefined} libraryResult [Library record for that well]
  * @return {Object}               [Create a library result if it doesn't exist]
  */
-RnaiLibrarystock.helpers.checkLibraryResult = function(libraryResult) {
+RnaiRnailibrary.helpers.checkLibraryResult = function(libraryResult) {
   if (!libraryResult) {
     libraryResult = {};
     libraryResult.name = 'ahringer_empty';
@@ -210,10 +210,22 @@ RnaiLibrarystock.helpers.checkLibraryResult = function(libraryResult) {
 /**
 Worm Specific
 **/
-RnaiLibrarystock.helpers.wormStrain = function(barcode) {
+RnaiRnailibrary.helpers.wormStrain = function(barcode) {
   var strain = 'N2';
   if (barcode.match('M') || barcode.match('mel')) {
     strain = 'M';
   }
   return strain;
+};
+
+RnaiRnailibrary.search = function(where) {
+  RnaiRnailibrary.find({
+      where: where
+    })
+    .then(function(results) {
+      return Promise.resolve(results);
+    })
+    .catch(function(error) {
+      return Promise.reject(new Error(error));
+    });
 };

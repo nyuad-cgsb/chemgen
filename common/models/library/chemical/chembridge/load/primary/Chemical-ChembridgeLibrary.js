@@ -3,11 +3,11 @@
 const app = require('../../../../../../../server/server');
 const Promise = require('bluebird');
 
-const ChemicalLibrarystock = app.models.ChemicalLibrarystock;
+const ChemicalChembridgelibrary = app.models.ChemicalChembridgelibrary;
 
-ChemicalLibrarystock.extract.Primary.getParentLibrary = function(workflowData, barcode) {
+ChemicalChembridgelibrary.extract.Primary.getParentLibrary = function(workflowData, barcode) {
   return new Promise(function(resolve, reject) {
-    ChemicalLibrarystock.extract.Primary.getLibraryInfo(workflowData, barcode)
+    ChemicalChembridgelibrary.extract.Primary.getLibraryInfo(workflowData, barcode)
       .then(function(results) {
         resolve(results);
       })
@@ -17,12 +17,12 @@ ChemicalLibrarystock.extract.Primary.getParentLibrary = function(workflowData, b
   });
 };
 
-ChemicalLibrarystock.extract.Primary.getLibraryInfo = function(workflowData, barcode) {
-  var plateObj = app.models.ChemicalChembridgelibrary
+ChemicalChembridgelibrary.extract.Primary.getLibraryInfo = function(workflowData, barcode) {
+  var plateObj = ChemicalChembridgelibrary
     .helpers.parseBarcode(barcode);
 
   return new Promise(function(resolve, reject) {
-    app.models.ChemicalChembridgelibrary
+    ChemicalChembridgelibrary
       .find({
         where: {
           plate: plateObj.plateName,

@@ -2,7 +2,7 @@
 
 const app = require('../../../../../../server/server');
 const Promise = require('bluebird');
-const RnaiLibrarystock = app.models.RnaiLibrarystock;
+const RnaiRnailibrary = app.models.RnaiRnailibrary;
 const _ = require('lodash');
 
 /**
@@ -15,16 +15,16 @@ For secondary screens these are written in an excel spreadsheet, but for primary
 screens we need a lookup.
 **/
 
-RnaiLibrarystock.load.workflows.createStock = function(workflowData, plateInfo) {
+RnaiRnailibrary.load.workflows.createStock = function(workflowData, plateInfo) {
   var barcode = plateInfo.ExperimentExperimentplate.barcode;
 
   return new Promise(function(resolve, reject) {
-    RnaiLibrarystock['extract'][workflowData.screenStage]['getParentLibrary'](workflowData, barcode)
+    RnaiRnailibrary['extract'][workflowData.screenStage]['getParentLibrary'](workflowData, barcode)
       .then(function(libraryResults) {
-        return RnaiLibrarystock.extract.parseLibraryResults(workflowData, plateInfo, libraryResults);
+        return RnaiRnailibrary.extract.parseLibraryResults(workflowData, plateInfo, libraryResults);
       })
       .then(function(parsedLibraryResults) {
-        return RnaiLibrarystock.load.createRnaiLibraryStocks(parsedLibraryResults);
+        return RnaiRnailibrary.load.createRnaiLibraryStocks(parsedLibraryResults);
       })
       .then(function(libraryDataList) {
         resolve({
@@ -39,12 +39,12 @@ RnaiLibrarystock.load.workflows.createStock = function(workflowData, plateInfo) 
   });
 };
 
-RnaiLibrarystock.load.createRnaiLibraryStocks = function(dataList) {
+RnaiRnailibrary.load.createRnaiLibraryStocks = function(dataList) {
   return new Promise(function(resolve, reject) {
     Promise.map(dataList, function(data) {
         var createObj = data.libraryStock;
 
-        return RnaiLibrarystock
+        return app.models.RnaiLibrarystock
           .findOrCreate({
             where: app.etlWorkflow.helpers.findOrCreateObj(createObj),
           }, createObj)
@@ -70,10 +70,10 @@ RnaiLibrarystock.load.createRnaiLibraryStocks = function(dataList) {
   });
 };
 
-RnaiLibrarystock.load.workflows.processExperimentPlates = function(workflowData, plateInfoList) {
+RnaiRnailibrary.load.workflows.processExperimentPlates = function(workflowData, plateInfoList) {
   return new Promise(function(resolve, reject) {
     Promise.map(plateInfoList, function(plateInfo) {
-        return RnaiLibrarystock.load.workflows.createStock(workflowData, plateInfo);
+        return RnaiRnailibrary.load.workflows.createStock(workflowData, plateInfo);
       }, {
         concurrency: 6,
       })
@@ -87,20 +87,20 @@ RnaiLibrarystock.load.workflows.processExperimentPlates = function(workflowData,
   });
 };
 
-RnaiLibrarystock.genLibraryResult = function(barcode, libraryResults, well) {
+RnaiRnailibrary.genLibraryResult = function(barcode, libraryResults, well) {
   var libraryResult = {};
   if (barcode.match('L4440')) {
     libraryResult.name = 'L4440';
     libraryResult.geneName = 'L4440';
   } else {
     // I'm sure I use the quadrant for something  - just not sure what
-    var quadrant = RnaiLibrarystock.helpers.getQuad(barcode);
+    var quadrant = RnaiRnailibrary.helpers.getQuad(barcode);
     libraryResult = _.find(libraryResults, {
       well: well,
     });
   }
 
-  libraryResult = RnaiLibrarystock.helpers.checkLibraryResult(libraryResult);
+  libraryResult = RnaiRnailibrary.helpers.checkLibraryResult(libraryResult);
 
   return libraryResult;
 };

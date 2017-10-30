@@ -34,6 +34,14 @@ module.exports = function(WpPosts) {
   WpPosts.library.chembridge.load.plate.workflows = {};
   WpPosts.library.chembridge.load.assay.workflows = {};
 
+  WpPosts.library.fda = {};
+  WpPosts.library.fda.load = {};
+  WpPosts.library.fda.load.plate = {};
+  WpPosts.library.fda.load.assay = {};
+  WpPosts.library.fda.load.workflows = {};
+  WpPosts.library.fda.load.plate.workflows = {};
+  WpPosts.library.fda.load.assay.workflows = {};
+
   WpPosts.on('attached', function(obj) {
     require('../load/ExperimentAssay/wp-posts');
     require('../load/ExperimentAssayImage/wp-posts');
@@ -41,6 +49,7 @@ module.exports = function(WpPosts) {
     require('../load/wp-posts');
     require('../library/ahringer/wp-posts');
     require('../library/chembridge/wp-posts');
+    require('../library/fda/wp-posts');
     require('../annotations/wormbase/wp-posts');
   });
 

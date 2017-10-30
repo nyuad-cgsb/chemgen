@@ -44,6 +44,8 @@ WpPosts.load.assay.processExperimentPlate = function(workflowData, plateData) {
 
 WpPosts.load.assay.workflows.processPost = function(workflowData, plateInfo, experimentData) {
   var taxTerms = experimentData.libraryData.libraryStock.taxTerms;
+  var plateId = plateInfo.ExperimentExperimentplate.experimentPlateId;
+  var assayId = experimentData.experimentAssayData.assayId;
 
   return new Promise(function(resolve, reject) {
     WpPosts.load.assay.workflows
@@ -61,6 +63,16 @@ WpPosts.load.assay.workflows.processPost = function(workflowData, plateInfo, exp
         taxTerms.push({
           taxonomy: 'envira-tag',
           taxTerm: postData.postTitle,
+        });
+        taxTerms.push({
+          taxonomy: 'envira-tag',
+          taxTerm: 'SN-' + workflowData.screenName + '_PI-' + plateId,
+        });
+        // experimentData.experimentAssayData.assayId
+        taxTerms.push({
+          taxonomy: 'envira-tag',
+          taxTerm: 'SN-' + workflowData.screenName + '_PI-' + plateId +
+           '_AI-' + assayId,
         });
         // Do the downstream processing here
         // Each post should be associated to 1 or more taxonomy terms
@@ -91,6 +103,9 @@ WpPosts.load.assay.workflows.updatePost = function(workflowData, plateInfo, expe
         var dateNow = new Date().toISOString();
         postObj.postModified = dateNow;
         postObj.postModifiedGmt = dateNow;
+        // This was nuts - the in memory model I used for testing could deal with any of these
+        // But the real model could only use updateOrCreate
+        // I had to dig around in the tests for mysql data juggler to figure this out
         // return postObj.save;
         // return WpPosts.upsertWithWhere({where: {id: postObj.id}}, postObj);
         // return postObj.updateAttribute({postContent: postContent});
@@ -158,7 +173,7 @@ WpPosts.load.assay.genPostContent = function(workflowData, plateData, experiment
   var barcode = plateData.ExperimentExperimentplate.barcode;
   var plateId = plateData.ExperimentExperimentplate.experimentPlateId;
   var libraryData = experimentData.libraryData;
-  var condition = app.models[workflowData.libraryStockModel].helpers.parseCond(barcode);
+  var condition = app.models[workflowData.libraryModel].helpers.parseCond(barcode);
 
   var screenName = workflowData.screenName;
   var taxTerm = libraryData.libraryStock.taxTerm;
@@ -182,6 +197,7 @@ WpPosts.load.assay.genPostContent = function(workflowData, plateData, experiment
   contentObj.screenNameSlug = slug(workflowData.screenName);
   contentObj.taxTerm = libraryData.libraryStock.taxTerm;
   contentObj.taxTermSlug = slug(libraryData.libraryStock.taxTerm);
+  contentObj.wormStrain = workflowData.data.wormStrain;
 
   contentObj = WpPosts.load.assay.genEnviraContent(contentObj);
   contentObj = WpPosts.load.assay.genEnviraControl(workflowData, contentObj);
@@ -194,6 +210,7 @@ WpPosts.load.assay.genPostContent = function(workflowData, plateData, experiment
         resolve(postContent);
       })
       .catch(function(error) {
+        app.winston.error(JSON.stringify(contentObj));
         app.winston.error(error.stack);
         reject(new Error(error));
       });
@@ -206,7 +223,7 @@ WpPosts.load.assay.genEnviraControl = function(workflowData, contentObj) {
   if (contentObj.barcode.match('L4440')) {
     return contentObj;
   } else {
-    contentObj = app.models[workflowData.libraryStockModel].helpers
+    contentObj = app.models[workflowData.libraryModel].helpers
       .buildControlTags(workflowData, contentObj);
   }
 
