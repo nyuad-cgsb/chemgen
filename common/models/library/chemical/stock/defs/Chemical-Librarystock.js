@@ -9,9 +9,6 @@ module.exports = function(ChemicalLibrarystock) {
 
   ChemicalLibrarystock.helpers = {};
   ChemicalLibrarystock.on('attached', function(obj) {
-    require('../load/Chemical-Librarystock');
-    require('../load/primary/Chemical-Librarystock');
-    require('../extract/Chemical-Librarystock');
     require('../helpers/Chemical-Librarystock');
   });
 };

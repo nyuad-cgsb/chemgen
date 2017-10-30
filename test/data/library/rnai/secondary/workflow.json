@@ -1,7 +1,7 @@
 {
   "tasks": ["task1", "task2", "task3"],
   "library": "ahringer",
-  "libraryModel": "RnaiLibrary",
+  "libraryModel": "RnaiRnailibrary",
   "libraryStockModel": "RnaiLibrarystock",
   "condition": "Permissive",
   "screenStage": "Secondary",

@@ -2,7 +2,7 @@
 
 const app = require('../../../../../../../server/server.js');
 const Promise = require('bluebird');
-const RnaiLibrarystock = app.models.RnaiLibrarystock;
+const RnaiRnailibrary = app.models.RnaiRnailibrary;
 
 /**
  * Secondary
@@ -13,11 +13,12 @@ const RnaiLibrarystock = app.models.RnaiLibrarystock;
 // Each well has a location representation - which is either the vendor library (length = 3)
 // Or the stock library (length = 4 to include a quadrant)
 // TODO THIS IS A WORKFLOW
-RnaiLibrarystock.extract.Secondary.getParentLibrary = function(workflowData) {
+// TODO Most of this is ahringer library specific
+RnaiRnailibrary.extract.Secondary.getParentLibrary = function(workflowData) {
   return new Promise(function(resolve, reject) {
-    RnaiLibrarystock.extract.Secondary.parseCustomPlate(workflowData)
+    RnaiRnailibrary.extract.Secondary.parseCustomPlate(workflowData)
       .then(function(results) {
-        return RnaiLibrarystock.extract.Secondary.parseRows(workflowData, results);
+        return RnaiRnailibrary.extract.Secondary.parseRows(workflowData, results);
       })
       .then(function(results) {
         resolve(results);
@@ -87,7 +88,7 @@ var parseWell = function(workflowData, wellData) {
       if (!where) {
         reject(new Error('Not able to find a corresponding library well!'));
       } else {
-        app.models.RnaiRnailibrary.find({
+        RnaiRnailibrary.find({
             where: where,
           })
           .then(function(tresults) {
@@ -110,7 +111,7 @@ var parseWell = function(workflowData, wellData) {
   });
 };
 
-RnaiLibrarystock.extract.Secondary.parseRows = function(workflowData, lists) {
+RnaiRnailibrary.extract.Secondary.parseRows = function(workflowData, lists) {
   return new Promise(function(resolve, reject) {
     Promise.map(lists, function(wellData) {
         return parseWell(workflowData, wellData);
@@ -126,7 +127,8 @@ RnaiLibrarystock.extract.Secondary.parseRows = function(workflowData, lists) {
 
 // This parses the custom Plate
 // That exists as a json file the library data directory
-RnaiLibrarystock.extract.Secondary.parseCustomPlate = function(workflowData) {
+// This is Ahringer Library Specific
+RnaiRnailibrary.extract.Secondary.parseCustomPlate = function(workflowData) {
   var wellData = workflowData.data.library.wellData;
   var rows = app.etlWorkflow.helpers.rows;
   var list = [];

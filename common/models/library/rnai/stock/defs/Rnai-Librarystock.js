@@ -5,9 +5,8 @@ module.exports = function(RnaiLibrarystock) {
   RnaiLibrarystock.Secondary = {};
   RnaiLibrarystock.Custom = {};
   RnaiLibrarystock.workflows = {};
-  RnaiLibrarystock.helpers = {};
-  RnaiLibrarystock.helpers.buildControlTag = {};
-
+  // RnaiLibrarystock.helpers = {};
+  // RnaiLibrarystock.helpers.buildControlTag = {};
 
   RnaiLibrarystock.load = {};
   RnaiLibrarystock.load.workflows = {};
@@ -22,11 +21,11 @@ module.exports = function(RnaiLibrarystock) {
   RnaiLibrarystock.extract.Custom = {};
 
   RnaiLibrarystock.on('attached', function(obj) {
-    require('../extract/secondary/Rnai-Librarystock.js');
-    require('../extract/primary/Rnai-Librarystock.js');
-    require('../load/Rnai-Librarystock.js');
-    require('../extract/Rnai-Librarystock.js');
-    require('../helpers.js');
+    // require('../extract/secondary/Rnai-Librarystock.js');
+    // require('../extract/primary/Rnai-Librarystock.js');
+    // require('../load/Rnai-Librarystock.js');
+    // require('../extract/Rnai-Librarystock.js');
+    // require('../helpers.js');
   });
 
 };

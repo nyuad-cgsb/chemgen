@@ -2,23 +2,24 @@
 
 const app = require('../../../../../../server/server');
 const Promise = require('bluebird');
-const RnaiLibrarystock = app.models.RnaiLibrarystock;
+const RnaiRnailibrary = app.models.RnaiRnailibrary;
 const slug = require('slug');
 
 // TODO This should be the library - not the librarystock
 // There is a 'taxTerm' identifier in the libraryStock, which could be in the workflowData
-RnaiLibrarystock.extract.parseLibraryResults = function(workflowData, plateInfo, libraryResults) {
+RnaiRnailibrary.extract.parseLibraryResults = function(workflowData, plateInfo, libraryResults) {
   return new Promise(function(resolve, reject) {
     var allWells = workflowData.wells;
     var barcode = plateInfo.ExperimentExperimentplate.barcode;
-    var strain = RnaiLibrarystock.helpers.wormStrain(barcode);
-    var condition = RnaiLibrarystock.helpers
+    var strain = RnaiRnailibrary.helpers.wormStrain(barcode);
+    var condition = RnaiRnailibrary.helpers
       .parseCond(plateInfo.ExperimentExperimentplate.barcode);
     var plateId = plateInfo.ExperimentExperimentplate.experimentPlateId;
     var taxID = 'geneName';
 
     Promise.map(allWells, function(well) {
-        var libraryResult = RnaiLibrarystock.genLibraryResult(barcode, libraryResults, well);
+        // app.winston.info('Well is :' + well);
+        var libraryResult = RnaiRnailibrary.genLibraryResult(barcode, libraryResults, well);
         // TODO add RnaiWbXrefs to tests
         return app.models.RnaiWbXrefs.extract.genTaxTerms({
             where: {
@@ -39,6 +40,7 @@ RnaiLibrarystock.extract.parseLibraryResults = function(workflowData, plateInfo,
                 taxonomy: 'wb_gene_sequence_id',
                 taxTerm: 'L4440'
               });
+              libraryResult.geneName = 'L4440';
             }
 
             //In the secondary screen we have just genes
@@ -47,8 +49,9 @@ RnaiLibrarystock.extract.parseLibraryResults = function(workflowData, plateInfo,
                 taxonomy: 'wb_gene_sequence_id',
                 taxTerm: 'L4440'
               });
+              libraryResult.geneName = 'L4440';
             }
-            if (wormTaxTerms.length === 0) {
+            if (wormTaxTerms.taxTerms.length === 0) {
               taxTerms.push({
                 taxonomy: 'wb_gene_sequence_id',
                 taxTerm: libraryResult.geneName,
