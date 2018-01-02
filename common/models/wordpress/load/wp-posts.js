@@ -5,10 +5,10 @@ const WpPosts = app.models.WpPosts;
 const Promise = require('bluebird');
 const slug = require('slug');
 const php = require('js-php-serialize');
-const deepcopy = require('deepcopy');
-const Mustache = require('mustache');
-const readFile = Promise.promisify(require('fs').readFile);
-const path = require('path');
+// const deepcopy = require('deepcopy');
+// const Mustache = require('mustache');
+// const readFile = Promise.promisify(require('fs').readFile);
+// const path = require('path');
 
 WpPosts.load.postInfo = function(workflowData, plateInfo) {
   var postContent = '';
@@ -170,9 +170,9 @@ WpPosts.load.genImageMeta = function(imageBase) {
         'mime-type': 'image/jpeg',
       },
       'shapely-full': {
-        file: imageName + '-1024x1024.jpeg',
-        width: 1024,
-        height: 1024,
+        file: imageName + '-768-768.jpeg',
+        width: 768,
+        height: 768,
         'mime-type': 'image/jpeg',
       },
       'shapely-featured': {

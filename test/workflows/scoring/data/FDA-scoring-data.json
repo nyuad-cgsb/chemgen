@@ -1,0 +1,48 @@
+{
+  "NA": {
+    "N2": [
+      {
+        "assayPostId": 1,
+        "assayId": 1,
+        "plateId": 1,
+        "reagentId": 128417,
+        "taxTerm": "C41D7.1",
+        "barcode": "N2_FDA_1",
+        "well": "H12",
+        "plateCreationDate": "2016-03-22T20:52:09.000Z"
+      },
+      {
+        "assayPostId": 1,
+        "assayId": 1,
+        "plateId": 1,
+        "reagentId": 128417,
+        "taxTerm": "C41D7.1",
+        "barcode": "N2_FDA_1",
+        "well": "H12",
+        "plateCreationDate": "2016-03-22T20:52:09.000Z"
+      },
+    ],
+    "M": [
+      {
+        "assayPostId": 601232,
+        "assayId": 166803,
+        "plateId": 1769,
+        "reagentId": 128225,
+        "taxTerm": "C41D7.1",
+        "barcode": "RNAiI.1Q4E_M",
+        "well": "H12",
+        "plateCreationDate": "2016-03-22T21:03:01.000Z"
+      },
+      {
+        "assayPostId": 601136,
+        "assayId": 166419,
+        "plateId": 1765,
+        "reagentId": 127841,
+        "taxTerm": "C41D7.1",
+        "barcode": "RNAiI.1Q4E_D_M",
+        "well": "H12",
+        "plateCreationDate": "2016-03-22T21:08:26.000Z"
+      }
+    ]
+  }
+}

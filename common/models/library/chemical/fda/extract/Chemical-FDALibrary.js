@@ -45,7 +45,6 @@ ChemicalFdalibrary.extract.parseLibraryResults = function(workflowData, plateInf
             };
 
             createStock.taxTerm = String(createStock.taxTerm);
-            // app.winston.info(JSON.stringify(taxTerms));
 
             var data = {
               libraryStock: createStock,

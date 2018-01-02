@@ -5,6 +5,8 @@ const Promise = require('bluebird');
 
 const ChemicalFdalibrary = app.models.ChemicalFdalibrary;
 
+//TODO This whole workflow is the same across libraries - we just need to do some cleaning up first
+
 ChemicalFdalibrary.load.workflows.processExperimentPlates = function(workflowData, plateInfoList) {
   return new Promise(function(resolve, reject) {
     Promise.map(plateInfoList, function(plateInfo) {
@@ -51,7 +53,6 @@ ChemicalFdalibrary.load.workflows.createStock = function(workflowData, plateInfo
 };
 
 ChemicalFdalibrary.load.createLibraryStocks = function(dataList) {
-
   return new Promise(function(resolve, reject) {
     Promise.map(dataList, function(data) {
         var createObj = data.libraryStock;
@@ -62,6 +63,7 @@ ChemicalFdalibrary.load.createLibraryStocks = function(dataList) {
           }, createObj)
           .then(function(results) {
             var result = results[0];
+            debugger;
             var resultData = {
               libraryStock: result,
               libraryParent: data.libraryParent,

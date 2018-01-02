@@ -32,7 +32,7 @@ ChemicalFdalibrary.helpers.barcodeIsControl = function(barcode) {
 Chemical Libraries don't have permissive/restrictive
  */
 ChemicalFdalibrary.helpers.parseCond = function(barcode) {
-  return 'NONE';
+  return 'NA';
 };
 
 /**

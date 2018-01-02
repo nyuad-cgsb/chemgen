@@ -11,7 +11,8 @@ cp -f "{{{images.vendorImage}}}" "{{{images.tmpImage}}}"
 convert -layers flatten -quality 100 "{{{images.convertImage}}}" "{{{images.convertBmp}}}"
 convert -auto-level "{{{images.convertImage}}}" "{{{images.autoLevelTiffImage}}}"
 convert -auto-level "{{{images.convertBmp}}}" "{{{images.autoLevelBmpImage}}}"
-convert -layers flatten -quality 100 "{{{images.autoLevelTiffImage}}}" "{{{images.autoLevelJpegImage}}}"
+convert -auto-level "{{{images.convertBmp}}}" "{{{images.baseImage}}}-autolevel.png"
+convert -layers flatten -quality 50 "{{{images.autoLevelTiffImage}}}" "{{{images.autoLevelJpegImage}}}"
 
 {{#thumbSizes}}
 convert -quality 50 -thumbnail {{{.}}} "{{{images.autoLevelJpegImage}}}" "{{{images.baseImage}}}-autolevel-{{{.}}}.jpeg"

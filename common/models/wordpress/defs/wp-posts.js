@@ -5,6 +5,9 @@ module.exports = function(WpPosts) {
   WpPosts.load.assay = {};
   WpPosts.load.plate = {};
   WpPosts.load.plate.workflows = {};
+  WpPosts.load.score = {};
+  WpPosts.load.score.workflows = {};
+  WpPosts.load.score.genEnviraControl  = {};
   WpPosts.load.workflows = {};
   WpPosts.load.assay.workflows = {};
   WpPosts.load.annotations = {};
@@ -46,6 +49,7 @@ module.exports = function(WpPosts) {
     require('../load/ExperimentAssay/wp-posts');
     require('../load/ExperimentAssayImage/wp-posts');
     require('../load/Experiment-Experimentplate/wp-posts');
+    require('../load/scoring/wp-posts');
     require('../load/wp-posts');
     require('../library/ahringer/wp-posts');
     require('../library/chembridge/wp-posts');
@@ -54,5 +58,4 @@ module.exports = function(WpPosts) {
   });
 
   WpPosts.wpUrl = process.env.wpUrl || 'http://onyx.abudhabi.nyu.edu/wordpress';
-
 };

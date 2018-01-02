@@ -23,6 +23,12 @@ module.exports = function(RnaiRnailibrary) {
   RnaiRnailibrary.extract.Secondary = {};
   RnaiRnailibrary.extract.Custom = {};
 
+  // RnaiRnailibrary.scoring = {};
+  // RnaiRnailibrary.scoring.workflows = {};
+  // RnaiRnailibrary.scoring.Primary = {};
+  // RnaiRnailibrary.scoring.Secondary = {};
+  // RnaiRnailibrary.scoring.Custom = {};
+
   RnaiRnailibrary.on('attached', function(obj) {
     require('../extract/secondary/Rnai-RnaiLibrary.js');
     require('../extract/primary/Rnai-RnaiLibrary.js');

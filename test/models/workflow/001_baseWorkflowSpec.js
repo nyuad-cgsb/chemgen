@@ -12,7 +12,6 @@ const diff = require('deep-diff').diff;
 describe('001_baseWorkflowSpec', function() {
   it('Should create a workflow object', function(done) {
     var create = {
-      tasks: ['task1', 'task2', 'task3'],
       library: 'ahringer',
       libraryModel: 'RnaiLibrary',
       libraryStockModel: 'RnaiLibrarystock',
@@ -28,6 +27,10 @@ describe('001_baseWorkflowSpec', function() {
       screenName: '2017-12-11--PR',
       search: {},
       data: {},
+      conditions:["Permissive","Restrictive"],
+      strains:["M","N2"],
+      mutantStrain: "M",
+      wildTypeStrain: "N2",
     };
 
     app.models.Workflow.create(create)

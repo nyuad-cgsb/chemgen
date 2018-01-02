@@ -1,0 +1,210 @@
+<div class="row" id="pe_header">
+  <div class="col-md-6">
+    <b>Screen Name</b>:
+    <p>{{screenName}}</p>
+  </div>
+  <div class="col-md-6">
+    <b>Assay View</b>:
+    <a href="{{{assayUrl}}}">Link</a>
+  </div>
+</div>
+
+<div class="row" id="pe_score_control">
+  <div class="col-md-12">
+    <h4>Control Plates M TS <a href="{{{CMUrl}}}">Link</a> </h4>
+    <div class="pg-empty-placeholder" id="control_envira_gallery">
+      <p>[envira-gallery-dynamic id="tags-{{enviraCMTag}}" columns="4" limit="4" sort="random"] </p>
+    </div>
+  </div>
+  </div>
+
+<div class="row" id="pe_score_control">
+  <div class="col-md-12">
+    <h4>Control Plates N2 <a href="{{{CTSUrl}}}">Link</a></h4>
+    <div class="pg-empty-placeholder" id="control_envira_gallery">
+      [envira-gallery-dynamic id="tags-{{enviraCTSTag}}" columns="4" limit="4" sort="random"] </p>
+    </div>
+  </div>
+</div>
+
+<div class="row" id="pe_score_form">
+  <form role="form" id="rnai_enh_primary_form">
+    <div class="col-md-12">
+      <div class="row" id="pe_score_e_image">
+        <div class="col-md-6">
+          <h4>Permissive N2 <a href="{{{N2Url}}}">Link</a> </h4>
+          <div class="pg-empty-placeholder" id="en_envira_gallery">
+            <p>[envira-gallery-dynamic id="tags-{{enviraENTag}}" columns="1"] </p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h4>Permissive M <a href="{{{MUrl}}}">Link</a> </h4>
+          <div class="pg-empty-placeholder" id="em_envira_gallery">
+            <p>[envira-gallery-dynamic id="tags-{{enviraEMTag}}" columns="1"] </p>
+          </div>
+        </div>
+      </div>
+      <div class="row" id="pe_score_e_form_1">
+        <div class="col-md-6">
+          <div class="checkbox">
+            <div class="">
+              <label class="control-label">
+                                      <b>N2 + RNAi</b>&nbsp;
+                                  </label>
+            </div>
+            <div class="col-md-2">
+              <label class="control-label">
+                                      <input class="control-label" name="RNAI_N2_WT" type="checkbox" value="20">        WT
+                                  </label>
+              <label class="control-label">
+                                      <input class="control-label" name="RNAI_N2_STE" type="checkbox" value="7">        Ste
+                                  </label>
+              <label class="control-label">
+                                      <input class="control-label" name="RNAI_N2_LB" type="checkbox" value="10">        LB
+                                  </label>
+            </div>
+            <div class="col-md-2">
+              <label class="control-label">
+                                      <input class="control-label" name="RNAI_N2_LVA" type="checkbox" value="8">        LVA
+                                  </label>
+              <label class="control-label">
+                                      <input class="control-label" name="RNAI_N2_PE" type="checkbox" value="11">        PE
+                                  </label>
+            </div>
+            <div class="col-md-2">
+              <label class="control-label">
+                                      <input class="control-label" name="UF" type="checkbox" value="-9">        UF
+                                  </label>
+              <label class="control-label">
+                                      <input class="control-label" name="NB" type="checkbox" value="-2">        NB
+                                  </label>
+              <label class="control-label">
+                                      <input class="control-label" name="NW" type="checkbox" value="-3">        NW
+                                  </label>
+            </div>
+            <div class="col-md-2">
+              <label class="control-label">
+                                      <input class="control-label" name="RNAI_N2_CONT" type="checkbox" value="-13">        Cont
+                                  </label>
+              <label class="control-label">
+                                      <input class="control-label" name="RNAI_N2_PROB" type="checkbox" value="-14">        Prob
+                                  </label>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-6">
+              <label class="control-label">
+                                      <b>Mutant+ RNAi</b>
+                                  </label>
+            </div>
+            <div class="col-md-6">
+              <label class="control-label">
+                                      <input class="control-label" name="NO_HIT" type="checkbox" value="0">        No Sup/Enh
+                                  </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="checkbox">
+              <div class="col-md-2">
+                <label class="control-label">
+                                          <b>Weak</b>
+                                      </label>
+              </div>
+              <div class="col-md-2">
+                <label class="control-label">
+                                          <input class="control-label" name="WEAK_EMB" type="checkbox" value="12">        Emb
+                                      </label>
+                <label class="control-label">
+                                          <input class="control-label" name="WEAK_STE" type="checkbox" value="16">        Ste
+                                      </label>
+              </div>
+            </div>
+            <div class="checkbox">
+              <div class="col-md-2">
+                <label class="control-label">
+                                          <b>Medium</b>
+                                      </label>
+              </div>
+              <div class="col-md-2">
+                <label class="control-label">
+                                          <input class="control-label" name="MED_EMB" type="checkbox" value="13">        Emb
+                                      </label>
+                <label class="control-label">
+                                          <input class="control-label" name="MED_STE" type="checkbox" value="17">        Ste
+                                      </label>
+              </div>
+            </div>
+            <div class="checkbox">
+              <div class="col-md-2">
+                <label class="control-label">
+                                          <b>Strong</b>
+                                      </label>
+              </div>
+              <div class="col-md-2">
+                <label class="control-label">
+                                          <input class="control-label" name="STRONG_EMB" type="checkbox" value="14">        Emb
+                                      </label>
+                <label class="control-label">
+                                          <input class="control-label" name="STRONG_STE" type="checkbox" value="18">        Ste
+                                      </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" id="pe_score_e_form_2">
+        <div class="col-md-6">
+          <div class="checkbox">
+            <div class="">
+              <label class="control-label">
+                                      <b>Assay Problems</b>&nbsp;
+                                  </label>
+            </div>
+            <div class="col-md-2">
+              <label class="control-label">
+                                      <input class="control-label" name="UF" type="checkbox" value="-9">        UF
+                                  </label>
+              <label class="control-label">
+                                      <input class="control-label" name="NB" type="checkbox" value="-2">        NB
+                                  </label>
+              <label class="control-label">
+                                      <input class="control-label" name="NW" type="checkbox" value="-3">        NW
+                                  </label>
+            </div>
+            <div class="col-md-2">
+              <label class="control-label">
+                                      <input class="control-label" name="CONT" type="checkbox" value="-4">        Cont
+                                  </label>
+              <label class="control-label">
+                                      <input class="control-label" name="DEVSTAR_PROB" type="checkbox" value="-7">     Devstar Prob
+                                  </label>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+      </div>
+    </div>
+  </form>
+  <script>
+    jQuery(function($) {
+      $("#rnai_enh_primary_form").on("submit", function(event) {
+        event.preventDefault();
+        var formData = $(this).serializeArray();
+        //Get the activepost id
+        var activePostId = $('#activepost').attr('value') || '';
+        formData.push({
+          activePostId: activePostId
+        });
+        // alert(JSON.stringify($(this).serializeObject()));
+        alert(JSON.stringify(formData));
+        event.stopImmediatePropagation();
+        //Hide The RnaiENH form and clooooose
+        return false;
+      });
+    });
+  </script>
+</div>
