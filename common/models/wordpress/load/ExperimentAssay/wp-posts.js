@@ -84,7 +84,10 @@ WpPosts.load.assay.workflows.processPost = function(workflowData, plateInfo, exp
       })
       .then(function(results) {
         experimentData.assayPostData = results;
-        resolve(experimentData);
+        return app.models.ExperimentAssay.load.updateWithPostData(workflowData, experimentData);
+      })
+      .then(function(results){
+        resolve(results);
       })
       .catch(function(error) {
         app.winston.error(error.stack);
@@ -92,6 +95,7 @@ WpPosts.load.assay.workflows.processPost = function(workflowData, plateInfo, exp
       });
   });
 };
+
 
 WpPosts.load.assay.workflows.updatePost = function(workflowData, plateInfo, experimentData, postObj) {
   var taxTerms = experimentData.libraryData.libraryStock.taxTerms;

@@ -14,8 +14,8 @@ Workflow.experiment.getPlates = function(workflowData) {
       .then(function(platesList) {
         return Workflow.experiment.mapPlates(workflowData, platesList);
       })
-      .then(function() {
-        resolve();
+      .then(function(results) {
+        resolve(results);
       })
       .catch(function(error) {
         app.winston.error(error.stack);
@@ -31,9 +31,11 @@ Workflow.experiment.mapPlates = function(workflowData, platesList) {
     Promise.map(platesList, function(plate) {
       app.winston.info('Starting Plate: ' + plate.csPlateid + ' Name: ' + plate.name);
       return Workflow.experiment.processPlate(workflowData, plate);
-    }, {concurrency: 6})
+    }, {
+      concurrency: 6,
+    })
       .then(function(results) {
-        resolve();
+        resolve(results);
       })
       .catch(function(error) {
         app.winston.error(error.stack);
@@ -44,25 +46,28 @@ Workflow.experiment.mapPlates = function(workflowData, platesList) {
 
 Workflow.experiment.processPlate = function(workflowData, plate) {
   return new Promise(function(resolve, reject) {
-    app.models.ExperimentExperimentplate.load.workflows.processVendorPlates(workflowData, [plate])
+    app.models.ExperimentExperimentplate.load.workflows
+    .processVendorPlates(workflowData, [plate])
       .then(function(plateInfoList) {
-        // return app.models[workflowData.libraryStockModel].load.workflows
         return app.models[workflowData.libraryModel].load.workflows
-        .processExperimentPlates(workflowData, plateInfoList);
+          .processExperimentPlates(workflowData, plateInfoList);
       })
       .then(function(results) {
-        return app.models.ExperimentAssay.load.workflows.processExperimentPlates(workflowData, results);
+        return app.models.ExperimentAssay.load.workflows
+        .processExperimentPlates(workflowData, results);
       })
       .then(function(results) {
-        return app.models.WpPosts.load.plate.workflows.processPosts(workflowData, results);
+        return app.models.WpPosts.load.plate.workflows
+        .processPosts(workflowData, results);
       })
       .then(function(results) {
-        return app.models.WpPosts.load.assay.workflows.processExperimentPlates(workflowData, results);
+        return app.models.WpPosts.load.assay.workflows
+        .processExperimentPlates(workflowData, results);
       })
       .then(function(results) {
-        app.winston.info(JSON.stringify(results));
         app.winston.info('Finished Plate: ' + plate.csPlateid);
-        resolve();
+        // TODO add in plateID and imageDate
+        resolve(results);
       })
       .catch(function(error) {
         app.winston.error(error.stack);

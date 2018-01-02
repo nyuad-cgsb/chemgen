@@ -54,6 +54,21 @@
         "nullable": "N"
       }
     },
+    "librarystockName": {
+      "type": "String",
+      "required": true,
+      "length": 100,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "librarystock_name",
+        "dataType": "varchar",
+        "dataLength": 100,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "N"
+      }
+    },
     "well": {
       "type": "String",
       "required": true,

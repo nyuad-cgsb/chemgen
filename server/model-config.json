@@ -5,6 +5,7 @@
       "loopback/server/models",
       "../common/models",
       "../common/models/workflow/defs",
+      "../common/models/scoring/manual/defs",
       "../common/models/experiment/plate/defs",
       "../common/models/experiment/assay/defs",
       "../common/models/experiment/screen/defs",
@@ -65,6 +66,12 @@
     "dataSource": "chemgenDS"
   },
   "MainScreen": {
+    "dataSource": "chemgenDS"
+  },
+  "ExperimentManualscorecode": {
+    "dataSource": "chemgenDS"
+  },
+  "ExperimentManualscores": {
     "dataSource": "chemgenDS"
   },
   "WpTermTaxonomy": {

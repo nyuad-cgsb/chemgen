@@ -42,9 +42,8 @@ RnaiRnailibrary.extract.parseLibraryResults = function(workflowData, plateInfo, 
               });
               libraryResult.geneName = 'L4440';
             }
-
             //In the secondary screen we have just genes
-            if (libraryResult.geneName === 'L4440') {
+            else if (libraryResult.geneName === 'L4440') {
               taxTerms.push({
                 taxonomy: 'wb_gene_sequence_id',
                 taxTerm: 'L4440'
@@ -58,6 +57,9 @@ RnaiRnailibrary.extract.parseLibraryResults = function(workflowData, plateInfo, 
               });
             }
 
+            //TODO Get rid of this geneName nonsense - should just be taxTerm
+            // Add parentstockId to workflow definition
+            // add taxTerm to workflow defintiion
             var createStock = {
               plateId: plateId,
               parentstockId: libraryResult.rnailibraryId,

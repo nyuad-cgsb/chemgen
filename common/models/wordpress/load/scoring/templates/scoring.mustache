@@ -1,0 +1,225 @@
+<div class="row" id="pe_header">
+  <div class="col-md-6">
+    <b>Screen Name</b>:
+    <p>{{screenName}}</p>
+  </div>
+  <div class="col-md-6">
+    <b>Assay View</b>:
+    <a href="{{{assayUrl}}}">Link</a>
+  </div>
+</div>
+
+<!-- Begin Content -->
+<div class="row">
+  <div id="images" class="col-md-8">
+    <div class="row" id="pe_score_control">
+      <div class="col-md-12">
+        <h4>Control Plates M TS <a href="{{{CMUrl}}}">Link</a> </h4>
+        <div class="pg-empty-placeholder" id="control_envira_gallery">
+          <p>[envira-gallery-dynamic id="tags-{{enviraCMTag}}" columns="4" limit="4" sort="random"] </p>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="pe_score_control">
+      <div class="col-md-12">
+        <h4>Control Plates N2 <a href="{{{CTSUrl}}}">Link</a></h4>
+        <div id="control_envira_gallery">
+          [envira-gallery-dynamic id="tags-{{enviraCTSTag}}" columns="4" limit="4" sort="random"]
+        </div>
+      </div>
+    </div>
+    <div class="row" id="pe_score_e_image">
+      <div class="col-md-6">
+        <h4>{{condition}} N2 <a href="{{{N2Url}}}">Link</a> </h4>
+        <div class="pg-empty-placeholder" id="en_envira_gallery">
+          <p>[envira-gallery-dynamic id="tags-{{enviraENTag}}" columns="1"] </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h4>{{condition}} M <a href="{{{MUrl}}}">Link</a> </h4>
+        <div class="pg-empty-placeholder" id="em_envira_gallery">
+          <p>[envira-gallery-dynamic id="tags-{{enviraEMTag}}" columns="1"] </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Begin Hidden Elements -->
+  <div>
+    <input type="hidden" id="assayId" name="assayId" value="{{{assayId}}}">
+    <input type="hidden" id="plateId" name="plateId" value="{{{plateId}}}">
+    <input type="hidden" id="screenId" name="screenId" value="{{{screenId}}}">
+    <input type="hidden" id="screenName" name="screenName" value="{{{screenName}}}">
+    <input type="hidden" id="libraryModel" name="libraryModel" value="{{{libraryModel}}}">
+    <input type="hidden" id="libraryStockModel" name="libraryStockModel" value="{{{libraryStockModel}}}">
+    <input type="hidden" id="mutantAssayPostId" name="mutantAssayPostId" value="{{{mutantAssayPostId}}}">
+    <input type="hidden" id="wildTypeAssayPostId" name="wildTypeAssayPostId" value="{{{wildTypeAssayPostId}}}">
+  </div>
+  <!-- End Hidden Elements -->
+  <div id="score_form_container" class="col-md-4">
+    <form role="form" id="score_form">
+      <!-- Begin N2 Scores -->
+      <div class="row" id="n_scores">
+        <h4 class="capitalize">N2 + {{{library}}}</h4>
+        <div id="n_phenotype_scores" class="col-md-6 col-sm-6">
+          <!-- Begin N2 No Effect -->
+          <h5><strong>Phenotypes</strong></h5>
+          <div id="n_no_effect">
+            <div class="row">
+              <input type="checkbox" id="C_NO_EFFECT" name="C_NO_EFFECT" value="20"> No Effect
+            </div>
+          </div>
+          <!-- End N2 No Effect -->
+          <!-- Begin N2 Emb Phenotype -->
+          <div id="n_emb_phenotype">
+            <h5><strong>EMB</strong></h5>
+            <div class="row">
+              <input type="radio" id="C_WEAK_EMB" name="C_EMB_LETH" value="21"> Weak
+            </div>
+            <div class="row">
+              <input type="radio" id="C_MED_EMB" name="C_EMB_LETH" value="23"> Medium
+            </div>
+            <div class="row">
+              <input type="radio" id="C_STRONG_EMB" name="C_EMB_LETH" value="24"> Strong
+            </div>
+          </div>
+          <!-- End N2 Emb Phenotype -->
+          <!-- Begin N2 Ste Phenotype -->
+          <div id="n_ste_phenotype">
+            <h5><strong>STE</strong></h5>
+            <div class="row">
+              <input type="radio" id="C_WEAK_STE" name="C_STE_LETH" value="51"> Weak
+            </div>
+            <div class="row">
+              <input type="radio" id="C_MED_STE" name="C_STE_LETH" value="52"> Medium
+            </div>
+            <div class="row">
+              <input type="radio" id="C_STRONG_STE" name="C_STE_LETH" value="53"> Strong
+            </div>
+          </div>
+          <!-- End N2 Ste Phenotype -->
+          <!-- Begin N2 PE LVA Phenotype -->
+          <div id="n_pe_lva_phenotype">
+            <div class="row">
+              <input type="checkbox" id="C_LVA" name="C_SEC_PHENO" value="26"> LVA
+            </div>
+            <div class="row">
+              <input type="checkbox" id="C_PE" name="C_SEC_PHENO" value="27"> PE
+            </div>
+          </div>
+          <!-- End N2 PE LVA Phenotype -->
+        </div>
+        <!-- End N2 PhenoType Scores -->
+        <!-- Begin N2 Problems -->
+        <div id="n_probs" class="col-md-6 col-sm-6">
+          <h5><strong>Problems</strong></h5>
+          <div class="row">
+            <input class="control-label" name="C_PROB" id="C_NW" type="checkbox" value="-12"> NW
+          </div>
+          <div class="row">
+            <input class="control-label" name="C_PROB" id="C_NB" type="checkbox" value="-11"> NB
+          </div>
+          <div class="row">
+            <input class="control-label" name="C_PROB" id="C_UF" type="checkbox" value="-10"> UF
+          </div>
+          <div class="row">
+            <input class="control-label" name="C_PROB" id="C_CONT" type="checkbox" value="-13"> Cont
+          </div>
+          <div class="row">
+            <input class="control-label" name="C_PROB" id="C_PROB" type="checkbox" value="-14"> Prob
+          </div>
+        </div>
+        <!-- End N2 Problems -->
+      </div>
+      <!-- End N2 Scores -->
+      <hr />
+      <!-- Begin Mutant Scores -->
+      <div class="row" id="m_scores">
+        <h4 class="capitalize">Mutant + {{{library}}}</h4>
+        <div id="m_phenotype_scores" class="col-md-6 col-sm-6">
+          <h5><strong>Phenotypes</strong></h5>
+          <!-- Begin M No Effect -->
+          <div id="m_no_effect">
+            <div class="row">
+              <input type="checkbox" id="M_NO_EFFECT" name="M_NO_EFFECT" value="0"> No Effect
+            </div>
+          </div>
+          <!-- End M No Effect -->
+          <!-- Begin M Emb Phenotype -->
+          <div id="m_primary_phenotype">
+            <h5><strong>EMB</strong></h5>
+            <div class="row">
+              <input type="radio" id="M_WEAK_EMB" name="M_EMB_LETH" value="12"> Weak
+            </div>
+            <div class="row">
+              <input type="radio" id="M_MED_EMB" name="M_EMB_LETH" value="13"> Medium
+            </div>
+            <div class="row">
+              <input type="radio" id="M_STRONG_EMB" name="M_EMB_LETH" value="14"> Strong
+            </div>
+            <div class="row">
+              <input type="checkbox" id="M_SUP_EMB_ENH" name="M_SUP_ENH" value="15"> Sup
+            </div>
+          </div>
+          <!-- End M Emb Phenotype -->
+          <!-- Begin M Ste Phenotype -->
+          <div id="m_ste_phenotype">
+            <h5><strong>STE</strong></h5>
+            <div class="row">
+              <input type="radio" id="M_WEAK_STE" name="M_STE_LETH" value="16"> Weak
+            </div>
+            <div class="row">
+              <input type="radio" id="M_MED_STE" name="M_STE_LETH" value="17"> Medium
+            </div>
+            <div class="row">
+              <input type="radio" id="M_STRONG_STE" name="M_STE_LETH" value="18"> Strong
+            </div>
+            <div class="row">
+              <input type="checkbox" id="M_SUP_STE_ENH" name="M_SUP_ENH" value="19"> Sup
+            </div>
+          </div>
+          <!-- End M Ste Phenotype -->
+          <!-- Begin N2 PE LVA Phenotype -->
+          <div id="m_pe_lva_phenotype">
+            <div class="row">
+              <input type="checkbox" id="M_LVA" name="M_SEC_PHENO" value="8"> LVA
+            </div>
+            <div class="row">
+              <input type="checkbox" id="M_PE" name="M_SEC_PHENO" value="11"> PE
+            </div>
+          </div>
+        </div>
+        <!-- Begin N2 PE LVA Phenotype -->
+        <!-- End M PhenoType Scores -->
+        <!-- Begin M Problems -->
+        <div id="m_probs" class="col-md-6 col-sm-6">
+          <h5><strong>Problems</strong></h5>
+          <div class="row">
+            <input class="control-label" name="M_PROB" id="M_NW" type="checkbox" value="-3"> NW
+          </div>
+          <div class="row">
+            <input class="control-label" name="M_PROB" id="M_NB" type="checkbox" value="-2"> NB
+          </div>
+          <div class="row">
+            <input class="control-label" name="M_PROB" id="M_UF" type="checkbox" value="-9"> UF
+          </div>
+          <div class="row">
+            <input class="control-label" name="M_PROB" id="M_CONT" type="checkbox" value="-4"> Cont
+          </div>
+          <div class="row">
+            <input class="control-label" name="M_PROB" id="M_PROB" type="checkbox" value="53"> Prob
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <button type="submit" id="score_form_submit" class="btn btn-success">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<div id="messages" class="row">
+  <div id="message" class="col-md-12">
+  </div>
+</div>
+<!-- End Content -->

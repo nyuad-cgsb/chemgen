@@ -6,12 +6,6 @@
     "validateUpsert": true
   },
   "properties": {
-    "tasks": {
-      "type": [
-        "any"
-      ],
-      "required": false 
-    },
     "library": {
       "type": "any",
       "required": true
@@ -28,6 +22,30 @@
       "type": "any",
       "required": true
     },
+    "conditions": {
+      "type": [
+        "any"
+      ],
+      "required": true,
+      "default": ["Permissive", "Restrictive"]
+    },
+    "strains": {
+      "type": [
+        "any"
+      ],
+      "required": true,
+      "default": ["M", "N2"]
+    },
+    "mutantStrain": {
+      "type": "string",
+      "required": true,
+      "default": "M"
+    },
+    "wildTypeStrain": {
+      "type": "string",
+      "required": true,
+      "default": "N2"
+    },
     "screenStage": {
       "type": "string",
       "required": true
@@ -39,6 +57,18 @@
     "instrumentId": {
       "type": "any",
       "required": true
+    },
+    "assayPostType":{
+      "type": "string",
+      "required": false
+    },
+    "platePostType":{
+      "type": "string",
+      "required": false
+    },
+    "scorePostType":{
+      "type": "string",
+      "required": false
     },
     "assayDate": {
       "type": "any",
@@ -93,7 +123,6 @@
         "H07", "H08", "H09", "H10", "H11", "H12"
       ],
       "required": true
-
     }
   },
   "validations": [],

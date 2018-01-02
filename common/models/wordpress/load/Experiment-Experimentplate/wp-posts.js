@@ -108,7 +108,7 @@ WpPosts.load.plate.genPostContent = function(workflowData, plateData) {
   var enviraGallery = [
     '[envira-gallery-dynamic id="tags-',
     slug('SN-' + workflowData.screenName + '_PI-' + plateId + '_B-' + barcode),
-    '" columns="6"]',
+    '" columns="6" limit="100"]',
   ].join('');
 
   var contentObj = {

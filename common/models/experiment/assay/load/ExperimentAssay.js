@@ -78,6 +78,9 @@ ExperimentAssay.load.createAssays = function(workflowData, plateInfo, libraryDat
 
 /**
  * The assay is a single well
+ * TODO The experimentAssay Object has some properties that are
+ * currently hard coded to the arrayscan Plate model
+ * The datasource where the plates come from should be a part of the initial workflow configuration
  **/
 ExperimentAssay.load.createAssay = function(workflowData, plateInfo, libraryData) {
   var well = libraryData.libraryStock.well;
@@ -104,6 +107,7 @@ ExperimentAssay.load.createAssay = function(workflowData, plateInfo, libraryData
       }, ExperimentAssayObj)
       .then(function(results) {
         var result = results[0];
+        result.plateCreationDate = plateInfo.ExperimentExperimentplate.plateStartTime;
         resolve({
           libraryData: libraryData,
           experimentAssayData: result
@@ -130,6 +134,26 @@ ExperimentAssay.load.convertImages = function(workflowData, plateInfo, libraryDa
         app.winston.error(error.stack);
         reject(new Error(error));
       });
+  });
+};
+
+ExperimentAssay.load.updateWithPostData = function(workflowData, experimentData) {
+  var experimentAssayId = experimentData.experimentAssayData.assayId;
+  var assayPostId = experimentData.assayPostData.id;
+  var experimentAssayResult = experimentData.experimentAssayData;
+  experimentAssayResult.wpPostId = assayPostId;
+
+  return new Promise(function(resolve, reject){
+    ExperimentAssay.updateOrCreate(experimentAssayResult)
+    .then(function(results){
+      experimentData.experimentAssayData = results;
+      app.winston.info(JSON.stringify(experimentData, null, 2));
+      resolve(experimentData);
+    })
+    .catch(function(error){
+        app.winston.error(error.stack);
+        reject(new Error(error));
+    });
   });
 };
 

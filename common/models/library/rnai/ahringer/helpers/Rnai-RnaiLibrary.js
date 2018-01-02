@@ -5,6 +5,28 @@ const Promise = require('bluebird');
 
 const RnaiRnailibrary = app.models.RnaiRnailibrary;
 
+/**
+Possible L4440 Barcodes include:
+L4440E
+L4440E_D
+L4440E_M
+L4440E_M
+L4440E_D_M
+**/
+RnaiRnailibrary.helpers.buildControlBarcode = function(barcode) {
+  var controlBarCode = 'L4440';
+  if (barcode.match('E')) {
+    controlBarCode = controlBarCode + 'E';
+  }
+  if (barcode.match('D')) {
+    controlBarCode = controlBarCode + '_D';
+  }
+  if (barcode.match('M')) {
+    controlBarCode = controlBarCode + '_M';
+  }
+  return controlBarCode;
+};
+
 RnaiRnailibrary.helpers.buildControlTag.Primary = function(workflowData, contentObj) {
   var cnTag = '_C-Restrictive' + '_WS-N2';
   var cmTag = '_C-Restrictive' + '_WS-M';
@@ -162,7 +184,7 @@ RnaiRnailibrary.helpers.parseCond = function(barcode) {
   } else if (barcode.match('S')) {
     return 'Restrictive';
   } else {
-    return 0;
+    return 'Restrictive';
   }
 };
 

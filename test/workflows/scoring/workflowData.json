@@ -1,0 +1,79 @@
+  {
+    "screenName": "AHR-2016-03-16--Pr",
+    "conditions": ["Permissive", "Restrictive"],
+    "strains": ["M", "N2"],
+    "mutantStrain": "M",
+    "wildTypeStrain": "N2",
+    "library": "ahringer",
+    "libraryModel": "RnaiRnailibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "assayPostType": "ahringer_assay",
+    "platePostType": "ahringer_plate",
+    "scorePostType": "rnai_ep",
+    "isJunk": 0,
+    "assayDate": "2016-03-16",
+    "imageDates": [{
+        "creationdate": "2016-03-21"
+      },
+      {
+        "creationdate": "2016-03-22"
+      },
+      {
+        "creationdate": "2016-03-23"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "17.5",
+    "restrictiveTemp": "23.5",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [{
+              "or": [{
+                  "name": {
+                    "like": "%RNA%I.1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [{
+                  "creationdate": "2016-03-21"
+                },
+                {
+                  "creationdate": "2016-03-22"
+                },
+                {
+                  "creationdate": "2016-03-23"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "I",
+            "RnaiPlateNo": "1"
+          }
+        }
+      }
+    },
+    "data": {
+      "StampDate": "2016-03-03",
+      "CultureDate": "2016-03-07",
+      "FreezeDate": "2016-03-08",
+      "IPTGInductionDate": "2016-03-16",
+      "restrictiveImageDate": "2016-03-21",
+      "permissiveImageDate": "2016-03-22",
+      "comments": "Suppressors - incubated at 17.5 for 3 days (until L4) and transferred to 23.5"
+    }
+  }
