@@ -1,0 +1,86 @@
+{
+  "name": "TensorflowModel",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "assayId": {
+      "type": "number",
+      "required": true
+    },
+    "isMutant": {
+      "type": "number",
+      "required": true
+    },
+    "score": {
+      "type": "number",
+      "required": false 
+    },
+    "ExpWormCount": {
+      "type": "number",
+      "default": 0
+    },
+    "ExpLarvaCount": {
+      "type": "number",
+      "default": 0
+    },
+    "ExpEggCount": {
+      "type": "number",
+      "default": 0
+    },
+    "C0WormCount": {
+      "type": "number",
+      "default": 0
+    },
+    "C0LarvaCount": {
+      "type": "number",
+      "default": 0
+    },
+    "C0EggCount": {
+      "type": "number",
+      "default": 0
+    },
+    "C1WormCount": {
+      "type": "number",
+      "default": 0
+    },
+    "C1LarvaCount": {
+      "type": "number",
+      "default": 0
+    },
+    "C1EggCount": {
+      "type": "number",
+      "default": 0
+    },
+    "C2WormCount": {
+      "type": "number",
+      "default": 0
+    },
+    "C2LarvaCount": {
+      "type": "number",
+      "default": 0
+    },
+    "C2EggCount": {
+      "type": "number",
+      "default": 0
+    },
+    "C3WormCount": {
+      "type": "number",
+      "default": 0
+    },
+    "C3LarvaCount": {
+      "type": "number",
+      "default": 0
+    },
+    "C3EggCount": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

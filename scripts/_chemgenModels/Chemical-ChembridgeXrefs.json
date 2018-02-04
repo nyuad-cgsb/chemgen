@@ -1,0 +1,57 @@
+{
+  "name": "ChemicalChembridgexrefs",
+  "options": {
+    "idInjection": false,
+    "mysql": {
+      "schema": "chemgen",
+      "table": "Chemical_ChembridgeXrefs"
+    }
+  },
+  "properties": {
+    "chembridgeId": {
+      "type": "Number",
+      "required": true,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "chembridge_id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "cidId": {
+      "type": "Number",
+      "required": true,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "cid_id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "smiles": {
+      "type": "String",
+      "required": true,
+      "length": 535,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "smiles",
+        "dataType": "varchar",
+        "dataLength": 535,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "N"
+      }
+    }
+  }
+}

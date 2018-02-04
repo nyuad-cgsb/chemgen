@@ -22,8 +22,17 @@ const Workflow = app.models.Workflow;
 /// ////////////////////////////////
 var wellDataFile = path.resolve(__dirname, 'data', '2017-12-14--FDA--Secondary_Plate001.json');
 var assayDate = '2017-12-14';
-var screenName = 'FDA-' + assayDate + '--01--Sec';
-var like = '%FDA%';
+// var screenName = 'FDA-' + assayDate + '--01--Sec';
+
+// var screenName = 'FDA-2017-12-14--01--T-18.5-Sec';
+// var like = '%FDA%18.5%';
+
+// var screenName = 'FDA-2017-12-14--01--T-25-Sec';
+// var like = '%FDA%25%';
+
+var screenName = 'FDA-2017-12-14--01--T-20-Sec';
+var like = '%FDA%20%';
+
 var loopUpIndex = 0;
 var commentIndex = 0;
 var imageDates = [{
@@ -48,7 +57,7 @@ var wells = [
   'F01', 'F02', 'F03', 'F04', 'F05', 'F06',
   'F07', 'F08', 'F09', 'F10', 'F11', 'F12',
   'G01', 'G02', 'G03', 'G04', 'G05', 'G06',
-  'G07', 'G08', 'G09', 'G10',  'G12',
+  'G07', 'G08', 'G09', 'G10', 'G12',
   'H01', 'H12',
 ];
 
@@ -74,10 +83,6 @@ var workflowData = {
             name: {
               like: like,
             },
-          }, {
-            name: {
-              like: 'L4440%',
-            },
           }],
         }, {
           or: imageDates,
@@ -99,9 +104,9 @@ var workflowData = {
 
 Workflow.experiment.secondary.create(workflowData, wellDataFile)
   .then(function(workflowData) {
-    return Workflow.experiment.getPlates(workflowData);
+    return doThings(workflowData);
   })
-  .then(function() {
+  .then(function(results) {
     app.winston.info('Finished entire workflow!');
     process.exit(0);
     return;
@@ -111,3 +116,39 @@ Workflow.experiment.secondary.create(workflowData, wellDataFile)
     app.winston.error(error.stack);
     process.exit(1);
   });
+
+// function doThings(workflowData) {
+//   return new Promise(function(resolve, reject) {
+//     Workflow.experiment.getPlates(workflowData)
+//       .then(function(results) {
+//         return app.models.ExperimentManualscores.transform.workflows
+//         .score(workflowData, results);
+//       })
+//       .then(function(results) {
+//         app.winston.info('Finished scoring workflow!');
+//         resolve(results);
+//       })
+//       .catch(function(error) {
+//         app.winston.error(error.stack);
+//         process.exit(1);
+//       });
+//   });
+// };
+function doThings(workflowData) {
+  return new Promise(function(resolve, reject) {
+    var results = jsonfile.readFileSync('FDA_2017-12-20-results.json');
+    // Workflow.experiment.getPlates(workflowData)
+    //   .then(function(results) {
+    //     jsonfile.writeFileSync('FDA_2017-12-20-results.json', results, {spaces: 2});
+    app.models.ExperimentManualscores.transform.workflows
+      .score(workflowData, results)
+      .then(function(results) {
+        app.winston.info('Finished scoring workflow!');
+        resolve(results);
+      })
+      .catch(function(error) {
+        app.winston.error(error.stack);
+        process.exit(1);
+      });
+  });
+};

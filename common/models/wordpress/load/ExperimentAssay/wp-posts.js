@@ -13,10 +13,10 @@ const path = require('path');
 WpPosts.load.assay.workflows.processExperimentPlates = function(workflowData, plateDataList) {
   return new Promise(function(resolve, reject) {
     Promise.map(plateDataList, function(plateData) {
-        return WpPosts.load.assay.processExperimentPlate(workflowData, plateData);
-      }, {
-        concurrency: 1,
-      })
+      return WpPosts.load.assay.processExperimentPlate(workflowData, plateData);
+    }, {
+      concurrency: 1,
+    })
       .then(function(results) {
         resolve(results[0]);
       })
@@ -30,8 +30,8 @@ WpPosts.load.assay.workflows.processExperimentPlates = function(workflowData, pl
 WpPosts.load.assay.processExperimentPlate = function(workflowData, plateData) {
   return new Promise(function(resolve, reject) {
     Promise.map(plateData.experimentAssayList, function(experimentData) {
-        return WpPosts.load.assay.workflows.processPost(workflowData, plateData.plateInfo, experimentData);
-      })
+      return WpPosts.load.assay.workflows.processPost(workflowData, plateData.plateInfo, experimentData);
+    })
       .then(function(results) {
         resolve(results);
       })
@@ -86,7 +86,7 @@ WpPosts.load.assay.workflows.processPost = function(workflowData, plateInfo, exp
         experimentData.assayPostData = results;
         return app.models.ExperimentAssay.load.updateWithPostData(workflowData, experimentData);
       })
-      .then(function(results){
+      .then(function(results) {
         resolve(results);
       })
       .catch(function(error) {
@@ -95,7 +95,6 @@ WpPosts.load.assay.workflows.processPost = function(workflowData, plateInfo, exp
       });
   });
 };
-
 
 WpPosts.load.assay.workflows.updatePost = function(workflowData, plateInfo, experimentData, postObj) {
   var taxTerms = experimentData.libraryData.libraryStock.taxTerms;
@@ -130,7 +129,7 @@ WpPosts.load.assay.workflows.updatePost = function(workflowData, plateInfo, expe
 WpPosts.load.assay.workflows.createPost = function(workflowData, plateInfo, experimentData) {
   var plateId = plateInfo.ExperimentExperimentplate.experimentPlateId;
   var title = [plateId, experimentData.experimentAssayData.assayId,
-    experimentData.experimentAssayData.assayName
+    experimentData.experimentAssayData.assayName,
   ].join('-');
   var titleSlug = slug(title);
 
@@ -157,8 +156,8 @@ WpPosts.load.assay.workflows.createPost = function(workflowData, plateInfo, expe
 
   return new Promise(function(resolve, reject) {
     WpPosts.findOrCreate({
-        where: app.etlWorkflow.helpers.findOrCreateObj(postObj),
-      }, postObjWithDate)
+      where: app.etlWorkflow.helpers.findOrCreateObj(postObj),
+    }, postObjWithDate)
       .then(function(results) {
         resolve(results[0]);
       })
@@ -202,6 +201,7 @@ WpPosts.load.assay.genPostContent = function(workflowData, plateData, experiment
   contentObj.taxTerm = libraryData.libraryStock.taxTerm;
   contentObj.taxTermSlug = slug(libraryData.libraryStock.taxTerm);
   contentObj.wormStrain = workflowData.data.wormStrain;
+  contentObj.screenStage = workflowData.screenStage;
 
   contentObj = WpPosts.load.assay.genEnviraContent(contentObj);
   contentObj = WpPosts.load.assay.genEnviraControl(workflowData, contentObj);
@@ -235,6 +235,11 @@ WpPosts.load.assay.genEnviraControl = function(workflowData, contentObj) {
 };
 
 WpPosts.load.assay.genEnviraContent = function(contentObj) {
+  var emCols = 2;
+  if (contentObj.screenStage === 'Secondary') {
+    emCols = 8;
+  }
+
   contentObj.enviraCCol = 2;
   contentObj.enviraEMTag = [
     'SN-', contentObj.screenNameSlug,
@@ -242,28 +247,28 @@ WpPosts.load.assay.genEnviraContent = function(contentObj) {
     'TT-', contentObj.taxTermSlug,
     '_W-', contentObj.well,
   ].join('');
-  contentObj.enviraEMCol = 4;
+  contentObj.enviraEMCol = emCols;
   contentObj.enviraENTag = [
     'SN-', contentObj.screenNameSlug,
     '_C-Permissive_WS-N2_',
     'TT-', contentObj.taxTermSlug,
     '_W-', contentObj.well,
   ].join('');
-  contentObj.enviraENCol = 4;
+  contentObj.enviraENCol = emCols;
   contentObj.enviraSMTag = [
     'SN-', contentObj.screenNameSlug,
     '_C-Restrictive_WS-M_',
     'TT-', contentObj.taxTermSlug,
     '_W-', contentObj.well,
   ].join('');
-  contentObj.enviraSMCol = 4;
+  contentObj.enviraSMCol = emCols;
   contentObj.enviraSNTag = [
     'SN-', contentObj.screenNameSlug,
     '_C-Restrictive_WS-N2_',
     'TT-', contentObj.taxTermSlug,
     '_W-', contentObj.well,
   ].join('');
-  contentObj.enviraSNCol = 4;
+  contentObj.enviraSNCol = emCols;
 
   if (contentObj.taxTerm.match('empty')) {
     contentObj.hasTaxTerm = false;

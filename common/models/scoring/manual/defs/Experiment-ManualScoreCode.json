@@ -3,14 +3,14 @@
   "options": {
     "idInjection": false,
     "mysql": {
-      "schema": "chemgen",
+      "schema": "chemgen_exp_fda",
       "table": "Experiment_ManualScoreCode"
     }
   },
   "properties": {
     "manualscorecodeId": {
       "type": "Number",
-      "required": false,
+      "required": true,
       "length": null,
       "precision": 10,
       "scale": 0,
@@ -26,7 +26,7 @@
     },
     "description": {
       "type": "String",
-      "required": false,
+      "required": true,
       "length": 65535,
       "precision": null,
       "scale": null,
@@ -41,7 +41,7 @@
     },
     "shortDescription": {
       "type": "String",
-      "required": false,
+      "required": true,
       "length": 535,
       "precision": null,
       "scale": null,
@@ -56,7 +56,7 @@
     },
     "formName": {
       "type": "String",
-      "required": false,
+      "required": true,
       "length": 200,
       "precision": null,
       "scale": null,
@@ -71,7 +71,7 @@
     },
     "formCode": {
       "type": "String",
-      "required": false,
+      "required": true,
       "length": 20,
       "precision": null,
       "scale": null,
@@ -79,6 +79,36 @@
         "columnName": "form_code",
         "dataType": "varchar",
         "dataLength": 20,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "N"
+      }
+    },
+    "manualValue": {
+      "type": "Number",
+      "required": true,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "manual_value",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "manualGroup": {
+      "type": "String",
+      "required": true,
+      "length": 25,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "manual_group",
+        "dataType": "varchar",
+        "dataLength": 25,
         "dataPrecision": null,
         "dataScale": null,
         "nullable": "N"

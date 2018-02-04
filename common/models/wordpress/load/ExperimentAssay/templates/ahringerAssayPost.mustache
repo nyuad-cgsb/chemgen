@@ -61,21 +61,60 @@
         <div>
           {{#hasTaxTerm}}
             <h2>{{{taxTerm}}}</h2>
+          {{/hasTaxTerm}}
+          <h3> Permissive </h3>
+          {{#enviraCPMTag}}
+            <div id="enviraCPM">
+              <h3>Control Permissive Mutant</h3>
+              <p>
+                [envira-gallery-dynamic id="tags-{{enviraCPMTag}}" columns="4" limit="4" sort="random"] </p>
+            </div>
+          {{/enviraCPMTag}}
+          {{#hasTaxTerm}}
             <div id="enviraEM">
               <h3>Permissive Mutant</h3>
               <p>
                 [envira-gallery-dynamic id="tags-{{enviraEMTag}}" columns="{{enviraEMCol}}"] </p>
             </div>
+          {{/hasTaxTerm}}
+          {{#enviraCPNTag}}
+            <div id="enviraCPN">
+              <h3>Control Permissive N2</h3>
+              <p>
+                [envira-gallery-dynamic id="tags-{{enviraCPNTag}}" columns="4" limit="4" sort="random"] </p>
+            </div>
+          {{/enviraCPNTag}}
+          {{#hasTaxTerm}}
             <div id="enviraEN">
               <h3>Permissive N2</h3>
               <p>
                 [envira-gallery-dynamic id="tags-{{enviraENTag}}" columns="{{enviraEMCol}}"]</p>
             </div>
+          {{/hasTaxTerm}}
+          <br><br>
+          <h3> Restrictive </h3>
+          {{#enviraCRMTag}}
+            <div id="enviraCRM">
+              <h3>Control Restrictive Mutant</h3>
+              <p>
+                [envira-gallery-dynamic id="tags-{{enviraCRMTag}}" columns="4" limit="4" sort="random"] </p>
+            </div>
+          {{/enviraCRMTag}}
+          {{#hasTaxTerm}}
             <div id="enviraSM">
               <h3>Restrictive Mutant</h3>
               <p>
                 [envira-gallery-dynamic id="tags-{{enviraSMTag}}" columns="{{enviraSMCol}}"] </p>
             </div>
+          {{/hasTaxTerm}}
+          {{#enviraCRNTag}}
+            <div id="enviraCRN">
+              <h3>Control Restrictive N2</h3>
+              <p>
+                [envira-gallery-dynamic id="tags-{{enviraCRNTag}}" columns="4" limit="4" sort="random"] </p>
+            </div>
+          {{/enviraCRNTag}}
+          {{#hasTaxTerm}}
             <div id="enviraSN">
               <h3>Restrictive N2</h3>
               <p>
@@ -87,41 +126,6 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-md-12">
-      {{#enviraCRMTag}}
-        <div id="enviraCRM">
-          <h3>Control Restrictive Mutant</h3>
-          <p>
-            [envira-gallery-dynamic id="tags-{{enviraCRMTag}}" columns="4" limit="4" sort="random"] </p>
-        </div>
-      {{/enviraCRMTag}}
-      {{#enviraCRNTag}}
-        <div id="enviraCRN">
-          <h3>Control Restrictive N2</h3>
-          <p>
-            [envira-gallery-dynamic id="tags-{{enviraCRNTag}}" columns="4" limit="4" sort="random"] </p>
-        </div>
-      {{/enviraCRNTag}}
-
-      {{#enviraCPMTag}}
-        <div id="enviraCPM">
-          <h3>Control Permissive Mutant</h3>
-          <p>
-            [envira-gallery-dynamic id="tags-{{enviraCPMTag}}" columns="4" limit="4" sort="random"] </p>
-        </div>
-      {{/enviraCPMTag}}
-
-      {{#enviraCPNTag}}
-        <div id="enviraCPN">
-          <h3>Control Permissive N2</h3>
-          <p>
-            [envira-gallery-dynamic id="tags-{{enviraCPNTag}}" columns="4" limit="4" sort="random"] </p>
-        </div>
-      {{/enviraCPNTag}}
-
-    </div>
-  </div>
 
   <div class="row">
     <div class="col-md-12">

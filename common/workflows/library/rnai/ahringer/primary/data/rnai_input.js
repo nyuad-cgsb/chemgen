@@ -21,7 +21,7 @@ var creationDates = [];
 var assayDate = '';
 var screenNames = {};
 
-var file = path.resolve(__dirname, 'RNAi_mel-28.tsv');
+var file = path.resolve(__dirname, '2018-01-30-RNAi_mip-1_mip-2.tsv');
 
 var parseCreationDates = function(dateStr) {
   var dates = dateStr.split(',');
@@ -35,6 +35,7 @@ var parseCreationDates = function(dateStr) {
 };
 
 var startStream = function(file) {
+  console.log('starting stream!');
   var inputStream = fs.createReadStream(file, 'utf8');
 
   Papa.parse(inputStream, {
@@ -45,6 +46,7 @@ var startStream = function(file) {
     worker: true,
     step: function(results) {
       inputStream.pause();
+      console.log(JSON.stringify(results));
       decideData(results.data[0])
     .then(function(results) {
       return inputStream.resume();
@@ -59,7 +61,7 @@ var startStream = function(file) {
       app.winston.info('all done!');
       app.winston.info('Number of screens ' + Object.keys(screenNames).length);
       app.winston.info(JSON.stringify(screenNames, null, 2));
-      jsonfile.writeFileSync(path.resolve(__dirname, 'primary_assays-2016-03--2016-09.json'), workflowDataList, {
+      jsonfile.writeFileSync(path.resolve(__dirname, 'primary_assays-2017-12.json'), workflowDataList, {
         spaces: 2,
       });
     },

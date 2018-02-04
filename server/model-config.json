@@ -6,6 +6,7 @@
       "../common/models",
       "../common/models/workflow/defs",
       "../common/models/scoring/manual/defs",
+      "../common/models/scoring/tensorflow/defs",
       "../common/models/experiment/plate/defs",
       "../common/models/experiment/assay/defs",
       "../common/models/experiment/screen/defs",
@@ -74,6 +75,9 @@
   "ExperimentManualscores": {
     "dataSource": "chemgenDS"
   },
+  "ExperimentTensorflowcounts": {
+    "dataSource": "chemgenDS"
+  },
   "WpTermTaxonomy": {
     "dataSource": "wordpressDS"
   },
@@ -88,5 +92,9 @@
   },
   "WpPostmeta": {
     "dataSource": "wordpressDS"
+  },
+  "TensorflowModel": {
+    "dataSource": "db",
+    "public": false
   }
 }

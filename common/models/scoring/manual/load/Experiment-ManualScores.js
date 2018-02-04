@@ -14,7 +14,10 @@ ExperimentManualscores.load.workflows.parseScores = function(scores) {
       reject(new Error('ScoreData does not have correct structure'));
     }
 
-    ExperimentManualscores.load.inputScores(scores)
+    ExperimentManualscores.load.getScoreCodes()
+    .then(function(results){
+      return ExperimentManualscores.load.inputScores(results, scores)
+    })
       .then(function(results) {
         return ExperimentManualscores.load.updateScorePostTax(scores);
       })
@@ -48,14 +51,24 @@ ExperimentManualscores.load.validateScores = function(scores) {
   return valid;
 };
 
-ExperimentManualscores.load.inputScores = function(scoresObj) {
+ExperimentManualscores.load.inputScores = function(scoreCodes, scoresObj) {
   return new Promise(function(resolve, reject) {
     Promise.map(scoresObj.scores, function(scores) {
-        return ExperimentManualscores.create({
+      var createObj = {
           assayId: scoresObj.assayId,
           scorerId: scoresObj.userId,
           scoreCodeId: scores.value,
-        });
+          parentstockId: scoresObj.parentstockId,
+          screenId: scoresObj.screenId,
+          screenName: scoresObj.screenName,
+          term: scoresObj.term,
+          manualscoreGroup: scoreCodes[scores.value]['manualGroup'],
+          manualscoreCode: scoreCodes[scores.value]['formCode'],
+          manualscoreValue: scoreCodes[scores.value]['manualValue'],
+        };
+        app.winston.info('ScoreCode: ' + JSON.stringify(scoreCodes[scores.value]));
+        app.winston.info('CreateObj : ' + JSON.stringify(createObj));
+        return ExperimentManualscores.create(createObj);
       })
       .then(function(results) {
         app.winston.info('There are scores! ' + JSON.stringify(results));

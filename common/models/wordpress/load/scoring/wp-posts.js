@@ -94,10 +94,10 @@ WpPosts.load.score.workflows.createPost = function(workflowData, condition, scor
     scoreData[condition][workflowData.mutantStrain][index].assayId,
   ].join('');
   var titleSlug = slug(title);
-  var postType = 'rnai_ep';
-  if (workflowData.hasOwnProperty('scorePostType')) {
-    postType = workflowData.scorePostType;
-  }
+  var postType = workflowData.library + '_ep';
+  // if (workflowData.hasOwnProperty('scorePostType')) {
+  //   postType = workflowData.scorePostType;
+  // }
 
   var postObj = {
     postAuthor: 1,
@@ -177,15 +177,19 @@ WpPosts.load.score.genPostContent = function(workflowData, condition, scoreData,
   contentObj.controlData = controlData;
   contentObj.screenName = screenName;
   contentObj.screenNameSlug = slug(screenName);
+  contentObj.parentstockId = scoreData[condition][mutantStrain][index].parentstockId;
   // These are the ids of the Mutant plate/assay
   contentObj.assayId = assayId;
   contentObj.plateId = plateId;
 
   contentObj.mutantAssayPostId = scoreData[condition][workflowData.mutantStrain][index].assayPostId;
   contentObj.wildTypeAssayPostId = scoreData[condition][workflowData.wildTypeStrain][index].assayPostId;
+  contentObj.library = library.charAt(0).toUpperCase() + library.slice(1);
   contentObj.libraryModel = workflowData.libraryModel;
   contentObj.libraryStockModel = workflowData.libraryStockModel;
   contentObj.screenId = workflowData.screenId || 0;
+  contentObj.screenName = workflowData.screenName;
+  contentObj.term = scoreData[condition][workflowData.mutantStrain][index].taxTerm;
 
   contentObj = WpPosts.load.score.genEnviraContent(workflowData, contentObj, index);
   contentObj = WpPosts.load.score

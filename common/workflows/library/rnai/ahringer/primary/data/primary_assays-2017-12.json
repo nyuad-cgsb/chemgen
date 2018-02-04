@@ -1,0 +1,842 @@
+[
+  {
+    "screenName": "AHR2-2017-12-06--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiRnailibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2017-12-06",
+    "imageDates": [
+      {
+        "creationdate": "2017-12-11"
+      },
+      {
+        "creationdate": "2017-12-10"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "20",
+    "restrictiveTemp": "25",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%I.1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2017-12-11"
+                },
+                {
+                  "creationdate": "2017-12-10"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "I",
+            "RnaiPlateNo": "1"
+          }
+        }
+      }
+    },
+    "data": {
+      "CultureDate": "2017-12-05",
+      "IPTGInductionDate": "2017-12-06",
+      "restrictiveImageDate": "2017-12-10",
+      "permissiveImageDate": "2017-12-11",
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR2-2017-12-06--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiRnailibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2017-12-06",
+    "imageDates": [
+      {
+        "creationdate": "2017-12-11"
+      },
+      {
+        "creationdate": "2017-12-10"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": 17.5,
+    "restrictiveTemp": 23.3,
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%I.2%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2017-12-11"
+                },
+                {
+                  "creationdate": "2017-12-10"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "I",
+            "RnaiPlateNo": "2"
+          }
+        }
+      }
+    },
+    "data": {
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR2-2017-12-06--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiRnailibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2017-12-06",
+    "imageDates": [
+      {
+        "creationdate": "2017-12-11"
+      },
+      {
+        "creationdate": "2017-12-10"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": 17.5,
+    "restrictiveTemp": 23.3,
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%I.3.A2%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2017-12-11"
+                },
+                {
+                  "creationdate": "2017-12-10"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "I",
+            "RnaiPlateNo": "3.A2"
+          }
+        }
+      }
+    },
+    "data": {
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR2-2017-12-06--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiRnailibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2017-12-06",
+    "imageDates": [
+      {
+        "creationdate": "2017-12-11"
+      },
+      {
+        "creationdate": "2017-12-10"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": 17.5,
+    "restrictiveTemp": 23.3,
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%I.3.B1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2017-12-11"
+                },
+                {
+                  "creationdate": "2017-12-10"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "I",
+            "RnaiPlateNo": "3.B1"
+          }
+        }
+      }
+    },
+    "data": {
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR2-2017-12-06--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiRnailibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2017-12-06",
+    "imageDates": [
+      {
+        "creationdate": "2017-12-11"
+      },
+      {
+        "creationdate": "2017-12-10"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": 17.5,
+    "restrictiveTemp": 23.3,
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%I.3.B2%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2017-12-11"
+                },
+                {
+                  "creationdate": "2017-12-10"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "I",
+            "RnaiPlateNo": "3.B2"
+          }
+        }
+      }
+    },
+    "data": {
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR2-2017-12-13--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiRnailibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2017-12-13",
+    "imageDates": [
+      {
+        "creationdate": "2017-12-18"
+      },
+      {
+        "creationdate": "2017-12-17"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": "20",
+    "restrictiveTemp": "25.5",
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%I.3.A1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2017-12-18"
+                },
+                {
+                  "creationdate": "2017-12-17"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "I",
+            "RnaiPlateNo": "3.A1"
+          }
+        }
+      }
+    },
+    "data": {
+      "CultureDate": "2017-12-12",
+      "IPTGInductionDate": "2017-12-13",
+      "restrictiveImageDate": "2017-12-17",
+      "permissiveImageDate": "2017-12-18",
+      "comments": "Robot stopped in the middle of screen (plate 6A1) - cytomat failure, Imaging run for suppressor was interupted by cytomat problem"
+    }
+  },
+  {
+    "screenName": "AHR2-2017-12-13--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiRnailibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2017-12-13",
+    "imageDates": [
+      {
+        "creationdate": "2017-12-18"
+      },
+      {
+        "creationdate": "2017-12-17"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": 17.5,
+    "restrictiveTemp": 23.3,
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%I.4%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2017-12-18"
+                },
+                {
+                  "creationdate": "2017-12-17"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "I",
+            "RnaiPlateNo": "4"
+          }
+        }
+      }
+    },
+    "data": {
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR2-2017-12-13--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiRnailibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2017-12-13",
+    "imageDates": [
+      {
+        "creationdate": "2017-12-18"
+      },
+      {
+        "creationdate": "2017-12-17"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": 17.5,
+    "restrictiveTemp": 23.3,
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%I.5%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2017-12-18"
+                },
+                {
+                  "creationdate": "2017-12-17"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "I",
+            "RnaiPlateNo": "5"
+          }
+        }
+      }
+    },
+    "data": {
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR2-2017-12-13--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiRnailibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2017-12-13",
+    "imageDates": [
+      {
+        "creationdate": "2017-12-18"
+      },
+      {
+        "creationdate": "2017-12-17"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": 17.5,
+    "restrictiveTemp": 23.3,
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%I.6.A2%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2017-12-18"
+                },
+                {
+                  "creationdate": "2017-12-17"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "I",
+            "RnaiPlateNo": "6.A2"
+          }
+        }
+      }
+    },
+    "data": {
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR2-2017-12-13--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiRnailibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2017-12-13",
+    "imageDates": [
+      {
+        "creationdate": "2017-12-18"
+      },
+      {
+        "creationdate": "2017-12-17"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": 17.5,
+    "restrictiveTemp": 23.3,
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%I.6.B1%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2017-12-18"
+                },
+                {
+                  "creationdate": "2017-12-17"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "I",
+            "RnaiPlateNo": "6.B1"
+          }
+        }
+      }
+    },
+    "data": {
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR2-2017-12-13--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiRnailibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2017-12-13",
+    "imageDates": [
+      {
+        "creationdate": "2017-12-18"
+      },
+      {
+        "creationdate": "2017-12-17"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": 17.5,
+    "restrictiveTemp": 23.3,
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%I.6.B2%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2017-12-18"
+                },
+                {
+                  "creationdate": "2017-12-17"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "I",
+            "RnaiPlateNo": "6.B2"
+          }
+        }
+      }
+    },
+    "data": {
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR2-2017-12-13--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiRnailibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2017-12-13",
+    "imageDates": [
+      {
+        "creationdate": "2017-12-18"
+      },
+      {
+        "creationdate": "2017-12-17"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": 17.5,
+    "restrictiveTemp": 23.3,
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%I.7%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2017-12-18"
+                },
+                {
+                  "creationdate": "2017-12-17"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "I",
+            "RnaiPlateNo": "7"
+          }
+        }
+      }
+    },
+    "data": {
+      "comments": ""
+    }
+  },
+  {
+    "screenName": "AHR2-2017-12-13--Pr",
+    "library": "ahringer",
+    "libraryModel": "RnaiRnailibrary",
+    "libraryStockModel": "RnaiLibrarystock",
+    "isJunk": 0,
+    "assayDate": "2017-12-13",
+    "imageDates": [
+      {
+        "creationdate": "2017-12-18"
+      },
+      {
+        "creationdate": "2017-12-17"
+      }
+    ],
+    "screenStage": "Primary",
+    "permissiveTemp": 17.5,
+    "restrictiveTemp": 23.3,
+    "instrumentId": 1,
+    "screenId": 1,
+    "search": {
+      "instrument": {
+        "arrayscan": {
+          "and": [
+            {
+              "or": [
+                {
+                  "name": {
+                    "like": "%RNA%I.8%"
+                  }
+                },
+                {
+                  "name": {
+                    "like": "L4440%"
+                  }
+                }
+              ]
+            },
+            {
+              "or": [
+                {
+                  "creationdate": "2017-12-18"
+                },
+                {
+                  "creationdate": "2017-12-17"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "library": {
+        "rnai": {
+          "ahringer": {
+            "chrom": "I",
+            "RnaiPlateNo": "8"
+          }
+        }
+      }
+    },
+    "data": {
+      "comments": ""
+    }
+  }
+]

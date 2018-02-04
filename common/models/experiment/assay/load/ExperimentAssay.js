@@ -147,7 +147,7 @@ ExperimentAssay.load.updateWithPostData = function(workflowData, experimentData)
     ExperimentAssay.updateOrCreate(experimentAssayResult)
     .then(function(results){
       experimentData.experimentAssayData = results;
-      app.winston.info(JSON.stringify(experimentData, null, 2));
+      // app.winston.info(JSON.stringify(experimentData, null, 2));
       resolve(experimentData);
     })
     .catch(function(error){

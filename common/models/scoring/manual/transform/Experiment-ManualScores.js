@@ -15,6 +15,7 @@ Group data into the different conditions and strains
 ExperimentManualscores.transform.workflows
   .score = function(workflowData, screenData) {
     return new Promise(function(resolve, reject) {
+      var tensorflowData = [];
       var parentStockIds = ExperimentManualscores.transform
         .getParentStockIds(workflowData, screenData);
 
@@ -28,11 +29,18 @@ ExperimentManualscores.transform.workflows
         return ExperimentManualscores.transform.workflows
             .groupByStrain(workflowData, groupScreenData, groupScreenData)
             .then(function(scoreData) {
-              return app.models.WpPosts.load.score.workflows
-                .processConditions(workflowData, scoreData, controlData);
+              // return app.models.WpPosts.load.score.workflows
+              //   .processConditions(workflowData, scoreData, controlData);
+              return ExperimentManualscores.transform.workflows.postProcess(workflowData, scoreData, controlData);
             });
       }, {concurrency: 1})
         .then(function(results) {
+          return app.models.TensorflowModel.find();
+        })
+        .then(function(results){
+          app.winston.info('Results!');
+          // app.winston.info(JSON.stringify(results, null, 2));
+          jsonfile.writeFileSync('analysis/FDA-scores-with-counts.json', results, {spaces: 2});
           resolve(results);
         })
         .catch(function(error) {
@@ -41,6 +49,25 @@ ExperimentManualscores.transform.workflows
         });
     });
   };
+
+ExperimentManualscores.transform.workflows
+.postProcess = function(workflowData, scoreData, controlData) {
+  return new Promise(function(resolve, reject) {
+    app.models.WpPosts.load.score.workflows
+    .processConditions(workflowData, scoreData, controlData)
+    .then(function(results) {
+      return app.models.ExperimentTensorflowcounts.extract.workflows
+      .generateCSV(workflowData, scoreData, controlData);
+    })
+    .then(function(results) {
+      resolve(results);
+    })
+    .catch(function(error) {
+      app.winston.error(error.stack);
+      reject(new Error(error));
+    });
+  });
+};
 
 // TODO - not every experiment will have a strain - some will have cells or things
 // Instead of wormStrain it should be organismType or something
@@ -67,8 +94,6 @@ ExperimentManualscores.transform.workflows
           scoreData[condition][strain] = [];
         }
 
-        var taxTerms =  gScreen.libraryData.libraryStock.taxTerms;
-
         var screenScoreData = {
           assayPostId: gScreen.assayPostData.id,
           assayId: gScreen.experimentAssayData.assayId,
@@ -76,6 +101,7 @@ ExperimentManualscores.transform.workflows
           reagentId: gScreen.experimentAssayData.reagentId,
           taxTerm: gScreen.libraryData.libraryStock.taxTerm,
           taxTerms: gScreen.libraryData.libraryStock.taxTerms,
+          parentstockId: gScreen.libraryData.libraryStock.parentstockId,
           barcode: barcode,
           well: gScreen.libraryData.libraryStock.well,
           plateCreationDate: new Date(gScreen.experimentAssayData.plateCreationDate),
@@ -146,9 +172,26 @@ ExperimentManualscores.transform
 // This is just a placeholder for now
 // TODO This should really be combined the data for the envira gallery
 // Just get the envira control tags
+// Also return a list of ids -
+// For secondary this is just get ids from the same plate where parentstockId == =null
 ExperimentManualscores.transform
   .buildControlTags.Secondary = function(workflowData, screenData) {
-    return {};
+    var parentstockIds = [];
+    var controlIds = {};
+    screenData.map(function(screens) {
+      screens.map(function(screen) {
+        if (screen.libraryData.libraryStock.parentstockId === null) {
+          if (! controlIds.hasOwnProperty(screen.experimentAssayData.plateId)) {
+            controlIds[screen.experimentAssayData.plateId] = [];
+          }
+          controlIds[screen.experimentAssayData.plateId]
+          .push(screen.experimentAssayData.assayId);
+        }
+      });
+    });
+    // app.winston.info(JSON.stringify(controlIds));
+    return controlIds;
+    // return {};
   };
 
 ExperimentManualscores.transform

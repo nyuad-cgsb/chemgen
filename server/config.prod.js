@@ -3,7 +3,7 @@
 module.exports = {
   "restApiRoot": "/api",
   "host": "0.0.0.0",
-  "port": 3005,
+  "port": process.env.SERVER_PORT,
   "remoting": {
     "context": false,
     "rest": {

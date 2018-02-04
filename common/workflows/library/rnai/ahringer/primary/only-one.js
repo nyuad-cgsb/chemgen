@@ -36,6 +36,7 @@ var testResultsData = require('./data/test-rnai-results.json');
     // return app.models.ExperimentManualscores.transform.workflows
     // .score(workflowData[0], results[0]);
   // })
+  
 app.models.ExperimentManualscores.transform.workflows
   .score(testWorkflowData, testResultsData)
   .then(function(results) {

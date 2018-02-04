@@ -1,3 +1,4 @@
 {
-  "extends": "loopback"
+  "extends": "loopback",
+  "indent": 2
 }

@@ -49,6 +49,8 @@
     <input type="hidden" id="plateId" name="plateId" value="{{{plateId}}}">
     <input type="hidden" id="screenId" name="screenId" value="{{{screenId}}}">
     <input type="hidden" id="screenName" name="screenName" value="{{{screenName}}}">
+    <input type="hidden" id="parentstockId" name="parentstockId" value="{{{parentstockId}}}">
+    <input type="hidden" id="term" name="term" value="{{{term}}}">
     <input type="hidden" id="libraryModel" name="libraryModel" value="{{{libraryModel}}}">
     <input type="hidden" id="libraryStockModel" name="libraryStockModel" value="{{{libraryStockModel}}}">
     <input type="hidden" id="mutantAssayPostId" name="mutantAssayPostId" value="{{{mutantAssayPostId}}}">
@@ -73,37 +75,38 @@
           <div id="n_emb_phenotype">
             <h5><strong>EMB</strong></h5>
             <div class="row">
-              <input type="radio" id="C_WEAK_EMB" name="C_EMB_LETH" value="21"> Weak
+              <input type="radio" id="WT_WEAK_EMB" name="WT_EMB_LETH" value="21"> Weak
             </div>
             <div class="row">
-              <input type="radio" id="C_MED_EMB" name="C_EMB_LETH" value="23"> Medium
+              <input type="radio" id="WT_MED_EMB" name="WT_EMB_LETH" value="23"> Medium
             </div>
             <div class="row">
-              <input type="radio" id="C_STRONG_EMB" name="C_EMB_LETH" value="24"> Strong
+              <input type="radio" id="WT_STRONG_EMB" name="WT_EMB_LETH" value="24"> Strong
             </div>
           </div>
           <!-- End N2 Emb Phenotype -->
           <!-- Begin N2 Ste Phenotype -->
           <div id="n_ste_phenotype">
             <h5><strong>STE</strong></h5>
+            <!-- Updated this - WT_STE_LETH -> WT_ENH_STE -->
             <div class="row">
-              <input type="radio" id="C_WEAK_STE" name="C_STE_LETH" value="51"> Weak
+              <input type="radio" id="WT_WEAK_STE" name="WT_ENH_STE" value="51"> Weak
             </div>
             <div class="row">
-              <input type="radio" id="C_MED_STE" name="C_STE_LETH" value="52"> Medium
+              <input type="radio" id="WT_MED_STE" name="WT_ENH_STE" value="52"> Medium
             </div>
             <div class="row">
-              <input type="radio" id="C_STRONG_STE" name="C_STE_LETH" value="53"> Strong
+              <input type="radio" id="WT_STRONG_STE" name="WT_ENH_STE" value="53"> Strong
             </div>
           </div>
           <!-- End N2 Ste Phenotype -->
           <!-- Begin N2 PE LVA Phenotype -->
           <div id="n_pe_lva_phenotype">
             <div class="row">
-              <input type="checkbox" id="C_LVA" name="C_SEC_PHENO" value="26"> LVA
+              <input type="checkbox" id="WT_LVA" name="WT_SEC_PHENO" value="26"> LVA
             </div>
             <div class="row">
-              <input type="checkbox" id="C_PE" name="C_SEC_PHENO" value="27"> PE
+              <input type="checkbox" id="WT_PE" name="WT_SEC_PHENO" value="27"> PE
             </div>
           </div>
           <!-- End N2 PE LVA Phenotype -->
@@ -113,19 +116,19 @@
         <div id="n_probs" class="col-md-6 col-sm-6">
           <h5><strong>Problems</strong></h5>
           <div class="row">
-            <input class="control-label" name="C_PROB" id="C_NW" type="checkbox" value="-12"> NW
+            <input class="control-label" name="WT_PROB" id="WT_NW" type="checkbox" value="-12"> NW
           </div>
           <div class="row">
-            <input class="control-label" name="C_PROB" id="C_NB" type="checkbox" value="-11"> NB
+            <input class="control-label" name="WT_PROB" id="WT_NB" type="checkbox" value="-11"> NB
           </div>
           <div class="row">
-            <input class="control-label" name="C_PROB" id="C_UF" type="checkbox" value="-10"> UF
+            <input class="control-label" name="WT_PROB" id="WT_UF" type="checkbox" value="-10"> UF
           </div>
           <div class="row">
-            <input class="control-label" name="C_PROB" id="C_CONT" type="checkbox" value="-13"> Cont
+            <input class="control-label" name="WT_PROB" id="WT_CONT" type="checkbox" value="-13"> Cont
           </div>
           <div class="row">
-            <input class="control-label" name="C_PROB" id="C_PROB" type="checkbox" value="-14"> Prob
+            <input class="control-label" name="WT_PROB" id="WT_PROB" type="checkbox" value="-14"> Prob
           </div>
         </div>
         <!-- End N2 Problems -->
@@ -164,14 +167,15 @@
           <!-- Begin M Ste Phenotype -->
           <div id="m_ste_phenotype">
             <h5><strong>STE</strong></h5>
+            <!-- Updated this - M_STE_LETH -> M_ENH_STE -->
             <div class="row">
-              <input type="radio" id="M_WEAK_STE" name="M_STE_LETH" value="16"> Weak
+              <input type="radio" id="M_WEAK_STE" name="M_ENH_STE" value="16"> Weak
             </div>
             <div class="row">
-              <input type="radio" id="M_MED_STE" name="M_STE_LETH" value="17"> Medium
+              <input type="radio" id="M_MED_STE" name="M_ENH_STE" value="17"> Medium
             </div>
             <div class="row">
-              <input type="radio" id="M_STRONG_STE" name="M_STE_LETH" value="18"> Strong
+              <input type="radio" id="M_STRONG_STE" name="M_ENH_STE" value="18"> Strong
             </div>
             <div class="row">
               <input type="checkbox" id="M_SUP_STE_ENH" name="M_SUP_ENH" value="19"> Sup

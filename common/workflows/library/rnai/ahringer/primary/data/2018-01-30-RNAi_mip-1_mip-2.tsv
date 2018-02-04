@@ -1,0 +1,14 @@
+Library	Screen type	Worm Strain	Worm Stage	Chromosome no.	RNAi plate no.	Controls	RNAi Stamp date	Culture date	Freeze date	IPTG induction date	Assay date		Enhancer temp	Enhancer Imaging and OD date	Suppressor temp	Suppressor Imaging and OD date	CreationDate	Comments
+RNAi Ahringer library	Enhancer and Suppressor	N2, mip-1;mip-2	L1	I	1	L4440		5/12/2017		6/12/2017	6/12/2017		20	11/12/2017	25	10/12/2017	2017-12-11,2017-12-10	
+					2													
+					3.A2													
+					3.B1													
+					3.B2													
+RNAi Ahringer library	Enhancer and Suppressor	N2, mip-1;mip-2	L1	I	3.A1	L4440		12/12/2017		13/12/2017	13/12/2017		20	18/12/2017	25.5	17/12/2017	2017-12-18,2017-12-17	Robot stopped in the middle of screen (plate 6A1) - cytomat failure, Imaging run for suppressor was interupted by cytomat problem
+					4													
+					5													
+					6.A2													
+					6.B1													
+					6.B2													
+					7													
+					8													

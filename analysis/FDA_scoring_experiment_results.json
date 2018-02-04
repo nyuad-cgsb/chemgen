@@ -1,0 +1,1752 @@
+{
+  "NA": {
+    "M": [
+      {
+        "assayPostId": 10241,
+        "assayId": 5205,
+        "plateId": 62,
+        "reagentId": 5123,
+        "taxTerm": "1505786",
+        "taxTerms": [
+          {
+            "taxonomy": "image_date",
+            "taxTerm": "2017-12-19T14:27:17.000Z"
+          },
+          {
+            "taxonomy": "condition",
+            "taxTerm": "NA"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_B-FDA_R_mel_20C_1"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-62_B-FDA_R_mel_20C_1"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_B-FDA_R_mel_20C_1_C-NA_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-M_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_WS-M_TT-1505786_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-M_TT-1505786_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-62_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-62_C-NA_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "screen_name",
+            "taxTerm": "FDA-2017-12-14--01--T-20-Sec"
+          },
+          {
+            "taxonomy": "experiment_screen_stage",
+            "taxTerm": "Secondary"
+          },
+          {
+            "taxonomy": "worm_strain",
+            "taxTerm": "M"
+          },
+          {
+            "taxonomy": "fda_molecular_name",
+            "taxTerm": "TRICLABENDAZOLE"
+          },
+          {
+            "taxonomy": "fda_formula",
+            "taxTerm": "C14H9Cl3N2OS"
+          },
+          {
+            "taxonomy": "fda_cas_num",
+            "taxTerm": "68786-66-3"
+          },
+          {
+            "taxonomy": "fda_bioactivity",
+            "taxTerm": "anthelmintic"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "62-5205-FDA_R_mel_20C_1_A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-62"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-62_AI-5205"
+          }
+        ],
+        "parentstockId": 1505786,
+        "barcode": "FDA_R_mel_20C_1",
+        "well": "A03",
+        "plateCreationDate": "2017-12-19T14:27:17.000Z"
+      },
+      {
+        "assayPostId": 9730,
+        "assayId": 5120,
+        "plateId": 61,
+        "reagentId": 5039,
+        "taxTerm": "1505786",
+        "taxTerms": [
+          {
+            "taxonomy": "image_date",
+            "taxTerm": "2017-12-19T14:31:04.000Z"
+          },
+          {
+            "taxonomy": "condition",
+            "taxTerm": "NA"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_B-FDA_R_mel_20C_2"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-61_B-FDA_R_mel_20C_2"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_B-FDA_R_mel_20C_2_C-NA_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-M_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_WS-M_TT-1505786_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-M_TT-1505786_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-61_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-61_C-NA_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "screen_name",
+            "taxTerm": "FDA-2017-12-14--01--T-20-Sec"
+          },
+          {
+            "taxonomy": "experiment_screen_stage",
+            "taxTerm": "Secondary"
+          },
+          {
+            "taxonomy": "worm_strain",
+            "taxTerm": "M"
+          },
+          {
+            "taxonomy": "fda_molecular_name",
+            "taxTerm": "TRICLABENDAZOLE"
+          },
+          {
+            "taxonomy": "fda_formula",
+            "taxTerm": "C14H9Cl3N2OS"
+          },
+          {
+            "taxonomy": "fda_cas_num",
+            "taxTerm": "68786-66-3"
+          },
+          {
+            "taxonomy": "fda_bioactivity",
+            "taxTerm": "anthelmintic"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "61-5120-FDA_R_mel_20C_2_A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-61"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-61_AI-5120"
+          }
+        ],
+        "parentstockId": 1505786,
+        "barcode": "FDA_R_mel_20C_2",
+        "well": "A03",
+        "plateCreationDate": "2017-12-19T14:31:04.000Z"
+      },
+      {
+        "assayPostId": 9645,
+        "assayId": 5088,
+        "plateId": 60,
+        "reagentId": 4954,
+        "taxTerm": "1505786",
+        "taxTerms": [
+          {
+            "taxonomy": "image_date",
+            "taxTerm": "2017-12-19T14:38:03.000Z"
+          },
+          {
+            "taxonomy": "condition",
+            "taxTerm": "NA"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_B-FDA_R_mel_20C_3"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-60_B-FDA_R_mel_20C_3"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_B-FDA_R_mel_20C_3_C-NA_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-M_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_WS-M_TT-1505786_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-M_TT-1505786_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-60_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-60_C-NA_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "screen_name",
+            "taxTerm": "FDA-2017-12-14--01--T-20-Sec"
+          },
+          {
+            "taxonomy": "experiment_screen_stage",
+            "taxTerm": "Secondary"
+          },
+          {
+            "taxonomy": "worm_strain",
+            "taxTerm": "M"
+          },
+          {
+            "taxonomy": "fda_molecular_name",
+            "taxTerm": "TRICLABENDAZOLE"
+          },
+          {
+            "taxonomy": "fda_formula",
+            "taxTerm": "C14H9Cl3N2OS"
+          },
+          {
+            "taxonomy": "fda_cas_num",
+            "taxTerm": "68786-66-3"
+          },
+          {
+            "taxonomy": "fda_bioactivity",
+            "taxTerm": "anthelmintic"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "60-5088-FDA_R_mel_20C_3_A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-60"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-60_AI-5088"
+          }
+        ],
+        "parentstockId": 1505786,
+        "barcode": "FDA_R_mel_20C_3",
+        "well": "A03",
+        "plateCreationDate": "2017-12-19T14:38:03.000Z"
+      },
+      {
+        "assayPostId": 9531,
+        "assayId": 4956,
+        "plateId": 59,
+        "reagentId": 4869,
+        "taxTerm": "1505786",
+        "taxTerms": [
+          {
+            "taxonomy": "image_date",
+            "taxTerm": "2017-12-19T14:43:58.000Z"
+          },
+          {
+            "taxonomy": "condition",
+            "taxTerm": "NA"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_B-FDA_R_mel_20C_4"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-59_B-FDA_R_mel_20C_4"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_B-FDA_R_mel_20C_4_C-NA_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-M_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_WS-M_TT-1505786_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-M_TT-1505786_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-59_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-59_C-NA_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "screen_name",
+            "taxTerm": "FDA-2017-12-14--01--T-20-Sec"
+          },
+          {
+            "taxonomy": "experiment_screen_stage",
+            "taxTerm": "Secondary"
+          },
+          {
+            "taxonomy": "worm_strain",
+            "taxTerm": "M"
+          },
+          {
+            "taxonomy": "fda_molecular_name",
+            "taxTerm": "TRICLABENDAZOLE"
+          },
+          {
+            "taxonomy": "fda_formula",
+            "taxTerm": "C14H9Cl3N2OS"
+          },
+          {
+            "taxonomy": "fda_cas_num",
+            "taxTerm": "68786-66-3"
+          },
+          {
+            "taxonomy": "fda_bioactivity",
+            "taxTerm": "anthelmintic"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "59-4956-FDA_R_mel_20C_4_A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-59"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-59_AI-4956"
+          }
+        ],
+        "parentstockId": 1505786,
+        "barcode": "FDA_R_mel_20C_4",
+        "well": "A03",
+        "plateCreationDate": "2017-12-19T14:43:58.000Z"
+      },
+      {
+        "assayPostId": 9391,
+        "assayId": 4884,
+        "plateId": 58,
+        "reagentId": 4783,
+        "taxTerm": "1505786",
+        "taxTerms": [
+          {
+            "taxonomy": "image_date",
+            "taxTerm": "2017-12-19T14:50:51.000Z"
+          },
+          {
+            "taxonomy": "condition",
+            "taxTerm": "NA"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_B-FDA_R_mel_20C_5"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-58_B-FDA_R_mel_20C_5"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_B-FDA_R_mel_20C_5_C-NA_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-M_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_WS-M_TT-1505786_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-M_TT-1505786_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-58_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-58_C-NA_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "screen_name",
+            "taxTerm": "FDA-2017-12-14--01--T-20-Sec"
+          },
+          {
+            "taxonomy": "experiment_screen_stage",
+            "taxTerm": "Secondary"
+          },
+          {
+            "taxonomy": "worm_strain",
+            "taxTerm": "M"
+          },
+          {
+            "taxonomy": "fda_molecular_name",
+            "taxTerm": "TRICLABENDAZOLE"
+          },
+          {
+            "taxonomy": "fda_formula",
+            "taxTerm": "C14H9Cl3N2OS"
+          },
+          {
+            "taxonomy": "fda_cas_num",
+            "taxTerm": "68786-66-3"
+          },
+          {
+            "taxonomy": "fda_bioactivity",
+            "taxTerm": "anthelmintic"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "58-4884-FDA_R_mel_20C_5_A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-58"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-58_AI-4884"
+          }
+        ],
+        "parentstockId": 1505786,
+        "barcode": "FDA_R_mel_20C_5",
+        "well": "A03",
+        "plateCreationDate": "2017-12-19T14:50:51.000Z"
+      },
+      {
+        "assayPostId": 9303,
+        "assayId": 4780,
+        "plateId": 57,
+        "reagentId": 4698,
+        "taxTerm": "1505786",
+        "taxTerms": [
+          {
+            "taxonomy": "image_date",
+            "taxTerm": "2017-12-19T14:57:51.000Z"
+          },
+          {
+            "taxonomy": "condition",
+            "taxTerm": "NA"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_B-FDA_R_mel_20C_6"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-57_B-FDA_R_mel_20C_6"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_B-FDA_R_mel_20C_6_C-NA_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-M_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_WS-M_TT-1505786_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-M_TT-1505786_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-57_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-57_C-NA_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "screen_name",
+            "taxTerm": "FDA-2017-12-14--01--T-20-Sec"
+          },
+          {
+            "taxonomy": "experiment_screen_stage",
+            "taxTerm": "Secondary"
+          },
+          {
+            "taxonomy": "worm_strain",
+            "taxTerm": "M"
+          },
+          {
+            "taxonomy": "fda_molecular_name",
+            "taxTerm": "TRICLABENDAZOLE"
+          },
+          {
+            "taxonomy": "fda_formula",
+            "taxTerm": "C14H9Cl3N2OS"
+          },
+          {
+            "taxonomy": "fda_cas_num",
+            "taxTerm": "68786-66-3"
+          },
+          {
+            "taxonomy": "fda_bioactivity",
+            "taxTerm": "anthelmintic"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "57-4780-FDA_R_mel_20C_6_A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-57"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-57_AI-4780"
+          }
+        ],
+        "parentstockId": 1505786,
+        "barcode": "FDA_R_mel_20C_6",
+        "well": "A03",
+        "plateCreationDate": "2017-12-19T14:57:51.000Z"
+      },
+      {
+        "assayPostId": 9215,
+        "assayId": 4695,
+        "plateId": 56,
+        "reagentId": 4613,
+        "taxTerm": "1505786",
+        "taxTerms": [
+          {
+            "taxonomy": "image_date",
+            "taxTerm": "2017-12-19T15:03:31.000Z"
+          },
+          {
+            "taxonomy": "condition",
+            "taxTerm": "NA"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_B-FDA_R_mel_20C_7"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-56_B-FDA_R_mel_20C_7"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_B-FDA_R_mel_20C_7_C-NA_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-M_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_WS-M_TT-1505786_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-M_TT-1505786_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-56_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-56_C-NA_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "screen_name",
+            "taxTerm": "FDA-2017-12-14--01--T-20-Sec"
+          },
+          {
+            "taxonomy": "experiment_screen_stage",
+            "taxTerm": "Secondary"
+          },
+          {
+            "taxonomy": "worm_strain",
+            "taxTerm": "M"
+          },
+          {
+            "taxonomy": "fda_molecular_name",
+            "taxTerm": "TRICLABENDAZOLE"
+          },
+          {
+            "taxonomy": "fda_formula",
+            "taxTerm": "C14H9Cl3N2OS"
+          },
+          {
+            "taxonomy": "fda_cas_num",
+            "taxTerm": "68786-66-3"
+          },
+          {
+            "taxonomy": "fda_bioactivity",
+            "taxTerm": "anthelmintic"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "56-4695-FDA_R_mel_20C_7_A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-56"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-56_AI-4695"
+          }
+        ],
+        "parentstockId": 1505786,
+        "barcode": "FDA_R_mel_20C_7",
+        "well": "A03",
+        "plateCreationDate": "2017-12-19T15:03:31.000Z"
+      },
+      {
+        "assayPostId": 8704,
+        "assayId": 4610,
+        "plateId": 55,
+        "reagentId": 4531,
+        "taxTerm": "1505786",
+        "taxTerms": [
+          {
+            "taxonomy": "image_date",
+            "taxTerm": "2017-12-19T15:10:24.000Z"
+          },
+          {
+            "taxonomy": "condition",
+            "taxTerm": "NA"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_B-FDA_R_mel_20C_8"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-55_B-FDA_R_mel_20C_8"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_B-FDA_R_mel_20C_8_C-NA_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-M_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_WS-M_TT-1505786_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-M_TT-1505786_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-55_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-55_C-NA_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-M_TT-1505786"
+          },
+          {
+            "taxonomy": "screen_name",
+            "taxTerm": "FDA-2017-12-14--01--T-20-Sec"
+          },
+          {
+            "taxonomy": "experiment_screen_stage",
+            "taxTerm": "Secondary"
+          },
+          {
+            "taxonomy": "worm_strain",
+            "taxTerm": "M"
+          },
+          {
+            "taxonomy": "fda_molecular_name",
+            "taxTerm": "TRICLABENDAZOLE"
+          },
+          {
+            "taxonomy": "fda_formula",
+            "taxTerm": "C14H9Cl3N2OS"
+          },
+          {
+            "taxonomy": "fda_cas_num",
+            "taxTerm": "68786-66-3"
+          },
+          {
+            "taxonomy": "fda_bioactivity",
+            "taxTerm": "anthelmintic"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "55-4610-FDA_R_mel_20C_8_A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-55"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-55_AI-4610"
+          }
+        ],
+        "parentstockId": 1505786,
+        "barcode": "FDA_R_mel_20C_8",
+        "well": "A03",
+        "plateCreationDate": "2017-12-19T15:10:24.000Z"
+      }
+    ],
+    "N2": [
+      {
+        "assayPostId": 8567,
+        "assayId": 4581,
+        "plateId": 54,
+        "reagentId": 4446,
+        "taxTerm": "1505786",
+        "taxTerms": [
+          {
+            "taxonomy": "image_date",
+            "taxTerm": "2017-12-19T15:17:24.000Z"
+          },
+          {
+            "taxonomy": "condition",
+            "taxTerm": "NA"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_B-FDA_R_N2_20C_1"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-54_B-FDA_R_N2_20C_1"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_B-FDA_R_N2_20C_1_C-NA_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-N2_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_WS-N2_TT-1505786_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-N2_TT-1505786_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-54_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-54_C-NA_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "screen_name",
+            "taxTerm": "FDA-2017-12-14--01--T-20-Sec"
+          },
+          {
+            "taxonomy": "experiment_screen_stage",
+            "taxTerm": "Secondary"
+          },
+          {
+            "taxonomy": "worm_strain",
+            "taxTerm": "N2"
+          },
+          {
+            "taxonomy": "fda_molecular_name",
+            "taxTerm": "TRICLABENDAZOLE"
+          },
+          {
+            "taxonomy": "fda_formula",
+            "taxTerm": "C14H9Cl3N2OS"
+          },
+          {
+            "taxonomy": "fda_cas_num",
+            "taxTerm": "68786-66-3"
+          },
+          {
+            "taxonomy": "fda_bioactivity",
+            "taxTerm": "anthelmintic"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "54-4581-FDA_R_N2_20C_1_A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-54"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-54_AI-4581"
+          }
+        ],
+        "parentstockId": 1505786,
+        "barcode": "FDA_R_N2_20C_1",
+        "well": "A03",
+        "plateCreationDate": "2017-12-19T15:17:24.000Z"
+      },
+      {
+        "assayPostId": 8459,
+        "assayId": 4503,
+        "plateId": 53,
+        "reagentId": 4361,
+        "taxTerm": "1505786",
+        "taxTerms": [
+          {
+            "taxonomy": "image_date",
+            "taxTerm": "2017-12-19T15:23:08.000Z"
+          },
+          {
+            "taxonomy": "condition",
+            "taxTerm": "NA"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_B-FDA_R_N2_20C_2"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-53_B-FDA_R_N2_20C_2"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_B-FDA_R_N2_20C_2_C-NA_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-N2_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_WS-N2_TT-1505786_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-N2_TT-1505786_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-53_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-53_C-NA_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "screen_name",
+            "taxTerm": "FDA-2017-12-14--01--T-20-Sec"
+          },
+          {
+            "taxonomy": "experiment_screen_stage",
+            "taxTerm": "Secondary"
+          },
+          {
+            "taxonomy": "worm_strain",
+            "taxTerm": "N2"
+          },
+          {
+            "taxonomy": "fda_molecular_name",
+            "taxTerm": "TRICLABENDAZOLE"
+          },
+          {
+            "taxonomy": "fda_formula",
+            "taxTerm": "C14H9Cl3N2OS"
+          },
+          {
+            "taxonomy": "fda_cas_num",
+            "taxTerm": "68786-66-3"
+          },
+          {
+            "taxonomy": "fda_bioactivity",
+            "taxTerm": "anthelmintic"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "53-4503-FDA_R_N2_20C_2_A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-53"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-53_AI-4503"
+          }
+        ],
+        "parentstockId": 1505786,
+        "barcode": "FDA_R_N2_20C_2",
+        "well": "A03",
+        "plateCreationDate": "2017-12-19T15:23:08.000Z"
+      },
+      {
+        "assayPostId": 8364,
+        "assayId": 4408,
+        "plateId": 52,
+        "reagentId": 4274,
+        "taxTerm": "1505786",
+        "taxTerms": [
+          {
+            "taxonomy": "image_date",
+            "taxTerm": "2017-12-19T15:29:47.000Z"
+          },
+          {
+            "taxonomy": "condition",
+            "taxTerm": "NA"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_B-FDA_R_N2_20C_3"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-52_B-FDA_R_N2_20C_3"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_B-FDA_R_N2_20C_3_C-NA_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-N2_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_WS-N2_TT-1505786_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-N2_TT-1505786_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-52_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-52_C-NA_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "screen_name",
+            "taxTerm": "FDA-2017-12-14--01--T-20-Sec"
+          },
+          {
+            "taxonomy": "experiment_screen_stage",
+            "taxTerm": "Secondary"
+          },
+          {
+            "taxonomy": "worm_strain",
+            "taxTerm": "N2"
+          },
+          {
+            "taxonomy": "fda_molecular_name",
+            "taxTerm": "TRICLABENDAZOLE"
+          },
+          {
+            "taxonomy": "fda_formula",
+            "taxTerm": "C14H9Cl3N2OS"
+          },
+          {
+            "taxonomy": "fda_cas_num",
+            "taxTerm": "68786-66-3"
+          },
+          {
+            "taxonomy": "fda_bioactivity",
+            "taxTerm": "anthelmintic"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "52-4408-FDA_R_N2_20C_3_A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-52"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-52_AI-4408"
+          }
+        ],
+        "parentstockId": 1505786,
+        "barcode": "FDA_R_N2_20C_3",
+        "well": "A03",
+        "plateCreationDate": "2017-12-19T15:29:47.000Z"
+      },
+      {
+        "assayPostId": 8282,
+        "assayId": 4303,
+        "plateId": 51,
+        "reagentId": 4188,
+        "taxTerm": "1505786",
+        "taxTerms": [
+          {
+            "taxonomy": "image_date",
+            "taxTerm": "2017-12-19T15:37:03.000Z"
+          },
+          {
+            "taxonomy": "condition",
+            "taxTerm": "NA"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_B-FDA_R_N2_20C_4"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-51_B-FDA_R_N2_20C_4"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_B-FDA_R_N2_20C_4_C-NA_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-N2_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_WS-N2_TT-1505786_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-N2_TT-1505786_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-51_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-51_C-NA_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "screen_name",
+            "taxTerm": "FDA-2017-12-14--01--T-20-Sec"
+          },
+          {
+            "taxonomy": "experiment_screen_stage",
+            "taxTerm": "Secondary"
+          },
+          {
+            "taxonomy": "worm_strain",
+            "taxTerm": "N2"
+          },
+          {
+            "taxonomy": "fda_molecular_name",
+            "taxTerm": "TRICLABENDAZOLE"
+          },
+          {
+            "taxonomy": "fda_formula",
+            "taxTerm": "C14H9Cl3N2OS"
+          },
+          {
+            "taxonomy": "fda_cas_num",
+            "taxTerm": "68786-66-3"
+          },
+          {
+            "taxonomy": "fda_bioactivity",
+            "taxTerm": "anthelmintic"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "51-4303-FDA_R_N2_20C_4_A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-51"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-51_AI-4303"
+          }
+        ],
+        "parentstockId": 1505786,
+        "barcode": "FDA_R_N2_20C_4",
+        "well": "A03",
+        "plateCreationDate": "2017-12-19T15:37:03.000Z"
+      },
+      {
+        "assayPostId": 8189,
+        "assayId": 4185,
+        "plateId": 50,
+        "reagentId": 4103,
+        "taxTerm": "1505786",
+        "taxTerms": [
+          {
+            "taxonomy": "image_date",
+            "taxTerm": "2017-12-19T15:42:48.000Z"
+          },
+          {
+            "taxonomy": "condition",
+            "taxTerm": "NA"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_B-FDA_R_N2_20C_5"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-50_B-FDA_R_N2_20C_5"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_B-FDA_R_N2_20C_5_C-NA_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-N2_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_WS-N2_TT-1505786_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-N2_TT-1505786_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-50_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-50_C-NA_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "screen_name",
+            "taxTerm": "FDA-2017-12-14--01--T-20-Sec"
+          },
+          {
+            "taxonomy": "experiment_screen_stage",
+            "taxTerm": "Secondary"
+          },
+          {
+            "taxonomy": "worm_strain",
+            "taxTerm": "N2"
+          },
+          {
+            "taxonomy": "fda_molecular_name",
+            "taxTerm": "TRICLABENDAZOLE"
+          },
+          {
+            "taxonomy": "fda_formula",
+            "taxTerm": "C14H9Cl3N2OS"
+          },
+          {
+            "taxonomy": "fda_cas_num",
+            "taxTerm": "68786-66-3"
+          },
+          {
+            "taxonomy": "fda_bioactivity",
+            "taxTerm": "anthelmintic"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "50-4185-FDA_R_N2_20C_5_A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-50"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-50_AI-4185"
+          }
+        ],
+        "parentstockId": 1505786,
+        "barcode": "FDA_R_N2_20C_5",
+        "well": "A03",
+        "plateCreationDate": "2017-12-19T15:42:48.000Z"
+      },
+      {
+        "assayPostId": 7593,
+        "assayId": 4100,
+        "plateId": 49,
+        "reagentId": 4022,
+        "taxTerm": "1505786",
+        "taxTerms": [
+          {
+            "taxonomy": "image_date",
+            "taxTerm": "2017-12-19T15:49:44.000Z"
+          },
+          {
+            "taxonomy": "condition",
+            "taxTerm": "NA"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_B-FDA_R_N2_20C_6"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-49_B-FDA_R_N2_20C_6"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_B-FDA_R_N2_20C_6_C-NA_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-N2_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_WS-N2_TT-1505786_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-N2_TT-1505786_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-49_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-49_C-NA_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "screen_name",
+            "taxTerm": "FDA-2017-12-14--01--T-20-Sec"
+          },
+          {
+            "taxonomy": "experiment_screen_stage",
+            "taxTerm": "Secondary"
+          },
+          {
+            "taxonomy": "worm_strain",
+            "taxTerm": "N2"
+          },
+          {
+            "taxonomy": "fda_molecular_name",
+            "taxTerm": "TRICLABENDAZOLE"
+          },
+          {
+            "taxonomy": "fda_formula",
+            "taxTerm": "C14H9Cl3N2OS"
+          },
+          {
+            "taxonomy": "fda_cas_num",
+            "taxTerm": "68786-66-3"
+          },
+          {
+            "taxonomy": "fda_bioactivity",
+            "taxTerm": "anthelmintic"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "49-4100-FDA_R_N2_20C_6_A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-49"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-49_AI-4100"
+          }
+        ],
+        "parentstockId": 1505786,
+        "barcode": "FDA_R_N2_20C_6",
+        "well": "A03",
+        "plateCreationDate": "2017-12-19T15:49:44.000Z"
+      },
+      {
+        "assayPostId": 7508,
+        "assayId": 4064,
+        "plateId": 48,
+        "reagentId": 3936,
+        "taxTerm": "1505786",
+        "taxTerms": [
+          {
+            "taxonomy": "image_date",
+            "taxTerm": "2017-12-19T15:56:40.000Z"
+          },
+          {
+            "taxonomy": "condition",
+            "taxTerm": "NA"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_B-FDA_R_N2_20C_7"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-48_B-FDA_R_N2_20C_7"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_B-FDA_R_N2_20C_7_C-NA_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-N2_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_WS-N2_TT-1505786_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-N2_TT-1505786_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-48_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-48_C-NA_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "screen_name",
+            "taxTerm": "FDA-2017-12-14--01--T-20-Sec"
+          },
+          {
+            "taxonomy": "experiment_screen_stage",
+            "taxTerm": "Secondary"
+          },
+          {
+            "taxonomy": "worm_strain",
+            "taxTerm": "N2"
+          },
+          {
+            "taxonomy": "fda_molecular_name",
+            "taxTerm": "TRICLABENDAZOLE"
+          },
+          {
+            "taxonomy": "fda_formula",
+            "taxTerm": "C14H9Cl3N2OS"
+          },
+          {
+            "taxonomy": "fda_cas_num",
+            "taxTerm": "68786-66-3"
+          },
+          {
+            "taxonomy": "fda_bioactivity",
+            "taxTerm": "anthelmintic"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "48-4064-FDA_R_N2_20C_7_A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-48"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-48_AI-4064"
+          }
+        ],
+        "parentstockId": 1505786,
+        "barcode": "FDA_R_N2_20C_7",
+        "well": "A03",
+        "plateCreationDate": "2017-12-19T15:56:40.000Z"
+      },
+      {
+        "assayPostId": 7423,
+        "assayId": 4021,
+        "plateId": 47,
+        "reagentId": 3848,
+        "taxTerm": "1505786",
+        "taxTerms": [
+          {
+            "taxonomy": "image_date",
+            "taxTerm": "2017-12-19T16:02:26.000Z"
+          },
+          {
+            "taxonomy": "condition",
+            "taxTerm": "NA"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_B-FDA_R_N2_20C_8"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-47_B-FDA_R_N2_20C_8"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_B-FDA_R_N2_20C_8_C-NA_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-N2_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_WS-N2_TT-1505786_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-N2_TT-1505786_W-A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-47_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-47_C-NA_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_C-NA_WS-N2_TT-1505786"
+          },
+          {
+            "taxonomy": "screen_name",
+            "taxTerm": "FDA-2017-12-14--01--T-20-Sec"
+          },
+          {
+            "taxonomy": "experiment_screen_stage",
+            "taxTerm": "Secondary"
+          },
+          {
+            "taxonomy": "worm_strain",
+            "taxTerm": "N2"
+          },
+          {
+            "taxonomy": "fda_molecular_name",
+            "taxTerm": "TRICLABENDAZOLE"
+          },
+          {
+            "taxonomy": "fda_formula",
+            "taxTerm": "C14H9Cl3N2OS"
+          },
+          {
+            "taxonomy": "fda_cas_num",
+            "taxTerm": "68786-66-3"
+          },
+          {
+            "taxonomy": "fda_bioactivity",
+            "taxTerm": "anthelmintic"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "47-4021-FDA_R_N2_20C_8_A03"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-47"
+          },
+          {
+            "taxonomy": "envira-tag",
+            "taxTerm": "SN-FDA-2017-12-14--01--T-20-Sec_PI-47_AI-4021"
+          }
+        ],
+        "parentstockId": 1505786,
+        "barcode": "FDA_R_N2_20C_8",
+        "well": "A03",
+        "plateCreationDate": "2017-12-19T16:02:26.000Z"
+      }
+    ]
+  }
+}

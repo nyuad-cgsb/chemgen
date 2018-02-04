@@ -40,6 +40,10 @@ var scores = {
   libraryModel: "RnaiRnailibrary",
   libraryStockModel: "RnaiLibrarystock",
   scorePostId: 2,
+  screenId: 1,
+  term: 'term1',
+  screenName: 'screen1',
+  parentstockId: 1,
   userId: 1,
   userName: 'user',
   scores: [{
@@ -65,26 +69,46 @@ var scoreResults = [{
   'assayId': 1,
   'scoreCodeId': 53,
   'scorerId': 1,
+  'screenId': 1,
+  'term': 'term1',
+  'parentstockId': 1,
+  'screenName': 'screen1',
 }, {
   'manualscoreId': 2,
   'assayId': 1,
   'scoreCodeId': 0,
   'scorerId': 1,
+  'screenId': 1,
+  'term': 'term1',
+  'parentstockId': 1,
+  'screenName': 'screen1',
 }, {
   'manualscoreId': 3,
   'assayId': 1,
   'scoreCodeId': 13,
   'scorerId': 1,
+  'screenId': 1,
+  'term': 'term1',
+  'parentstockId': 1,
+  'screenName': 'screen1',
 }, {
   'manualscoreId': 4,
   'assayId': 1,
   'scoreCodeId': 16,
   'scorerId': 1,
+  'screenId': 1,
+  'term': 'term1',
+  'parentstockId': 1,
+  'screenName': 'screen1',
 }, {
   'manualscoreId': 5,
   'assayId': 1,
   'scoreCodeId': -4,
   'scorerId': 1,
+  'screenId': 1,
+  'term': 'term1',
+  'parentstockId': 1,
+  'screenName': 'screen1',
 }];
 
 describe('GetScores Workflow', function() {
@@ -150,7 +174,7 @@ describe('GetScores Workflow', function() {
         return app.models.WpTerms.find();
       })
       .then(function(results) {
-        app.winston.info(JSON.stringify(results, null, 2));
+        // app.winston.info(JSON.stringify(results, null, 2));
         results = JSON.stringify(results);
         results = JSON.parse(results);
         expect(results[results.length - 1]).to.deep.equal({termId: 17, name: "yes", slug: "yes", termGroup: 0 });
